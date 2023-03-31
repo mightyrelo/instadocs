@@ -32,7 +32,7 @@ const productSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        'default': 'general'
+        'default': 'user'
     }
 });
 

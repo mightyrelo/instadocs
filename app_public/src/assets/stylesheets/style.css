@@ -252,6 +252,15 @@ h4 small {
     border-bottom: 2px solid #31727a;
   }
 
+  select {
+    padding: 26px 40px;
+  }
+
+  #category {
+    height:fit-content;
+  }
+
+
 
 
   

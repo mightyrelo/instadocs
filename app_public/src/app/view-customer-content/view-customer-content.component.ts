@@ -69,7 +69,8 @@ export class ViewCustomerContentComponent implements OnInit {
   public formCat = {
     category: ''
   };
-  public categories = ['suv','aut','intr','pow','cab','tool','int','acc','fir','swt','efe'];
+  public categories = ['user','suv','aut','intr','pow','cab','tool','int','acc','fir','swt','efe','auto'];
+  public categoriesFull = ['user','surveillance','automation','intrusion','power','cabling','tools','intercom','access control','fire','switches','electric fencing', 'automation advanced'];
 
   public categorySelected = false;
   
@@ -373,8 +374,8 @@ export class ViewCustomerContentComponent implements OnInit {
 
   public onCategorySubmit() : void {
     //this.formError2 = '';
-
-    this.productDataService.getCategoryProducts(this.getUserName(), this.formCat.category)
+    const idx = this.categoriesFull.indexOf(this.formCat.category);
+    this.productDataService.getCategoryProducts(this.getUserName(), this.categories[idx])
       .then(foundProducts => {this.products = foundProducts;this.categorySelected = false;});
     
   }

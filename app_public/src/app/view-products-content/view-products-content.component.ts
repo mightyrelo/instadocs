@@ -19,7 +19,8 @@ export class ViewProductsContentComponent implements OnInit {
   public formError = '';
   public formError2 = '';
 
-  public categories = ['suv','aut','intr','pow','cab','tool','int','acc','fir','swt','efe'];
+  public categories = ['user','suv','aut','intr','pow','cab','tool','int','acc','fir','swt','efe', 'auto'];
+  public categoriesFull = ['user','surveillance','automation','intrusion','power','cabling','tools','intercom','access control','fire','switches','electric fencing', 'automation advanced'];
   public formCat = {
     category: ''
   }; 
@@ -96,7 +97,7 @@ export class ViewProductsContentComponent implements OnInit {
   private doAddProduct() : void {
     this.productDataService.addProduct(this.newProduct)
       .then((prod: Product) => {
-        console.log('product saved', prod);
+        console.log('product saved', prod.category);
         this.resetAndHideProductForm();
       });
   }
@@ -113,8 +114,8 @@ export class ViewProductsContentComponent implements OnInit {
   }
   public onCategorySubmit() : void {
     //this.formError2 = '';
-
-    this.productDataService.getCategoryProducts(this.getUserName(), this.formCat.category)
+    const idx = this.categoriesFull.indexOf(this.formCat.category);
+    this.productDataService.getCategoryProducts(this.getUserName(), this.categories[idx])
       .then(foundProducts => {this.products = foundProducts;});
     
   }
