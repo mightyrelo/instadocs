@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <th class="wide">Product</th>
+    <th class="wider">Description</th>
+    <th class="narrow">Price/Unit</th>
+    <th class="narrow">Quantity</th>
+    <th class="narrow">Amount</th>
+  </tr>
+  <tr *ngFor="let item of content.invoiceItems">
+    <td class="wide">{{item.product}}</td>
+    <td class="wider">{{item.description}}</td>
+    <td class="narrow">{{item.productAmount}}</td>
+    <td class="narrow">{{item.quantity}}</td>
+    <td class="narrow">{{item.productAmount * item.quantity | currency : 'R' : true}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="narrow">Total: </td>
+    <td class="narrow">{{content.amount | currency : 'R' : true }} </td>
+  </tr>
+</table>

@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-12" >
+    <small>
+      <button *ngIf="isLoggedIn()" class="btn-primary" (click)="displayForm=true"><i class="fa-sharp fa-solid fa-user-plus"></i> </button>
+      <a *ngIf="!isLoggedIn()" routerLink="/login"><button class="btn-primary">login to add</button>
+      </a>
+    </small>
+  </div>  
+</div>
+<div *ngIf="displayForm" class="col-12 col-md-8 heading">
+  <form (ngSubmit)="onCustomerSubmit()" method="post" role="form">
+    <div *ngIf="formError" class="alert alert-danger">
+      {{formError}}</div>
+    <div class="form-group">
+       <label for="name">name</label>
+       <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="formCustomer.name">
+    </div> 
+    <div class="form-group">
+       <label for="address">address</label>
+       <textarea class="form-control" id="address" name="address" type="text" placeholder="" [(ngModel)]="formCustomer.address"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="contact">contact</label>
+      <input class="form-control" id="contact" name="contact" type="text" placeholder="" [(ngModel)]="formCustomer.contact">
+   </div> 
+    <div class="form-group">
+      <label for="email">email</label>
+      <input class="form-control" id="email" name="email" type="text" placeholder="" [(ngModel)]="formCustomer.email">
+   </div> 
+   <div class="form-group">
+    <label for="rating">rating</label>
+    <select [(ngModel)]="formCustomer.rating" class="form-control bg" id="rating" name="rating">
+      <option  class="form-control bg" *ngFor="let item of counts">{{item}}</option>
+     </select>
+   </div>
+   <div class="form-group">
+    <label for="gender">gender</label><br>
+    <input type="radio" name="gender" value="female" checked="checked" [(ngModel)]="formCustomer.gender"> female
+    <input type="radio" name="gender" value="male" [(ngModel)]="formCustomer.gender"> male
+   </div>
+   
+   <div class="form-group">
+    <label for="facilities">facilities</label>
+    <input class="form-control" id="facilities" name="facilities" type="text" placeholder="" [(ngModel)]="formCustomer.facilities">
+   </div>
+    <div class="form-group">
+    </div>
+    <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
+    <small><button (click)="resetAndHideCustomerForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa sharp fa-solid fa-xmark"></i></button></small>
+  </form>     
+</div> 
+<div *ngFor="let customer of customers | mostRecentFirst" class="card">
+   <div class="card-block"> 
+   </div>
+   <h4> <a routerLink="/customers/{{customer._id}}" class="heading">{{customer.name}}</a></h4>
+   <small>
+    <i class="fa{{customer.rating < 1 ? 'r':'s' }} fa-star"></i>
+    <i class="fa{{customer.rating < 2 ? 'r':'s' }} fa-star"></i>
+    <i class="fa{{customer.rating < 3 ? 'r':'s' }} fa-star"></i>
+    <i class="fa{{customer.rating < 4 ? 'r':'s' }} fa-star"></i>
+    <i class="fa{{customer.rating < 5 ? 'r':'s' }} fa-star"></i>
+    <a class="float-right btn"  style="font-size: 1.8em" (click)="flagged(customer._id)"><i class="fa-solid fa-trash trash"></i></a>
+    <div *ngIf="isFlagged(customer._id)">
+      <button style="font-size: 0.7em" (click)="setFlagOff(customer._id)" class="btn btn-primary float-right">cancel</button>
+      <button style="font-size: 0.7em" (click)="deleteCustomer(customer._id)" class="btn btn-primary float-right">are you sure?</button>
+    </div>
+  </small>
+  <p><b>Address: </b><span class="badge badge-pill badge-default">{{customer.address}}</span></p>
+  <p><b>Contacts: </b><span class="badge badge-pill badge-default">{{customer.contact | contact}}</span></p>
+  <div class="facilities">
+    <p><b>Facilities: </b><span *ngFor="let facility of customer.facilities" class="badge badge-warning">{{facility}}</span></p>
+  </div>
+</div>
+

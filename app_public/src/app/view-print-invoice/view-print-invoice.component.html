@@ -1,0 +1,22 @@
+<div>
+  <p *ngIf="customer">
+    <a style="font-size: 1.3em;color: whitesmoke;" class="btn" routerLink="/customers/{{customer._id}}"><i style="font-size: 2.0" class="fa-solid fa-backward"></i> to {{customer.name}}</a>
+    <a style="font-size: 2.3em;color: whitesmoke;" class="btn float-right" (click)="createPDF()"><i class="fa-solid fa-file-pdf"></i></a>
+  </p>
+<div class="outer" id="print">
+  <div class="parent">
+    <app-company-tag *ngIf="company" [content]="company"></app-company-tag>
+    <app-company-contact *ngIf="company" [content]="company"></app-company-contact>
+  </div>
+  <div class="parent1">
+    <app-customer-contacts *ngIf="customer" [content]="customer"></app-customer-contacts>
+    <app-invoice-details *ngIf="invoice" [user]="userName" [content]="invoice"></app-invoice-details>
+  </div>
+  <div class="parent3">
+    <app-invoice-items *ngIf="invoice" [content]="invoice"></app-invoice-items>
+  </div>
+  <div class="parent4">
+    <app-banking *ngIf="company" [content]="company"></app-banking>
+  </div>
+</div>
+</div>

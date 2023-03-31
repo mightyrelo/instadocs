@@ -1,0 +1,74 @@
+<div *ngIf="!userRegistered">
+   <p class="lead">Already a member? Please <a routerLink="/login">log in</a>, instead.</p>
+<form (ngSubmit)="onRegisterSubmit()" method="post" role="form">
+  <div *ngIf="formError" class="alert alert-danger">
+    {{formError}}
+    </div>
+  <div class="form-group">
+     <label for="name">name</label>
+     <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="credentials.name">
+  </div> 
+  <div class="form-group">
+     <label for="email">email</label>
+     <input class="form-control" id="email" name="email" type="email" placeholder="" [(ngModel)]="credentials.email">
+  </div> 
+  <div class="form-group">
+     <label for="password">password</label>
+     <input class="form-control" id="password" name="password" type="password" placeholder="" [(ngModel)]="credentials.password">
+  </div> 
+  <div class="form-group">
+  </div>
+  <button  type="submit" role="button" class="btn-primary sm-button">Register!</button>  
+</form>     
+</div>
+
+<div *ngIf="userRegistered" class="col-12 col-md-8">
+   <p class="lead">Register your Company</p>
+   <form (ngSubmit)="onCompanySubmit()" method="post" role="form">
+     <div *ngIf="formError" class="alert alert-danger">
+       {{formError}}</div>
+     <div class="form-group">
+        <label for="name">name</label>
+        <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="formCompany.name">
+     </div> 
+     <div class="form-group">
+        <label for="address">address</label>
+        <textarea class="form-control" id="address" name="address" type="text" placeholder="" [(ngModel)]="formCompany.address"></textarea>
+     </div>
+     <div class="form-group">
+       <label for="contacts">contacts</label>
+       <input class="form-control" id="contacts" name="contacts" type="text" placeholder="" [(ngModel)]="formCompany.contacts">
+    </div> 
+     <div class="form-group">
+       <label for="email">email</label>
+       <input class="form-control" id="email" name="email" type="text" placeholder="" [(ngModel)]="formCompany.email">
+    </div> 
+    <div class="form-group">
+     <label for="tagline">tagline</label>
+     <input class="form-control" id="tagline" name="tagline" type="text" placeholder="" [(ngModel)]="formCompany.tagline">
+    </div>
+    <div class="form-group">
+     <label for="website">website</label>
+     <input class="form-control" id="website" name="website" type="text" placeholder="" [(ngModel)]="formCompany.website">
+    </div>
+    <div class="form-group">
+     <label for="bank">bank</label>
+     <input class="form-control" id="bank" name="bank" type="text" placeholder="" [(ngModel)]="formCompany.bank">
+    </div>
+    <div class="form-group">
+     <label for="accountName">accountName</label>
+     <input class="form-control" id="accountName" name="accountName" type="text" placeholder="" [(ngModel)]="formCompany.accountName">
+    </div> 
+    <div class="form-group">
+     <label for="accountNumber">accountNumber</label>
+     <input class="form-control" id="accountNumber" name="accountNumber" type="text" placeholder="" [(ngModel)]="formCompany.accountNumber">
+    </div>
+    <div class="form-group">
+     <label for="branch">branch</label>
+     <input class="form-control" id="branch" name="branch" type="text" placeholder="" [(ngModel)]="formCompany.branch">
+    </div>
+     <div class="form-group">
+     </div>
+     <small><button  type="submit" role="button" class="btn-primary sm-button">Complete</button> </small>
+   </form>     
+ </div> 

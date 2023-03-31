@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-12" >
+    <small>
+      <button *ngIf="isLoggedIn()" class="btn-primary" (click)="displayForm=true">add company </button>
+      <a *ngIf="!isLoggedIn()" routerLink="/login"><button class="btn-primary">login to add</button>
+      </a>
+    </small>
+  </div>  
+</div>
+<div *ngIf="displayForm" class="col-12 col-md-8">
+  <form (ngSubmit)="onCompanySubmit()" method="post" role="form">
+    <div *ngIf="formError" class="alert alert-danger">
+      {{formError}}</div>
+    <div class="form-group">
+       <label for="name">name</label>
+       <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="formCompany.name">
+    </div> 
+    <div class="form-group">
+       <label for="address">address</label>
+       <textarea class="form-control" id="address" name="address" type="text" placeholder="" [(ngModel)]="formCompany.address"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="contacts">contacts</label>
+      <input class="form-control" id="contacts" name="contacts" type="text" placeholder="" [(ngModel)]="formCompany.contacts">
+   </div> 
+    <div class="form-group">
+      <label for="email">email</label>
+      <input class="form-control" id="email" name="email" type="text" placeholder="" [(ngModel)]="formCompany.email">
+   </div> 
+   <div class="form-group">
+    <label for="tagline">tagline</label>
+    <input class="form-control" id="tagline" name="tagline" type="text" placeholder="" [(ngModel)]="formCompany.tagline">
+   </div>
+   <div class="form-group">
+    <label for="website">website</label>
+    <input class="form-control" id="website" name="website" type="text" placeholder="" [(ngModel)]="formCompany.website">
+   </div>
+   <div class="form-group">
+    <label for="bank">bank</label>
+    <input class="form-control" id="bank" name="bank" type="text" placeholder="" [(ngModel)]="formCompany.bank">
+   </div>
+   <div class="form-group">
+    <label for="accountName">accountName</label>
+    <input class="form-control" id="accountName" name="accountName" type="text" placeholder="" [(ngModel)]="formCompany.accountName">
+   </div> 
+   <div class="form-group">
+    <label for="accountNumber">accountNumber</label>
+    <input class="form-control" id="accountNumber" name="accountNumber" type="text" placeholder="" [(ngModel)]="formCompany.accountNumber">
+   </div>
+   <div class="form-group">
+    <label for="branch">branch</label>
+    <input class="form-control" id="branch" name="branch" type="text" placeholder="" [(ngModel)]="formCompany.branch">
+   </div>
+    <div class="form-group">
+    </div>
+    <small><button  type="submit" role="button" class="btn-primary sm-button">add</button> </small>
+    <small><button (click)="resetAndHideCompanyForm()" type="button" role="button" class="btn-primary sm-button">cancel</button></small>
+  </form>     
+</div> 
+<div *ngFor="let company of companies" class="card">
+   <div class="card-block"> 
+   </div>
+   <h4> <a routerLink="/companies/{{company._id}}" class="heading">{{company.name}}</a></h4>
+   <small>
+    <a class="float-right btn"  style="font-size: 1.8em" (click)="flagged(company._id)"><i class="fa-solid fa-trash trash"></i></a>
+    <div *ngIf="isFlagged(company._id)">
+      <button style="font-size: 0.7em" (click)="setFlagOff(company._id)" class="btn btn-primary float-right">cancel</button>
+      <button style="font-size: 0.7em" (click)="deleteCompany(company._id)" class="btn btn-primary float-right">are you sure?</button>
+    </div>
+  </small>
+  <p><b>Address: </b><span class="badge badge-pill badge-default">{{company.address}}</span></p>
+  <p><b>Email: </b><span class="badge badge-pill badge-default">{{company.email}}</span></p>
+  <div class="website">
+    <p><b>Contacts: </b><span *ngFor="let contact of company.contacts" class="badge badge-warning">{{contact | contact}}</span></p>
+  </div>
+</div>
+

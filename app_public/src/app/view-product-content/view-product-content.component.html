@@ -1,0 +1,55 @@
+<div class="col-12 col-lg-9">
+  <div class="row"> 
+    <div class="col-12 col-md-6">
+      <p>{{dbProduct.name}} <span (click)="displayForm=true" style="float:right"><i class="fa-solid fa-file-pen"></i></span> </p>
+      <div *ngIf="displayForm" class="col-12 col-md-8">
+        <form (ngSubmit)="onProductSubmit(dbProduct._id)" method="post" role="form"> 
+          <div *ngIf="formError" class="alert alert-danger">
+            {{formError}}</div>
+          <div class="form-group">
+             <label for="name">name</label>
+             <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="newProduct.name">
+          </div> 
+          <div class="form-group">
+             <label for="description">description</label>
+             <textarea class="form-control" id="description" name="description" type="text" placeholder="" [(ngModel)]="newProduct.description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="trade">trade</label>
+            <input class="form-control" id="trade" name="trade" type="text" placeholder="" [(ngModel)]="newProduct.trade">
+         </div> 
+         <div class="form-group">
+          <label for="selling">retail</label>
+          <input class="form-control" id="selling" name="selling" type="text" placeholder="" [(ngModel)]="newProduct.selling">
+         </div>
+          <div class="form-group">
+          </div>       
+          <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button></small>
+          <small><button (click)="resetAndHideProductForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa sharp fa-solid fa-xmark"></i></button></small>
+        </form>     
+      </div>
+      <div class="card card-primary">
+        <div class="card-block">
+          <h2 class="card-title">Product Info </h2>
+          <p class="card-text">Trade : {{dbProduct.trade | currency :'R':true}}</p>
+          <p class="card-text">Retail: {{dbProduct.selling | currency :'R':true}}</p>
+          <p class="card-text">Description: {{dbProduct.description}}</p>
+        </div>
+      </div>
+    </div>
+  <div class="col-12 col-md-6 location-map">
+  <div class="card card-primary">
+    <div class="card-block">
+      <h2 class="card-title">{{dbProduct.name}} Image </h2>
+          <img class="img-fluid roundedrounded"  src='/assets/images/productImage.jpg' alt='map of location' height="660">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="card-primary review-card">
+      <div class="card-block">
+      </div>
+    </div>
+  </div>
+</div>

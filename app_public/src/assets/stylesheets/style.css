@@ -1,0 +1,257 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Lobster', cursive;
+}
+legend {
+font-family: 'Lobster', cursive;
+}
+.navbar {
+background-color: rgba(0,100,0, 0.2);
+border-color: greenyellow;
+}
+.navbar-light .navbar-brand {
+font-family: 'Lobster', cursive;
+color: #fff;
+}
+.navbar-light .navbar-toggler {
+color: white;
+border-color: white;
+}
+.navbar-light .navbar-toggler-icon {
+background-image: url("data:image/svgxml;charset=utf8,%3CsvgviewBox='0 0 30 30'xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2'stroke-linecap='round'stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+color: white;
+}
+.card {
+background-color: rgba(0,0,0, 0.4);;
+padding: 1rem;
+border: 3px solid whitesmoke;
+margin-top: 2px;
+color: whitesmoke;
+}
+
+.nav-item {
+  margin-left: 2%;
+}
+
+.active {
+  color: rgb(174, 0, 255);
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-thickness: 0.25em;
+}
+
+
+
+.card-primary {
+border-color:  darkslategray;
+margin-bottom: 0.5rem;
+}
+.banner {
+margin-top: 4em;
+border-bottom: 1px solid white;
+margin-bottom: 1.5em;
+padding-bottom: 0.5em;
+}
+.review-header {
+background-color: #31727a;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+.review {
+margin-right: -16px;
+margin-left: -16px;
+margin-bottom: 0.5em;
+}
+.badge-default, .badge-pill, .badge, .btn-primary {
+background-color: yellow;
+border-color: greenyellow;
+color: black;
+}
+h4 a, h4 a:hover {
+color: #fff;
+}
+
+h4 small {
+  font-size: 60%;
+  line-height: 200%;
+  color: #aaa;
+  }
+  h1 small {
+  color: #aaa;
+  }
+  .address {
+  margin-bottom: 0.5rem;
+  }
+  .facilities span.badge {
+  margin-right: 2px;
+  }
+  p {
+  margin-bottom: 0.65rem;
+  }
+  a {
+  color: rgba(255, 255, 255, 0.8)
+  }
+  a:hover {
+  color:#fff
+  }
+  body {
+  font-family: "Cabin", Arial, sans-serif;
+  color: #fff;
+  background-image: url('../images/pexels-yasin-gündogdu-2761116.jpg');
+  background-attachment: fixed;
+  }
+
+  .sm-button {
+    margin-bottom: 2px;
+  }
+
+  .heading {
+    color:whitesmoke;
+  }
+
+  .trash {
+    color: rgb(82, 5, 5);
+  }
+
+  input[type="text"], textarea[type="text"], input[type="password"], input[type="email"], option[type="text"] {
+    background-color: rgba(0,100,0, 0.2);
+    color: white;
+  
+  }
+
+  .bg {
+    background-color: rgba(0,100,0, 0.2);
+    color: white;
+     
+  }
+
+  input[type="text"]:focus, textarea[type="text"]:focus, option[type="text"], input[type="password"]:focus, input[type="email"]:focus{
+    background-color: rgba(0,100,0, 0.2);
+    color: white;
+  }
+
+  .parent {
+    color: black;
+    background-color:rgb(255, 255, 255);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .parent1 {
+    color: black;
+    background-color:rgb(255, 255, 255);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .outer {
+    background-image: url('../images/pexels-scott-webb-1084510.jpg');
+    margin: 0 auto 0 auto;
+    width: 95%;
+  }
+
+
+  .div1 {
+    width: 75%;
+    height: 220px;
+    padding: 0.5em;
+    padding-top: 3.3em;
+    line-height: 0.8em;
+  }
+
+  .div2 {
+    width: 100%;
+    height: 220px;
+    float: right;
+    padding: 2em;
+    line-height: 0.8em;
+    padding-top: 4.0em;
+  }
+  .div3 {
+    background-color:rgba(0, 255, 42, 0.18);
+    width: 100%;
+    height: 120px;
+    padding: 1em;
+    line-height: 0.8em;
+  }
+
+  .div4 {
+    width: 100%;
+    height: 120px;
+    float: right;
+    padding: 1em;
+    background-color:rgba(0, 255, 42, 0.18);
+    line-height: 0.8em;
+    text-align: right;
+    padding-right: 2.2em;
+  }
+
+  .spacer {
+    height: 10px;
+  }
+
+  table {
+    background-color:rgba(0, 255, 42, 0.18);
+    margin: 0 auto 0 auto;
+    width: 95%;
+    text-align: center;
+    color: black;
+    border: 1px solid rgba(0,155, 0, 0.8);
+  }
+
+  th {
+    background-color: rgba(0,155, 0, 0.8);
+    text-align: center;
+    padding: 0.5em;
+  }
+
+
+  td.wide, th.wide {
+    width: 20%;
+    padding: 0.5em;
+  }
+  td.wider, th.wider {
+    width: 35%;
+    padding: 0.5em;
+  }
+  td.narrow, th.narrow {
+    width: 15%;
+    padding: 0.5em;
+  }
+
+  .parent4 {
+    background-color:rgba(0, 255, 42, 0.18);
+    margin: 1em auto 0 auto;
+    width: 70%;
+    text-align: center;
+    color: black;
+    line-height: 0.8em;
+    padding: 1em;
+  }
+
+  select {
+    background-color: rgba(0,100,0, 0.2);
+    color: white;
+
+  }
+
+  .text {
+    color: rgba(218,165,32,0.5);
+  }
+
+  .bord {
+    border-left: 2px solid #31727a;
+    border-right: 2px solid #31727a;
+    border-bottom: 2px solid #31727a;
+  }
+
+
+
+  
