@@ -161,6 +161,7 @@
                   <div class="col-12 no-gutters review-header">
                     <small class="reviewTimestamp"> {{invoice.createdOn | date: 'd MMMM  yyyy hh:mm'}} </small>
                     <a  style="font-size: 1.3em" class="btn float-right" (click)="flaggedInvoice(dbCustomer._id, invoice._id)"><i class="fa-solid fa-trash trash"></i></a>
+                    <a style="font-size: 1.3em;color: whitesmoke" class="btn float-right" routerLink="/customers/{{dbCustomer._id}}/invoices/{{invoice._id}}/po"><i class="fa-solid fa-file-invoice-dollar"></i></a>
                     <a style="font-size: 1.4em;color: whitesmoke;" class="btn float-right" routerLink="/customers/{{dbCustomer._id}}/invoices/{{invoice._id}}"><i class="fa-solid fa-circle-info"></i></a>
                     <div *ngIf="isFlaggedInvoice(dbCustomer._id, invoice._id)">
                       <button style="font-size: 0.7em" (click)="setFlagOffInvoice(dbCustomer._id, invoice._id)" class="btn btn-primary float-right">cancel</button>

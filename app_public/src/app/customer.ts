@@ -4,6 +4,7 @@ export class QuoteItem {
     productAmount: number;
     description: string;
     summary: string;
+    productExpense: number;
 }
 
 export class Quote {

@@ -28,7 +28,8 @@ export class ViewCustomerContentComponent implements OnInit {
     quantity: null,
     productAmount: null,
     description: 'd',
-    summary: ''
+    summary: '',
+    productExpense: null
   } 
 
   //form processing
@@ -157,6 +158,7 @@ export class ViewCustomerContentComponent implements OnInit {
       this.currentProduct = foundProduct;
       this.formQuoteItem.productAmount = this.currentProduct.selling;
       this.formQuoteItem.description = this.currentProduct.description;
+      this.formQuoteItem.productExpense = this.currentProduct.trade;
       this.formQuoteItem.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, ` 
       this.newQuotation.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, `;
       this.newQuotation.amount += this.formQuoteItem.quantity * this.currentProduct.selling;
@@ -169,6 +171,7 @@ export class ViewCustomerContentComponent implements OnInit {
         product: this.formQuoteItem.product,
         quantity: this.formQuoteItem.quantity,
         productAmount: this.formQuoteItem.productAmount,
+        productExpense: this.formQuoteItem.productExpense,
         description: this.formQuoteItem.description
       });
      
@@ -189,6 +192,8 @@ export class ViewCustomerContentComponent implements OnInit {
     this.newQuotation.amount = 0;
     this.currentProduct = null;
     this.formQuoteItem.summary = '';
+    this.formQuoteItem.productAmount = null;
+    this.formQuoteItem.productExpense = null;
     this.itemAdded = false;
 
   }

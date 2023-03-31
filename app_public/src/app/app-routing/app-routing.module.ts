@@ -16,6 +16,7 @@ import { ViewCompaniesComponent } from '../view-companies/view-companies.compone
 import { ViewPrintComponent } from '../view-print/view-print.component';
 import { ViewPrintInvoiceComponent } from '../view-print-invoice/view-print-invoice.component';
 import { ViewProductComponent } from '../view-product/view-product.component';
+import { ViewPrintPoComponent } from '../view-print-po/view-print-po.component';
 
 const routes : Routes = 
   [{
@@ -63,6 +64,9 @@ const routes : Routes =
 }, {
   path: 'products/:productId',
   component: ViewProductComponent, 
+}, {
+  path: 'customers/:customerId/invoices/:invoiceId/po',
+  component: ViewPrintPoComponent, 
 }];
 
 @NgModule({

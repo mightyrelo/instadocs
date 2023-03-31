@@ -37,6 +37,7 @@ export class InvoiceDataService {
   }
 
   public readInvoice(cusId: string, iId: string) {
+    console.log('reading invoice');
     const url: string = `${this.apiBaseUrl}/customers/${cusId}/invoices/${iId}`;
     return this.http
         .get(url)

@@ -38,6 +38,7 @@ const doAddInvoice = (req, res, customer)=>{
         quantity = thisQuotation.quoteItems[i].quantity;
         description = thisQuotation.quoteItems[i].description;
         productAmount = thisQuotation.quoteItems[i].productAmount;
+        productExpense = thisQuotation.quoteItems[i].productExpense;
         summary += `${quantity} x ${product}, `;
         profit = thisQuotation.profit;
         amount = thisQuotation.amount;
@@ -46,7 +47,8 @@ const doAddInvoice = (req, res, customer)=>{
                product,
                quantity,
                description,
-               productAmount
+               productAmount,
+               productExpense
         });
     }
     

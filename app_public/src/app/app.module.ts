@@ -43,6 +43,10 @@ import { InvoiceItemsComponent } from './invoice-items/invoice-items.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { ViewProductContentComponent } from './view-product-content/view-product-content.component';
 import { ProdNavBarComponent } from './prod-nav-bar/prod-nav-bar.component';
+import { ViewPrintPoComponent } from './view-print-po/view-print-po.component';
+import { ViewPrintPoContentComponent } from './view-print-po-content/view-print-po-content.component';
+import { PoItemsComponent } from './po-items/po-items.component';
+import { PoDetailsComponent } from './po-details/po-details.component';
 
 
 
@@ -86,7 +90,11 @@ import { ProdNavBarComponent } from './prod-nav-bar/prod-nav-bar.component';
     InvoiceItemsComponent,
     ViewProductComponent,
     ViewProductContentComponent,
-    ProdNavBarComponent
+    ProdNavBarComponent,
+    ViewPrintPoComponent,
+    ViewPrintPoContentComponent,
+    PoItemsComponent,
+    PoDetailsComponent
   ],
   imports: [
     BrowserModule,

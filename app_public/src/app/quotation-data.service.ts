@@ -4,7 +4,7 @@ import { BROWSER_STORAGE } from './storage';
 
 import { environment } from '../environments/environment';
 
-import { Quote } from './quote';
+import { Quote } from './customer';
 
 @Injectable({
   providedIn: 'root'

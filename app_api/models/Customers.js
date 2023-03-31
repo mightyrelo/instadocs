@@ -4,6 +4,7 @@ const QuoteItemSchema = mongoose.Schema({
     product: String,
     quantity: Number,
     productAmount: Number,
+    productExpense: Number,
     description: String
 });
 
