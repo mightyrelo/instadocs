@@ -1,0 +1,10 @@
+<form (ngSubmit)="onUserNameSubmit()" method="post" role="form">
+  <div *ngIf="formError" class="alert alert-danger">
+    {{formError}}</div>
+  <div class="form-group heading">
+     <label for="name">username</label>
+     <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="formUser.name">
+  </div> 
+  <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
+</form>
+<p *ngIf="dataTransferred" class="heding">Data Transferred!</p>

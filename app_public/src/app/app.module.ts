@@ -47,6 +47,7 @@ import { ViewPrintPoComponent } from './view-print-po/view-print-po.component';
 import { ViewPrintPoContentComponent } from './view-print-po-content/view-print-po-content.component';
 import { PoItemsComponent } from './po-items/po-items.component';
 import { PoDetailsComponent } from './po-details/po-details.component';
+import { TransferDbComponent } from './transfer-db/transfer-db.component';
 
 
 
@@ -94,7 +95,8 @@ import { PoDetailsComponent } from './po-details/po-details.component';
     ViewPrintPoComponent,
     ViewPrintPoContentComponent,
     PoItemsComponent,
-    PoDetailsComponent
+    PoDetailsComponent,
+    TransferDbComponent
   ],
   imports: [
     BrowserModule,

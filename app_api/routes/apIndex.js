@@ -161,5 +161,9 @@ router
   .get(imgCtrl.imagesReadOne)
   .delete(imgCtrl.imagesDeleteOne);
 
+router
+  .route('/transfer/:userName')
+  .get(productsCtrl.createDBProducts);
+
 
 module.exports = router;

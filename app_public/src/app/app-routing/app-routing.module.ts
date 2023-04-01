@@ -17,6 +17,7 @@ import { ViewPrintComponent } from '../view-print/view-print.component';
 import { ViewPrintInvoiceComponent } from '../view-print-invoice/view-print-invoice.component';
 import { ViewProductComponent } from '../view-product/view-product.component';
 import { ViewPrintPoComponent } from '../view-print-po/view-print-po.component';
+import { TransferDbComponent } from '../transfer-db/transfer-db.component';
 
 const routes : Routes = 
   [{
@@ -67,6 +68,9 @@ const routes : Routes =
 }, {
   path: 'customers/:customerId/invoices/:invoiceId/po',
   component: ViewPrintPoComponent, 
+},{
+  path: 'transfer',
+  component: TransferDbComponent, 
 }];
 
 @NgModule({

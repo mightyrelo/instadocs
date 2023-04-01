@@ -11,6 +11,7 @@
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a routerLink="customers" routerLinkActive="active" class="nav-link">customers</a></li>
         		<li class="nav-item"><a routerLink="products" routerLinkActive="active" class="nav-link">products</a></li>							
+        		<li *ngIf="isLoggedIn() && getUserName()=='admin'" class="nav-item"><a routerLink="transfer" routerLinkActive="active" class="nav-link">transferDB</a></li>							
 			</ul>
 			<ul class="navbar-nav navbar-right">
         <li class="nav-item"><a routerLinkActive="active" class="nav-link" routerLink="register" *ngIf="!isLoggedIn()">register</a></li>
