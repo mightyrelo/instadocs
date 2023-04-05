@@ -48,6 +48,8 @@ import { ViewPrintPoContentComponent } from './view-print-po-content/view-print-
 import { PoItemsComponent } from './po-items/po-items.component';
 import { PoDetailsComponent } from './po-details/po-details.component';
 import { TransferDbComponent } from './transfer-db/transfer-db.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { QuoteFormSpComponent } from './quote-form-sp/quote-form-sp.component';
 
 
 
@@ -96,7 +98,9 @@ import { TransferDbComponent } from './transfer-db/transfer-db.component';
     ViewPrintPoContentComponent,
     PoItemsComponent,
     PoDetailsComponent,
-    TransferDbComponent
+    TransferDbComponent,
+    QuoteFormComponent,
+    QuoteFormSpComponent
   ],
   imports: [
     BrowserModule,

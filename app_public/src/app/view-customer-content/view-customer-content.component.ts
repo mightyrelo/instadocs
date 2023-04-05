@@ -113,90 +113,11 @@ export class ViewCustomerContentComponent implements OnInit {
       .then(foundProducts => this.products = foundProducts);
   }
 
-  public getProductByName(name: string): Promise<Product> {
-    return this.productDataService.getProductByName(name);
-  }
-
-  formIsValid(){
-    if(!this.formQuoteItem.product || !this.formQuoteItem.quantity){
-      return false;
-    }
-    return true;
-  }
-
   getCustomers() : void {
     this.customerDataService.getCustomers(this.getUserName())
       .then(response => this.customers = response);
   }
 
-  onQuoteSubmit(){
-    this.formError = '';
-    this.itemAdded = false;
-    if(this.formIsValid()) {
-      //get last item and set its summary
-      this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
-      .then((quotation: Quote) => {
-        console.log('quotation saved', quotation);
-        let quotes = this.dbCustomer.quotations.slice(0);
-        quotes.unshift(quotation);
-        this.dbCustomer.quotations = quotes;
-        this.resetAndHideQuoteForm();
-      });
-    } else {
-      this.formError = 'No items entered, please try again.';
-    }
-
-  }
-
-  //Add qoute item to quotation
-  public addItemToQuote() : void {
-    
-    this.formError = '';
-
-    this.getProductByName(this.formQuoteItem.product)
-    .then(foundProduct => {
-      this.currentProduct = foundProduct;
-      this.formQuoteItem.productAmount = this.currentProduct.selling;
-      this.formQuoteItem.description = this.currentProduct.description;
-      this.formQuoteItem.productExpense = this.currentProduct.trade;
-      this.formQuoteItem.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, ` 
-      this.newQuotation.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, `;
-      this.newQuotation.amount += this.formQuoteItem.quantity * this.currentProduct.selling;
-      this.newQuotation.profit += this.formQuoteItem.quantity * (this.currentProduct.selling - this.currentProduct.trade);
-      this.newQuotation.expense += this.formQuoteItem.quantity * this.currentProduct.trade; 
-
-      this.itemAdded = true;
-
-      this.newQuotation.quoteItems.push({
-        product: this.formQuoteItem.product,
-        quantity: this.formQuoteItem.quantity,
-        productAmount: this.formQuoteItem.productAmount,
-        productExpense: this.formQuoteItem.productExpense,
-        description: this.formQuoteItem.description
-      });
-     
-    }); 
-
-  } 
-
-
-  public resetAndHideQuoteForm(){
-    this.formError = '';
-    this.displayForm = false;
-    this.formQuoteItem.product = '';
-    this.formQuoteItem.quantity = null;
-    this.newQuotation.quoteItems.splice(0, this.newQuotation.quoteItems.length);
-    this.newQuotation.summary = '';
-    this.newQuotation.profit = 0;
-    this.newQuotation.expense = 0;
-    this.newQuotation.amount = 0;
-    this.currentProduct = null;
-    this.formQuoteItem.summary = '';
-    this.formQuoteItem.productAmount = null;
-    this.formQuoteItem.productExpense = null;
-    this.itemAdded = false;
-
-  }
 
   //deleting quote
   flagged(customerId: string, quoteId: string) {
@@ -377,19 +298,19 @@ export class ViewCustomerContentComponent implements OnInit {
     this.getCustomers();
   }
 
-  public onCategorySubmit() : void {
-    //this.formError2 = '';
-    const idx = this.categoriesFull.indexOf(this.formCat.category);
-    this.productDataService.getCategoryProducts(this.getUserName(), this.categories[idx])
-      .then(foundProducts => {this.products = foundProducts;this.categorySelected = false;});
-    
+  
+
+  public openQuoteForm() : void {
+    this.displayForm = true;
+
+
   }
 
 
   ngOnInit() {
     this.getCustomers();
     this.readProducts();
-    for(let i = 1; i <= 30;i++){
+    for(let i = 1; i <= 100;i++){
         this.counts[i] = i;
     }
   }
