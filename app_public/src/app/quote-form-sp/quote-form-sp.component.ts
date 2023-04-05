@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-quote-form-sp',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-form-sp.component.css']
 })
 export class QuoteFormSpComponent implements OnInit {
+
+  @Input() dbCustomer : any;
 
   constructor() { }
 

@@ -87,7 +87,8 @@
                   </small>
                 </div>
                 <div *ngIf="displayForm" class="col-12 col-md-8">
-                    <app-quote-form [dbCustomer]="dbCustomer"></app-quote-form>   
+                    <app-quote-form-sp *ngIf="getUserName()=='thabethe'" [dbCustomer]="dbCustomer"></app-quote-form-sp>   
+                    <app-quote-form *ngIf="getUserName()!='thabethe'" [dbCustomer]="dbCustomer"></app-quote-form>   
                 </div>
                 <div *ngFor="let quote of dbCustomer.quotations | mostRecentFirst" class="row review">
                   <div class="col-12 no-gutters review-header">

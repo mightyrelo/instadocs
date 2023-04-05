@@ -98,7 +98,7 @@ export class ViewCustomerContentComponent implements OnInit {
     return this.authService.isLoggedIn();
   }
 
-  private getUserName() : string {
+  public getUserName() : string {
     if(this.isLoggedIn())
     {
       const {name} = this.authService.getCurrentUser();
@@ -302,7 +302,6 @@ export class ViewCustomerContentComponent implements OnInit {
 
   public openQuoteForm() : void {
     this.displayForm = true;
-
 
   }
 
