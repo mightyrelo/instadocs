@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-quote-form-sp',
@@ -8,8 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class QuoteFormSpComponent implements OnInit {
 
   @Input() dbCustomer : any;
-
+  @Input() displayForm : boolean;
+  @Output() formClosedEvent = new EventEmitter<boolean>();
   constructor() { }
+
+  public onFormClosedEvent(eventData : boolean) {
+    this.formClosedEvent.emit(false);
+  }
 
   ngOnInit() {
   }

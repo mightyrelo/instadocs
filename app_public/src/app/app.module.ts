@@ -50,6 +50,10 @@ import { PoDetailsComponent } from './po-details/po-details.component';
 import { TransferDbComponent } from './transfer-db/transfer-db.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteFormSpComponent } from './quote-form-sp/quote-form-sp.component';
+import { QoutePvComponent } from './qoute-pv/qoute-pv.component';
+import { QouteAcComponent } from './qoute-ac/qoute-ac.component';
+import { QouteBatComponent } from './qoute-bat/qoute-bat.component';
+import { QouteOtherComponent } from './qoute-other/qoute-other.component';
 
 
 
@@ -100,7 +104,11 @@ import { QuoteFormSpComponent } from './quote-form-sp/quote-form-sp.component';
     PoDetailsComponent,
     TransferDbComponent,
     QuoteFormComponent,
-    QuoteFormSpComponent
+    QuoteFormSpComponent,
+    QoutePvComponent,
+    QouteAcComponent,
+    QouteBatComponent,
+    QouteOtherComponent
   ],
   imports: [
     BrowserModule,

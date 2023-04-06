@@ -305,6 +305,10 @@ export class ViewCustomerContentComponent implements OnInit {
 
   }
 
+  public onFormClosedEvent(eventData : boolean) {
+    this.displayForm = eventData;
+  }
+
 
   ngOnInit() {
     this.getCustomers();

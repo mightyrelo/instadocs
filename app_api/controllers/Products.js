@@ -214,23 +214,44 @@ const createProduct = (req, res, data) => {
 const createDBProducts = (req, res) => {
     const products = [];
     let count = 0;
-    fs.createReadStream('./regal_prices.csv')
-      .pipe(csvParser({separator: ';'}))
-      .on("data", (data)=> {
-        if((Number(data.trade)-1) != -1){
-            if(!isNaN(Number(data.trade)) && !isNaN(Number(data.retail))){
-                count++;
-                products.push(data);
-                createProduct(req, res, data);    
-            }
-        }
-
-        })
-      .on("end", ()=>{
-        console.log(count,' products read from cvs to db.');
-        sendJSONResponse(res, 201, products);
-      });
-      
+    if(req.params.userName == 'thabethe') {
+        fs.createReadStream('./solar_list.csv')
+        .pipe(csvParser({separator: ';'}))
+        .on("data", (data)=> {
+            console.log(data)
+          /*if((Number(data.trade)-1) != -1){
+              if(!isNaN(Number(data.trade)) && !isNaN(Number(data.retail))){
+                  count++;
+                  products.push(data);
+                  createProduct(req, res, data);    
+              }
+          }*/
+  
+          })
+        .on("end", ()=>{
+          console.log(count,' products read from cvs to db.');
+          //sendJSONResponse(res, 201, products);
+        });  
+    }
+    else {
+        fs.createReadStream('./regal_prices.csv')
+        .pipe(csvParser({separator: ';'}))
+        .on("data", (data)=> {
+          if((Number(data.trade)-1) != -1){
+              if(!isNaN(Number(data.trade)) && !isNaN(Number(data.retail))){
+                  count++;
+                  products.push(data);
+                  createProduct(req, res, data);    
+              }
+          }
+  
+          })
+        .on("end", ()=>{
+          console.log(count,' products read from cvs to db.');
+          //sendJSONResponse(res, 201, products);
+        });         
+    }
+       
 };
 
 module.exports = {
