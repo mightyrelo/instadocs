@@ -11,7 +11,7 @@
             <label  for="product">Product</label>
             <select [(ngModel)]="formQuoteItem.product" class="form-control input-sm" id="name" name="product">
              <option></option>
-             <option *ngFor="let product of products">{{product.name}}</option>
+             <option *ngFor="let product of prods">{{product.name}}</option>
             </select>
           </div>
           <div class="col-3 col-md-3">

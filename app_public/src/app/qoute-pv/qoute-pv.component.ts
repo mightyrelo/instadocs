@@ -18,6 +18,7 @@ export class QoutePvComponent implements OnInit {
   @Input() dbCustomer: Customer;
   @Input() displayForm: boolean;
   @Output() formClosedEvent = new EventEmitter<boolean>();
+  @Input() prods : any;
 
   public closeForm : boolean = false;
 

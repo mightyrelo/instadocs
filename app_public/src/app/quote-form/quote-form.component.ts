@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Product } from '../product';
 import { ProductDataService } from '../product-data.service';
@@ -16,16 +16,22 @@ export class QuoteFormComponent implements OnInit {
 
 
   @Input() dbCustomer: Customer;
+  @Input() dbProducts: Product;
+  @Input() displayForm3: boolean;
+  @Input() displayForm: boolean;
+  @Output() formClosedEvent2 = new EventEmitter<boolean>();
 
   //form processing
   public formError  = '';
-  public displayForm : boolean = false;
+  //public displayForm : boolean = true;
 
   public products : Product[];
 
   public counts = [];
 
   public itemAdded : boolean;
+
+  public closedForm : boolean = false;
 
   public formCat = {
     category: ''
@@ -146,7 +152,9 @@ export class QuoteFormComponent implements OnInit {
 
 
   public resetAndHideQuoteForm(){
+    console.log('why nt');
     this.formError = '';
+    //this.displayForm3 = false;
     this.displayForm = false;
     this.formQuoteItem.product = '';
     this.formQuoteItem.quantity = null;
@@ -159,7 +167,10 @@ export class QuoteFormComponent implements OnInit {
     this.formQuoteItem.summary = '';
     this.formQuoteItem.productAmount = null;
     this.formQuoteItem.productExpense = null;
+    this.formClosedEvent2.emit(false);
+    console.log('emitted false');
     this.itemAdded = false;
+    this.closedForm = true;
 
   }
 

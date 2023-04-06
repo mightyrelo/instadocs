@@ -206,7 +206,7 @@ const createProduct = (req, res, data) => {
                 console.log(err);
                 sendJSONResponse(res, 400, err);
             } else {
-                console.log(product);
+                //console.log(product);
             }
         });
     }

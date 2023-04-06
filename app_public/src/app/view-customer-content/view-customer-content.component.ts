@@ -22,6 +22,7 @@ export class ViewCustomerContentComponent implements OnInit {
   //form processing
   public formError  = '';
   public displayForm : boolean = false;
+  public displayForm3 : boolean = true;
 
   public formQuoteItem : QuoteItem = {
     product: '',
@@ -109,8 +110,9 @@ export class ViewCustomerContentComponent implements OnInit {
   }
 
   public readProducts(): void {
+    
     this.productDataService.getProducts(this.getUserName())
-      .then(foundProducts => this.products = foundProducts);
+      .then(foundProducts => {this.products = foundProducts;});
   }
 
   getCustomers() : void {
@@ -285,6 +287,7 @@ export class ViewCustomerContentComponent implements OnInit {
   public resetAndHideCustomerForm() : void {
     this.formError2 = '';
     this.displayForm2 = false;
+    this.displayForm3 = false;
     this.formCustomer.name = '',
     this.formCustomer.contact = null;
     this.formCustomer.address = '';
@@ -301,18 +304,40 @@ export class ViewCustomerContentComponent implements OnInit {
   
 
   public openQuoteForm() : void {
+    console.log('here we are', this.displayForm);
     this.displayForm = true;
-
   }
 
   public onFormClosedEvent(eventData : boolean) {
     this.displayForm = eventData;
   }
+  public onFormClosedEvent2(eventData : boolean) {
+    this.displayForm = eventData;
+  }
+
+  public resetAndHideQuoteForm(){
+    this.formError = '';
+   // this.displayForm = false;
+    this.formQuoteItem.product = '';
+    this.formQuoteItem.quantity = null;
+    this.newQuotation.quoteItems.splice(0, this.newQuotation.quoteItems.length);
+    this.newQuotation.summary = '';
+    this.newQuotation.profit = 0;
+    this.newQuotation.expense = 0;
+    this.newQuotation.amount = 0;
+    this.currentProduct = null;
+    this.formQuoteItem.summary = '';
+    this.formQuoteItem.productAmount = null;
+    this.formQuoteItem.productExpense = null;
+    this.itemAdded = false;
+    this.displayForm = false;
+  }
 
 
   ngOnInit() {
     this.getCustomers();
-    this.readProducts();
+    this.productDataService.getCategoryProducts(this.getUserName(), 'PV')
+      .then(rsp => this.products = rsp);
     for(let i = 1; i <= 100;i++){
         this.counts[i] = i;
     }
