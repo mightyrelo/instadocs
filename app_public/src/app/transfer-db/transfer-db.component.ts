@@ -11,7 +11,8 @@ export class TransferDbComponent implements OnInit {
 
   public formError = '';
   public formUser = {
-    name: ''
+    name: '',
+    pricelist: ''
   }
   public dataTransferred : boolean = false;
 
@@ -21,7 +22,7 @@ export class TransferDbComponent implements OnInit {
   ) { }
 
   public onUserNameSubmit() : void {
-    this.dbTransferService.transferDB(this.formUser.name)
+    this.dbTransferService.transferDB(this.formUser)
       .then(rsp => {console.log('transferred'); this.dataTransferred = true;});
 
   }

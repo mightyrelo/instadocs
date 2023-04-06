@@ -5,6 +5,10 @@
      <label for="name">username</label>
      <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="formUser.name">
   </div> 
+  <div class="form-group heading">
+     <label for="pricelist">pricelist</label>
+     <input class="form-control" id="pricelist" name="pricelist" type="text" placeholder="" [(ngModel)]="formUser.pricelist">
+  </div> 
   <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
 </form>
 <p class="heading" *ngIf="dataTransferred" class="heding">Data Transferred!</p>
