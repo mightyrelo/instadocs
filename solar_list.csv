@@ -1,9 +1,6 @@
 description;name;qty;rate;cost;dist;price;inner;category;margin
 ;;;;R33 040.00;R33 040.00;R41 822.78;;;0.79
-Mono /Poly  Solar PV  Panel (Wattage & QTY);455;6;3000.00;R18 000.00;R18 000.00;R22 784.81;pv;PV;
 MC4 connectors  Twin pack ;;2;90.00;R180.00;R180.00;R227.85;other;PV;
-Inverter 5kW HV  48VDC;;1;12000.00;R12 000.00;R12 000.00;R15 189.87;inv;PV;
-Panel Mount IBR/ROOF 3;;2;1190.00;R2 380.00;R2 380.00;R3 012.66;roof;PV;
 Flat Roof custom made stand;;0;8000.00;R0.00;R0.00;R0.00;roof;PV;
 Labour for PANEL Install +connections (3panels);;6;80.00;R480.00;R480.00;R607.59;other;PV;
 ;;;;;;;;;
@@ -75,16 +72,16 @@ Battery stand  (battery housing) brackets;;0;828.00;R0.00;R0.00;R0.00;batstand;b
 Travelling KM ;;10;6.00;;;R60.00;trvl;TRVLAB;
 Labour Retrofit  kit  per  Geyser;;0;4000.00;;;R0.00;;TRVLAB;
 "Installation labour (Engineering ;Electrical Interface +commissioning) ";;8;450.00;R3 600;R2 000.00;R3 600.00;lab;TRVLAB;
-Assessment ;;1;650.00;R650;;R650.00;lab;TRVLAB;
-Out of town ;;0;1200.00;R0;;R0.00;tvrl;TRVLAB;
-Canadian PV;305;;2100.00;;;;panel;PV;
-Canadian PV;365;;2500.00;;;;panel;PV;
-Canadian PV;410;;2650.00;;;;panel;PV;
-Canadian PV;455;;3000.00;;;;panel;PV;
-Canadian PV;490;;3250.00;;;;panel;PV;
-PV Solar  Panel Mono;545;;3500.00;;;;panel;PV;
-PV Solar Panel  Mono;595;;3700.00;;;;panel;PV;
-Inverter 3kW 24VDC ;3000;;5750.00;1500W PV Max;;;inv;PV;
+Assessment;;1;650.00;R650;;R650.00;lab;TRVLAB;
+Out of town;;0;1200.00;R0;;R0.00;tvrl;TRVLAB;
+305W;Canadian PV;;2100.00;;;;panel;PV;
+365W;Canadian PV;;2500.00;;;;panel;PV;
+410W;Canadian PV;;2650.00;;;;panel;PV;
+455W;Canadian PV;;3000.00;;;;panel;PV;
+490W;Canadian PV;;3250.00;;;;panel;PV;
+545W;PV Solar  Panel Mono;;3500.00;;;;panel;PV;
+595W;PV Solar Panel  Mono;;3700.00;;;;panel;PV;
+Inverter 3kW 24VDC;3000;;5750.00;1500W PV Max;;;inv;PV;
 Inverter 3kW  48VDC;3000;;6999.00;;;;inv;PV;
 Inverter 5kW LV 48VDC;5000;;11000.00;;;;inv;PV;
 Inverter 5kW HV  48VDC;5000;;12000.00;;;;inv;PV;

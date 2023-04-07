@@ -304,7 +304,6 @@ export class ViewCustomerContentComponent implements OnInit {
   
 
   public openQuoteForm() : void {
-    console.log('here we are', this.displayForm);
     this.displayForm = true;
   }
 

@@ -152,7 +152,6 @@ export class QuoteFormComponent implements OnInit {
 
 
   public resetAndHideQuoteForm(){
-    console.log('why nt');
     this.formError = '';
     //this.displayForm3 = false;
     this.displayForm = false;
@@ -168,7 +167,6 @@ export class QuoteFormComponent implements OnInit {
     this.formQuoteItem.productAmount = null;
     this.formQuoteItem.productExpense = null;
     this.formClosedEvent2.emit(false);
-    console.log('emitted false');
     this.itemAdded = false;
     this.closedForm = true;
 
