@@ -7,6 +7,23 @@ export class QuoteItem {
     productExpense: number;
 }
 
+export class QuoteItem2 {
+    panel: string;
+    quantityP: number;
+    panelAmount: number;
+    inverter: string;
+    quantityI: number;
+    inverterAmount: number;
+    roof: string;
+    quantityR: number;
+    roofAmount: number;
+    pvAmount: number;
+    description: string;
+    summary: string;
+    productExpense: number;
+
+}
+
 export class Quote {
     _id: string;
     quoteItems: QuoteItem[];

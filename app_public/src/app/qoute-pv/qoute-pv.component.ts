@@ -6,6 +6,7 @@ import { AuthenticationService } from '../authentication.service';
 import { Customer, Quote } from '../customer';
 import { QuotationDataService } from '../quotation-data.service';
 import { QuoteItem } from '../customer';
+import {QuoteItem2} from '../customer';
 
 
 
@@ -49,6 +50,23 @@ export class QoutePvComponent implements OnInit {
     description: 'd',
     summary: '',
     productExpense: null,
+
+  }
+
+  public formQuoteItem2 : QuoteItem2 = {
+    panel: '',
+    quantityP: null,
+    panelAmount: null,
+    inverter: '',
+    quantityI: null,
+    inverterAmount: null,
+    roof: '',
+    quantityR: null,
+    roofAmount: null,
+    pvAmount: null,
+    description: '',
+    summary: null,
+    productExpense: null
 
   }
 
@@ -101,6 +119,7 @@ export class QoutePvComponent implements OnInit {
   public getPanels(cat: string) : void {
     for(let i = 0; i < this.prods.length; i++){
       if(this.prods[i].subCategory == 'panel') {
+        console.log('same panels');
         this.panels.push(this.prods[i]);
       }
     }
@@ -108,6 +127,7 @@ export class QoutePvComponent implements OnInit {
   public getRoofs(cat: string) : void {
     for(let i = 0; i < this.prods.length; i++){
       if(this.prods[i].subCategory == 'roof') {
+        console.log('same roofs'); 
         this.roofs.push(this.prods[i]);
       }
     }
@@ -116,6 +136,7 @@ export class QoutePvComponent implements OnInit {
   public getInveters(cat: string) : void {
     for(let i = 0; i < this.prods.length; i++){
       if(this.prods[i].subCategory == 'inv') {
+        console.log('same inverters');
         this.inverters.push(this.prods[i]);
       }
     }
