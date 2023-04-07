@@ -20,7 +20,12 @@ export class QuoteItem2 {
     pvAmount: number;
     description: string;
     summary: string;
-    productExpense: number;
+    panelExpense: number;
+    inverterExpense: number;
+    roofExpense: number;
+    roofDescription: string;
+    panelDescription: string
+    invDescription;
 
 }
 
@@ -33,6 +38,7 @@ export class Quote {
     profit: number;
     flagged: boolean;
 }
+
 
 export class Invoice {
     _id: string;

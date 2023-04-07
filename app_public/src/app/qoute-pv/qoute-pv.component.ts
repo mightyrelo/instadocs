@@ -42,6 +42,9 @@ export class QoutePvComponent implements OnInit {
   public categorySelected = false;
 
   public currentProduct: Product;
+  public currentPanel: Product;
+  public currentInverter: Product;
+  public currentRoof: Product;
 
   public formQuoteItem : QuoteItem = {
     product: '',
@@ -66,7 +69,13 @@ export class QoutePvComponent implements OnInit {
     pvAmount: null,
     description: '',
     summary: null,
-    productExpense: null
+
+    panelExpense: null,
+    inverterExpense: null,
+    roofExpense: null,
+    roofDescription: null,
+    panelDescription: null,
+    invDescription: null
 
   }
 
@@ -143,69 +152,112 @@ export class QoutePvComponent implements OnInit {
   }
 
   formIsValid(){
-    if(!this.formQuoteItem.product || !this.formQuoteItem.quantity){
+    if(!this.formQuoteItem2.panel || !this.formQuoteItem2.quantityP  || !this.formQuoteItem2.inverter
+       || !this.formQuoteItem2.quantityI || !this.formQuoteItem2.roof || !this.formQuoteItem2.quantityR){
       return false;
     }
     return true;
-  }
-
-  onQuoteSubmit(){
-    this.productDataService.getCategoryProducts(this.getUserName(), 'PV')
-      .then(foundProducts => {
-        this.products = foundProducts;
-        this.categorySelected = false;
-        this.formError = '';
-        this.itemAdded = false;
-        if(this.formIsValid()) {
-          //get last item and set its summary
-          this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
-          .then((quotation: Quote) => {
-            console.log('quotation saved', quotation);
-            let quotes = this.dbCustomer.quotations.slice(0);
-            quotes.unshift(quotation);
-            this.dbCustomer.quotations = quotes;
-            this.resetAndHideQuoteForm();
-      });
-    } else {
-      this.formError = 'No items entered, please try again.';
-    }
-      });
   }
 
   public getProductByName(name: string): Promise<Product> {
     return this.productDataService.getProductByName(name);
   }
 
-  public addItemToQuote() : void {
-    
+  public onQuoteSubmit() : void {
     this.formError = '';
 
-    this.getProductByName(this.formQuoteItem.product)
+    this.getProductByName(this.formQuoteItem2.panel)
     .then(foundProduct => {
-      this.currentProduct = foundProduct;
-      this.formQuoteItem.productAmount = this.currentProduct.selling;
-      this.formQuoteItem.description = this.currentProduct.description;
-      this.formQuoteItem.productExpense = this.currentProduct.trade;
-      this.formQuoteItem.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, ` 
-      this.newQuotation.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, `;
-      this.newQuotation.amount += this.formQuoteItem.quantity * this.currentProduct.selling;
-      this.newQuotation.profit += this.formQuoteItem.quantity * (this.currentProduct.selling - this.currentProduct.trade);
-      this.newQuotation.expense += this.formQuoteItem.quantity * this.currentProduct.trade; 
+      this.currentPanel = foundProduct;
+      this.formQuoteItem2.panelAmount = this.currentPanel.selling;
+      this.formQuoteItem2.panelDescription = this.currentPanel.description;
+      this.formQuoteItem2.panelExpense = this.currentPanel.trade;
+      this.formQuoteItem2.summary += `${this.formQuoteItem2.quantityP} x ${this.currentPanel.name}, ` 
+      this.newQuotation.summary += `${this.formQuoteItem2.quantityP} x ${this.currentPanel.name}, `;
+      this.newQuotation.amount += this.formQuoteItem2.quantityP * this.currentPanel.selling;
+      this.newQuotation.profit += this.formQuoteItem2.quantityP * (this.currentPanel.selling - this.currentPanel.trade);
+      this.newQuotation.expense += this.formQuoteItem2.quantityP * this.currentPanel.trade; 
+
+      this.getProductByName(this.formQuoteItem2.inverter)
+        .then(inverter => {
+          this.currentInverter = inverter;
+          this.formQuoteItem2.inverterAmount = this.currentInverter.selling;
+          this.formQuoteItem2.invDescription = this.currentInverter.description;
+          this.formQuoteItem2.inverterExpense = this.currentInverter.trade;
+          this.formQuoteItem2.summary += `${this.formQuoteItem2.quantityI} x ${this.currentInverter.name}, ` 
+          this.newQuotation.summary += `${this.formQuoteItem2.quantityI} x ${this.currentInverter.name}, `;
+          this.newQuotation.amount += this.formQuoteItem2.quantityI * this.currentInverter.selling;
+          this.newQuotation.profit += this.formQuoteItem2.quantityI * (this.currentInverter.selling - this.currentInverter.trade);
+          this.newQuotation.expense += this.formQuoteItem2.quantityI * this.currentInverter.trade;
+
+          this.getProductByName(this.formQuoteItem2.roof)
+            .then(roof => {
+              this.currentRoof = roof;
+              this.formQuoteItem2.roofAmount = this.currentRoof.selling;
+              this.formQuoteItem2.roofDescription = this.currentRoof.description;
+               this.formQuoteItem2.roofExpense = this.currentRoof.trade;
+              this.formQuoteItem2.summary += `${this.formQuoteItem2.quantityR} x ${this.currentRoof.name}, ` 
+              this.newQuotation.summary += `${this.formQuoteItem2.quantityR} x ${this.currentRoof.name}, `;
+              this.newQuotation.amount += this.formQuoteItem2.quantityR * this.currentRoof.selling;
+               this.newQuotation.profit += this.formQuoteItem2.quantityR * (this.currentRoof.selling - this.currentRoof.trade);
+              this.newQuotation.expense += this.formQuoteItem2.quantityR * this.currentRoof.trade;
+            })
+
+        });
 
       this.itemAdded = true;
 
       this.newQuotation.quoteItems.push({
-        product: this.formQuoteItem.product,
-        quantity: this.formQuoteItem.quantity,
-        productAmount: this.formQuoteItem.productAmount,
-        productExpense: this.formQuoteItem.productExpense,
-        description: this.formQuoteItem.description
+        product: this.formQuoteItem2.panel,
+        quantity: this.formQuoteItem2.quantityP,
+        productAmount: this.formQuoteItem2.panelAmount,
+        productExpense: this.formQuoteItem2.panelExpense,
+        description: this.formQuoteItem2.panelDescription
       });
      
+      this.newQuotation.quoteItems.push({
+        product: this.formQuoteItem2.inverter,
+        quantity: this.formQuoteItem2.quantityI,
+        productAmount: this.formQuoteItem2.inverterAmount,
+        productExpense: this.formQuoteItem2.inverterExpense,
+        description: this.formQuoteItem2.invDescription
+      });
+    
+      this.newQuotation.quoteItems.push({
+        product: this.formQuoteItem2.roof,
+        quantity: this.formQuoteItem2.quantityR,
+        productAmount: this.formQuoteItem2.roofAmount,
+        productExpense: this.formQuoteItem2.roofExpense,
+        description: this.formQuoteItem2.roofDescription
+      });
+
+      this.doSubmitQuote();
+
+     
     }); 
+
   }
 
+  public doSubmitQuote() : void {
+    this.formError = '';
+    this.itemAdded = false;
+    if(this.formIsValid()) {
+      //get last item and set its summary
+      this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
+      .then((quotation: Quote) => {
+        console.log('quotation saved', quotation);
+        let quotes = this.dbCustomer.quotations.slice(0);
+        quotes.unshift(quotation);
+        this.dbCustomer.quotations = quotes;
+        this.resetAndHideQuoteForm();
+      });
+    } else {
+      this.formError = 'No items entered, please try again.';
+    }
 
+  }
+
+  
   public resetAndHideQuoteForm(){
     this.formError = '';
    // this.displayForm = false;
@@ -217,13 +269,29 @@ export class QoutePvComponent implements OnInit {
     this.newQuotation.expense = 0;
     this.newQuotation.amount = 0;
     this.currentProduct = null;
-    this.formQuoteItem.summary = '';
-    this.formQuoteItem.productAmount = null;
-    this.formQuoteItem.productExpense = null;
     this.itemAdded = false;
     this.formClosedEvent.emit(false);
     this.displayForm = false;
     this.closeForm = true;
+    this.formQuoteItem2.panel =  null;
+    this.formQuoteItem2.quantityP = null;
+    this.formQuoteItem2.panelAmount = 0;
+    this.formQuoteItem2.inverter =  null;
+    this.formQuoteItem2.quantityI = null;
+    this.formQuoteItem2.inverterAmount = null;
+    this.formQuoteItem2.roof =  null;
+    this.formQuoteItem2.quantityR = null;
+    this.formQuoteItem2.roofAmount = null;
+    this.formQuoteItem2.pvAmount = null;
+    this.formQuoteItem2.description = null;
+    this.formQuoteItem2.summary = null;
+
+    this.formQuoteItem2.panelExpense = null;
+    this.formQuoteItem2.inverterExpense = null;
+    this.formQuoteItem2.roofExpense = null;
+    this.formQuoteItem2.roofDescription = null;
+    this.formQuoteItem2.panelDescription = null;
+    this.formQuoteItem2.invDescription = null;
 
   }
 

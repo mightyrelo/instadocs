@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Customer } from '../customer';
 
 @Component({
   selector: 'app-quote-form-sp',
@@ -14,6 +15,7 @@ export class QuoteFormSpComponent implements OnInit {
   constructor() { }
 
   public allProducts = [];
+  public customer : Customer
 
   public onFormClosedEvent(eventData : boolean) {
     this.formClosedEvent.emit(false);
@@ -21,6 +23,7 @@ export class QuoteFormSpComponent implements OnInit {
 
   ngOnInit() {
     this.allProducts = this.dbProducts;
+    this.customer = this.dbCustomer;
   }
 
 }
