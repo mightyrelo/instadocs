@@ -1,11 +1,11 @@
 description;name;qty;rate;cost;dist;price;inner;category;margin
 ;;;;R33 040.00;R33 040.00;R41 822.78;;;0.79
 Mono /Poly  Solar PV  Panel (Wattage & QTY);455;6;3000.00;R18 000.00;R18 000.00;R22 784.81;pv;PV;
-MC4 connectors  Twin pack ;;2;90.00;R180.00;R180.00;R227.85;pv;PV;
-Inverter 5kW HV  48VDC;;1;12000.00;R12 000.00;R12 000.00;R15 189.87;pv;PV;
-Panel Mount IBR/ROOF 3;;2;1190.00;R2 380.00;R2 380.00;R3 012.66;pv;PV;
-Flat Roof custom made stand;;0;8000.00;R0.00;R0.00;R0.00;pv;PV;
-Labour for PANEL Install +connections (3panels);;6;80.00;R480.00;R480.00;R607.59;pv;PV;
+MC4 connectors  Twin pack ;;2;90.00;R180.00;R180.00;R227.85;other;PV;
+Inverter 5kW HV  48VDC;;1;12000.00;R12 000.00;R12 000.00;R15 189.87;inv;PV;
+Panel Mount IBR/ROOF 3;;2;1190.00;R2 380.00;R2 380.00;R3 012.66;roof;PV;
+Flat Roof custom made stand;;0;8000.00;R0.00;R0.00;R0.00;roof;PV;
+Labour for PANEL Install +connections (3panels);;6;80.00;R480.00;R480.00;R607.59;other;PV;
 ;;;;;;;;;
 Cabling Material PV and battery only;;;;R4 910.00;R4 910.00;R6 215.19;;;
 PV Solar panel wire 4mm sq  40Meter;;45;22.00;R990.00;R990.00;R1 253.16;wire;PVCABLE;

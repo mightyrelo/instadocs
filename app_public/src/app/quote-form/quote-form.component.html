@@ -39,7 +39,55 @@
                           <div class="col-2 col-md-2">
                             <small><button (click)="addItemToQuote()" type="button" role="button" class="btn-primary sm-button"><i class="fa-sharp fa-solid fa-cart-plus"></i></button></small>
                           </div>
+                      </div> 
+                       <div class="form-group row">
+                          <div class="col-7 col-md-7">
+                            <label  for="product">Panel</label>
+                            <select [(ngModel)]="formQuoteItem.product" class="form-control input-sm" id="name" name="product">
+                             <option></option>
+                             <option *ngFor="let product of products">{{product.name}}</option>
+                            </select>
+                          </div>
+                          <div class="col-3 col-md-3">
+                            <label  for="product">Qty</label>
+                            <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="name" name="quantity">
+                             <option></option>
+                             <option *ngFor="let item of counts">{{item}}</option>
+                            </select>                         
+                          </div>
                       </div>  
+                       <div class="form-group row">
+                          <div class="col-7 col-md-7">
+                            <label  for="product">Inverter</label>
+                            <select [(ngModel)]="formQuoteItem.product" class="form-control input-sm" id="name" name="product">
+                             <option></option>
+                             <option *ngFor="let product of products">{{product.name}}</option>
+                            </select>
+                          </div>
+                          <div class="col-3 col-md-3">
+                            <label  for="product">Qty</label>
+                            <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="name" name="quantity">
+                             <option></option>
+                             <option *ngFor="let item of counts">{{item}}</option>
+                            </select>                         
+                          </div>
+                      </div>
+                       <div class="form-group row">
+                          <div class="col-7 col-md-7">
+                            <label  for="product">Roof</label>
+                            <select [(ngModel)]="formQuoteItem.product" class="form-control input-sm" id="name" name="product">
+                             <option></option>
+                             <option *ngFor="let product of products">{{product.name}}</option>
+                            </select>
+                          </div>
+                          <div class="col-3 col-md-3">
+                            <label  for="product">Qty</label>
+                            <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="name" name="quantity">
+                             <option></option>
+                             <option *ngFor="let item of counts">{{item}}</option>
+                            </select>                         
+                          </div>
+                      </div>     
                       <div class="form-group">
                       </div>
                       <small><button  type="submit" role="button" class="btn-primary sm-button">quote</button></small>

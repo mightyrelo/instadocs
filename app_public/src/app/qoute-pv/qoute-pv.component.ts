@@ -8,6 +8,7 @@ import { QuotationDataService } from '../quotation-data.service';
 import { QuoteItem } from '../customer';
 
 
+
 @Component({
   selector: 'app-qoute-pv',
   templateUrl: './qoute-pv.component.html',
@@ -18,7 +19,7 @@ export class QoutePvComponent implements OnInit {
   @Input() dbCustomer: Customer;
   @Input() displayForm: boolean;
   @Output() formClosedEvent = new EventEmitter<boolean>();
-  @Input() prods : any;
+  @Input() prods : Product[];
 
   public closeForm : boolean = false;
 
@@ -47,7 +48,8 @@ export class QoutePvComponent implements OnInit {
     productAmount: null,
     description: 'd',
     summary: '',
-    productExpense: null
+    productExpense: null,
+
   }
 
   public newQuotation = {
@@ -60,6 +62,10 @@ export class QoutePvComponent implements OnInit {
     flagged: false,
     _id: ''
   };
+
+  public panels = [];
+  public roofs = [];
+  public inverters = [];
 
 
   constructor(
@@ -90,6 +96,29 @@ export class QoutePvComponent implements OnInit {
         this.products = foundProducts;
         this.categorySelected = false;
       });
+  }
+
+  public getPanels(cat: string) : void {
+    for(let i = 0; i < this.prods.length; i++){
+      if(this.prods[i].subCategory == 'panel') {
+        this.panels.push(this.prods[i]);
+      }
+    }
+  }
+  public getRoofs(cat: string) : void {
+    for(let i = 0; i < this.prods.length; i++){
+      if(this.prods[i].subCategory == 'roof') {
+        this.roofs.push(this.prods[i]);
+      }
+    }
+  }
+
+  public getInveters(cat: string) : void {
+    for(let i = 0; i < this.prods.length; i++){
+      if(this.prods[i].subCategory == 'inv') {
+        this.inverters.push(this.prods[i]);
+      }
+    }
   }
 
   formIsValid(){
@@ -178,6 +207,9 @@ export class QoutePvComponent implements OnInit {
   }
 
   ngOnInit() : void {
+    this.getPanels('panel');
+    this.getInveters('inv');
+    this.getRoofs('roof');
     for(let i = 1; i <= 100;i++){
       this.counts[i] = i;
     }

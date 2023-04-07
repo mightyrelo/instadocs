@@ -200,7 +200,8 @@ const createProduct = (req, res, data) => {
             trade: trade,
             selling: retail,
             userId: userName,
-            category: data.category
+            category: data.category,
+            subCategory: data.inner
         },(err, product)=>{
             if(err) {
                 console.log(err);

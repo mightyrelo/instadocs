@@ -9,4 +9,5 @@ export class Product {
     flagged: boolean;
     userId: string;
     category: string;
+    subCategory: string;
   };

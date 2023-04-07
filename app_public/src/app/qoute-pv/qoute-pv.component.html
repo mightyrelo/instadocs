@@ -7,24 +7,53 @@
           <p>{{formQuoteItem.summary}} added</p>
         </div>
       <div class="form-group row">
-          <div class="col-7 col-md-7">
-            <label  for="product">Product</label>
-            <select [(ngModel)]="formQuoteItem.product" class="form-control input-sm" id="name" name="product">
-             <option></option>
-             <option *ngFor="let product of prods">{{product.name}}</option>
-            </select>
-          </div>
-          <div class="col-3 col-md-3">
-            <label  for="product">Qty</label>
-            <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="name" name="quantity">
-             <option></option>
-             <option *ngFor="let item of counts">{{item}}</option>
-            </select>                         
-          </div>
-          <div class="col-2 col-md-2">
-            <small><button (click)="addItemToQuote()" type="button" role="button" class="btn-primary sm-button"><i class="fa-sharp fa-solid fa-cart-plus"></i></button></small>
-          </div>
-      </div>  
+        <div class="col-7 col-md-7">
+          <label  for="panel">Panel</label>
+          <select [(ngModel)]="formQuoteItem.panel" class="form-control input-sm" id="panel" name="panel">
+           <option *ngFor="let product of panels">{{product.name}}</option> 
+          </select>
+          <p>hello{{panels.length}}</p>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantity">Qty</label>
+          <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="quantity" name="quantity">
+           <option></option>
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="inverter">Inverter</label>
+          <select [(ngModel)]="formQuoteItem.inverter" class="form-control input-sm" id="inverter" name="inverter">
+           <option></option>
+           <option *ngFor="let product of inverters">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantity">Qty</label>
+          <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="quantity" name="quantity">
+           <option></option>
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="roof">Roof</label>
+          <select [(ngModel)]="formQuoteItem.roof" class="form-control input-sm" id="roof" name="roof">
+           <option></option>
+           <option *ngFor="let product of roofs">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantity">Qty</label>
+          <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="quantity" name="quantity">
+           <option></option>
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
       <div class="form-group">
       </div>
       <small><button  type="submit" role="button" class="btn-primary sm-button">quote</button></small>

@@ -34,7 +34,8 @@ export class ViewProductsContentComponent implements OnInit {
     selling: null,
     flagged: false,
     userId: '',
-    category: ''
+    category: '',
+    subCategory: ''
   };
 
   constructor(private productDataService: ProductDataService,

@@ -34,7 +34,8 @@ export class ViewProductContentComponent implements OnInit {
     selling: null,
     flagged: false,
     userId: '',
-    category: ''
+    category: '',
+    subCategory: ''
   };
 
   public isLoggedIn() : boolean {
