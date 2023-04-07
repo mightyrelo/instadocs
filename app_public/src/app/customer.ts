@@ -25,7 +25,15 @@ export class QuoteItem2 {
     roofExpense: number;
     roofDescription: string;
     panelDescription: string
-    invDescription;
+    invDescription: string;
+    labourAmount: number;
+    labourDescription: string;
+    labourExpense: number;
+    quantityL: number;
+    mc4Amount: number;
+    mc4Description: string;
+    mc4Expense: number;
+    quantityMC: number;
 
 }
 

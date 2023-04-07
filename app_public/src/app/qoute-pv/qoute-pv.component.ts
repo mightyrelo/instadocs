@@ -45,6 +45,8 @@ export class QoutePvComponent implements OnInit {
   public currentPanel: Product;
   public currentInverter: Product;
   public currentRoof: Product;
+  public currentLabour: Product;
+  public currentMC4: Product;
 
   public formQuoteItem : QuoteItem = {
     product: '',
@@ -75,7 +77,17 @@ export class QoutePvComponent implements OnInit {
     roofExpense: null,
     roofDescription: null,
     panelDescription: null,
-    invDescription: null
+    invDescription: null,
+
+    labourAmount: null,
+    labourDescription: null,
+    labourExpense: null,
+    quantityL: null,
+
+    mc4Amount: null,
+    mc4Description: null,
+    mc4Expense: null,
+    quantityMC: null,
 
   }
 
@@ -128,7 +140,7 @@ export class QoutePvComponent implements OnInit {
   public getPanels(cat: string) : void {
     for(let i = 0; i < this.prods.length; i++){
       if(this.prods[i].subCategory == 'panel') {
-        console.log('same panels');
+       
         this.panels.push(this.prods[i]);
       }
     }
@@ -136,7 +148,7 @@ export class QoutePvComponent implements OnInit {
   public getRoofs(cat: string) : void {
     for(let i = 0; i < this.prods.length; i++){
       if(this.prods[i].subCategory == 'roof') {
-        console.log('same roofs'); 
+         
         this.roofs.push(this.prods[i]);
       }
     }
@@ -145,7 +157,7 @@ export class QoutePvComponent implements OnInit {
   public getInveters(cat: string) : void {
     for(let i = 0; i < this.prods.length; i++){
       if(this.prods[i].subCategory == 'inv') {
-        console.log('same inverters');
+       
         this.inverters.push(this.prods[i]);
       }
     }
@@ -202,32 +214,79 @@ export class QoutePvComponent implements OnInit {
                this.newQuotation.profit += this.formQuoteItem2.quantityR * (this.currentRoof.selling - this.currentRoof.trade);
               this.newQuotation.expense += this.formQuoteItem2.quantityR * this.currentRoof.trade;
 
-                this.newQuotation.quoteItems.push({
-                product: this.formQuoteItem2.panel,
-                quantity: this.formQuoteItem2.quantityP,
-                productAmount: this.formQuoteItem2.panelAmount,
-                productExpense: this.formQuoteItem2.panelExpense,
-                description: this.formQuoteItem2.panelDescription
-              });
-           
-            //console.log('is null?', this.formQuoteItem2.inverterAmount);
-              this.newQuotation.quoteItems.push({
-                product: this.formQuoteItem2.inverter,
-                quantity: this.formQuoteItem2.quantityI,
-               productAmount: this.formQuoteItem2.inverterAmount,
-                productExpense: this.formQuoteItem2.inverterExpense,
-               description: this.formQuoteItem2.invDescription
-             });
-          
-              this.newQuotation.quoteItems.push({
-                product: this.formQuoteItem2.roof,
-                quantity: this.formQuoteItem2.quantityR,
-                productAmount: this.formQuoteItem2.roofAmount,
-                 productExpense: this.formQuoteItem2.roofExpense,
-                description: this.formQuoteItem2.roofDescription
-             });
-      
-            this.doSubmitQuote();
+              this.getProductByName('Labour for PANEL Install +connections')
+                .then(labour => {
+                  this.currentLabour = labour;
+                  this.formQuoteItem2.labourAmount = this.currentLabour.selling;
+                  this.formQuoteItem2.labourDescription = this.currentLabour.description;
+                  this.formQuoteItem2.labourExpense = this.currentLabour.trade;
+                  this.formQuoteItem2.summary += `${this.formQuoteItem2.quantityP} x ${this.currentLabour.name}, ` 
+                  this.newQuotation.summary += `${this.formQuoteItem2.quantityP} x ${this.currentLabour.name}, `;
+                  this.newQuotation.amount += this.formQuoteItem2.quantityP * this.currentLabour.selling;
+                  this.newQuotation.profit += this.formQuoteItem2.quantityP * (this.currentLabour.selling - this.currentLabour.trade);
+                  this.newQuotation.expense += this.formQuoteItem2.quantityP * this.currentLabour.trade;
+
+                  this.getProductByName('MC4 connectors  Twin pack')
+                    .then(mc => {
+                      this.currentMC4 = mc;
+                      this.formQuoteItem2.mc4Amount = this.currentMC4.selling;
+                      this.formQuoteItem2.mc4Description = this.currentMC4.description;
+                      this.formQuoteItem2.mc4Expense = this.currentMC4.trade;
+                      this.formQuoteItem2.summary += `${this.formQuoteItem2.quantityP/2} x ${this.currentMC4.name}, ` 
+                      this.newQuotation.summary += `${this.formQuoteItem2.quantityP/2} x ${this.currentMC4.name}, `;
+                      this.newQuotation.amount += (this.formQuoteItem2.quantityP/2) * this.currentMC4.selling;
+                      this.newQuotation.profit += (this.formQuoteItem2.quantityP/2) * (this.currentMC4.selling - this.currentMC4.trade);
+                      this.newQuotation.expense += (this.formQuoteItem2.quantityP/2) * this.currentMC4.trade;
+
+                      this.newQuotation.quoteItems.push({
+                        product: this.formQuoteItem2.panel,
+                        quantity: this.formQuoteItem2.quantityP,
+                        productAmount: this.formQuoteItem2.panelAmount,
+                        productExpense: this.formQuoteItem2.panelExpense,
+                        description: this.formQuoteItem2.panelDescription
+                        });
+                   
+                    //console.log('is null?', this.formQuoteItem2.inverterAmount);
+                         this.newQuotation.quoteItems.push({
+                        product: this.formQuoteItem2.inverter,
+                        quantity: this.formQuoteItem2.quantityI,
+                        productAmount: this.formQuoteItem2.inverterAmount,
+                        productExpense: this.formQuoteItem2.inverterExpense,
+                        description: this.formQuoteItem2.invDescription
+                        });
+                         
+                        this.newQuotation.quoteItems.push({
+                        product: this.formQuoteItem2.roof,
+                        quantity: this.formQuoteItem2.quantityR,
+                        productAmount: this.formQuoteItem2.roofAmount,
+                         productExpense: this.formQuoteItem2.roofExpense,
+                        description: this.formQuoteItem2.roofDescription
+                        });
+              
+                         
+                        this.newQuotation.quoteItems.push({
+                        product: 'Labour for PANEL Install +connections',
+                        quantity: this.formQuoteItem2.quantityP,
+                        productAmount: this.formQuoteItem2.labourAmount,
+                         productExpense: this.formQuoteItem2.labourExpense,
+                        description: this.formQuoteItem2.labourDescription
+                        });
+              
+                         
+                        this.newQuotation.quoteItems.push({
+                        product: 'MC4 connectors  Twin pack',
+                        quantity: this.formQuoteItem2.quantityP/2,
+                        productAmount: this.formQuoteItem2.mc4Amount,
+                         productExpense: this.formQuoteItem2.mc4Expense,
+                        description: this.formQuoteItem2.mc4Description
+                        });
+              
+                       this.doSubmitQuote();
+
+                    });
+                });
+
+                
             });
 
         });
