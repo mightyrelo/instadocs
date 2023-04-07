@@ -201,39 +201,38 @@ export class QoutePvComponent implements OnInit {
               this.newQuotation.amount += this.formQuoteItem2.quantityR * this.currentRoof.selling;
                this.newQuotation.profit += this.formQuoteItem2.quantityR * (this.currentRoof.selling - this.currentRoof.trade);
               this.newQuotation.expense += this.formQuoteItem2.quantityR * this.currentRoof.trade;
-            })
+
+                this.newQuotation.quoteItems.push({
+                product: this.formQuoteItem2.panel,
+                quantity: this.formQuoteItem2.quantityP,
+                productAmount: this.formQuoteItem2.panelAmount,
+                productExpense: this.formQuoteItem2.panelExpense,
+                description: this.formQuoteItem2.panelDescription
+              });
+           
+            //console.log('is null?', this.formQuoteItem2.inverterAmount);
+              this.newQuotation.quoteItems.push({
+                product: this.formQuoteItem2.inverter,
+                quantity: this.formQuoteItem2.quantityI,
+               productAmount: this.formQuoteItem2.inverterAmount,
+                productExpense: this.formQuoteItem2.inverterExpense,
+               description: this.formQuoteItem2.invDescription
+             });
+          
+              this.newQuotation.quoteItems.push({
+                product: this.formQuoteItem2.roof,
+                quantity: this.formQuoteItem2.quantityR,
+                productAmount: this.formQuoteItem2.roofAmount,
+                 productExpense: this.formQuoteItem2.roofExpense,
+                description: this.formQuoteItem2.roofDescription
+             });
+      
+            this.doSubmitQuote();
+            });
 
         });
 
-      this.itemAdded = true;
-
-      this.newQuotation.quoteItems.push({
-        product: this.formQuoteItem2.panel,
-        quantity: this.formQuoteItem2.quantityP,
-        productAmount: this.formQuoteItem2.panelAmount,
-        productExpense: this.formQuoteItem2.panelExpense,
-        description: this.formQuoteItem2.panelDescription
-      });
-     
-      this.newQuotation.quoteItems.push({
-        product: this.formQuoteItem2.inverter,
-        quantity: this.formQuoteItem2.quantityI,
-        productAmount: this.formQuoteItem2.inverterAmount,
-        productExpense: this.formQuoteItem2.inverterExpense,
-        description: this.formQuoteItem2.invDescription
-      });
-    
-      this.newQuotation.quoteItems.push({
-        product: this.formQuoteItem2.roof,
-        quantity: this.formQuoteItem2.quantityR,
-        productAmount: this.formQuoteItem2.roofAmount,
-        productExpense: this.formQuoteItem2.roofExpense,
-        description: this.formQuoteItem2.roofDescription
-      });
-
-      this.doSubmitQuote();
-
-     
+        this.itemAdded = true;
     }); 
 
   }
