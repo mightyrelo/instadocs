@@ -14,6 +14,7 @@ export class QuoteFormSpComponent implements OnInit {
   @Input() aacProducts = [];
   @Input() wireProducts = [];
   @Input() battProducts = [];
+  @Input() otherProducts = [];
   @Output() formClosedEvent = new EventEmitter<boolean>();
   constructor() { }
 
@@ -21,11 +22,14 @@ export class QuoteFormSpComponent implements OnInit {
   public acProducts = [];
   public wirProducts = [];
   public batProducts = [];
+  public otProducts = [];
   public customer : Customer;
 
   public pvQuoteDone : boolean = false;
   public pvwQuoteDone : boolean = false;
   public acQuoteDone : boolean = false;
+  public battQuoteDone : boolean = false;
+  public otherQuoteDone : boolean = false;
 
   public onPVFormClosedEvent(eventData : boolean) {
     //this.formClosedEvent.emit(false);
@@ -38,13 +42,17 @@ export class QuoteFormSpComponent implements OnInit {
   }
 
   public onACFormClosedEvent(eventData : boolean) {
-    console.log('here');
     this.acQuoteDone = true;
     //this.formClosedEvent.emit(false);
   }
 
   public onBattFormClosedEvent(eventData : boolean) {
-    //this.acQuoteDone = true;
+    this.battQuoteDone = true;
+    //this.formClosedEvent.emit(false);
+  }
+
+  public onOtherFormClosedEvent(eventData : boolean) {
+    this.otherQuoteDone = true;
     //this.formClosedEvent.emit(false);
   }
 
@@ -55,6 +63,7 @@ export class QuoteFormSpComponent implements OnInit {
     this.acProducts = this.aacProducts;
     this.wirProducts = this.wireProducts;
     this.batProducts = this.battProducts;
+    this.otProducts = this.otherProducts;
     this.customer = this.dbCustomer;
   }
 

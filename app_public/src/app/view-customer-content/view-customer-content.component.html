@@ -89,7 +89,8 @@
                 <div *ngIf="displayForm" class="col-12 col-md-8">
                     <app-quote-form-sp *ngIf="getUserName()=='thabethe'" [dbCustomer]="dbCustomer" [displayForm]="displayForm"
                       (formClosedEvent)="onFormClosedEvent($event)" [dbProducts]="products"
-                      [aacProducts]="acProducts" [wireProducts]="wireProducts" [battProducts]="battProducts">
+                      [aacProducts]="acProducts" [wireProducts]="wireProducts" [battProducts]="battProducts"
+                      [otherProducts]="otherProducts">
                     </app-quote-form-sp>   
                     <app-quote-form *ngIf="getUserName()!='thabethe'" [dbCustomer]="dbCustomer" [displayForm3]="displayForm" (formClosedEvent2)="onFormClosedEvent2($event)"></app-quote-form>   
                 </div>

@@ -153,6 +153,29 @@ export class QuoteItem5  {
 
   }
 
+export class QuoteItem6  {
+    travel: string;
+    quantityT: number;
+    tAmount: number;
+    tDescription: string;
+    tExpense: number;
+
+    assess: string;
+    quantityS: number;
+    sAmount: number;
+    sDescription: string;
+    sExpense: number;
+
+    labour: string;
+    quantityL: number;
+    lAmount: number;
+    lDescription: string;
+    lExpense: number;
+
+    summary: string;
+
+  }
+
 export class Quote {
     _id: string;
     quoteItems: QuoteItem[];

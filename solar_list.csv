@@ -70,9 +70,9 @@ Battery protection 5kW -125A 48V system;;0;601.00;R0.00;R0.00;R0.00;batprot;batt
 battery stand -battery housing 2 100Ah AGM;;2;1100.00;R2 200.00;R2 200.00;R2 784.81;batstand;battery;
 Battery stand -battery housing brackets;;0;828.00;R0.00;R0.00;R0.00;batstand;battery;
 Travelling KM;;10;6.00;;;R60.00;trvl;TRVLAB;
-Labour Retrofit  kit  per  Geyser;;0;4000.00;;;R0.00;;TRVLAB;
-Installation labour  -Engineering, Electrical Interface +commissioning ;;8;450.00;R3 600;R2 000.00;R3 600.00;lab;TRVLAB;
-Assessment;;1;650.00;R650;;R650.00;lab;TRVLAB;
+Labour Retrofit  kit per  Geyser;;0;4000.00;;;R0.00;;TRVLAB;
+Installation labour -Engineering, Electrical Interface +commissioning;;8;450.00;R3 600;R2 000.00;R3 600.00;lab;TRVLAB;
+Assessment;;1;650.00;R650;;R650.00;assess;TRVLAB;
 Out of town;;0;1200.00;R0;;R0.00;tvrl;TRVLAB;
 305W;Canadian PV;;2100.00;;;;panel;PV;
 365W;Canadian PV;;2500.00;;;;panel;PV;
