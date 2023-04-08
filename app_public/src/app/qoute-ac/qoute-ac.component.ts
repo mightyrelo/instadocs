@@ -123,7 +123,7 @@ export class QouteAcComponent implements OnInit {
   }
 
   formIsValid(){
-    if(!this.formQuoteItem3.distribution || !this.formQuoteItem3.quantityDSB  ||
+    /*if(!this.formQuoteItem3.distribution || !this.formQuoteItem3.quantityDSB  ||
        !this.formQuoteItem3.consumables || !this.formQuoteItem3.quantityCons ||
        !this.formQuoteItem3.acProt|| !this.formQuoteItem3.quantityACProt ||
        !this.formQuoteItem3.cova|| !this.formQuoteItem3.quantityCov ||
@@ -132,7 +132,7 @@ export class QouteAcComponent implements OnInit {
        !this.formQuoteItem3.avr|| !this.formQuoteItem3.quantityAvr
        ){
       return false;
-    }
+    }*/
     return true;
   }
 
@@ -145,6 +145,7 @@ export class QouteAcComponent implements OnInit {
 
     this.getProductByName(this.formQuoteItem3.distribution)
     .then(foundProduct => {
+      console.log(foundProduct.name);
       this.currentDB = foundProduct;
       this.formQuoteItem3.dsbAmount = this.currentDB.selling;
       this.formQuoteItem3.dsbDescription = this.currentDB.description;
@@ -204,7 +205,7 @@ export class QouteAcComponent implements OnInit {
                       this.newQuotation.amount += this.formQuoteItem3.quantityCov * this.currentMCB.selling;
                       this.newQuotation.profit += this.formQuoteItem3.quantityCov * (this.currentMCB.selling - this.currentMCB.trade);
                       this.newQuotation.expense += this.formQuoteItem3.quantityCov * this.currentMCB.trade;
-
+                      console.log(this.formQuoteItem3.surgProt);
                       this.getProductByName(this.formQuoteItem3.surgProt)
                         .then(surProt => {
                           this.currentSurgProt = surProt;
