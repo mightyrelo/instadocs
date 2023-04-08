@@ -63,7 +63,7 @@ lithium phosphate US3000;;0;17000.00;R0.00;R0.00;R0.00;batt;battery;
 200Ah Navara Gel AGM;;2;3600.00;R7 200.00;R7 200.00;R9 113.92;batt;battery;
 200Ah Gel AGM;;0;4300.00;R0.00;R0.00;R0.00;batt;battery;
 240AH Gel AGM Omnipower -sinetech;;0;6900.00;R0.00;R0.00;R0.00;batt;battery;
-battery cabinet -house 2 X US2000 Lithium;;0;3000.00;R0.00;R0.00;R0.00;batprot;battery;
+battery cabinet -house 2 X US2000 Lithium;;0;3000.00;R0.00;R0.00;R0.00;batstand;battery;
 Battery protection 2kW -100A 24V system;;0;400.00;R0.00;R0.00;R0.00;batprot;battery;
 Battery protection 3kW -160A 24V system;;0;600.00;R0.00;R0.00;R0.00;batprot;battery;
 Battery protection 5kW -125A 48V system;;0;601.00;R0.00;R0.00;R0.00;batprot;battery;

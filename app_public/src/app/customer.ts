@@ -130,6 +130,29 @@ export class QuoteItem4  {
 
   }
 
+export class QuoteItem5  {
+    batt: string;
+    quantityB: number;
+    bAmount: number;
+    bDescription: string;
+    bExpense: number;
+
+    prot: string;
+    quantityP: number;
+    pAmount: number;
+    pDescription: string;
+    pExpense: number;
+
+    stand: string;
+    quantityS: number;
+    sAmount: number;
+    sDescription: string;
+    sExpense: number;
+
+    summary: string;
+
+  }
+
 export class Quote {
     _id: string;
     quoteItems: QuoteItem[];

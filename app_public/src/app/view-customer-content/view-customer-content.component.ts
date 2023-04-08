@@ -82,6 +82,7 @@ export class ViewCustomerContentComponent implements OnInit {
   public products : Product[];
   public acProducts : Product[];
   public wireProducts : Product[];
+  public battProducts : Product[];
   public currentProduct: Product;
 
   public newInvoice: Invoice;
@@ -343,6 +344,8 @@ export class ViewCustomerContentComponent implements OnInit {
       .then(rsp => this.acProducts = rsp);
     this.productDataService.getCategoryProducts(this.getUserName(), 'PVCABLE')
       .then(rsp => this.wireProducts = rsp);
+    this.productDataService.getCategoryProducts(this.getUserName(), 'battery')
+      .then(rsp => this.battProducts = rsp);
     for(let i = 1; i <= 100;i++){
         this.counts[i] = i;
     }
