@@ -37,6 +37,52 @@ export class QuoteItem2 {
 
 }
 
+export class QuoteItem3 {
+    distribution: string;
+    quantityDSB: number;
+    dsbAmount: number;
+    dsbDescription: string;
+    dsbExpense: number;
+
+    consumables: string;
+    quantityCons: number;
+    consAmount: number;
+    consDescription: string;
+    consExpense: number;
+
+    acProt: string;
+    quantityACProt: number;
+    acProtAmount: number;
+    acProtDescription: string;
+    acProtExpense: number;
+
+    cova: string;
+    quantityCov: number;
+    covAmount: number;
+    covDescription: string;
+    covExpense: number;
+
+    mcb: string;
+    quantityMCB: number;
+    mcbAmount: number;
+    mcbDescription: string;
+    mcbExpense: number;
+
+    surgProt: string;
+    quantitySurg: number;
+    surgAmount: number;
+    surgDescription: string;
+    surgExpense: number;
+
+    avr: string;
+    quantityAvr: number;
+    avrAmount: number;
+    avrDescription: string;
+    avrExpense: number;
+    summary: string;
+
+}
+
 export class Quote {
     _id: string;
     quoteItems: QuoteItem[];

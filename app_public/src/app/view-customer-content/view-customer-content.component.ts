@@ -80,6 +80,7 @@ export class ViewCustomerContentComponent implements OnInit {
   private customers: Customer[] = [];
 
   public products : Product[];
+  public acProducts : Product[];
   public currentProduct: Product;
 
   public newInvoice: Invoice;
@@ -337,6 +338,8 @@ export class ViewCustomerContentComponent implements OnInit {
     this.getCustomers();
     this.productDataService.getCategoryProducts(this.getUserName(), 'PV')
       .then(rsp => this.products = rsp);
+    this.productDataService.getCategoryProducts(this.getUserName(), 'AC')
+      .then(rsp => this.acProducts = rsp);
     for(let i = 1; i <= 100;i++){
         this.counts[i] = i;
     }

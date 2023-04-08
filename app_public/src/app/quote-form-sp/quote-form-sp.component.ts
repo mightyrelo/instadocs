@@ -11,10 +11,12 @@ export class QuoteFormSpComponent implements OnInit {
   @Input() dbCustomer : any;
   @Input() displayForm : boolean;
   @Input() dbProducts = [];
+  @Input() aacProducts = [];
   @Output() formClosedEvent = new EventEmitter<boolean>();
   constructor() { }
 
   public allProducts = [];
+  public acProducts = [];
   public customer : Customer
 
   public onFormClosedEvent(eventData : boolean) {
@@ -23,6 +25,7 @@ export class QuoteFormSpComponent implements OnInit {
 
   ngOnInit() {
     this.allProducts = this.dbProducts;
+    this.acProducts = this.aacProducts;
     this.customer = this.dbCustomer;
   }
 

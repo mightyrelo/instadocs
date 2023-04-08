@@ -1,3 +1,115 @@
-<p>
-  qoute-ac works!
-</p>
+<p>{{closeForm}}</p>
+<div *ngIf="displayForm==true">
+  <div *ngIf="closeForm == false">
+    <form (ngSubmit)="onQuoteSubmit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError}}</div>
+        <div *ngIf="itemAdded" class="alert alert-success">
+          <p>{{formQuoteItem.summary}} added</p>
+        </div>
+      <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="distribution">DIN Rail</label>
+          <select [(ngModel)]="formQuoteItem3.distribution" class="form-control input-sm" id="distribution" name="distribution">
+           <option *ngFor="let product of dbs">{{product.name}}</option> 
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityDSB">Qty</label>
+          <select [(ngModel)]="formQuoteItem3.quantityDSB" class="form-control input-sm" id="quantityDSB" name="quantityDSB">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="cons">consumables</label>
+          <select [(ngModel)]="formQuoteItem3.consumables" class="form-control input-sm" id="cons" name="cons">
+           <option *ngFor="let product of cons">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityCons">Qty</label>
+          <select [(ngModel)]="formQuoteItem3.quantityCons" class="form-control input-sm" id="quantityCons" name="quantityCons">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="acProt">AC Protection</label>
+          <select [(ngModel)]="formQuoteItem3.acProt" class="form-control input-sm" id="acProt" name="acProt">
+           <option *ngFor="let product of acProts">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityR">Qty</label>
+          <select [(ngModel)]="formQuoteItem3.quantityACProt" class="form-control input-sm" id="quantityR" name="quantityR">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="cova">changeover switch</label>
+          <select [(ngModel)]="formQuoteItem3.cova" class="form-control input-sm" id="cova" name="cova">
+           <option *ngFor="let product of chovas">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityK">Qty</label>
+          <select [(ngModel)]="formQuoteItem3.quantityCov" class="form-control input-sm" id="quantityK" name="quantityK">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="mcb">mcb</label>
+          <select [(ngModel)]="formQuoteItem3.mcb" class="form-control input-sm" id="mcb" name="mcb">
+           <option *ngFor="let product of mcbs">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityS">Qty</label>
+          <select [(ngModel)]="formQuoteItem3.quantityMCB" class="form-control input-sm" id="quantityS" name="quantityS">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="srgProt">surge protection</label>
+          <select [(ngModel)]="formQuoteItem3.surgeProt" class="form-control input-sm" id="srgProt" name="srgProt">
+           <option *ngFor="let product of surgeProts">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityV">Qty</label>
+          <select [(ngModel)]="formQuoteItem3.quantitySurg" class="form-control input-sm" id="quantityV" name="quantityV">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="asw">avr switch</label>
+          <select [(ngModel)]="formQuoteItem3.avr" class="form-control input-sm" id="asw" name="asw">
+           <option *ngFor="let product of avrs">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityC">Qty</label>
+          <select [(ngModel)]="formQuoteItem3.quantityAVR" class="form-control input-sm" id="quantityC" name="quantityC">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+      <div class="form-group">
+      </div>
+      <small><button  type="submit" role="button" class="btn-primary sm-button">quote</button></small>
+      <small><button (click)="resetAndHideQuoteForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa-solid fa-xmark"></i></button></small>
+    </form>  
+  </div>
+  </div>
+  
