@@ -17,9 +17,16 @@ export class QuoteFormSpComponent implements OnInit {
 
   public allProducts = [];
   public acProducts = [];
-  public customer : Customer
+  public customer : Customer;
 
-  public onFormClosedEvent(eventData : boolean) {
+  public pvQuoteDone : boolean = false;
+
+  public onPVFormClosedEvent(eventData : boolean) {
+    //this.formClosedEvent.emit(false);
+    this.pvQuoteDone = true;
+  }
+
+  public onACFormClosedEvent(eventData : boolean) {
     this.formClosedEvent.emit(false);
   }
 
