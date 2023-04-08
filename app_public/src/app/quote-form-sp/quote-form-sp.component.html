@@ -1,5 +1,14 @@
-<app-qoute-pv *ngIf="!pvQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVFormClosedEvent($event)"
-     [prods]="allProducts" [dbCustomer]="customer"></app-qoute-pv>
 
-<app-qoute-ac *ngIf="pvQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onACFormClosedEvent($event)"
-     [prods]="acProducts" [dbCustomer]="customer"></app-qoute-ac>
+<app-qoute-pv *ngIf="!pvQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVFormClosedEvent($event)"
+     [prods]="allProducts" [dbCustomer]="customer">
+</app-qoute-pv>
+
+
+<app-quote-pv-wire *ngIf="pvQuoteDone && !pvwQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVWFormClosedEvent($event)"
+    [prods]="wirProducts" [dbCustomer]="customer">
+</app-quote-pv-wire>
+
+<app-qoute-ac *ngIf="pvwQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onACFormClosedEvent($event)"
+     [prods]="acProducts" [dbCustomer]="customer">
+</app-qoute-ac>
+

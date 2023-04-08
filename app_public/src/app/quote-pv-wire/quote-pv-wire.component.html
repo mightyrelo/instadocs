@@ -1,0 +1,115 @@
+<div *ngIf="displayForm">
+  <h2>PV Cabling</h2>
+  <div *ngIf="!closeForm">
+    <form (ngSubmit)="onQuoteSubmit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError}}</div>
+        <div *ngIf="itemAdded" class="alert alert-success">
+          <p>{{formQuoteItem.summary}} added</p>
+        </div>
+      <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="pvw">PV Wire</label>
+          <select [(ngModel)]="formQuoteItem4.pvwire" class="form-control input-sm" id="pvw" name="pvw">
+           <option *ngFor="let product of wires">{{product.name}}</option> 
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityW">Qty</label>
+          <select [(ngModel)]="formQuoteItem4.quantityW" class="form-control input-sm" id="quantityW" name="quantityW">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="trc">trailing cable</label>
+          <select [(ngModel)]="formQuoteItem4.trail" class="form-control input-sm" id="trc" name="trc">
+           <option *ngFor="let product of trails">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityTR">Qty</label>
+          <select [(ngModel)]="formQuoteItem4.quantityTR" class="form-control input-sm" id="quantityTR" name="quantityTR">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="flex">Panel flex</label>
+          <select [(ngModel)]="formQuoteItem4.flex" class="form-control input-sm" id="flex" name="flex">
+           <option *ngFor="let product of flexes">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityFL">Qty</label>
+          <select [(ngModel)]="formQuoteItem4.quantityFL" class="form-control input-sm" id="quantityFL" name="quantityFL">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="ear">earch cable</label>
+          <select [(ngModel)]="formQuoteItem4.earth" class="form-control input-sm" id="ear" name="ear">
+           <option *ngFor="let product of earths">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityK">Qty</label>
+          <select [(ngModel)]="formQuoteItem4.quantityE" class="form-control input-sm" id="quantityE" name="quantityE">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="batt">battery cable</label>
+          <select [(ngModel)]="formQuoteItem4.batt" class="form-control input-sm" id="batt" name="batt">
+           <option *ngFor="let product of batts">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityB">Qty</label>
+          <select [(ngModel)]="formQuoteItem4.quantityB" class="form-control input-sm" id="quantityB" name="quantityB">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="weld">welding cable</label>
+          <select [(ngModel)]="formQuoteItem4.weld" class="form-control input-sm" id="weld" name="weld">
+           <option *ngFor="let product of welds">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityW">Qty</label>
+          <select [(ngModel)]="formQuoteItem4.quantityWE" class="form-control input-sm" id="quantityWE" name="quantityWE">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="arm">armouring</label>
+          <select [(ngModel)]="formQuoteItem4.arm" class="form-control input-sm" id="arm" name="arm">
+           <option *ngFor="let product of arms">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityA">Qty</label>
+          <select [(ngModel)]="formQuoteItem4.quantityA" class="form-control input-sm" id="quantityA" name="quantityA">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+      <div class="form-group">
+      </div>
+      <small><button  type="submit" role="button" class="btn-primary sm-button">quote</button></small>
+      <small><button (click)="resetAndHideQuoteForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa-solid fa-xmark"></i></button></small>
+    </form>  
+  </div>
+  </div>
+  

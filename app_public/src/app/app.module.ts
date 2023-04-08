@@ -54,6 +54,7 @@ import { QoutePvComponent } from './qoute-pv/qoute-pv.component';
 import { QouteAcComponent } from './qoute-ac/qoute-ac.component';
 import { QouteBatComponent } from './qoute-bat/qoute-bat.component';
 import { QouteOtherComponent } from './qoute-other/qoute-other.component';
+import { QuotePvWireComponent } from './quote-pv-wire/quote-pv-wire.component';
 
 
 
@@ -108,7 +109,8 @@ import { QouteOtherComponent } from './qoute-other/qoute-other.component';
     QoutePvComponent,
     QouteAcComponent,
     QouteBatComponent,
-    QouteOtherComponent
+    QouteOtherComponent,
+    QuotePvWireComponent
   ],
   imports: [
     BrowserModule,

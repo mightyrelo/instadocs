@@ -83,6 +83,53 @@ export class QuoteItem3 {
 
 }
 
+export class QuoteItem4  {
+    pvwire: string;
+    quantityW: number;
+    wAmount: number;
+    wDescription: string;
+    wExpense: number;
+
+    trail: string;
+    quantityTR: number;
+    trAmount: number;
+    trDescription: string;
+    trExpense: number;
+
+    flex: string;
+    quantityFL: number;
+    flAmount: number;
+    flDescription: string;
+    flExpense: number;
+
+    earth: string;
+    quantityE: number;
+    eAmount: number;
+    eDescription: string;
+    eExpense: number;
+
+    batt: string;
+    quantityB: number;
+    bAmount: number;
+    bDescription: string;
+    bExpense: number;
+
+    weld: string;
+    quantityWE: number;
+    weAmount: number;
+    weDescription: string;
+    weExpense: number;
+
+    arm: string;
+    quantityA: number;
+    aAmount: number;
+    aDescription: string;
+    aExpense: number;
+
+    summary: string;
+
+  }
+
 export class Quote {
     _id: string;
     quoteItems: QuoteItem[];
