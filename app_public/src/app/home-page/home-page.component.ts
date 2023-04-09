@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
     },
     viewBar: {
       main: 'Prepare documents on the move',
-      sub: 'Whether it\'s a mobile phone, lap or desktop, Ngamla! is accessible from any device with an internet connection and this means that quotes, invoices and other documents can prepared from anywhere.'
+      sub: 'Ngamla! is accessible from any device with an internet connection. This means that quotations, invoices and purchase orders can prepared from anywhere.'
     }
   };
 
