@@ -36,6 +36,21 @@ export class QuoteFormSpComponent implements OnInit {
   public battQuoteDone : boolean = false;
   public otherQuoteDone : boolean = false;
 
+  public pvSummary : string;
+  public pvQuote : boolean = false;
+
+  public pvcSummary : string;
+  public pvcQuote : boolean = false;
+
+  public acSummary : string;
+  public acQuote : boolean = false;
+
+  public battSummary : string;
+  public battQuote : boolean = false;
+
+  public otherSummary : string;
+  public otherQuote : boolean = false;
+
   public mainQuote : Quote = new Quote();
   
 
@@ -66,27 +81,40 @@ export class QuoteFormSpComponent implements OnInit {
 
   public onACQuoteGenerated(evntData : Quote) {
     this.addItemsToQuote(evntData);
+    this.acSummary = evntData.summary;
+    this.acQuote = true;
        
   }
   
   public onPVQuoteGenerated(evntData : Quote) {
     this.addItemsToQuote(evntData);
+    this.pvSummary = evntData.summary;
+    this.pvQuote = true;
        
   }
   
   public onPVWQuoteGenerated(evntData : Quote) {
     this.addItemsToQuote(evntData);
+    this.pvcSummary = evntData.summary;
+    this.pvcQuote = true;
+    //this.pvSummary = evntData.summary;
+   // this.pvQuote = evntData.summary;
        
   }
   
   public onBattQuoteGenerated(evntData : Quote) {
     this.addItemsToQuote(evntData);
+    this.battSummary = evntData.summary;
+    this.battQuote = true;
        
   }
   
   public onOtherQuoteGenerated(evntData : Quote) {
     //console.log('how?');
     this.addItemsToQuote(evntData);
+    this.otherSummary = evntData.summary;
+    this.otherQuote = true;
+    //time delay
     this.doCreateQuote();
        
   }
