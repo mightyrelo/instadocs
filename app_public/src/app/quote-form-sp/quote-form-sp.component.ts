@@ -96,10 +96,14 @@ export class QuoteFormSpComponent implements OnInit {
     for(let i = 0; i < evntData.quoteItems.length; i++){
       this.mainQuote.quoteItems.push(evntData.quoteItems[i]);
     }
+    console.log(evntData.amount);
+    this.mainQuote.amount += evntData.amount;
+    this.mainQuote.profit += evntData.profit;
+    this.mainQuote.expense += evntData.expense;
+    this.mainQuote.summary += evntData.summary;
   }
   
   private doCreateQuote() : void {
-    console.log('why not create?');
     this.quoteDataService.addQuote(this.dbCustomer._id, this.mainQuote)
       .then((quotation: Quote) => {
         console.log('quotation saved', quotation);
@@ -117,6 +121,9 @@ export class QuoteFormSpComponent implements OnInit {
     this.otProducts = this.otherProducts;
     this.customer = this.dbCustomer;
     this.mainQuote.quoteItems = [];
+    this.mainQuote.amount = 0;
+    this.mainQuote.profit = 0;
+    this.mainQuote.expense = 0;
   }
 
 }
