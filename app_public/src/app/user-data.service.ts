@@ -36,6 +36,24 @@ export class UserDataService {
 
   }
 
+  public getUsers() {
+    const url : string = `${this.apiBaseUrl}/users`;
+    return this.http
+      .get(url)
+      .toPromise()
+      .then(response => response as User[])
+      .catch(this.handleError);
+  }
+
+  public deleteUser(userId: string) {
+    const url : string = `${this.apiBaseUrl}/users/${userId}`;
+    return this.http
+        .delete(url)
+        .toPromise()
+        .then(response => response as any)
+        .catch(this.handleError);
+  }
+
   private handleError(error: any) : Promise<any> {
     console.error('Something has gone wrong', error);
     return Promise.reject(error.message || error);

@@ -33,6 +33,7 @@ const quoteCtrl = require('../controllers/Quotations');
 const invCtrl = require('../controllers/Invoices');
 const compCtrl = require('../controllers/Companies');
 const imgCtrl = require('../controllers/Images');
+const usersCtrl = require('../controllers/Users');
 
 
 
@@ -164,6 +165,14 @@ router
 router
   .route('/transfer/:userName/pricelist/:pricelist')
   .get(productsCtrl.createDBProducts);
+
+router
+  .route('/users')
+  .get(usersCtrl.usersReadAll);
+
+router
+  .route('/users/:userId')
+  .delete(usersCtrl.usersDeleteOne);
 
 
 module.exports = router;

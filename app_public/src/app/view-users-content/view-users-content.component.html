@@ -1,0 +1,17 @@
+<div *ngIf="users">
+  <div *ngFor="let user of users | mostRecentFirst" class="card">
+    <div class="card-block"></div>
+    <h4><a routerLink="/users/{{user._id}}" class="heading">{{user.name}}</a>
+     <small>&nbsp;
+       <a class="btn float-right" style="font-size: 1.4em" (click)="flagged(user._id)"><i class="fa-solid fa-trash trash"></i></a>
+     </small><span class="badge badge-pill badge-default float-right"></span>
+     <div *ngIf="isFlagged(user._id)">
+      <small><button style="font-size: 0.8em" (click)="setFlagOff(user._id)" class="btn btn-primary float-right">cancel</button></small>
+      <small> <button style="font-size: 0.8em" (click)="deleteUser(user._id)" class="btn btn-primary float-right">for real?</button></small>
+     </div>
+    </h4>
+    <p class="address">Active Since: {{user.createdOn | date: 'd MMMM  yyyy hh:mm' }}</p> 
+   <p class="address">{{user.email}}</p>
+   <div class="col-12 col-md-4"></div>
+  </div>
+</div>

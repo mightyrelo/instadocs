@@ -18,6 +18,7 @@ import { ViewPrintInvoiceComponent } from '../view-print-invoice/view-print-invo
 import { ViewProductComponent } from '../view-product/view-product.component';
 import { ViewPrintPoComponent } from '../view-print-po/view-print-po.component';
 import { TransferDbComponent } from '../transfer-db/transfer-db.component';
+import { ViewUsersComponent } from '../view-users/view-users.component';
 
 const routes : Routes = 
   [{
@@ -71,6 +72,9 @@ const routes : Routes =
 },{
   path: 'transfer',
   component: TransferDbComponent, 
+},{
+  path: 'users',
+  component: ViewUsersComponent, 
 }];
 
 @NgModule({

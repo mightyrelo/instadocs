@@ -5,6 +5,7 @@ import { AuthenticationService } from '../authentication.service';
 import { HistoryService } from '../history.service';
 
 import { Company } from '../company';
+import { User } from '../user';
 
 import { CompanyDataService } from '../company-data.service';
 
@@ -16,10 +17,13 @@ import { CompanyDataService } from '../company-data.service';
 })
 export class RegisterFormComponent implements OnInit {
 
-  public credentials = {
+  public credentials : User = {
     name: '',
     email: '',
-    password: ''
+    password: '',
+    _id: '',
+    flagged: null,
+    createdOn: ''
   };
 
   public formError = '';
@@ -40,10 +44,12 @@ export class RegisterFormComponent implements OnInit {
     branch: null,
     accountNumber: null,
     flagged: false,
-    userId: ''
+    userId: '',
   };
 
   public companies : Company[];
+
+  public images;
 
 
   constructor(
@@ -81,7 +87,7 @@ export class RegisterFormComponent implements OnInit {
       this.formCompany.userId = this.getUserName();
       this.companyDataService.addCompany(this.formCompany)
        .then (dbCom =>  {
-        console.log('company saved', dbCom);
+        console.log('company saved', dbCom); 
         let comps = this.companies.slice(0);
         comps.unshift(dbCom);
         this.companies = comps;
@@ -92,6 +98,15 @@ export class RegisterFormComponent implements OnInit {
       	this.formError = 'Missing fields required, give it another go!'
     }
   }
+
+  selectImage(event) : void {
+    if(event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.images = file;
+    }
+  }
+
+
 
   resetAndHideCompanyForm(){
     this.formError = '';
@@ -114,8 +129,6 @@ export class RegisterFormComponent implements OnInit {
     this.companyDataService.readCompanies()
       .then(response => {this.companies = response;});
   }
-
-
 
 
   ngOnInit() : void{

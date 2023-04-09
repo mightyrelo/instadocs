@@ -13,7 +13,11 @@ const UserSchema = mongoose.Schema({
         required: true
     },
     hash: String,
-    salt: String
+    salt: String,
+    createdOn: {
+        type: Date,
+        'default': Date.now
+    }
 });
 
 UserSchema.methods.setPassword = function(password){

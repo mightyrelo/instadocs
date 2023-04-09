@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../authentication.service';
 import { HistoryService } from '../history.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-login-form',
@@ -12,10 +13,13 @@ import { HistoryService } from '../history.service';
 export class LoginFormComponent implements OnInit {
 
   public formError = '';
-  public credentials = {
+  public credentials : User = {
     email: '',
     password: '',
-    name: ''
+    name: '',
+    _id: '',
+    createdOn: '',
+    flagged: null
   };
   constructor(
     private authService: AuthenticationService,
