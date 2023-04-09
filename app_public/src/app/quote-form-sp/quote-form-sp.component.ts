@@ -38,18 +38,23 @@ export class QuoteFormSpComponent implements OnInit {
 
   public pvSummary : string;
   public pvQuote : boolean = false;
+  public pvTotal : number;
 
   public pvcSummary : string;
   public pvcQuote : boolean = false;
+  public pvcTotal : number;
 
   public acSummary : string;
   public acQuote : boolean = false;
+  public acTotal : number;
 
   public battSummary : string;
   public battQuote : boolean = false;
+  public battTotal : number;
 
   public otherSummary : string;
   public otherQuote : boolean = false;
+  public otherTotal : number;
 
   public mainQuote : Quote = new Quote();
   
@@ -76,13 +81,18 @@ export class QuoteFormSpComponent implements OnInit {
 
   public onOtherFormClosedEvent(eventData : boolean) {
     this.otherQuoteDone = true;
-    this.formClosedEvent.emit(false);
+  }
+
+  public submitQuote() : void {
+      this.formClosedEvent.emit(false);
+      this.doCreateQuote();
   }
 
   public onACQuoteGenerated(evntData : Quote) {
     this.addItemsToQuote(evntData);
     this.acSummary = evntData.summary;
     this.acQuote = true;
+    this.acTotal = evntData.amount;
        
   }
   
@@ -90,6 +100,7 @@ export class QuoteFormSpComponent implements OnInit {
     this.addItemsToQuote(evntData);
     this.pvSummary = evntData.summary;
     this.pvQuote = true;
+    this.pvTotal = evntData.amount;
        
   }
   
@@ -97,6 +108,7 @@ export class QuoteFormSpComponent implements OnInit {
     this.addItemsToQuote(evntData);
     this.pvcSummary = evntData.summary;
     this.pvcQuote = true;
+    this.pvcTotal = evntData.amount;
     //this.pvSummary = evntData.summary;
    // this.pvQuote = evntData.summary;
        
@@ -106,6 +118,7 @@ export class QuoteFormSpComponent implements OnInit {
     this.addItemsToQuote(evntData);
     this.battSummary = evntData.summary;
     this.battQuote = true;
+    this.battTotal = evntData.amount;
        
   }
   
@@ -114,13 +127,13 @@ export class QuoteFormSpComponent implements OnInit {
     this.addItemsToQuote(evntData);
     this.otherSummary = evntData.summary;
     this.otherQuote = true;
+    this.otherTotal = evntData.amount;
     //time delay
-    this.doCreateQuote();
+    
        
   }
 
   private addItemsToQuote(evntData : Quote) {
-    console.log('in sp', evntData);
     for(let i = 0; i < evntData.quoteItems.length; i++){
       this.mainQuote.quoteItems.push(evntData.quoteItems[i]);
     }
