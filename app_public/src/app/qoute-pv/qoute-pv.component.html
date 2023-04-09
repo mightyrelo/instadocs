@@ -1,0 +1,59 @@
+<h2>PV</h2>
+<div *ngIf="displayForm==true">
+  <div *ngIf="closeForm == false">
+    <form (ngSubmit)="onQuoteSubmit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError}}</div>
+        <div *ngIf="itemAdded" class="alert alert-success">
+          <p>{{formQuoteItem.summary}} added</p>
+        </div>
+      <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="panel">Panel</label>
+          <select [(ngModel)]="formQuoteItem2.panel" class="form-control input-sm" id="panel" name="panel">
+           <option *ngFor="let product of panels">{{product.name}}</option> 
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityP">Qty</label>
+          <select [(ngModel)]="formQuoteItem2.quantityP" class="form-control input-sm" id="quantityP" name="quantityP">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="inverter">Inverter</label>
+          <select [(ngModel)]="formQuoteItem2.inverter" class="form-control input-sm" id="inverter" name="inverter">
+           <option *ngFor="let product of inverters">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityI">Qty</label>
+          <select [(ngModel)]="formQuoteItem2.quantityI" class="form-control input-sm" id="quantityI" name="quantityI">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>
+     <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="roof">Roof</label>
+          <select [(ngModel)]="formQuoteItem2.roof" class="form-control input-sm" id="roof" name="roof">
+           <option *ngFor="let product of roofs">{{product.name}}</option>
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityR">Qty</label>
+          <select [(ngModel)]="formQuoteItem2.quantityR" class="form-control input-sm" id="quantityR" name="quantityR">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>  
+      <div class="form-group">
+      </div>
+      <small><button  type="submit" role="button" class="btn-primary sm-button">quote</button></small>
+      <small><button (click)="resetAndHideQuoteForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa-solid fa-xmark"></i></button></small>
+    </form>  
+  </div>
+  </div>
+  

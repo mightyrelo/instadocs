@@ -33,6 +33,10 @@ const productSchema = new mongoose.Schema({
     category: {
         type: String,
         'default': 'user'
+    },
+    subCategory: {
+        type: String,
+        'default': 'other'
     }
 });
 

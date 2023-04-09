@@ -22,6 +22,7 @@ export class ViewCustomerContentComponent implements OnInit {
   //form processing
   public formError  = '';
   public displayForm : boolean = false;
+  public displayForm3 : boolean = true;
 
   public formQuoteItem : QuoteItem = {
     product: '',
@@ -79,6 +80,10 @@ export class ViewCustomerContentComponent implements OnInit {
   private customers: Customer[] = [];
 
   public products : Product[];
+  public acProducts : Product[];
+  public wireProducts : Product[];
+  public battProducts : Product[];
+  public otherProducts : Product[];
   public currentProduct: Product;
 
   public newInvoice: Invoice;
@@ -98,7 +103,7 @@ export class ViewCustomerContentComponent implements OnInit {
     return this.authService.isLoggedIn();
   }
 
-  private getUserName() : string {
+  public getUserName() : string {
     if(this.isLoggedIn())
     {
       const {name} = this.authService.getCurrentUser();
@@ -109,19 +114,9 @@ export class ViewCustomerContentComponent implements OnInit {
   }
 
   public readProducts(): void {
+    
     this.productDataService.getProducts(this.getUserName())
-      .then(foundProducts => this.products = foundProducts);
-  }
-
-  public getProductByName(name: string): Promise<Product> {
-    return this.productDataService.getProductByName(name);
-  }
-
-  formIsValid(){
-    if(!this.formQuoteItem.product || !this.formQuoteItem.quantity){
-      return false;
-    }
-    return true;
+      .then(foundProducts => {this.products = foundProducts;});
   }
 
   getCustomers() : void {
@@ -129,74 +124,6 @@ export class ViewCustomerContentComponent implements OnInit {
       .then(response => this.customers = response);
   }
 
-  onQuoteSubmit(){
-    this.formError = '';
-    this.itemAdded = false;
-    if(this.formIsValid()) {
-      //get last item and set its summary
-      this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
-      .then((quotation: Quote) => {
-        console.log('quotation saved', quotation);
-        let quotes = this.dbCustomer.quotations.slice(0);
-        quotes.unshift(quotation);
-        this.dbCustomer.quotations = quotes;
-        this.resetAndHideQuoteForm();
-      });
-    } else {
-      this.formError = 'No items entered, please try again.';
-    }
-
-  }
-
-  //Add qoute item to quotation
-  public addItemToQuote() : void {
-    
-    this.formError = '';
-
-    this.getProductByName(this.formQuoteItem.product)
-    .then(foundProduct => {
-      this.currentProduct = foundProduct;
-      this.formQuoteItem.productAmount = this.currentProduct.selling;
-      this.formQuoteItem.description = this.currentProduct.description;
-      this.formQuoteItem.productExpense = this.currentProduct.trade;
-      this.formQuoteItem.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, ` 
-      this.newQuotation.summary += `${this.formQuoteItem.quantity} x ${this.currentProduct.name}, `;
-      this.newQuotation.amount += this.formQuoteItem.quantity * this.currentProduct.selling;
-      this.newQuotation.profit += this.formQuoteItem.quantity * (this.currentProduct.selling - this.currentProduct.trade);
-      this.newQuotation.expense += this.formQuoteItem.quantity * this.currentProduct.trade; 
-
-      this.itemAdded = true;
-
-      this.newQuotation.quoteItems.push({
-        product: this.formQuoteItem.product,
-        quantity: this.formQuoteItem.quantity,
-        productAmount: this.formQuoteItem.productAmount,
-        productExpense: this.formQuoteItem.productExpense,
-        description: this.formQuoteItem.description
-      });
-     
-    }); 
-
-  } 
-
-
-  public resetAndHideQuoteForm(){
-    this.formError = '';
-    this.displayForm = false;
-    this.formQuoteItem.product = '';
-    this.formQuoteItem.quantity = null;
-    this.newQuotation.quoteItems.splice(0, this.newQuotation.quoteItems.length);
-    this.newQuotation.summary = '';
-    this.newQuotation.profit = 0;
-    this.newQuotation.expense = 0;
-    this.newQuotation.amount = 0;
-    this.currentProduct = null;
-    this.formQuoteItem.summary = '';
-    this.formQuoteItem.productAmount = null;
-    this.formQuoteItem.productExpense = null;
-    this.itemAdded = false;
-
-  }
 
   //deleting quote
   flagged(customerId: string, quoteId: string) {
@@ -364,6 +291,7 @@ export class ViewCustomerContentComponent implements OnInit {
   public resetAndHideCustomerForm() : void {
     this.formError2 = '';
     this.displayForm2 = false;
+    this.displayForm3 = false;
     this.formCustomer.name = '',
     this.formCustomer.contact = null;
     this.formCustomer.address = '';
@@ -377,19 +305,51 @@ export class ViewCustomerContentComponent implements OnInit {
     this.getCustomers();
   }
 
-  public onCategorySubmit() : void {
-    //this.formError2 = '';
-    const idx = this.categoriesFull.indexOf(this.formCat.category);
-    this.productDataService.getCategoryProducts(this.getUserName(), this.categories[idx])
-      .then(foundProducts => {this.products = foundProducts;this.categorySelected = false;});
-    
+  
+
+  public openQuoteForm() : void {
+    this.displayForm = true;
+  }
+
+  public onFormClosedEvent(eventData : boolean) {
+    this.displayForm = eventData;
+  }
+  public onFormClosedEvent2(eventData : boolean) {
+    this.displayForm = eventData;
+  }
+
+  public resetAndHideQuoteForm(){
+    this.formError = '';
+   // this.displayForm = false;
+    this.formQuoteItem.product = '';
+    this.formQuoteItem.quantity = null;
+    this.newQuotation.quoteItems.splice(0, this.newQuotation.quoteItems.length);
+    this.newQuotation.summary = '';
+    this.newQuotation.profit = 0;
+    this.newQuotation.expense = 0;
+    this.newQuotation.amount = 0;
+    this.currentProduct = null;
+    this.formQuoteItem.summary = '';
+    this.formQuoteItem.productAmount = null;
+    this.formQuoteItem.productExpense = null;
+    this.itemAdded = false;
+    this.displayForm = false;
   }
 
 
   ngOnInit() {
     this.getCustomers();
-    this.readProducts();
-    for(let i = 1; i <= 30;i++){
+    this.productDataService.getCategoryProducts(this.getUserName(), 'PV')
+      .then(rsp => this.products = rsp);
+    this.productDataService.getCategoryProducts(this.getUserName(), 'AC')
+      .then(rsp => this.acProducts = rsp);
+    this.productDataService.getCategoryProducts(this.getUserName(), 'PVCABLE')
+      .then(rsp => this.wireProducts = rsp);
+    this.productDataService.getCategoryProducts(this.getUserName(), 'battery')
+      .then(rsp => this.battProducts = rsp);
+    this.productDataService.getCategoryProducts(this.getUserName(), 'TRVLAB')
+      .then(rsp => this.otherProducts = rsp);
+    for(let i = 1; i <= 100;i++){
         this.counts[i] = i;
     }
   }

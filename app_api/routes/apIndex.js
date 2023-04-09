@@ -162,7 +162,7 @@ router
   .delete(imgCtrl.imagesDeleteOne);
 
 router
-  .route('/transfer/:userName')
+  .route('/transfer/:userName/pricelist/:pricelist')
   .get(productsCtrl.createDBProducts);
 
 

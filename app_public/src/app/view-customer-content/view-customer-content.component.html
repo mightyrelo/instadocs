@@ -82,57 +82,17 @@
                 <h2 class="card-title">Quotations </h2>
                 <div class="row sm-button" [ngSwitch]="isLoggedIn()">
                   <small>
-                    <button (click)="displayForm=true" class="btn-primary float-right" *ngSwitchCase="true">add quote</button>
+                    <button (click)="openQuoteForm()" class="btn-primary float-right" *ngSwitchCase="true">add quote</button>
                     <a routerLink="/login"><button class="btn-primary float-right" *ngSwitchDefault>login to quote</button></a>
                   </small>
                 </div>
                 <div *ngIf="displayForm" class="col-12 col-md-8">
-                  <small *ngIf="!categorySelected"><button (click)="categorySelected=true" type="button" role="button" class="btn-primary sm-button">Select category</button></small>
-                  <div *ngIf="categorySelected" class="heading">
-                    <form (ngSubmit)="onCategorySubmit()" method="post" role="form">
-                      <div *ngIf="formError" class="alert alert-danger">
-                        {{formError}}
-                      </div> 
-                     <div class="form-group">
-                      <label for="category">Category</label>
-                      <select  [(ngModel)]="formCat.category" class="form-control bg" id="category" name="category">
-                        <option  class="form-control bg" *ngFor="let cat of categoriesFull">{{cat}}</option>
-                      </select>
-                     </div>
-                      <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
-                    </form>
-                  </div>                  
-                  <form (ngSubmit)="onQuoteSubmit()" method="post" role="form">
-                    <div *ngIf="formError" class="alert alert-danger">
-                      {{formError}}</div>
-                      <div *ngIf="itemAdded" class="alert alert-success">
-                        <p>{{formQuoteItem.summary}} added</p>
-                      </div>
-                    <div class="form-group row">
-                        <div class="col-7 col-md-7">
-                          <label  for="product">Product</label>
-                          <select [(ngModel)]="formQuoteItem.product" class="form-control input-sm" id="name" name="product">
-                           <option></option>
-                           <option *ngFor="let product of products">{{product.name}}</option>
-                          </select>
-                        </div>
-                        <div class="col-3 col-md-3">
-                          <label  for="product">Qty</label>
-                          <select [(ngModel)]="formQuoteItem.quantity" class="form-control input-sm" id="name" name="quantity">
-                           <option></option>
-                           <option *ngFor="let item of counts">{{item}}</option>
-                          </select>                         
-                        </div>
-                        <div class="col-2 col-md-2">
-                          <small><button (click)="addItemToQuote()" type="button" role="button" class="btn-primary sm-button"><i class="fa-sharp fa-solid fa-cart-plus"></i></button></small>
-                        </div>
-                    </div>  
-                    <div class="form-group">
-                    </div>
-                    
-                    <small><button  type="submit" role="button" class="btn-primary sm-button">quote</button></small>
-                    <small><button (click)="resetAndHideQuoteForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa-solid fa-xmark"></i></button></small>
-                  </form>     
+                    <app-quote-form-sp *ngIf="getUserName()=='thabethe'" [dbCustomer]="dbCustomer" [displayForm]="displayForm"
+                      (formClosedEvent)="onFormClosedEvent($event)" [dbProducts]="products"
+                      [aacProducts]="acProducts" [wireProducts]="wireProducts" [battProducts]="battProducts"
+                      [otherProducts]="otherProducts">
+                    </app-quote-form-sp>   
+                    <app-quote-form *ngIf="getUserName()!='thabethe'" [dbCustomer]="dbCustomer" [displayForm3]="displayForm" (formClosedEvent2)="onFormClosedEvent2($event)"></app-quote-form>   
                 </div>
                 <div *ngFor="let quote of dbCustomer.quotations | mostRecentFirst" class="row review">
                   <div class="col-12 no-gutters review-header">

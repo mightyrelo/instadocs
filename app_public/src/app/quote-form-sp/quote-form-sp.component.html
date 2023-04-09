@@ -1,0 +1,60 @@
+<div *ngIf="pvQuote" class="alert alert-success">
+     <h4>PV Items</h4>
+     <p>{{pvSummary}}</p>
+     <br>
+     <p>Subtotal: {{pvTotal | currency :'R':true }}</p>
+</div>
+<div *ngIf="pvcQuote" class="alert alert-success">
+     <h4>PV Cable Items</h4>
+     <p>{{pvcSummary}}</p>
+     <br>
+     <p>Subtotal: {{pvcTotal | currency :'R':true }}</p>
+</div>
+<div *ngIf="acQuote" class="alert alert-success">
+     <h4>AC Items</h4>
+     <p>{{acSummary}}</p>
+     <br>
+     <p>Subtotal: {{acTotal | currency :'R':true }}</p>
+</div>
+<div *ngIf="battQuote" class="alert alert-success">
+     <h4>Battery Items</h4>
+     <p>{{battSummary}}</p>
+     <br>
+     <p>Subtotal: {{battTotal | currency :'R':true }}</p>
+</div>
+<div *ngIf="otherQuote" class="alert alert-success">
+     <h4>Additional Items</h4>
+     <p>{{otherSummary}}</p>
+     <br>
+     <p>Subtotal: {{otherTotal | currency :'R':true }}</p>
+</div>
+
+<app-qoute-pv *ngIf="!pvQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVFormClosedEvent($event)"
+     [prods]="allProducts" [dbCustomer]="customer" (quoteGenerated)="onPVQuoteGenerated($event)">
+</app-qoute-pv>
+
+
+
+<app-quote-pv-wire *ngIf="pvQuoteDone && !pvwQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVWFormClosedEvent($event)"
+    [prods]="wirProducts" [dbCustomer]="customer"  (quoteGenerated)="onPVWQuoteGenerated($event)">
+</app-quote-pv-wire>
+
+<app-qoute-ac *ngIf="pvwQuoteDone && !acQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onACFormClosedEvent($event)"
+     [prods]="acProducts" [dbCustomer]="customer"  (quoteGenerated)="onACQuoteGenerated($event)">
+</app-qoute-ac>
+
+
+<app-qoute-bat *ngIf="acQuoteDone && !battQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onBattFormClosedEvent($event)"
+     [prods]="batProducts" [dbCustomer]="customer"  (quoteGenerated)="onBattQuoteGenerated($event)">
+</app-qoute-bat>
+
+
+<app-qoute-other *ngIf="battQuoteDone && !otherQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onOtherFormClosedEvent($event)"
+     [prods]="otProducts" [dbCustomer]="customer" (quoteGenerated)="onOtherQuoteGenerated($event)">
+</app-qoute-other>
+
+<div *ngIf="otherQuoteDone">
+     <small><button  type="button" role="button" class="btn-primary sm-button" (click)="submitQuote()">Done</button></small>
+     <small><button (click)="resetAndHideQuoteForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa-solid fa-xmark"></i></button></small>
+</div>
+

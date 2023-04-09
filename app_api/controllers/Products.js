@@ -190,47 +190,94 @@ const sendUserProducts = (req, res, products) =>
 };
 
 const createProduct = (req, res, data) => {
-    const trade = Number(data.trade);
-    const retail = Number(data.retail);
-    Prod.create({
-        name: data.description,
-        description: data.regalCode,
-        trade: trade,
-        selling: retail,
-        userId: req.params.userName,
-        category: data.category
-    },(err, product)=>{
-        if(err) {
-            console.log(err);
-            sendJSONResponse(res, 400, err);
-        } else {
+    let userName = req.params.userName;
+    if(userName == 'thabethe') {
+        const trade = Number(data.rate);
+        const retail = trade + 0.3*trade;
+        Prod.create({
+            name: data.description,
+            description: data.description,
+            trade: trade,
+            selling: retail,
+            userId: userName,
+            category: data.category,
+            subCategory: data.inner
+        },(err, product)=>{
+            if(err) {
+                console.log(err);
+                sendJSONResponse(res, 400, err);
+            } else {
+                //console.log(product);
+            }
+        });
+    }
+    else
+    {
+        const trade = Number(data.trade);
+        const retail = Number(data.retail);
+        Prod.create({
+            name: data.description,
+            description: data.regalCode,
+            trade: trade,
+            selling: retail,
+            userId: req.params.userName,
+            category: data.category
+            },(err, product)=>{
+            if(err) {
+                console.log(err);
+                sendJSONResponse(res, 400, err);
+              } else {
             //console.log(product);
-            
-        }
-    });
+            }
+        });
+    }
 };
 
 
 const createDBProducts = (req, res) => {
     const products = [];
     let count = 0;
-    fs.createReadStream('./regal_prices.csv')
-      .pipe(csvParser({separator: ';'}))
-      .on("data", (data)=> {
-        if((Number(data.trade)-1) != -1){
-            if(!isNaN(Number(data.trade)) && !isNaN(Number(data.retail))){
-                count++;
-                products.push(data);
-                createProduct(req, res, data);    
-            }
-        }
+    console.log('creating...',req.params.userName, req.params.pricelist);
+    let path = `./${req.params.pricelist}.csv`;
+    if(req.params.userName == 'thabethe') {
+        fs.createReadStream(path)
+        .pipe(csvParser({separator: ';'}))
+        .on("data", (data)=> {
 
-        })
-      .on("end", ()=>{
-        console.log(count,' products read from cvs to db.');
-        sendJSONResponse(res, 201, products);
-      });
-      
+            if((Number(data.rate)-1) != -1){
+              if(!isNaN(Number(data.rate))){
+                  count++;
+                  //console.log(data);
+                  products.push(data);
+                  createProduct(req, res, data);    
+              }
+            }
+  
+          })
+        .on("end", ()=>{
+          console.log(count,' products read from cvs to db.');
+          //sendJSONResponse(res, 201, products);
+        });  
+    }
+    else {
+        fs.createReadStream(path)
+        .pipe(csvParser({separator: ';'}))
+        .on("data", (data)=> {
+          if((Number(data.trade)-1) != -1){
+              if(!isNaN(Number(data.trade)) && !isNaN(Number(data.retail))){
+                  count++;
+                  products.push(data);
+                  createProduct(req, res, data);    
+              }
+          }
+  
+          })
+        .on("end", ()=>{
+          console.log(count,' products read from cvs to db.');
+          //sendJSONResponse(res, 201, products);
+        });         
+    }
+       
 };
 
 module.exports = {
