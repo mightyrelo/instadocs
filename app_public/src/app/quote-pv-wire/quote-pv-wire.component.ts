@@ -19,6 +19,7 @@ export class QuotePvWireComponent implements OnInit {
   @Input() dbCustomer : Customer;
   @Input() prods : Product[];
   @Output() formClosedEvent = new EventEmitter<boolean>();
+  @Output() quoteGenerated = new EventEmitter<Quote>();
 
   public formError = '';
 
@@ -146,7 +147,6 @@ export class QuotePvWireComponent implements OnInit {
 
     this.getProductByName(this.formQuoteItem4.pvwire)
     .then(foundProduct => {
-      console.log('we find', foundProduct.name);
       this.currentW = foundProduct;
       this.formQuoteItem4.wAmount = this.currentW.selling;
       this.formQuoteItem4.wDescription = this.currentW.description;
@@ -294,7 +294,12 @@ export class QuotePvWireComponent implements OnInit {
                                   productExpense: this.formQuoteItem4.aExpense,
                                   description: this.formQuoteItem4.aDescription
                                 });
-                               this.doSubmitQuote();
+                                if(this.formIsValid()){
+                                  this.quoteGenerated.emit(this.newQuotation);
+                                  this.resetAndHideQuoteForm();
+                                } else {
+                                  this.formError = 'No items entered, please try again.';
+                                }
                             });
                         });
                     });
@@ -305,26 +310,6 @@ export class QuotePvWireComponent implements OnInit {
     }); 
 
   }
-
-  public doSubmitQuote() : void {
-    this.formError = '';
-    //this.itemAdded = false;
-    if(this.formIsValid()) {
-      //get last item and set its summary
-      this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
-      .then((quotation: Quote) => {
-        console.log('quotation saved', quotation);
-        let quotes = this.dbCustomer.quotations.slice(0);
-        quotes.unshift(quotation);
-        this.dbCustomer.quotations = quotes;
-        this.resetAndHideQuoteForm();
-      });
-    } else {
-      this.formError = 'No items entered, please try again.';
-    }
-
-  }
-
   
   public resetAndHideQuoteForm(){
     this.formError = '';

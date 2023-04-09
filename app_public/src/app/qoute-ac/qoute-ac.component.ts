@@ -19,6 +19,7 @@ export class QouteAcComponent implements OnInit {
   @Input() prods: Product[];
   @Input() displayForm: boolean;
   @Output() formClosedEvent  = new EventEmitter<boolean>();
+  @Output() quoteGenerated = new EventEmitter<Quote>();
 
   public formError = '';
 
@@ -288,7 +289,13 @@ export class QouteAcComponent implements OnInit {
                                   productExpense: this.formQuoteItem3.avrExpense,
                                   description: this.formQuoteItem3.avrDescription
                                 });
-                               this.doSubmitQuote();
+                                if(this.formIsValid()){
+                                  this.quoteGenerated.emit(this.newQuotation);
+                                  this.resetAndHideQuoteForm();
+                                } else {
+                                  this.formError = 'No items entered, please try again.';
+                                }
+                                
                             });
                         });
                     });
@@ -297,25 +304,6 @@ export class QouteAcComponent implements OnInit {
         });
        // this.itemAdded = true;
     }); 
-
-  }
-
-  public doSubmitQuote() : void {
-    this.formError = '';
-    //this.itemAdded = false;
-    if(this.formIsValid()) {
-      //get last item and set its summary
-      this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
-      .then((quotation: Quote) => {
-        console.log('quotation saved', quotation);
-        let quotes = this.dbCustomer.quotations.slice(0);
-        quotes.unshift(quotation);
-        this.dbCustomer.quotations = quotes;
-        this.resetAndHideQuoteForm();
-      });
-    } else {
-      this.formError = 'No items entered, please try again.';
-    }
 
   }
 

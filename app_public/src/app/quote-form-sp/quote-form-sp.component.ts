@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Customer } from '../customer';
+import { QuotationDataService } from '../quotation-data.service';
+import { Quote } from '../customer';
 
 @Component({
   selector: 'app-quote-form-sp',
@@ -16,7 +19,9 @@ export class QuoteFormSpComponent implements OnInit {
   @Input() battProducts = [];
   @Input() otherProducts = [];
   @Output() formClosedEvent = new EventEmitter<boolean>();
-  constructor() { }
+  constructor(
+    private quoteDataService : QuotationDataService
+  ) { }
 
   public allProducts = [];
   public acProducts = [];
@@ -30,6 +35,9 @@ export class QuoteFormSpComponent implements OnInit {
   public acQuoteDone : boolean = false;
   public battQuoteDone : boolean = false;
   public otherQuoteDone : boolean = false;
+
+  public mainQuote : Quote = new Quote();
+  
 
   public onPVFormClosedEvent(eventData : boolean) {
     //this.formClosedEvent.emit(false);
@@ -53,10 +61,53 @@ export class QuoteFormSpComponent implements OnInit {
 
   public onOtherFormClosedEvent(eventData : boolean) {
     this.otherQuoteDone = true;
-    //this.formClosedEvent.emit(false);
+    this.formClosedEvent.emit(false);
   }
 
+  public onACQuoteGenerated(evntData : Quote) {
+    this.addItemsToQuote(evntData);
+       
+  }
+  
+  public onPVQuoteGenerated(evntData : Quote) {
+    this.addItemsToQuote(evntData);
+       
+  }
+  
+  public onPVWQuoteGenerated(evntData : Quote) {
+    this.addItemsToQuote(evntData);
+       
+  }
+  
+  public onBattQuoteGenerated(evntData : Quote) {
+    this.addItemsToQuote(evntData);
+       
+  }
+  
+  public onOtherQuoteGenerated(evntData : Quote) {
+    //console.log('how?');
+    this.addItemsToQuote(evntData);
+    this.doCreateQuote();
+       
+  }
 
+  private addItemsToQuote(evntData : Quote) {
+    console.log('in sp', evntData);
+    for(let i = 0; i < evntData.quoteItems.length; i++){
+      this.mainQuote.quoteItems.push(evntData.quoteItems[i]);
+    }
+  }
+  
+  private doCreateQuote() : void {
+    console.log('why not create?');
+    this.quoteDataService.addQuote(this.dbCustomer._id, this.mainQuote)
+      .then((quotation: Quote) => {
+        console.log('quotation saved', quotation);
+        let quotes = this.dbCustomer.quotations.slice(0);
+        quotes.unshift(quotation);
+        this.dbCustomer.quotations = quotes;
+      });
+  }
 
   ngOnInit() {
     this.allProducts = this.dbProducts;
@@ -65,6 +116,7 @@ export class QuoteFormSpComponent implements OnInit {
     this.batProducts = this.battProducts;
     this.otProducts = this.otherProducts;
     this.customer = this.dbCustomer;
+    this.mainQuote.quoteItems = [];
   }
 
 }

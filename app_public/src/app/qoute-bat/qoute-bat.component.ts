@@ -6,7 +6,7 @@ import { ProductDataService } from '../product-data.service';
 import { QuotationDataService } from '../quotation-data.service';
 import { AuthenticationService } from '../authentication.service';
 import { QuoteItem5 } from '../customer';
-import { Quote } from '../customer'
+import { Quote } from '../customer';
 
 @Component({
   selector: 'app-qoute-bat',
@@ -18,6 +18,7 @@ export class QouteBatComponent implements OnInit {
   @Input() dbCustomer : Customer;
   @Input() prods : Product[];
   @Output() formClosedEvent = new EventEmitter<boolean>();
+  @Output() quoteGenerated = new EventEmitter<Quote>();
 
   public formError = '';
 
@@ -174,30 +175,16 @@ export class QouteBatComponent implements OnInit {
                   productExpense: this.formQuoteItem5.sExpense,
                   description: this.formQuoteItem5.sDescription
                 });
-               this.doSubmitQuote();  
+                if(this.formIsValid()){
+                  this.quoteGenerated.emit(this.newQuotation);
+                  this.resetAndHideQuoteForm();
+                } else {
+                  this.formError = 'No items entered, please try again.';
+                }
             });
         });
        // this.itemAdded = true;
     }); 
-
-  }
-
-  public doSubmitQuote() : void {
-    this.formError = '';
-    //this.itemAdded = false;
-    if(this.formIsValid()) {
-      //get last item and set its summary
-      this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
-      .then((quotation: Quote) => {
-        console.log('quotation saved', quotation);
-        let quotes = this.dbCustomer.quotations.slice(0);
-        quotes.unshift(quotation);
-        this.dbCustomer.quotations = quotes;
-        this.resetAndHideQuoteForm();
-      });
-    } else {
-      this.formError = 'No items entered, please try again.';
-    }
 
   }
 

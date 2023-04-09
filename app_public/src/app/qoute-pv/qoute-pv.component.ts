@@ -21,6 +21,7 @@ export class QoutePvComponent implements OnInit {
   @Input() displayForm: boolean;
   @Output() formClosedEvent = new EventEmitter<boolean>();
   @Input() prods : Product[];
+  @Output() quoteGenerated = new EventEmitter<Quote>();
 
   public closeForm : boolean = false;
 
@@ -280,9 +281,13 @@ export class QoutePvComponent implements OnInit {
                          productExpense: this.formQuoteItem2.mc4Expense,
                         description: this.formQuoteItem2.mc4Description
                         });
-              
-                       this.doSubmitQuote();
-
+                       
+                        if(this.formIsValid()){
+                          this.quoteGenerated.emit(this.newQuotation);
+                          this.resetAndHideQuoteForm();
+                        } else {
+                          this.formError = 'No items entered, please try again.';
+                        }
                     });
                 });
 

@@ -1,24 +1,24 @@
 
 <app-qoute-pv *ngIf="!pvQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVFormClosedEvent($event)"
-     [prods]="allProducts" [dbCustomer]="customer">
+     [prods]="allProducts" [dbCustomer]="customer" (quoteGenerated)="onPVQuoteGenerated($event)">
 </app-qoute-pv>
 
 
 <app-quote-pv-wire *ngIf="pvQuoteDone && !pvwQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVWFormClosedEvent($event)"
-    [prods]="wirProducts" [dbCustomer]="customer">
+    [prods]="wirProducts" [dbCustomer]="customer"  (quoteGenerated)="onPVWQuoteGenerated($event)">
 </app-quote-pv-wire>
 
 <app-qoute-ac *ngIf="pvwQuoteDone && !acQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onACFormClosedEvent($event)"
-     [prods]="acProducts" [dbCustomer]="customer">
+     [prods]="acProducts" [dbCustomer]="customer"  (quoteGenerated)="onACQuoteGenerated($event)">
 </app-qoute-ac>
 
 
 <app-qoute-bat *ngIf="acQuoteDone && !battQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onBattFormClosedEvent($event)"
-     [prods]="batProducts" [dbCustomer]="customer">
+     [prods]="batProducts" [dbCustomer]="customer"  (quoteGenerated)="onBattQuoteGenerated($event)">
 </app-qoute-bat>
 
 
 <app-qoute-other *ngIf="battQuoteDone && !otherQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onOtherFormClosedEvent($event)"
-     [prods]="otProducts" [dbCustomer]="customer">
+     [prods]="otProducts" [dbCustomer]="customer"  (quoteGenerated)="onOtherQuoteGenerated($event)">
 </app-qoute-other>
 
