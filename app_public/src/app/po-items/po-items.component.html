@@ -1,15 +1,15 @@
 <table>
   <tr>
-    <th class="wide">Product</th>
-    <th class="wider">Description</th>
-    <th class="narrow">Exp/Unit</th>
-    <th class="narrow">Quantity</th>
-    <th class="narrow">Amount</th>
+    <th class="wide" style="text-align:center;">Product</th>
+    <th class="wider" style="text-align:center;">Description</th>
+    <th class="narrow" style="text-align:center;">Exp/Unit</th>
+    <th class="narrow" style="text-align:center;">Quantity</th>
+    <th class="narrow" style="text-align:center;">Amount</th>
   </tr>
   <tr *ngFor="let item of content.invoiceItems">
     <td class="wide">{{item.product}}</td>
     <td class="wider">{{item.description}}</td>
-    <td class="narrow">{{item.productExpense}}</td>
+    <td class="narrow">{{item.productExpense | currency : 'R' : true}}</td>
     <td class="narrow">{{item.quantity}}</td>
     <td class="narrow">{{item.productExpense * item.quantity | currency : 'R' : true}}</td>
   </tr>

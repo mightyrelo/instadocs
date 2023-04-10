@@ -8,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class InvoiceItemsComponent implements OnInit {
 
   @Input() content: any;
+ 
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

@@ -260,6 +260,10 @@ h4 small {
     height:fit-content;
   }
 
+  .centered {
+    text-align: center;
+  }
+
 
 
 

@@ -10,10 +10,13 @@ export class InvoiceDetailsComponent implements OnInit {
 
   @Input() content: any;
   @Input() user: any;
+  public expDate : any;
 
   constructor() { }
 
   ngOnInit() {
+      this.expDate = new Date(this.content.createdOn);
+      this.expDate.setDate(this.expDate.getDate() + 7);
   }
 
 }

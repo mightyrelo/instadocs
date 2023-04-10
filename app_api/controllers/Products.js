@@ -193,10 +193,10 @@ const createProduct = (req, res, data) => {
     let userName = req.params.userName;
     if(userName == 'thabethe') {
         const trade = Number(data.rate);
-        const retail = trade + 0.3*trade;
+        const retail = trade/0.79;
         Prod.create({
             name: data.description,
-            description: data.description,
+            description: data.name,
             trade: trade,
             selling: retail,
             userId: userName,

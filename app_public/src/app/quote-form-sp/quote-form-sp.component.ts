@@ -154,6 +154,10 @@ export class QuoteFormSpComponent implements OnInit {
       });
   }
 
+  public resetAndHideQuoteForm() : void {
+    this.formClosedEvent.emit(false);
+  }
+
   ngOnInit() {
     this.allProducts = this.dbProducts;
     this.acProducts = this.aacProducts;
