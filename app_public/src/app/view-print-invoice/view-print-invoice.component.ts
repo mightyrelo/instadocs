@@ -12,6 +12,8 @@ import { Company } from '../company';
 import { Customer, Invoice } from '../customer';
 
 import { AuthenticationService } from '../authentication.service';
+import { UserDataService } from '../user-data.service';
+import { User } from '../user';
 
 
 @Component({
@@ -32,13 +34,15 @@ export class ViewPrintInvoiceComponent implements OnInit {
   public companies : Company[];
 
   public userName : string;
+  public user : User;
   
   constructor(
     private companyDataService : CompanyDataService,
     private invoiceDataService: InvoiceDataService,
     private customerDataService: CustomerDataService,
     private route: ActivatedRoute,
-    private authService: AuthenticationService
+    private authService: AuthenticationService,
+    private userDataService: UserDataService
 
   ) { }
 
@@ -69,7 +73,13 @@ export class ViewPrintInvoiceComponent implements OnInit {
         if(this.companies[i].userId == this.getUserName())
         {
           this.companyDataService.readCompany(this.companies[i]._id)
-           .then(resp => {this.company = resp; console.log(this.company)});
+           .then(resp => {
+              this.company = resp;
+              this.userDataService.getUserByName(this.getUserName())
+               .then(user => {
+                this.user = user;
+              });
+            });
         }        
       }
     });

@@ -10,6 +10,10 @@ import { Customer, Invoice } from '../customer';
 import { InvoiceDataService } from '../invoice-data.service';
 import { AuthenticationService } from '../authentication.service';
 
+import { UserDataService } from '../user-data.service';
+import { User } from '../user';
+
+
 
 @Component({
   selector: 'app-view-print-po',
@@ -26,13 +30,15 @@ export class ViewPrintPoComponent implements OnInit {
   public foundId : string;
 
   public userName : string;
+  public user : User;
   
   constructor(
     private companyDataService : CompanyDataService,
     private invoiceDataService: InvoiceDataService,
     private customerDataService: CustomerDataService,
     private route: ActivatedRoute,
-    private authService: AuthenticationService
+    private authService: AuthenticationService,
+    private userDataService: UserDataService
 
   ) { }
 
@@ -68,7 +74,13 @@ export class ViewPrintPoComponent implements OnInit {
         if(this.companies[i].userId == this.getUserName())
         {
           this.companyDataService.readCompany(this.companies[i]._id)
-           .then(resp => {this.company = resp; console.log(this.company)});
+           .then(resp => {
+              this.company = resp;
+              this.userDataService.getUserByName(this.getUserName())
+               .then(user => {
+                this.user = user;
+              });
+            });
         }        
       }
     });
@@ -120,6 +132,14 @@ export class ViewPrintPoComponent implements OnInit {
         .subscribe((inv: Invoice) => {  
           console.log(inv);       
           this.invoice = inv;
+          this.userDataService.getUserByName(this.getUserName())
+            .then(response => {
+              response.completedPOs = response.completedPOs + 1;
+              this.userDataService.updateInvoices(response)
+                .then(usr => {
+                    console.log('completed POs', usr.completedPOs);
+                });
+            });
         })
       })
   }

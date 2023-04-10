@@ -22,6 +22,16 @@ const UserSchema = mongoose.Schema({
         type: Number,
         required: true,
         'default': 0
+    },
+    completedInvoices : {
+        type: Number,
+        required: true,
+        'default': 0
+    },
+    completedPOs : {
+        type: Number,
+        required: true,
+        'default': 0
     }
 });
 

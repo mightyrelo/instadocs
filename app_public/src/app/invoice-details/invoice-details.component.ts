@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { User } from '../user';
+
 
 @Component({
   selector: 'app-invoice-details',
@@ -10,6 +12,7 @@ export class InvoiceDetailsComponent implements OnInit {
 
   @Input() content: any;
   @Input() user: any;
+  @Input() user2 : User;
   public expDate : any;
 
   constructor() { }

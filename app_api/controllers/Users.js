@@ -86,6 +86,12 @@ const usersDeleteOne = (req, res) => {
         if(req.body.completedQuotes){
             user.completedQuotes = req.body.completedQuotes;
         }
+        if(req.body.completedInvoices){
+            user.completedInvoices = req.body.completedInvoices;
+        }
+        if(req.body.completedPOs){
+            user.completedPOs = req.body.completedPOs;
+        }
         if(req.body.password){
             user.password = req.body.password;
         }

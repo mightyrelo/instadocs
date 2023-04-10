@@ -6,4 +6,6 @@ export class User {
     flagged: boolean;
     createdOn: string;
     completedQuotes: number;
+    completedInvoices: number;
+    completedPOs: number;
 }

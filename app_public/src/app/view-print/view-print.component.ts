@@ -70,7 +70,6 @@ export class ViewPrintComponent implements OnInit {
       this.companies = response;
       for(let i = 0; i < this.companies.length; i++)
       {
-        console.log('not getting compnay');
         if(this.companies[i].userId == this.getUserName())
         {
           this.companyDataService.readCompany(this.companies[i]._id)

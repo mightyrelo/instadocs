@@ -10,7 +10,7 @@
     </div>
     <div class="parent1">
       <app-customer-contacts *ngIf="customer" [content]="customer"></app-customer-contacts>
-      <app-po-details *ngIf="invoice" [content]="invoice" [user]="userName"></app-po-details>
+      <app-po-details *ngIf="invoice" [content]="invoice" [user]="userName" [user2]="user"></app-po-details>
     </div>
     <div class="parent3">
       <app-po-items *ngIf="invoice" [content]="invoice"></app-po-items>

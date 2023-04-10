@@ -20,7 +20,9 @@ export class LoginFormComponent implements OnInit {
     _id: '',
     createdOn: '',
     flagged: null,
-    completedQuotes: null
+    completedQuotes: null,
+    completedInvoices: null,
+    completedPOs: null,
   };
   constructor(
     private authService: AuthenticationService,

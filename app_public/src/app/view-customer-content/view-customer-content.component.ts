@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Customer, QuoteItem, Quote, Invoice } from '../customer';
 
@@ -8,7 +9,8 @@ import { ProductDataService } from '../product-data.service';
 import { Product } from '../product';
 import { InvoiceDataService } from '../invoice-data.service';
 import { AuthenticationService } from '../authentication.service';
-import { Router } from '@angular/router';
+import { UserDataService } from '../user-data.service';
+
 
 @Component({
   selector: 'app-view-customer-content',
@@ -95,6 +97,7 @@ export class ViewCustomerContentComponent implements OnInit {
     private productDataService: ProductDataService,
     private invoiceDataService: InvoiceDataService,
     private authService: AuthenticationService,
+    private userDataService: UserDataService,
     private router: Router
   ) { }
 
@@ -198,6 +201,14 @@ export class ViewCustomerContentComponent implements OnInit {
         invoices.unshift(response);
         this.dbCustomer.invoices = invoices;
         window.location.reload();
+        this.userDataService.getUserByName(this.getUserName())
+            .then(response => {
+            response.completedInvoices = response.completedInvoices + 1;
+            this.userDataService.updateInvoices(response)
+            .then(usr => {
+                console.log('completed invoices', usr.completedInvoices);
+              });
+            })
       });
   }
 

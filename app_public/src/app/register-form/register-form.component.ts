@@ -24,7 +24,9 @@ export class RegisterFormComponent implements OnInit {
     _id: '',
     flagged: null,
     createdOn: '',
-    completedQuotes: null
+    completedQuotes: null,
+    completedInvoices: null,
+    completedPOs: null,
   };
 
   public formError = '';
