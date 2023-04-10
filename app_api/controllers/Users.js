@@ -108,9 +108,26 @@ const usersDeleteOne = (req, res) => {
 
  };
 
+ const usersReadOne = (req, res) => {
+    User
+      .findById(req.params.userId)
+      .exec((err, user)=>{
+        if(!user) {
+            sendJSONResponse(res,404,{"message":"product with id not found"});
+            return;
+        } else if(err) {
+            sendJSONResponse(res,404,err);
+            return;
+        }
+        sendJSONResponse(res,200,user);
+      });
+
+ };
+
  module.exports = {
     usersReadAll,
     usersDeleteOne,
     usersReadByName,
     usersUpdateOne,
+    usersReadOne
  }

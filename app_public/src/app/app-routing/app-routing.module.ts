@@ -19,6 +19,7 @@ import { ViewProductComponent } from '../view-product/view-product.component';
 import { ViewPrintPoComponent } from '../view-print-po/view-print-po.component';
 import { TransferDbComponent } from '../transfer-db/transfer-db.component';
 import { ViewUsersComponent } from '../view-users/view-users.component';
+import { ViewUserComponent } from '../view-user/view-user.component';
 
 const routes : Routes = 
   [{
@@ -75,6 +76,11 @@ const routes : Routes =
 },{
   path: 'users',
   component: ViewUsersComponent, 
+
+},{
+  path:'users/:userId',
+  component: ViewUserComponent, 
+
 }];
 
 @NgModule({

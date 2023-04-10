@@ -57,6 +57,8 @@ import { QouteOtherComponent } from './qoute-other/qoute-other.component';
 import { QuotePvWireComponent } from './quote-pv-wire/quote-pv-wire.component';
 import { ViewUsersComponent } from './view-users/view-users.component';
 import { ViewUsersContentComponent } from './view-users-content/view-users-content.component';
+import { ViewUserComponent } from './view-user/view-user.component';
+import { ViewUserContentComponent } from './view-user-content/view-user-content.component';
 
 
 
@@ -114,7 +116,9 @@ import { ViewUsersContentComponent } from './view-users-content/view-users-conte
     QouteOtherComponent,
     QuotePvWireComponent,
     ViewUsersComponent,
-    ViewUsersContentComponent
+    ViewUsersContentComponent,
+    ViewUserComponent,
+    ViewUserContentComponent
   ],
   imports: [
     BrowserModule,

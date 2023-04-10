@@ -1,6 +1,6 @@
 <div class="div4" *ngIf="user2">
   <h6>Purchase Order#: {{user2.completedPOs}}</h6>
   <small><p>Release: {{content.createdOn | date : 'd MMMM  yyyy'}}</p></small>
-  <small><p>Expiry: {{content.createdOn | date : 'd MMMM  yyyy'}}</p></small>
+  <small><p>Expiry: {{expDate | date : 'd MMMM  yyyy'}}</p></small>
   <small><p>Author: {{user2.name}}</p></small>
 </div>

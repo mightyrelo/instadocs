@@ -172,6 +172,7 @@ router
 
 router
   .route('/users/:userId')
+  .get(usersCtrl.usersReadOne)
   .delete(usersCtrl.usersDeleteOne)
   .put(usersCtrl.usersUpdateOne);
 

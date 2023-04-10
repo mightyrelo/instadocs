@@ -1,0 +1,49 @@
+<div class="col-12 col-lg-9" *ngIf="dbUser">
+  <div class="row"> 
+    <div class="col-12 col-md-6">
+      <p>{{dbUser.name}} <span (click)="displayForm=true" style="float:right"><i class="fa-solid fa-file-pen"></i></span> </p>
+      <div *ngIf="displayForm" class="col-12 col-md-8">
+        <form (ngSubmit)="onUserSubmit(dbUser._id)" method="post" role="form"> 
+          <div *ngIf="formError" class="alert alert-danger">
+            {{formError}}</div>
+          <div class="form-group">
+             <label for="name">name</label>
+             <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="newUser.name">
+          </div> 
+          <div class="form-group">
+             <label for="description">email</label>
+             <textarea class="form-control" id="description" name="description" type="text" placeholder="" [(ngModel)]="newUser.email"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="trade">password</label>
+            <input class="form-control" id="trade" name="trade" type="text" placeholder="" [(ngModel)]="newUser.password">
+         </div> 
+          <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button></small>
+          <small><button (click)="resetAndHideUserForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa sharp fa-solid fa-xmark"></i></button></small>
+        </form>     
+      </div>
+      <div class="card card-primary">
+        <div class="card-block">
+          <h2 class="card-title">App Usage </h2>
+          <p class="card-text">Quotes : {{dbUser.completedQuotes}}</p>
+          <p class="card-text">Invoices: {{dbUser.completedInvoices}}</p>
+          <p class="card-text">Purchase Orders: {{dbUser.completedPOs}}</p>
+        </div>
+      </div>
+    </div>
+  <div class="col-12 col-md-6 location-map">
+  <div class="card card-primary">
+    <div class="card-block">
+      <h2 class="card-title">{{dbUser.name}}'s Avatar </h2>
+          <img class="img-fluid roundedrounded"  src='/assets/images/pexels-mohamed-abdelghaffar-771742.jpg' alt='map of location' height="660">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="card-primary review-card">
+      <div class="card-block">
+      </div>
+    </div>
+  </div>
+</div>

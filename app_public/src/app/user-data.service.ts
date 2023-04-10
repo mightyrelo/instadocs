@@ -63,6 +63,16 @@ export class UserDataService {
        .catch(this.handleError);
   }
 
+  public getUser(userId : string) {
+    console.log('insfds', userId);
+    const url : string = `${this.apiBaseUrl}/users/${userId}`;
+    return this.http
+       .get(url)
+       .toPromise()
+       .then(response => response as User)
+       .catch(this.handleError);
+  }
+
   public updateQuotes(user : User) {
     const url : string = `${this.apiBaseUrl}/users/${user._id}`;
     return this.http
@@ -82,6 +92,15 @@ export class UserDataService {
   }
 
   public updatePOs(user : User) {
+    const url : string = `${this.apiBaseUrl}/users/${user._id}`;
+    return this.http
+        .put(url, user)
+        .toPromise()
+        .then(response => response as any)
+        .catch(this.handleError);
+  }
+
+  public updateUser(user : User) {
     const url : string = `${this.apiBaseUrl}/users/${user._id}`;
     return this.http
         .put(url, user)
