@@ -46,7 +46,7 @@ export class ViewPrintInvoiceComponent implements OnInit {
 
   ) { }
 
-  private getUserName() : string {
+  public getUserName() : string {
     if(this.isLoggedIn())
     {
       const {name} = this.authService.getCurrentUser();

@@ -48,7 +48,7 @@ export class ViewPrintComponent implements OnInit {
 
 
 
-  private getUserName() : string {
+  public getUserName() : string {
     if(this.isLoggedIn())
     {
       const {name} = this.authService.getCurrentUser();
