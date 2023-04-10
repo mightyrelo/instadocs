@@ -237,6 +237,17 @@ h4 small {
   }
 
   .parent5 {
+    margin: 2em auto 0 auto;
+    background-color:rgba(0, 255, 42, 0.18);
+    width: 90%;
+    text-align: left;
+    font-size: 0.8em;
+    color: black;
+    line-height: 0.8em;
+    padding: 1em;
+  }
+
+  .parent6 {
     background-color:rgba(0, 255, 42, 0.18);
     margin: 1em auto 0 auto;
     width: 70%;
@@ -244,6 +255,7 @@ h4 small {
     color: black;
     line-height: 0.8em;
     padding: 1em;
+    font-weight: 0.5em;
   }
 
   select {

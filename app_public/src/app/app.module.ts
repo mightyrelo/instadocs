@@ -59,6 +59,7 @@ import { ViewUsersComponent } from './view-users/view-users.component';
 import { ViewUsersContentComponent } from './view-users-content/view-users-content.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { ViewUserContentComponent } from './view-user-content/view-user-content.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 
@@ -118,7 +119,8 @@ import { ViewUserContentComponent } from './view-user-content/view-user-content.
     ViewUsersComponent,
     ViewUsersContentComponent,
     ViewUserComponent,
-    ViewUserContentComponent
+    ViewUserContentComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
