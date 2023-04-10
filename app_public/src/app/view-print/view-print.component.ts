@@ -46,17 +46,13 @@ export class ViewPrintComponent implements OnInit {
     this.getQuote(cusId, qId);
   }
 
+
+
   private getUserName() : string {
     if(this.isLoggedIn())
     {
       const {name} = this.authService.getCurrentUser();
-      this.userName = name;
-      this.userDataService.getUserByName(this.userName)
-        .then(user => {
-          this.user = user;
-          return name ? name : 'Guest'
-        });
-     
+      return name ? name : 'Guest'
     }
     return 'Guest';
     
@@ -68,16 +64,23 @@ export class ViewPrintComponent implements OnInit {
 
   private getCompany() : void {
     //this.companyDataService.readCompany('63563a51f2aebf78da7348a7')//  63ad639ce44e1cd8465b1858
+
     this.companyDataService.readCompanies()
     .then(response => {
       this.companies = response;
       for(let i = 0; i < this.companies.length; i++)
       {
-        
+        console.log('not getting compnay');
         if(this.companies[i].userId == this.getUserName())
         {
           this.companyDataService.readCompany(this.companies[i]._id)
-           .then(resp => {this.company = resp; console.log(this.company)});
+           .then(resp => {
+            this.company = resp;
+            console.log(this.company)});
+            this.userDataService.getUserByName(this.getUserName())
+               .then(user => {
+                this.user = user;
+              });
         }        
       }
     });
@@ -110,26 +113,28 @@ export class ViewPrintComponent implements OnInit {
   ngOnInit() : void {
       this.getCompany();
       this.route.paramMap
-      .pipe(
-      switchMap((params: ParamMap) => {
-        let id = params.get('customerId');
-        this.foundId = id;
-        return this.customerDataService.getCustomer(id);
-      })
-      )
-      .subscribe((newCustomer: Customer) => {
-        this.customer = newCustomer;
-        this.route.paramMap
-        .pipe(
+          .pipe(
           switchMap((params: ParamMap) => {
-            let qId = params.get('quotationId');
-            return this.quoteDataService.readQuote(this.foundId, qId);
+            let id = params.get('customerId');
+            this.foundId = id;
+            return this.customerDataService.getCustomer(id);
           })
-        )
-        .subscribe((quote: Quote) => {         
-          this.quote = quote;
-        })
-      })
+          )
+          .subscribe((newCustomer: Customer) => {
+            this.customer = newCustomer;
+            this.route.paramMap
+            .pipe(
+              switchMap((params: ParamMap) => {
+                let qId = params.get('quotationId');
+                return this.quoteDataService.readQuote(this.foundId, qId);
+              })
+            )
+            .subscribe((quote: Quote) => {         
+              this.quote = quote;
+            })
+          })
+          
+          
   }
 
 }
