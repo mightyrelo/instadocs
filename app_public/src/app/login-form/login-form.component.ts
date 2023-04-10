@@ -19,7 +19,8 @@ export class LoginFormComponent implements OnInit {
     name: '',
     _id: '',
     createdOn: '',
-    flagged: null
+    flagged: null,
+    completedQuotes: null
   };
   constructor(
     private authService: AuthenticationService,

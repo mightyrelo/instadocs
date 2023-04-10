@@ -3,6 +3,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Customer } from '../customer';
 import { QuotationDataService } from '../quotation-data.service';
 import { Quote } from '../customer';
+import { UserDataService } from '../user-data.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-quote-form-sp',
@@ -20,7 +22,9 @@ export class QuoteFormSpComponent implements OnInit {
   @Input() otherProducts = [];
   @Output() formClosedEvent = new EventEmitter<boolean>();
   constructor(
-    private quoteDataService : QuotationDataService
+    private quoteDataService : QuotationDataService,
+    private userDataService : UserDataService,
+    private authService: AuthenticationService
   ) { }
 
   public allProducts = [];
@@ -143,15 +147,43 @@ export class QuoteFormSpComponent implements OnInit {
     this.mainQuote.expense += evntData.expense;
     this.mainQuote.summary += evntData.summary;
   }
+
+  public isLoggedIn() : boolean {
+    return this.authService.isLoggedIn();
+  }
+
+  public getUserName() : string {
+    if(this.isLoggedIn())
+    {
+      const {name} = this.authService.getCurrentUser();
+     return name ? name : 'Guest'
+    }
+    return 'Guest';
+    
+  }
+
+
   
   private doCreateQuote() : void {
     this.quoteDataService.addQuote(this.dbCustomer._id, this.mainQuote)
       .then((quotation: Quote) => {
-        console.log('quotation saved', quotation);
-        let quotes = this.dbCustomer.quotations.slice(0);
-        quotes.unshift(quotation);
-        this.dbCustomer.quotations = quotes;
-      });
+          console.log('quotation saved', quotation);
+          let quotes = this.dbCustomer.quotations.slice(0);
+          quotes.unshift(quotation);
+          this.dbCustomer.quotations = quotes;
+          this.userDataService.getUserByName(this.getUserName())
+            .then(response => {
+            response.completedQuotes = response.completedQuotes + 1;
+            this.userDataService.updateQuotes(response)
+                .then(usr => {
+                    console.log('completed quotes', usr.completedQuotes);
+                });
+            
+            });
+
+    });
+    
+    
   }
 
   public resetAndHideQuoteForm() : void {

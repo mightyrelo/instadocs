@@ -211,4 +211,5 @@ export class Customer {
     email: string;
     flagged: boolean;
     userId: string;
+    
 }

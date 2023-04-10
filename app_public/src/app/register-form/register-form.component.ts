@@ -23,7 +23,8 @@ export class RegisterFormComponent implements OnInit {
     password: '',
     _id: '',
     flagged: null,
-    createdOn: ''
+    createdOn: '',
+    completedQuotes: null
   };
 
   public formError = '';

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Quote } from '../customer';
+import { User } from '../user';
 
 
 @Component({
@@ -12,6 +12,7 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input() content: any;
   @Input() user: any;
+  @Input() user2: User;
 
   public expDate : any;
 

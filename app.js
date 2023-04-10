@@ -29,9 +29,11 @@ app.use(express.static(path.join(__dirname, 'app_public', 'build')));
 app.use(passport.initialize());
 
 app.use('/api', (req, res, next) => {
+  
   res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
   //res.header('Access-Control-Allow-Origin', 'http://ngamla.net');
   res.header('Access-Control-Allow-Headers', 'Origin, x-Requested-With,Content-Type, Accept, Authorization');
+  res.header('Access-Control-Allow-Methods', 'POST, PUT, GET, DELETE, OPTIONS');
   next();
 });
 

@@ -2,15 +2,15 @@
   <tr>
     <th class="wide" style="text-align:center;">Product</th>
     <th class="wider" style="text-align:center;">Description</th>
-    <th class="narrow" style="text-align:center;">R/Unit</th>
     <th class="narrow" style="text-align:center;">Qty</th>
+    <th class="narrow" style="text-align:center;">R/Unit</th>
     <th class="narrow" style="text-align:center;">Amount</th>
   </tr>
   <tr *ngFor="let item of content.quoteItems">
-    <td class="wide">{{item.product}}</td>
-    <td class="wider">{{item.description}}</td>
-    <td class="narrow">{{item.productAmount | currency : 'R' : true}}</td>
+    <td class="wide">{{item.description}}</td>
+    <td class="wider">{{item.product}}</td>
     <td class="narrow">{{item.quantity}}</td>
+    <td class="narrow">{{item.productAmount | currency : 'R' : true}}</td>
     <td class="narrow">{{item.productAmount * item.quantity | currency : 'R' : true}}</td>
   </tr>
   <tr>

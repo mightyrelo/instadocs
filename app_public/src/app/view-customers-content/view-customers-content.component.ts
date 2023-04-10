@@ -92,6 +92,7 @@ export class ViewCustomersContentComponent implements OnInit {
     this.formCustomer.email = '';
     this.formCustomer.flagged = false;
     this.getCustomers(this.getUserName());
+
   }
 
   //deleting quote

@@ -4,19 +4,28 @@
     <a style="font-size: 2.3em;color: whitesmoke;" class="btn float-right" (click)="createPDF()"><i class="fa-solid fa-file-pdf"></i></a>
   </p>
     <div class="outer" id="print">
-    <div class="parent">
-      <app-company-tag *ngIf="company" [content]="company"></app-company-tag>
-      <app-company-contact *ngIf="company" [content]="company"></app-company-contact>
+      <div class="parent">
+        <app-company-tag *ngIf="company" [content]="company"></app-company-tag>
+        <app-company-contact *ngIf="company" [content]="company"></app-company-contact>
+      </div>
+      <div class="parent1">
+        <app-customer-contacts *ngIf="customer" [content]="customer"></app-customer-contacts>
+        <app-quote-details *ngIf="quote" [content]="quote" [user]="userName" [user2]="user"></app-quote-details>
+      </div>
+      <div class="parent3">
+        <app-quote-items *ngIf="quote" [content]="quote"></app-quote-items>
+      </div>
+      <div class="parent4">
+        <app-banking *ngIf="company" [content]="company"></app-banking>
+      </div>
+      <div class="parent1">
+        <p>Quote excludes additional electrical reticulation , scafolding hire and civil works ( Trenches ) </p>
+         <p> System design is of a hybrid topology that will make use of municipal supply from time to time and therefore not OFFGRID </p>
+         <p> Labour and travelling costs exclude waiting time and all work is quoted to occur uninterrupted and concurrently </p>
+         <p> Inverter hybrid -> 1 year warranty </p>
+         <p> LI-Ion battery  cycle life >3500 cycles at DOD 85%  25°C  -> 8 years manufacturer warranty </p>
+         <p> AGM (Gel) battery  cycle life > 900 cycles at DOD 50% 25°C -> 6 months manufacturer warranty </p>
+        
+      </div>
     </div>
-    <div class="parent1">
-      <app-customer-contacts *ngIf="customer" [content]="customer"></app-customer-contacts>
-      <app-quote-details *ngIf="quote" [content]="quote" [user]="userName"></app-quote-details>
-    </div>
-    <div class="parent3">
-      <app-quote-items *ngIf="quote" [content]="quote"></app-quote-items>
-    </div>
-    <div class="parent4">
-      <app-banking *ngIf="company" [content]="company"></app-banking>
-    </div>
-  </div>
 </div>

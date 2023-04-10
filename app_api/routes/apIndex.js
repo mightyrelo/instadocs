@@ -172,7 +172,12 @@ router
 
 router
   .route('/users/:userId')
-  .delete(usersCtrl.usersDeleteOne);
+  .delete(usersCtrl.usersDeleteOne)
+  .put(usersCtrl.usersUpdateOne);
+
+router
+  .route('/users/username/:userName')
+  .get(usersCtrl.usersReadByName);
 
 
 module.exports = router;

@@ -50,7 +50,6 @@ export class ViewCustomerContentComponent implements OnInit {
     createdOn: '',
     flagged: false,
     userId: '',
-
   };
 
   public newQuotation = {

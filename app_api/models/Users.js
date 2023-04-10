@@ -17,6 +17,11 @@ const UserSchema = mongoose.Schema({
     createdOn: {
         type: Date,
         'default': Date.now
+    },
+    completedQuotes : {
+        type: Number,
+        required: true,
+        'default': 0
     }
 });
 

@@ -9,6 +9,8 @@ import { QuotationDataService } from '../quotation-data.service';
 import { Company } from '../company';
 import { Customer, Quote } from '../customer';
 import { AuthenticationService } from '../authentication.service';
+import { UserDataService } from '../user-data.service';
+import { User } from '../user';
 
 
 @Component({
@@ -26,13 +28,15 @@ export class ViewPrintComponent implements OnInit {
   public foundId : string;
 
   public userName : string;
+  public user : User;
   
   constructor(
     private companyDataService : CompanyDataService,
     private quoteDataService: QuotationDataService,
     private customerDataService: CustomerDataService,
     private route: ActivatedRoute,
-    private authService: AuthenticationService
+    private authService: AuthenticationService,
+    private userDataService: UserDataService
 
   ) { }
 
@@ -47,7 +51,12 @@ export class ViewPrintComponent implements OnInit {
     {
       const {name} = this.authService.getCurrentUser();
       this.userName = name;
-     return name ? name : 'Guest'
+      this.userDataService.getUserByName(this.userName)
+        .then(user => {
+          this.user = user;
+          return name ? name : 'Guest'
+        });
+     
     }
     return 'Guest';
     

@@ -54,6 +54,24 @@ export class UserDataService {
         .catch(this.handleError);
   }
 
+  public getUserByName(userName : string) {
+    const url : string = `${this.apiBaseUrl}/users/username/${userName}`;
+    return this.http
+       .get(url)
+       .toPromise()
+       .then(response => response as User)
+       .catch(this.handleError);
+  }
+
+  public updateQuotes(user : User) {
+    const url : string = `${this.apiBaseUrl}/users/${user._id}`;
+    return this.http
+        .put(url, user)
+        .toPromise()
+        .then(response => response as any)
+        .catch(this.handleError);
+  }
+
   private handleError(error: any) : Promise<any> {
     console.error('Something has gone wrong', error);
     return Promise.reject(error.message || error);

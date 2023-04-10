@@ -5,4 +5,5 @@ export class User {
     _id: string;
     flagged: boolean;
     createdOn: string;
+    completedQuotes: number;
 }
