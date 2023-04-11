@@ -15,8 +15,6 @@ export class DbTransferService {
   ) { }
 
   public transferDB(formUser: any) : Promise<null> {
-    console.log('name', formUser.name);
-    console.log('name', formUser.pricelist);
     const url : string = `${this.apiBaseUrl}/transfer/${formUser.name}/pricelist/${formUser.pricelist}`;
     return this.http
       .get(url)

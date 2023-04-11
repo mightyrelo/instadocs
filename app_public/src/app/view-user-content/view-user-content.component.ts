@@ -4,7 +4,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../user';
 import { UserDataService } from '../user-data.service';
 import { AuthenticationService } from '../authentication.service';
-
+import { DbTransferService } from '../db-transfer.service';
+import { ProductDataService } from '../product-data.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-view-user-content',
@@ -20,14 +22,22 @@ export class ViewUserContentComponent implements OnInit {
   public displayForm : boolean = false;
   public formError = '';
 
+  public isFlagged : boolean = false;
+
+  public userProducts : Product[];
+
   constructor(
     private authService : AuthenticationService,
-    private userDataService : UserDataService
+    private userDataService : UserDataService,
+    private dbTransferService: DbTransferService,
+    private productDataService: ProductDataService
   ) { }
 
   public  users : User[];
 
   public currentUser : User[];
+
+
 
   public newUser : User = {
     _id: '',
@@ -40,6 +50,15 @@ export class ViewUserContentComponent implements OnInit {
     flagged: null,
     createdOn: ''
   };
+
+  public formError2 = '';
+  public formUser = {
+    name: '',
+    pricelist: ''
+  }
+  public dataTransferred : boolean = false;
+
+  public productsDeleted : boolean = false;
 
   public isLoggedIn() : boolean {
     return this.authService.isLoggedIn();
@@ -96,13 +115,39 @@ export class ViewUserContentComponent implements OnInit {
     this.getUsers(this.getUserName());
   }
 
+  public onUserNameSubmit() : void {
+    this.formUser.name = this.dbUser.name;
+    this.dbTransferService.transferDB(this.formUser)
+      .then(rsp => {
+        console.log('transferred');
+        
+      });
+      this.dataTransferred = true;
+  }
+
+  public flagForDeletion() : void {
+    this.isFlagged = true;
+  }
+
+  public setOffFlag() : void {
+    this.isFlagged = false;
+  }
+
+  public deleteUserProducts() : void {
+    this.productDataService.getProductsByUserName(this.dbUser.name)
+      .then(products => {
+        this.userProducts = products;
+        for(let i = 0; i < this.userProducts.length; i++){
+          this.productDataService.deleteProduct(this.userProducts[i]._id)
+             .then(rsp => {});
+        }
+        this.productsDeleted = true;
+      });
+    
+  }
+
 
   ngOnInit(): void {
-    if(this.dbUser){
-      console.log('not binding', this.dbUser.name);
-    }
-       //this.companyLogo = `/assets/images/${this.dbUser.name}.png`;
-      console.log(this.companyLogo);
-  
+    
   }
 }

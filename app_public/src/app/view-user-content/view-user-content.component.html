@@ -1,4 +1,4 @@
-<div class="col-12 col-lg-9" *ngIf="dbUser">
+<div class="col-12 col-lg-9 heading" *ngIf="dbUser">
   <div class="row"> 
     <div class="col-12 col-md-6">
       <p>{{dbUser.name}} <span (click)="displayForm=true" style="float:right"><i class="fa-solid fa-file-pen"></i></span> </p>
@@ -30,6 +30,32 @@
           <p class="card-text">Purchase Orders: {{dbUser.completedPOs}}</p>
         </div>
       </div>
+      <br>
+      <div class="card-block">
+        <form (ngSubmit)="onUserNameSubmit()" method="post" role="form">
+          <div *ngIf="formError" class="alert alert-danger">
+            {{formError}}</div> 
+          <div class="form-group heading">
+             <label for="pricelist">transfer pricelist</label>
+             <input class="form-control" id="pricelist" name="pricelist" type="text" placeholder="" [(ngModel)]="formUser.pricelist">
+          </div> 
+          <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
+        </form>
+        <div *ngIf="dataTransferred" class="alert alert-success">
+          <p>prices list added to user.</p>
+        </div>
+        <br>
+        <div>
+          <small><button (click)="flagForDeletion()" type="button" role="button" class="btn-primary sm-button">Remove Products</button> </small>
+          <div *ngIf="isFlagged">
+            <button style="font-size: 0.7em" (click)="setFlagOff()" class="btn btn-primary float-right">cancel</button>
+            <button style="font-size: 0.7em" (click)="deleteUserProducts()" class="btn btn-primary float-right">are you sure?</button>
+          </div>
+        </div>
+        <div *ngIf="productsDeleted" class="alert alert-success">
+          <p>all user products removed.</p>
+        </div>
+      </div>
     </div>
   <div class="col-12 col-md-6 location-map">
   <div class="card card-primary">
@@ -42,8 +68,7 @@
 <div class="row">
   <div class="col-12">
     <div class="card-primary review-card">
-      <div class="card-block">
-      </div>
+      
     </div>
   </div>
 </div>

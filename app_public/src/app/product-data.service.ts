@@ -80,8 +80,16 @@ export class ProductDataService {
         .toPromise()
         .then(resp => resp as any)
         .catch(this.handleError);
-
   };
+
+  public getProductsByUserName(userName : string) : Promise<Product[]> {
+    const url: string = `${this.apiBaseUrl}/products/userName/${userName}`;
+    return this.http
+        .get(url)
+        .toPromise()
+        .then(resp => resp as Product[])
+        .catch(this.handleError);
+  }
 
   private handleError(error: any): Promise<any> {
     console.error('Something has gone wrong', error);
