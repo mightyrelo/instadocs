@@ -200,15 +200,15 @@ export class ViewCustomerContentComponent implements OnInit {
         let invoices = this.dbCustomer.invoices.slice(0);
         invoices.unshift(response);
         this.dbCustomer.invoices = invoices;
-        window.location.reload();
         this.userDataService.getUserByName(this.getUserName())
             .then(response => {
-            response.completedInvoices = response.completedInvoices + 1;
-            this.userDataService.updateInvoices(response)
-            .then(usr => {
-                console.log('completed invoices', usr.completedInvoices);
-              });
-            })
+              response.completedInvoices = response.completedInvoices + 1;
+              this.userDataService.updateInvoices(response)
+                .then(usr => {
+                    console.log('completed invoices', usr.completedInvoices);
+                    window.location.reload();
+                });
+            });
       });
   }
 

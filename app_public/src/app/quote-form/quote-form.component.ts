@@ -6,6 +6,7 @@ import { AuthenticationService } from '../authentication.service';
 import { Customer, Quote } from '../customer';
 import { QuotationDataService } from '../quotation-data.service';
 import { QuoteItem } from '../customer';
+import { UserDataService } from '../user-data.service';
 
 @Component({
   selector: 'app-quote-form',
@@ -67,7 +68,8 @@ export class QuoteFormComponent implements OnInit {
   constructor(
     private productDataService: ProductDataService,
     private authService: AuthenticationService,
-    private quoteDataService: QuotationDataService
+    private quoteDataService: QuotationDataService,
+    private userDataService: UserDataService
   ) { }
 
   public isLoggedIn() : boolean {
@@ -110,6 +112,14 @@ export class QuoteFormComponent implements OnInit {
         quotes.unshift(quotation);
         this.dbCustomer.quotations = quotes;
         this.resetAndHideQuoteForm();
+        this.userDataService.getUserByName(this.getUserName())
+            .then(usr => {
+            usr.completedQuotes = usr.completedQuotes + 1;
+            this.userDataService.updateQuotes(usr)
+                .then(usr => {
+                    
+                });
+            });
       });
     } else {
       this.formError = 'No items entered, please try again.';
