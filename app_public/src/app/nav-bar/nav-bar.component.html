@@ -9,9 +9,9 @@
 	<div class="container">
 		<div class="navbar-collapse collapse" id="navbarMain">
 			<ul class="navbar-nav mr-auto">
+				<li *ngIf="isLoggedIn() && getUserName()=='admin'" class="nav-item"><a routerLink="users" routerLinkActive="active" class="nav-link">users</a></li>
 				<li class="nav-item"><a routerLink="customers" routerLinkActive="active" class="nav-link">customers</a></li>
-        		<li class="nav-item"><a routerLink="products" routerLinkActive="active" class="nav-link">products</a></li>						
-				<li *ngIf="isLoggedIn() && getUserName()=='admin'" class="nav-item"><a routerLink="users" routerLinkActive="active" class="nav-link">users</a></li>								
+        		<li class="nav-item"><a routerLink="products" routerLinkActive="active" class="nav-link">products</a></li>														
 			</ul>
 			<ul class="navbar-nav navbar-right">
         <li class="nav-item"><a routerLinkActive="active" class="nav-link" routerLink="register" *ngIf="!isLoggedIn()">register</a></li>

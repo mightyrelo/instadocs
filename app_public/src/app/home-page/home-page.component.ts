@@ -10,7 +10,7 @@ export class HomePageComponent implements OnInit {
   public pageContent = {
     header: {
       title: 'Ngamla - ',
-      strapline: 'Installer\'s Invoicing App!'
+      strapline: 'Installer\'s Invoicing App'
     },
     viewBar: {
       main: 'Prepare documents on the move',
