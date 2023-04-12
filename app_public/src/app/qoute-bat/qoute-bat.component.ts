@@ -72,6 +72,9 @@ export class QouteBatComponent implements OnInit {
 
   public closeForm: boolean = false;
 
+  public protect : boolean = false;
+  public stand : boolean = false;
+
   constructor(
     private productDataService: ProductDataService,
     private authService: AuthenticationService,

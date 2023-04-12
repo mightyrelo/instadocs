@@ -20,8 +20,38 @@
            <option *ngFor="let item of counts">{{item}}</option>
           </select>                         
         </div>
-    </div>  
-     <div class="form-group row">
+    </div>
+    <div class="form-group row">
+      <div class="col-7 col-md-7">
+        <label  for="flex">Panel flex</label>
+        <select [(ngModel)]="formQuoteItem4.flex" class="form-control input-sm" id="flex" name="flex">
+         <option *ngFor="let product of flexes">{{product.name}}</option>
+        </select>
+      </div>
+      <div class="col-3 col-md-3">
+        <label  for="quantityFL">Qty</label>
+        <select [(ngModel)]="formQuoteItem4.quantityFL" class="form-control input-sm" id="quantityFL" name="quantityFL">
+         <option *ngFor="let item of counts">{{item}}</option>
+        </select>                         
+      </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-7 col-md-7">
+      <label  for="batt">battery cable</label>
+      <select [(ngModel)]="formQuoteItem4.batt" class="form-control input-sm" id="batt" name="batt">
+       <option *ngFor="let product of batts">{{product.name}}</option>
+      </select>
+    </div>
+    <div class="col-3 col-md-3">
+      <label  for="quantityB">Qty</label>
+      <select [(ngModel)]="formQuoteItem4.quantityB" class="form-control input-sm" id="quantityB" name="quantityB">
+       <option *ngFor="let item of counts">{{item}}</option>
+      </select>                         
+    </div>
+</div> 
+    <p style="font-weight: bold">Trailing cable?<button type="button" role="button" class="btn-primary sm-button" (click)="trailingCable = true"> <i class="fa-solid fa-check"></i></button></p>
+    <br> 
+     <div class="form-group row" *ngIf="trailingCable">
         <div class="col-7 col-md-7">
           <label  for="trc">trailing cable</label>
           <select [(ngModel)]="formQuoteItem4.trail" class="form-control input-sm" id="trc" name="trc">
@@ -35,21 +65,9 @@
           </select>                         
         </div>
     </div>
-     <div class="form-group row">
-        <div class="col-7 col-md-7">
-          <label  for="flex">Panel flex</label>
-          <select [(ngModel)]="formQuoteItem4.flex" class="form-control input-sm" id="flex" name="flex">
-           <option *ngFor="let product of flexes">{{product.name}}</option>
-          </select>
-        </div>
-        <div class="col-3 col-md-3">
-          <label  for="quantityFL">Qty</label>
-          <select [(ngModel)]="formQuoteItem4.quantityFL" class="form-control input-sm" id="quantityFL" name="quantityFL">
-           <option *ngFor="let item of counts">{{item}}</option>
-          </select>                         
-        </div>
-    </div>  
-     <div class="form-group row">
+    <p style="font-weight: bold">Earth cable?<button type="button" role="button" class="btn-primary sm-button" (click)="earthCable = true"> <i class="fa-solid fa-check"></i></button></p>
+    <br> 
+     <div class="form-group row" *ngIf="earthCable">
         <div class="col-7 col-md-7">
           <label  for="ear">earth cable</label>
           <select [(ngModel)]="formQuoteItem4.earth" class="form-control input-sm" id="ear" name="ear">
@@ -62,22 +80,10 @@
            <option *ngFor="let item of counts">{{item}}</option>
           </select>                         
         </div>
-    </div>  
-     <div class="form-group row">
-        <div class="col-7 col-md-7">
-          <label  for="batt">battery cable</label>
-          <select [(ngModel)]="formQuoteItem4.batt" class="form-control input-sm" id="batt" name="batt">
-           <option *ngFor="let product of batts">{{product.name}}</option>
-          </select>
-        </div>
-        <div class="col-3 col-md-3">
-          <label  for="quantityB">Qty</label>
-          <select [(ngModel)]="formQuoteItem4.quantityB" class="form-control input-sm" id="quantityB" name="quantityB">
-           <option *ngFor="let item of counts">{{item}}</option>
-          </select>                         
-        </div>
-    </div>  
-     <div class="form-group row">
+    </div> 
+    <p style="font-weight: bold">Welding cable?<button type="button" role="button" class="btn-primary sm-button" (click)="weldCable = true"> <i class="fa-solid fa-check"></i></button></p>
+    <br>    
+     <div class="form-group row" *ngIf="weldCable">
         <div class="col-7 col-md-7">
           <label  for="weld">welding cable</label>
           <select [(ngModel)]="formQuoteItem4.weld" class="form-control input-sm" id="weld" name="weld">
@@ -90,8 +96,10 @@
            <option *ngFor="let item of counts">{{item}}</option>
           </select>                         
         </div>
-    </div>  
-     <div class="form-group row">
+    </div>
+    <p style="font-weight: bold">Armouring?<button type="button" role="button" class="btn-primary sm-button" (click)="armour = true"> <i class="fa-solid fa-check"></i></button></p>
+    <br>   
+     <div class="form-group row" *ngIf="armour">
         <div class="col-7 col-md-7">
           <label  for="arm">armouring</label>
           <select [(ngModel)]="formQuoteItem4.arm" class="form-control input-sm" id="arm" name="arm">

@@ -48,8 +48,24 @@
            <option *ngFor="let item of counts">{{item}}</option>
           </select>                         
         </div>
-    </div>  
-     <div class="form-group row">
+    </div>
+    <div class="form-group row">
+      <div class="col-7 col-md-7">
+        <label  for="mcb">mcb</label>
+        <select [(ngModel)]="formQuoteItem3.mcb" class="form-control input-sm" id="mcb" name="mcb">
+         <option *ngFor="let product of mcbs">{{product.name}}</option>
+        </select>
+      </div>
+      <div class="col-3 col-md-3">
+        <label  for="quantityS">Qty</label>
+        <select [(ngModel)]="formQuoteItem3.quantityMCB" class="form-control input-sm" id="quantityS" name="quantityS">
+         <option *ngFor="let item of counts">{{item}}</option>
+        </select>                         
+      </div>
+  </div>
+    <p style="font-weight: bold">Change-over switch?<button type="button" role="button" class="btn-primary sm-button" (click)="chSwitch = true"> <i class="fa-solid fa-check"></i></button></p>  
+    <br> 
+    <div class="form-group row" *ngIf="chSwitch">
         <div class="col-7 col-md-7">
           <label  for="cova">changeover switch</label>
           <select [(ngModel)]="formQuoteItem3.cova" class="form-control input-sm" id="cova" name="cova">
@@ -63,21 +79,9 @@
           </select>                         
         </div>
     </div>  
-     <div class="form-group row">
-        <div class="col-7 col-md-7">
-          <label  for="mcb">mcb</label>
-          <select [(ngModel)]="formQuoteItem3.mcb" class="form-control input-sm" id="mcb" name="mcb">
-           <option *ngFor="let product of mcbs">{{product.name}}</option>
-          </select>
-        </div>
-        <div class="col-3 col-md-3">
-          <label  for="quantityS">Qty</label>
-          <select [(ngModel)]="formQuoteItem3.quantityMCB" class="form-control input-sm" id="quantityS" name="quantityS">
-           <option *ngFor="let item of counts">{{item}}</option>
-          </select>                         
-        </div>
-    </div>  
-     <div class="form-group row">
+    <p style="font-weight: bold">surge protection?<button type="button" role="button" class="btn-primary sm-button" (click)="surge = true"> <i class="fa-solid fa-check"></i></button></p>  
+    <br>  
+     <div class="form-group row" *ngIf="surge">
         <div class="col-7 col-md-7">
           <label  for="srgProt">surge protection</label>
           <select [(ngModel)]="formQuoteItem3.surgProt" class="form-control input-sm" id="srgProt" name="srgProt">
@@ -90,8 +94,10 @@
            <option *ngFor="let item of counts">{{item}}</option>
           </select>                         
         </div>
-    </div>  
-     <div class="form-group row">
+    </div>
+    <p style="font-weight: bold">avr switch?<button type="button" role="button" class="btn-primary sm-button" (click)="avrSwitch = true"> <i class="fa-solid fa-check"></i></button></p>  
+    <br>   
+     <div class="form-group row" *ngIf="avrSwitch">
         <div class="col-7 col-md-7">
           <label  for="asw">avr switch</label>
           <select [(ngModel)]="formQuoteItem3.avr" class="form-control input-sm" id="asw" name="asw">

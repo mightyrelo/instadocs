@@ -88,6 +88,10 @@ export class QouteAcComponent implements OnInit {
   public currentSurgProt: Product;
   public currentAVR: Product;
 
+  public chSwitch : boolean = false;
+  public avrSwitch : boolean = false;
+  public surge : boolean = false;
+
 
 
   public newQuotation = {

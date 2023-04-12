@@ -20,10 +20,12 @@
            <option *ngFor="let item of counts">{{item}}</option>
           </select>                         
         </div>
-    </div>  
-     <div class="form-group row">
+    </div>
+    <p style="font-weight: bold">protection?<button type="button" role="button" class="btn-primary sm-button" (click)="protect = true"> <i class="fa-solid fa-check"></i></button></p>  
+    <br>   
+     <div class="form-group row" *ngIf="protect">
         <div class="col-7 col-md-7">
-          <label  for="trc">protection</label>
+          <label  for="trc">Battery Protection</label>
           <select [(ngModel)]="formQuoteItem5.prot" class="form-control input-sm" id="trc" name="trc">
            <option *ngFor="let product of prots">{{product.name}}</option>
           </select>
@@ -35,7 +37,9 @@
           </select>                         
         </div>
     </div>
-      <div class="form-group row">
+    <p style="font-weight: bold">Battery Stand?<button type="button" role="button" class="btn-primary sm-button" (click)="stand = true"> <i class="fa-solid fa-check"></i></button></p>  
+    <br> 
+      <div class="form-group row" *ngIf="stand">
         <div class="col-7 col-md-7">
           <label  for="flex">battery stand</label>
           <select [(ngModel)]="formQuoteItem5.stand" class="form-control input-sm" id="stand" name="stand">

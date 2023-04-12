@@ -88,7 +88,10 @@ export class QuotePvWireComponent implements OnInit {
   public currentWeld: Product;
   public currentArm: Product;
 
-
+  public trailingCable : boolean = false;
+  public weldCable : boolean = false;
+  public armour : boolean = false;
+  public earthCable : boolean = false;
 
   public newQuotation = {
     quoteItems: [],
@@ -441,6 +444,8 @@ export class QuotePvWireComponent implements OnInit {
       }
     }
   }
+
+  
 
   
 
