@@ -129,7 +129,8 @@ export class QouteBatComponent implements OnInit {
       this.newQuotation.profit += this.formQuoteItem5.quantityB * (this.currentBatt.selling - this.currentBatt.trade);
       this.newQuotation.expense += this.formQuoteItem5.quantityB * this.currentBatt.trade; 
 
-      this.getProductByName(this.formQuoteItem5.prot)
+      if(this.formQuoteItem5.prot){
+        this.getProductByName(this.formQuoteItem5.prot)
         .then(prot => {
           this.currentProt = prot;
           this.formQuoteItem5.pAmount = this.currentProt.selling;
@@ -140,9 +141,83 @@ export class QouteBatComponent implements OnInit {
           this.newQuotation.amount += this.formQuoteItem5.quantityP * this.currentProt.selling;
           this.newQuotation.profit += this.formQuoteItem5.quantityP * (this.currentProt.selling - this.currentProt.trade);
           this.newQuotation.expense += this.formQuoteItem5.quantityP * this.currentProt.trade;
-          
+          if(this.formQuoteItem5.stand){
+            this.getProductByName(this.formQuoteItem5.stand)
+            .then(stand => {
+              this.currentStand = stand;
+              this.formQuoteItem5.sAmount = this.currentStand.selling;
+              this.formQuoteItem5.sDescription = this.currentStand.description;
+              this.formQuoteItem5.sExpense = this.currentStand.trade;
+              this.formQuoteItem5.summary += `${this.formQuoteItem5.quantityS} x ${this.currentStand.name}, ` 
+              this.newQuotation.summary += `${this.formQuoteItem5.quantityS} x ${this.currentStand.name}, `;
+              this.newQuotation.amount += this.formQuoteItem5.quantityS * this.currentStand.selling;
+              this.newQuotation.profit += this.formQuoteItem5.quantityS * (this.currentStand.selling - this.currentStand.trade);
+              this.newQuotation.expense += this.formQuoteItem5.quantityS * this.currentStand.trade;
 
-          this.getProductByName(this.formQuoteItem5.stand)
+              this.newQuotation.quoteItems.push({
+                product: this.formQuoteItem5.batt,
+                quantity: this.formQuoteItem5.quantityB,
+                productAmount: this.formQuoteItem5.bAmount,
+                productExpense: this.formQuoteItem5.bExpense,
+                description: this.formQuoteItem5.bDescription,
+                category: 'batt'
+                });
+                           
+                this.newQuotation.quoteItems.push({
+                    product: this.formQuoteItem5.prot,
+                    quantity: this.formQuoteItem5.quantityP,
+                    productAmount: this.formQuoteItem5.pAmount,
+                    productExpense: this.formQuoteItem5.pExpense,
+                    description: this.formQuoteItem5.pDescription,
+                    category: 'batt'
+                });
+
+                this.newQuotation.quoteItems.push({
+                  product: this.formQuoteItem5.stand,
+                  quantity: this.formQuoteItem5.quantityS,
+                  productAmount: this.formQuoteItem5.sAmount,
+                  productExpense: this.formQuoteItem5.sExpense,
+                  description: this.formQuoteItem5.sDescription,
+                  category: 'batt'
+                });
+                 
+                if(this.formIsValid()){
+                  this.quoteGenerated.emit(this.newQuotation);
+                  this.resetAndHideQuoteForm();
+                } else {
+                  this.formError = 'No items entered, please try again.';
+                }
+            });
+          }
+          else{
+            this.newQuotation.quoteItems.push({
+              product: this.formQuoteItem5.batt,
+              quantity: this.formQuoteItem5.quantityB,
+              productAmount: this.formQuoteItem5.bAmount,
+              productExpense: this.formQuoteItem5.bExpense,
+              description: this.formQuoteItem5.bDescription,
+              category: 'batt'
+              });
+              this.newQuotation.quoteItems.push({
+              product: this.formQuoteItem5.prot,
+              quantity: this.formQuoteItem5.quantityP,
+              productAmount: this.formQuoteItem5.pAmount,
+              productExpense: this.formQuoteItem5.pExpense,
+              description: this.formQuoteItem5.pDescription,
+              category: 'batt'
+              });
+              if(this.formIsValid()){
+                this.quoteGenerated.emit(this.newQuotation);
+                this.resetAndHideQuoteForm();
+              } else {
+                this.formError = 'No items entered, please try again.';
+              }
+          }
+        });
+      }
+      else{
+        if(this.formQuoteItem5.stand){
+            this.getProductByName(this.formQuoteItem5.stand)
             .then(stand => {
               this.currentStand = stand;
               this.formQuoteItem5.sAmount = this.currentStand.selling;
@@ -164,15 +239,7 @@ export class QouteBatComponent implements OnInit {
                 });
            
             //console.log('is null?', this.formQuoteItem2.inverterAmount);
-                 this.newQuotation.quoteItems.push({
-                  product: this.formQuoteItem5.prot,
-                  quantity: this.formQuoteItem5.quantityP,
-                  productAmount: this.formQuoteItem5.pAmount,
-                  productExpense: this.formQuoteItem5.pExpense,
-                  description: this.formQuoteItem5.pDescription,
-                  category: 'batt'
-                });
-                 
+
                 this.newQuotation.quoteItems.push({
                   product: this.formQuoteItem5.stand,
                   quantity: this.formQuoteItem5.quantityS,
@@ -181,14 +248,33 @@ export class QouteBatComponent implements OnInit {
                   description: this.formQuoteItem5.sDescription,
                   category: 'batt'
                 });
+                 
                 if(this.formIsValid()){
                   this.quoteGenerated.emit(this.newQuotation);
                   this.resetAndHideQuoteForm();
                 } else {
                   this.formError = 'No items entered, please try again.';
                 }
+    
             });
-        });
+        }
+        else{
+          this.newQuotation.quoteItems.push({
+            product: this.formQuoteItem5.batt,
+            quantity: this.formQuoteItem5.quantityB,
+            productAmount: this.formQuoteItem5.bAmount,
+            productExpense: this.formQuoteItem5.bExpense,
+            description: this.formQuoteItem5.bDescription,
+            category: 'batt'
+            });
+            if(this.formIsValid()){
+              this.quoteGenerated.emit(this.newQuotation);
+              this.resetAndHideQuoteForm();
+            } else {
+              this.formError = 'No items entered, please try again.';
+            }
+        }
+      }
        // this.itemAdded = true;
     }); 
 
