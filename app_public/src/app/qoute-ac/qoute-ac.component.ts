@@ -174,7 +174,7 @@ export class QouteAcComponent implements OnInit {
       this.newQuotation.amount += this.formQuoteItem3.quantityDSB * this.currentDB.selling;
       this.newQuotation.profit += this.formQuoteItem3.quantityDSB * (this.currentDB.selling - this.currentDB.trade);
       this.newQuotation.expense += this.formQuoteItem3.quantityDSB * this.currentDB.trade;
-      console.log('db add', this.newQuotation.amount); 
+       
 
       this.getProductByName(this.formQuoteItem3.consumables)
         .then(cons => {
@@ -187,7 +187,7 @@ export class QouteAcComponent implements OnInit {
           this.newQuotation.amount += this.formQuoteItem3.quantityCons * this.currentCons.selling;
           this.newQuotation.profit += this.formQuoteItem3.quantityCons * (this.currentCons.selling - this.currentCons.trade);
           this.newQuotation.expense += this.formQuoteItem3.quantityCons * this.currentCons.trade;
-          console.log('cons add', this.newQuotation.amount);
+          
 
           this.getProductByName(this.formQuoteItem3.acProt)
             .then(acProt => {
@@ -200,7 +200,7 @@ export class QouteAcComponent implements OnInit {
               this.newQuotation.amount += this.formQuoteItem3.quantityACProt * this.currentACProt.selling;
               this.newQuotation.profit += this.formQuoteItem3.quantityACProt * (this.currentACProt.selling - this.currentACProt.trade);
               this.newQuotation.expense += this.formQuoteItem3.quantityACProt * this.currentACProt.trade;
-              console.log('acProt add', this.newQuotation.amount);
+              
       
               
               this.getProductByName(this.formQuoteItem3.cova)
@@ -215,7 +215,7 @@ export class QouteAcComponent implements OnInit {
                     this.newQuotation.amount += this.formQuoteItem3.quantityCov * this.currentCOV.selling;
                     this.newQuotation.profit += this.formQuoteItem3.quantityCov * (this.currentCOV.selling - this.currentCOV.trade);
                     this.newQuotation.expense += this.formQuoteItem3.quantityCov * this.currentCOV.trade;
-                    console.log('cova add', this.newQuotation.amount);
+                    
                   }
                   
                  
@@ -230,7 +230,7 @@ export class QouteAcComponent implements OnInit {
                       this.newQuotation.amount += this.formQuoteItem3.quantityMCB * this.currentMCB.selling;
                       this.newQuotation.profit += this.formQuoteItem3.quantityMCB * (this.currentMCB.selling - this.currentMCB.trade);
                       this.newQuotation.expense += this.formQuoteItem3.quantityMCB * this.currentMCB.trade;
-                      console.log('mcb add', this.newQuotation.amount);
+                      
                       
                       this.getProductByName(this.formQuoteItem3.surgProt)
                         .then(surProt => {
@@ -253,17 +253,14 @@ export class QouteAcComponent implements OnInit {
                               this.formQuoteItem3.avrAmount = this.currentAVR.selling;
                               this.formQuoteItem3.avrDescription = this.currentAVR.description;
                               this.formQuoteItem3.avrExpense = this.currentAVR.trade;
-                              this.formQuoteItem3.summary += `${this.formQuoteItem3.quantityCov} x ${this.currentAVR.name}, ` 
-                              this.newQuotation.summary += `${this.formQuoteItem3.quantityCov} x ${this.currentAVR.name}, `;
-                              this.newQuotation.amount += this.formQuoteItem3.quantityCov * this.currentAVR.selling;
-                              this.newQuotation.profit += this.formQuoteItem3.quantityCov * (this.currentAVR.selling - this.currentAVR.trade);
-                              this.newQuotation.expense += this.formQuoteItem3.quantityCov * this.currentAVR.trade;
-                              console.log('av add', this.newQuotation.amount);
+                              this.formQuoteItem3.summary += `${this.formQuoteItem3.quantityAvr} x ${this.currentAVR.name}, ` 
+                              this.newQuotation.summary += `${this.formQuoteItem3.quantityAvr} x ${this.currentAVR.name}, `;
+                              this.newQuotation.amount += this.formQuoteItem3.quantityAvr * this.currentAVR.selling;
+                              this.newQuotation.profit += this.formQuoteItem3.quantityAvr * (this.currentAVR.selling - this.currentAVR.trade);
+                              this.newQuotation.expense += this.formQuoteItem3.quantityAvr * this.currentAVR.trade;
+                              
                             }
                               
-
-                            console.log('final', this.newQuotation.amount)
-
                               this.newQuotation.quoteItems.push({
                                 product: this.formQuoteItem3.distribution,
                                 quantity: this.formQuoteItem3.quantityDSB,
@@ -273,7 +270,6 @@ export class QouteAcComponent implements OnInit {
                                 category: 'ac'
                                 });
                            
-                            //console.log('is null?', this.formQuoteItem2.inverterAmount);
                                  this.newQuotation.quoteItems.push({
                                   product: this.formQuoteItem3.consumables,
                                   quantity: this.formQuoteItem3.quantityCons,
@@ -347,7 +343,6 @@ export class QouteAcComponent implements OnInit {
                 });
             });
         });
-       // this.itemAdded = true;
     });
     
   }
