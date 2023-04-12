@@ -151,6 +151,7 @@ export class QuotePvWireComponent implements OnInit {
     this.getProductByName(this.formQuoteItem4.pvwire)
     .then(foundProduct => {
       this.currentW = foundProduct;
+      console.log('hole in one', this.currentW);
       this.formQuoteItem4.wAmount = this.currentW.selling;
       this.formQuoteItem4.wDescription = this.currentW.description;
       this.formQuoteItem4.wExpense = this.currentW.trade;
@@ -160,20 +161,8 @@ export class QuotePvWireComponent implements OnInit {
       this.newQuotation.profit += this.formQuoteItem4.quantityW * (this.currentW.selling - this.currentW.trade);
       this.newQuotation.expense += this.formQuoteItem4.quantityW * this.currentW.trade; 
 
-      this.getProductByName(this.formQuoteItem4.trail)
-        .then(trail => {
-          this.currentTR = trail;
-          this.formQuoteItem4.trAmount = this.currentTR.selling;
-          this.formQuoteItem4.trDescription = this.currentTR.description;
-          this.formQuoteItem4.trExpense = this.currentTR.trade;
-          this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityTR} x ${this.currentTR.name}, ` 
-          this.newQuotation.summary += `${this.formQuoteItem4.quantityTR} x ${this.currentTR.name}, `;
-          this.newQuotation.amount += this.formQuoteItem4.quantityTR * this.currentTR.selling;
-          this.newQuotation.profit += this.formQuoteItem4.quantityTR * (this.currentTR.selling - this.currentTR.trade);
-          this.newQuotation.expense += this.formQuoteItem4.quantityTR * this.currentTR.trade; 
-          
-
-          this.getProductByName(this.formQuoteItem4.flex)
+      
+      this.getProductByName(this.formQuoteItem4.flex)
             .then(flex => {
               this.currentFL = flex;
               this.formQuoteItem4.flAmount = this.currentFL.selling;
@@ -182,23 +171,25 @@ export class QuotePvWireComponent implements OnInit {
               this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityFL} x ${this.currentFL.name}, ` 
               this.newQuotation.summary += `${this.formQuoteItem4.quantityFL} x ${this.currentFL.name}, `;
               this.newQuotation.amount += this.formQuoteItem4.quantityFL * this.currentFL.selling;
-              this.newQuotation.profit += this.formQuoteItem4.quantityFL * (this.currentFL.selling - this.currentTR.trade);
+              this.newQuotation.profit += this.formQuoteItem4.quantityFL * (this.currentFL.selling - this.currentFL.trade);
               this.newQuotation.expense += this.formQuoteItem4.quantityFL * this.currentFL.trade; 
-                      
+              
     
               this.getProductByName(this.formQuoteItem4.earth)
                 .then(earth => {
-                  this.currentEa = earth;
-                  this.formQuoteItem4.trAmount = this.currentEa.selling;
-                  this.formQuoteItem4.trDescription = this.currentEa.description;
-                  this.formQuoteItem4.trExpense = this.currentEa.trade;
-                  this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityE} x ${this.currentEa.name}, ` 
-                  this.newQuotation.summary += `${this.formQuoteItem4.quantityE} x ${this.currentEa.name}, `;
-                  this.newQuotation.amount += this.formQuoteItem4.quantityE * this.currentEa.selling;
-                  this.newQuotation.profit += this.formQuoteItem4.quantityE * (this.currentEa.selling - this.currentEa.trade);
-                  this.newQuotation.expense += this.formQuoteItem4.quantityE * this.currentEa.trade;
-                              
-                 
+                  if(earth.name != 'default'){
+                    this.currentEa = earth;
+                    this.formQuoteItem4.eAmount = this.currentEa.selling;
+                    this.formQuoteItem4.eDescription = this.currentEa.description;
+                    this.formQuoteItem4.eExpense = this.currentEa.trade;
+                    this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityE} x ${this.currentEa.name}, ` 
+                    this.newQuotation.summary += `${this.formQuoteItem4.quantityE} x ${this.currentEa.name}, `;
+                    this.newQuotation.amount += this.formQuoteItem4.quantityE * this.currentEa.selling;
+                    this.newQuotation.profit += this.formQuoteItem4.quantityE * (this.currentEa.selling - this.currentEa.trade);
+                    this.newQuotation.expense += this.formQuoteItem4.quantityE * this.currentEa.trade;
+    
+                  }
+
                   this.getProductByName(this.formQuoteItem4.batt)
                     .then(batt => {
                       this.currentBatt = batt;
@@ -213,108 +204,138 @@ export class QuotePvWireComponent implements OnInit {
                   
                       this.getProductByName(this.formQuoteItem4.weld)
                         .then(weld => {
-                          this.currentWeld = weld;
-                          this.formQuoteItem4.weAmount = this.currentWeld.selling;
-                          this.formQuoteItem4.weDescription = this.currentWeld.description;
-                          this.formQuoteItem4.weExpense = this.currentWeld.trade;
-                          this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityWE} x ${this.currentWeld.name}, ` 
-                          this.newQuotation.summary += `${this.formQuoteItem4.quantityWE} x ${this.currentWeld.name}, `;
-                          this.newQuotation.amount += this.formQuoteItem4.quantityWE * this.currentWeld.selling;
-                          this.newQuotation.profit += this.formQuoteItem4.quantityWE * (this.currentWeld.selling - this.currentWeld.trade);
-                          this.newQuotation.expense += this.formQuoteItem4.quantityWE * this.currentWeld.trade;
-                            
+                          if(weld.name != 'default')
+                          {
+                            this.currentWeld = weld;
+                            this.formQuoteItem4.weAmount = this.currentWeld.selling;
+                            this.formQuoteItem4.weDescription = this.currentWeld.description;
+                            this.formQuoteItem4.weExpense = this.currentWeld.trade;
+                            this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityWE} x ${this.currentWeld.name}, ` 
+                            this.newQuotation.summary += `${this.formQuoteItem4.quantityWE} x ${this.currentWeld.name}, `;
+                            this.newQuotation.amount += this.formQuoteItem4.quantityWE * this.currentWeld.selling;
+                            this.newQuotation.profit += this.formQuoteItem4.quantityWE * (this.currentWeld.selling - this.currentWeld.trade);
+                            this.newQuotation.expense += this.formQuoteItem4.quantityWE * this.currentWeld.trade;
+                          }
 
                           this.getProductByName(this.formQuoteItem4.arm)
                             .then(arm => {
-                              this.currentArm = arm;
-                              this.formQuoteItem4.aAmount = this.currentArm.selling;
-                              this.formQuoteItem4.aDescription = this.currentArm.description;
-                              this.formQuoteItem4.aExpense = this.currentArm.trade;
-                              this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityA} x ${this.currentArm.name}, ` 
-                              this.newQuotation.summary += `${this.formQuoteItem4.quantityA} x ${this.currentArm.name}, `;
-                              this.newQuotation.amount += this.formQuoteItem4.quantityA * this.currentArm.selling;
-                              this.newQuotation.profit += this.formQuoteItem4.quantityA * (this.currentArm.selling - this.currentArm.trade);
-                              this.newQuotation.expense += this.formQuoteItem4.quantityA * this.currentArm.trade;
-                              
-                              this.newQuotation.quoteItems.push({
-                                product: this.formQuoteItem4.pvwire,
-                                quantity: this.formQuoteItem4.quantityW,
-                                productAmount: this.formQuoteItem4.wAmount,
-                                productExpense: this.formQuoteItem4.wExpense,
-                                description: this.formQuoteItem4.wDescription
-                                });
-                           
-                            //console.log('is null?', this.formQuoteItem2.inverterAmount);
-                                 this.newQuotation.quoteItems.push({
-                                  product: this.formQuoteItem4.trail,
-                                  quantity: this.formQuoteItem4.quantityTR,
-                                  productAmount: this.formQuoteItem4.trAmount,
-                                  productExpense: this.formQuoteItem4.trExpense,
-                                  description: this.formQuoteItem4.trDescription,
-                                  category: 'pvw'
+                              if(arm.name != 'default'){
+                                this.currentArm = arm;
+                                this.formQuoteItem4.aAmount = this.currentArm.selling;
+                                this.formQuoteItem4.aDescription = this.currentArm.description;
+                                this.formQuoteItem4.aExpense = this.currentArm.trade;
+                                this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityA} x ${this.currentArm.name}, ` 
+                                this.newQuotation.summary += `${this.formQuoteItem4.quantityA} x ${this.currentArm.name}, `;
+                                this.newQuotation.amount += this.formQuoteItem4.quantityA * this.currentArm.selling;
+                                this.newQuotation.profit += this.formQuoteItem4.quantityA * (this.currentArm.selling - this.currentArm.trade);
+                                this.newQuotation.expense += this.formQuoteItem4.quantityA * this.currentArm.trade;  
+                              }
+                                                            
+                              this.getProductByName(this.formQuoteItem4.trail)
+                              .then(trail => {
+                                if(trail.name != 'default'){
+                                  this.currentTR = trail;
+                                  this.formQuoteItem4.trAmount = this.currentTR.selling;
+                                  this.formQuoteItem4.trDescription = this.currentTR.description;
+                                  this.formQuoteItem4.trExpense = this.currentTR.trade;
+                                  this.formQuoteItem4.summary += `${this.formQuoteItem4.quantityTR} x ${this.currentTR.name}, ` 
+                                  this.newQuotation.summary += `${this.formQuoteItem4.quantityTR} x ${this.currentTR.name}, `;
+                                  this.newQuotation.amount += this.formQuoteItem4.quantityTR * this.currentTR.selling;
+                                  this.newQuotation.profit += this.formQuoteItem4.quantityTR * (this.currentTR.selling - this.currentTR.trade);
+                                  this.newQuotation.expense += this.formQuoteItem4.quantityTR * this.currentTR.trade;
 
-                                
-                                });
-                                 
-                                this.newQuotation.quoteItems.push({
-                                  product: this.formQuoteItem4.earth,
-                                  quantity: this.formQuoteItem4.quantityE,
-                                  productAmount: this.formQuoteItem4.eAmount,
-                                  productExpense: this.formQuoteItem4.eExpense,
-                                  description: this.formQuoteItem4.eDescription,
-                                  category: 'pvw'
-                               
-                                });
-                                 
-                                this.newQuotation.quoteItems.push({
-                                  product: this.formQuoteItem4.batt,
-                                  quantity: this.formQuoteItem4.quantityB,
-                                  productAmount: this.formQuoteItem4.bAmount,
-                                  productExpense: this.formQuoteItem4.bExpense,
-                                  description: this.formQuoteItem4.bDescription,
-                                  category: 'pvw'
-                                });
-                      
-                                this.newQuotation.quoteItems.push({
-                                  product: this.formQuoteItem4.weld,
-                                  quantity: this.formQuoteItem4.quantityWE,
-                                  productAmount: this.formQuoteItem4.weAmount,
-                                  productExpense: this.formQuoteItem4.weExpense,
-                                  description: this.formQuoteItem4.weDescription,
-                                  category: 'pvw'
-                                });
-
-
-                                this.newQuotation.quoteItems.push({
-                                  product: this.formQuoteItem4.flex,
-                                  quantity: this.formQuoteItem4.quantityFL,
-                                  productAmount: this.formQuoteItem4.flAmount,
-                                  productExpense: this.formQuoteItem4.flExpense,
-                                  description: this.formQuoteItem4.flDescription,
-                                  category: 'pvw'
-                                 
-                                });
-
-                                this.newQuotation.quoteItems.push({
-                                  product: this.formQuoteItem4.arm,
-                                  quantity: this.formQuoteItem4.quantityA,
-                                  productAmount: this.formQuoteItem4.aAmount,
-                                  productExpense: this.formQuoteItem4.aExpense,
-                                  description: this.formQuoteItem4.aDescription,
-                                  category: 'pvw'
-                                });
-                                if(this.formIsValid()){
-                                  this.quoteGenerated.emit(this.newQuotation);
-                                  this.resetAndHideQuoteForm();
-                                } else {
-                                  this.formError = 'No items entered, please try again.';
                                 }
+                                this.newQuotation.quoteItems.push({
+                                  product: this.formQuoteItem4.pvwire,
+                                  quantity: this.formQuoteItem4.quantityW,
+                                  productAmount: this.formQuoteItem4.wAmount,
+                                  productExpense: this.formQuoteItem4.wExpense,
+                                  description: this.formQuoteItem4.wDescription,
+                                  category: 'pvw'   
+                                  });
+                               
+                                  if(this.formQuoteItem4.trail){
+                                    this.newQuotation.quoteItems.push({
+                                      product: this.formQuoteItem4.trail,
+                                      quantity: this.formQuoteItem4.quantityTR,
+                                      productAmount: this.formQuoteItem4.trAmount,
+                                      productExpense: this.formQuoteItem4.trExpense,
+                                      description: this.formQuoteItem4.trDescription,
+                                      category: 'pvw'    
+                                    });   
+                                  }
+                                  
+                                  if(this.formQuoteItem4.earth)
+                                  {
+                                    this.newQuotation.quoteItems.push({
+                                      product: this.formQuoteItem4.earth,
+                                      quantity: this.formQuoteItem4.quantityE,
+                                      productAmount: this.formQuoteItem4.eAmount,
+                                      productExpense: this.formQuoteItem4.eExpense,
+                                      description: this.formQuoteItem4.eDescription,
+                                      category: 'pvw'
+                                    });
+                                  }
+                                  
+                                   
+                                  this.newQuotation.quoteItems.push({
+                                    product: this.formQuoteItem4.batt,
+                                    quantity: this.formQuoteItem4.quantityB,
+                                    productAmount: this.formQuoteItem4.bAmount,
+                                    productExpense: this.formQuoteItem4.bExpense,
+                                    description: this.formQuoteItem4.bDescription,
+                                    category: 'pvw'
+                                  });
+                                  
+                                  if(this.formQuoteItem4.weld)
+                                  {
+                                    this.newQuotation.quoteItems.push({
+                                      product: this.formQuoteItem4.weld,
+                                      quantity: this.formQuoteItem4.quantityWE,
+                                      productAmount: this.formQuoteItem4.weAmount,
+                                      productExpense: this.formQuoteItem4.weExpense,
+                                      description: this.formQuoteItem4.weDescription,
+                                      category: 'pvw'
+                                    });
+                                  }
+                              
+                                  this.newQuotation.quoteItems.push({
+                                    product: this.formQuoteItem4.flex,
+                                    quantity: this.formQuoteItem4.quantityFL,
+                                    productAmount: this.formQuoteItem4.flAmount,
+                                    productExpense: this.formQuoteItem4.flExpense,
+                                    description: this.formQuoteItem4.flDescription,
+                                    category: 'pvw'
+                                   
+                                  });
+                                  if(this.formQuoteItem4.arm)
+                                  {
+                                    this.newQuotation.quoteItems.push({
+                                      product: this.formQuoteItem4.arm,
+                                      quantity: this.formQuoteItem4.quantityA,
+                                      productAmount: this.formQuoteItem4.aAmount,
+                                      productExpense: this.formQuoteItem4.aExpense,
+                                      description: this.formQuoteItem4.aDescription,
+                                      category: 'pvw'
+                                    });
+                                  }
+
+
+                                  
+                                  if(this.formIsValid()){
+                                    this.quoteGenerated.emit(this.newQuotation);
+                                    this.resetAndHideQuoteForm();
+                                  } else {
+                                    this.formError = 'No items entered, please try again.';
+                                  }
+                                
+                              });
+
                             });
                         });
                     });
                 });
             });
-        });
        // this.itemAdded = true;
     }); 
 

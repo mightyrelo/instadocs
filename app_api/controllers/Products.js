@@ -22,7 +22,7 @@ const productsCreateOne = (req, res) => {
         userId: req.body.userId
     },(err, product)=>{
         if(err) {
-            console.log('herew ew are');
+ 
             sendJSONResponse(res, 400, err);
         } else {
             sendJSONResponse(res, 201, product);
