@@ -48,7 +48,7 @@ export class ViewPrintPoComponent implements OnInit {
     this.getQuote(cusId, qId);
   }
 
-  private getUserName() : string {
+  public getUserName() : string {
     if(this.isLoggedIn())
     {
       const {name} = this.authService.getCurrentUser();
@@ -137,7 +137,7 @@ export class ViewPrintPoComponent implements OnInit {
               response.completedPOs = response.completedPOs + 1;
               this.userDataService.updateInvoices(response)
                 .then(usr => {
-                    console.log('completed POs', usr.completedPOs);
+                   
                 });
             });
         })
