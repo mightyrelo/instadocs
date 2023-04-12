@@ -106,6 +106,7 @@ export class QuoteFormComponent implements OnInit {
     this.itemAdded = false;
     if(this.formIsValid()) {
       //get last item and set its summary
+      console.log('deep', this.newQuotation.amount)
       this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
       .then((quotation: Quote) => {
         console.log('quotation saved', quotation);

@@ -47,13 +47,25 @@ export class ProductDataService {
   }
 
   public getProductByName(name: string) : Promise<Product> {
-    const url: string = `${this.apiBaseUrl}/products/name/${name}`;
-    return this.http
+    if(name){
+      const url: string = `${this.apiBaseUrl}/products/name/${name}`;
+      return this.http
       .get(url)
       .toPromise()
       .then(response => response as Product)
       .catch(this.handleError);
-  }
+    }
+    else {
+      const url: string = `${this.apiBaseUrl}/products/name/default`;
+      return this.http
+      .get(url)
+      .toPromise()
+      .then(response => response as Product)
+      .catch(this.handleError);
+    }
+ }
+
+ 
 
   public addProduct(prod: Product) : Promise<Product> {
     const url: string = `${this.apiBaseUrl}/products`;

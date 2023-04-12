@@ -143,6 +143,7 @@ export class QuoteFormSpComponent implements OnInit {
     for(let i = 0; i < evntData.quoteItems.length; i++){
       this.mainQuote.quoteItems.push(evntData.quoteItems[i]);
     }
+    console.log('adding to main', evntData.amount);
     this.mainQuote.amount += evntData.amount;
     this.mainQuote.profit += evntData.profit;
     this.mainQuote.expense += evntData.expense;
@@ -168,6 +169,7 @@ export class QuoteFormSpComponent implements OnInit {
   private doCreateQuote() : void {
     this.quoteDataService.addQuote(this.dbCustomer._id, this.mainQuote)
       .then((quotation: Quote) => {
+        console.log('deep', this.mainQuote.amount)
           console.log('quotation saved', quotation);
           let quotes = this.dbCustomer.quotations.slice(0);
           quotes.unshift(quotation);
