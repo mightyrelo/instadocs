@@ -237,7 +237,8 @@ export class QouteAcComponent implements OnInit {
                                 quantity: this.formQuoteItem3.quantityDSB,
                                 productAmount: this.formQuoteItem3.dsbAmount,
                                 productExpense: this.formQuoteItem3.dsbExpense,
-                                description: this.formQuoteItem3.dsbDescription
+                                description: this.formQuoteItem3.dsbDescription,
+                                category: 'ac'
                                 });
                            
                             //console.log('is null?', this.formQuoteItem2.inverterAmount);
@@ -246,8 +247,8 @@ export class QouteAcComponent implements OnInit {
                                   quantity: this.formQuoteItem3.quantityCons,
                                   productAmount: this.formQuoteItem3.consAmount,
                                   productExpense: this.formQuoteItem3.consExpense,
-                                  description: this.formQuoteItem3.consDescription
-                                
+                                  description: this.formQuoteItem3.consDescription,
+                                  category: 'ac'
                                 });
                                  
                                 this.newQuotation.quoteItems.push({
@@ -255,7 +256,8 @@ export class QouteAcComponent implements OnInit {
                                   quantity: this.formQuoteItem3.quantityACProt,
                                   productAmount: this.formQuoteItem3.acProtAmount,
                                   productExpense: this.formQuoteItem3.acProtExpense,
-                                  description: this.formQuoteItem3.acProtDescription
+                                  description: this.formQuoteItem3.acProtDescription,
+                                  category: 'ac'
                                 });
                                  
                                 this.newQuotation.quoteItems.push({
@@ -263,7 +265,8 @@ export class QouteAcComponent implements OnInit {
                                   quantity: this.formQuoteItem3.quantityCov,
                                   productAmount: this.formQuoteItem3.covAmount,
                                   productExpense: this.formQuoteItem3.covExpense,
-                                  description: this.formQuoteItem3.covDescription
+                                  description: this.formQuoteItem3.covDescription,
+                                  category: 'ac'
                                 });
                       
                                 this.newQuotation.quoteItems.push({
@@ -271,7 +274,8 @@ export class QouteAcComponent implements OnInit {
                                   quantity: this.formQuoteItem3.quantityMCB,
                                   productAmount: this.formQuoteItem3.mcbAmount,
                                   productExpense: this.formQuoteItem3.mcbExpense,
-                                  description: this.formQuoteItem3.mcbDescription
+                                  description: this.formQuoteItem3.mcbDescription,
+                                  category: 'ac'
                                 });
 
                                 this.newQuotation.quoteItems.push({
@@ -279,7 +283,8 @@ export class QouteAcComponent implements OnInit {
                                   quantity: this.formQuoteItem3.quantitySurg,
                                   productAmount: this.formQuoteItem3.surgAmount,
                                   productExpense: this.formQuoteItem3.surgExpense,
-                                  description: this.formQuoteItem3.surgDescription
+                                  description: this.formQuoteItem3.surgDescription,
+                                  category: 'ac'
                                 });
 
                                 this.newQuotation.quoteItems.push({
@@ -287,7 +292,8 @@ export class QouteAcComponent implements OnInit {
                                   quantity: this.formQuoteItem3.quantityAvr,
                                   productAmount: this.formQuoteItem3.avrAmount,
                                   productExpense: this.formQuoteItem3.avrExpense,
-                                  description: this.formQuoteItem3.avrDescription
+                                  description: this.formQuoteItem3.avrDescription,
+                                  category: 'ac'
                                 });
                                 if(this.formIsValid()){
                                   this.quoteGenerated.emit(this.newQuotation);

@@ -50,7 +50,8 @@ export class QuoteFormComponent implements OnInit {
     productAmount: null,
     description: 'd',
     summary: '',
-    productExpense: null
+    productExpense: null,
+    category: null
   }
 
   public newQuotation = {

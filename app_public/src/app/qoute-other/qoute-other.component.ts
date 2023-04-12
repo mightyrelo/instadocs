@@ -155,7 +155,8 @@ export class QouteOtherComponent implements OnInit {
                 quantity: this.formQuoteItem6.quantityT,
                 productAmount: this.formQuoteItem6.tAmount,
                 productExpense: this.formQuoteItem6.tExpense,
-                description: this.formQuoteItem6.tDescription
+                description: this.formQuoteItem6.tDescription,
+                category: 'ot'
                 });
            
             //console.log('is null?', this.formQuoteItem2.inverterAmount);
@@ -164,7 +165,8 @@ export class QouteOtherComponent implements OnInit {
                   quantity: this.formQuoteItem6.quantityS,
                   productAmount: this.formQuoteItem6.sAmount,
                   productExpense: this.formQuoteItem6.sExpense,
-                  description: this.formQuoteItem6.sDescription
+                  description: this.formQuoteItem6.sDescription,
+                  category: 'ot'
                 });
                  
                 this.newQuotation.quoteItems.push({
@@ -172,7 +174,8 @@ export class QouteOtherComponent implements OnInit {
                   quantity: this.formQuoteItem6.quantityL,
                   productAmount: this.formQuoteItem6.lAmount,
                   productExpense: this.formQuoteItem6.lExpense,
-                  description: this.formQuoteItem6.lDescription
+                  description: this.formQuoteItem6.lDescription,
+                  category: 'ot'
                 });
                 if(this.formIsValid()){
                   this.quoteGenerated.emit(this.newQuotation);

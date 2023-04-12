@@ -32,7 +32,8 @@ export class ViewCustomerContentComponent implements OnInit {
     productAmount: null,
     description: 'd',
     summary: '',
-    productExpense: null
+    productExpense: null,
+    category: null
   } 
 
   //form processing
@@ -88,8 +89,6 @@ export class ViewCustomerContentComponent implements OnInit {
   public currentProduct: Product;
 
   public newInvoice: Invoice;
-
-
 
   constructor(
     private quoteDataService: QuotationDataService,
@@ -327,6 +326,7 @@ export class ViewCustomerContentComponent implements OnInit {
   public onFormClosedEvent2(eventData : boolean) {
     this.displayForm = eventData;
   }
+  
 
   public resetAndHideQuoteForm(){
     this.formError = '';
@@ -342,6 +342,7 @@ export class ViewCustomerContentComponent implements OnInit {
     this.formQuoteItem.summary = '';
     this.formQuoteItem.productAmount = null;
     this.formQuoteItem.productExpense = null;
+    this.formQuoteItem.category = null;
     this.itemAdded = false;
     this.displayForm = false;
   }

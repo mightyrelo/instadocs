@@ -13,7 +13,8 @@
         <app-quote-details *ngIf="quote" [content]="quote" [user]="userName" [user2]="user"></app-quote-details>
       </div>
       <div class="parent3">
-        <app-quote-items *ngIf="quote" [content]="quote"></app-quote-items>
+        <app-quote-items *ngIf="quote  && getUserName() != 'thabethe'" [content]="quote"></app-quote-items>
+        <app-quote-items-sp *ngIf="quote && getUserName() == 'thabethe'" [quote]="quote"></app-quote-items-sp>
       </div>
       <div class="parent4">
         <app-banking *ngIf="company" [content]="company"></app-banking>

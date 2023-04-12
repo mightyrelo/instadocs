@@ -14,6 +14,7 @@
 <div class="card card-primary" *ngIf="getUserName() == 'admin'">
   <div class="card-block" *ngIf="users">
     <h2 class="card-title">App Usage </h2>
+    <p class="card-text">Users : {{users.activeUsers}}</p>
     <p class="card-text">Quotes : {{users.completedQuotes}}</p>
     <p class="card-text">Invoices: {{users.completedInvoices}}</p>
     <p class="card-text">Purchase Orders: {{users.completedPOs}}</p>

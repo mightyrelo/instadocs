@@ -15,7 +15,8 @@ export class HomeContentComponent implements OnInit {
   public users = {
     completedQuotes: 0,
     completedInvoices: 0,
-    completedPOs: 0
+    completedPOs: 0,
+    activeUsers: 0
   };
 
   constructor(
@@ -41,12 +42,15 @@ export class HomeContentComponent implements OnInit {
   ngOnInit() : void {
     this.userDataService.getUsers()
       .then(users => {
-        
         for(let i = 0; i < users.length; i++)
         {
-            this.users.completedQuotes += users[i].completedQuotes;
-            this.users.completedInvoices += users[i].completedInvoices;
-            this.users.completedPOs += users[i].completedPOs;
+            if(users[i].name != 'admin')
+            {
+              this.users.completedQuotes += users[i].completedQuotes;
+              this.users.completedInvoices += users[i].completedInvoices;
+              this.users.completedPOs += users[i].completedPOs;
+              this.users.activeUsers++;              
+            }
         }
       });
   }

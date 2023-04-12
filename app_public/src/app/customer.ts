@@ -5,6 +5,7 @@ export class QuoteItem {
     description: string;
     summary: string;
     productExpense: number;
+    category: string;
 }
 
 export class QuoteItem2 {

@@ -156,7 +156,8 @@ export class QouteBatComponent implements OnInit {
                 quantity: this.formQuoteItem5.quantityB,
                 productAmount: this.formQuoteItem5.bAmount,
                 productExpense: this.formQuoteItem5.bExpense,
-                description: this.formQuoteItem5.bDescription
+                description: this.formQuoteItem5.bDescription,
+                category: 'batt'
                 });
            
             //console.log('is null?', this.formQuoteItem2.inverterAmount);
@@ -165,7 +166,8 @@ export class QouteBatComponent implements OnInit {
                   quantity: this.formQuoteItem5.quantityP,
                   productAmount: this.formQuoteItem5.pAmount,
                   productExpense: this.formQuoteItem5.pExpense,
-                  description: this.formQuoteItem5.pDescription
+                  description: this.formQuoteItem5.pDescription,
+                  category: 'batt'
                 });
                  
                 this.newQuotation.quoteItems.push({
@@ -173,7 +175,8 @@ export class QouteBatComponent implements OnInit {
                   quantity: this.formQuoteItem5.quantityS,
                   productAmount: this.formQuoteItem5.sAmount,
                   productExpense: this.formQuoteItem5.sExpense,
-                  description: this.formQuoteItem5.sDescription
+                  description: this.formQuoteItem5.sDescription,
+                  category: 'batt'
                 });
                 if(this.formIsValid()){
                   this.quoteGenerated.emit(this.newQuotation);

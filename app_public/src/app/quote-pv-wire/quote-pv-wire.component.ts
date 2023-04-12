@@ -247,7 +247,8 @@ export class QuotePvWireComponent implements OnInit {
                                   quantity: this.formQuoteItem4.quantityTR,
                                   productAmount: this.formQuoteItem4.trAmount,
                                   productExpense: this.formQuoteItem4.trExpense,
-                                  description: this.formQuoteItem4.trDescription
+                                  description: this.formQuoteItem4.trDescription,
+                                  category: 'pvw'
 
                                 
                                 });
@@ -257,7 +258,8 @@ export class QuotePvWireComponent implements OnInit {
                                   quantity: this.formQuoteItem4.quantityE,
                                   productAmount: this.formQuoteItem4.eAmount,
                                   productExpense: this.formQuoteItem4.eExpense,
-                                  description: this.formQuoteItem4.eDescription
+                                  description: this.formQuoteItem4.eDescription,
+                                  category: 'pvw'
                                
                                 });
                                  
@@ -266,7 +268,8 @@ export class QuotePvWireComponent implements OnInit {
                                   quantity: this.formQuoteItem4.quantityB,
                                   productAmount: this.formQuoteItem4.bAmount,
                                   productExpense: this.formQuoteItem4.bExpense,
-                                  description: this.formQuoteItem4.bDescription
+                                  description: this.formQuoteItem4.bDescription,
+                                  category: 'pvw'
                                 });
                       
                                 this.newQuotation.quoteItems.push({
@@ -274,7 +277,8 @@ export class QuotePvWireComponent implements OnInit {
                                   quantity: this.formQuoteItem4.quantityWE,
                                   productAmount: this.formQuoteItem4.weAmount,
                                   productExpense: this.formQuoteItem4.weExpense,
-                                  description: this.formQuoteItem4.weDescription
+                                  description: this.formQuoteItem4.weDescription,
+                                  category: 'pvw'
                                 });
 
 
@@ -283,7 +287,8 @@ export class QuotePvWireComponent implements OnInit {
                                   quantity: this.formQuoteItem4.quantityFL,
                                   productAmount: this.formQuoteItem4.flAmount,
                                   productExpense: this.formQuoteItem4.flExpense,
-                                  description: this.formQuoteItem4.flDescription
+                                  description: this.formQuoteItem4.flDescription,
+                                  category: 'pvw'
                                  
                                 });
 
@@ -292,7 +297,8 @@ export class QuotePvWireComponent implements OnInit {
                                   quantity: this.formQuoteItem4.quantityA,
                                   productAmount: this.formQuoteItem4.aAmount,
                                   productExpense: this.formQuoteItem4.aExpense,
-                                  description: this.formQuoteItem4.aDescription
+                                  description: this.formQuoteItem4.aDescription,
+                                  category: 'pvw'
                                 });
                                 if(this.formIsValid()){
                                   this.quoteGenerated.emit(this.newQuotation);

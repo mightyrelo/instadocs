@@ -56,6 +56,7 @@ export class QoutePvComponent implements OnInit {
     description: 'd',
     summary: '',
     productExpense: null,
+    category: null
 
   }
 
@@ -244,7 +245,8 @@ export class QoutePvComponent implements OnInit {
                         quantity: this.formQuoteItem2.quantityP,
                         productAmount: this.formQuoteItem2.panelAmount,
                         productExpense: this.formQuoteItem2.panelExpense,
-                        description: this.formQuoteItem2.panelDescription
+                        description: this.formQuoteItem2.panelDescription,
+                        category: 'pv'
                         });
                    
                     //console.log('is null?', this.formQuoteItem2.inverterAmount);
@@ -253,7 +255,8 @@ export class QoutePvComponent implements OnInit {
                         quantity: this.formQuoteItem2.quantityI,
                         productAmount: this.formQuoteItem2.inverterAmount,
                         productExpense: this.formQuoteItem2.inverterExpense,
-                        description: this.formQuoteItem2.invDescription
+                        description: this.formQuoteItem2.invDescription,
+                        category: 'pv'
                         });
                          
                         this.newQuotation.quoteItems.push({
@@ -261,7 +264,8 @@ export class QoutePvComponent implements OnInit {
                         quantity: this.formQuoteItem2.quantityR,
                         productAmount: this.formQuoteItem2.roofAmount,
                          productExpense: this.formQuoteItem2.roofExpense,
-                        description: this.formQuoteItem2.roofDescription
+                        description: this.formQuoteItem2.roofDescription,
+                        category: 'pv'
                         });
               
                          
@@ -270,7 +274,8 @@ export class QoutePvComponent implements OnInit {
                         quantity: this.formQuoteItem2.quantityP,
                         productAmount: this.formQuoteItem2.labourAmount,
                          productExpense: this.formQuoteItem2.labourExpense,
-                        description: this.formQuoteItem2.labourDescription
+                        description: this.formQuoteItem2.labourDescription,
+                        category: 'pv'
                         });
               
                          
@@ -279,7 +284,8 @@ export class QoutePvComponent implements OnInit {
                         quantity: this.formQuoteItem2.quantityP/2,
                         productAmount: this.formQuoteItem2.mc4Amount,
                          productExpense: this.formQuoteItem2.mc4Expense,
-                        description: this.formQuoteItem2.mc4Description
+                        description: this.formQuoteItem2.mc4Description,
+                        category: 'pv'
                         });
                        
                         if(this.formIsValid()){

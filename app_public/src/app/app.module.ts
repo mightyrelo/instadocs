@@ -60,6 +60,7 @@ import { ViewUsersContentComponent } from './view-users-content/view-users-conte
 import { ViewUserComponent } from './view-user/view-user.component';
 import { ViewUserContentComponent } from './view-user-content/view-user-content.component';
 import { TermsComponent } from './terms/terms.component';
+import { QuoteItemsSpComponent } from './quote-items-sp/quote-items-sp.component';
 
 
 
@@ -120,7 +121,8 @@ import { TermsComponent } from './terms/terms.component';
     ViewUsersContentComponent,
     ViewUserComponent,
     ViewUserContentComponent,
-    TermsComponent
+    TermsComponent,
+    QuoteItemsSpComponent
   ],
   imports: [
     BrowserModule,
