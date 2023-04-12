@@ -29,6 +29,7 @@ const doAddInvoice = (req, res, customer)=>{
     let profit = 0;
     let expense = 0;
     let amount = 0;
+    let category = ''
 
     const thisQuotation = customer.quotations.id(req.params.quotationid);
     const quotationId = thisQuotation._id;
@@ -39,6 +40,7 @@ const doAddInvoice = (req, res, customer)=>{
         description = thisQuotation.quoteItems[i].description;
         productAmount = thisQuotation.quoteItems[i].productAmount;
         productExpense = thisQuotation.quoteItems[i].productExpense;
+        category = thisQuotation.quoteItems[i].category;
         summary += `${quantity} x ${product}, `;
         profit = thisQuotation.profit;
         amount = thisQuotation.amount;
@@ -48,7 +50,8 @@ const doAddInvoice = (req, res, customer)=>{
                quantity,
                description,
                productAmount,
-               productExpense
+               productExpense,
+               category
         });
     }
     
@@ -64,7 +67,7 @@ const doAddInvoice = (req, res, customer)=>{
         if(err) {
             sendJSONResponse(res, 400, err);
         } else {
-            console.log('hell-no', customer.invoices);
+    
             sendJSONResponse(res, 201, invoice);
         }
     });

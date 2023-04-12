@@ -13,7 +13,8 @@
     <app-invoice-details *ngIf="invoice" [user]="userName" [user2]="user" [content]="invoice"></app-invoice-details>
   </div>
   <div class="parent3">
-    <app-invoice-items *ngIf="invoice" [content]="invoice"></app-invoice-items>
+    <app-invoice-items *ngIf="invoice && getUserName() != 'thabethe'" [content]="invoice"></app-invoice-items>
+    <app-invoice-items-sp *ngIf="invoice && getUserName() == 'thabethe'" [invoice]="invoice"></app-invoice-items-sp>
   </div>
   <div class="parent4">
     <app-banking *ngIf="company" [content]="company"></app-banking>

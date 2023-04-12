@@ -61,6 +61,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { ViewUserContentComponent } from './view-user-content/view-user-content.component';
 import { TermsComponent } from './terms/terms.component';
 import { QuoteItemsSpComponent } from './quote-items-sp/quote-items-sp.component';
+import { InvoiceItemsSpComponent } from './invoice-items-sp/invoice-items-sp.component';
 
 
 
@@ -122,7 +123,8 @@ import { QuoteItemsSpComponent } from './quote-items-sp/quote-items-sp.component
     ViewUserComponent,
     ViewUserContentComponent,
     TermsComponent,
-    QuoteItemsSpComponent
+    QuoteItemsSpComponent,
+    InvoiceItemsSpComponent
   ],
   imports: [
     BrowserModule,
