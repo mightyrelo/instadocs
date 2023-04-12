@@ -32,38 +32,37 @@ export class InvoiceItemsSpComponent implements OnInit {
       {
           
           this.pvInvoice.invoiceItems.push(this.invoice.invoiceItems[i]);
-          this.pvInvoice.amount += this.invoice.invoiceItems[i].productAmount;
-          this.pvInvoice.expense += this.invoice.invoiceItems[i].productExpense;
-          this.pvInvoice.profit += this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense;
+          this.pvInvoice.amount += this.invoice.invoiceItems[i].productAmount*this.invoice.invoiceItems[i].quantity;
+          this.pvInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
+          this.pvInvoice.profit += this.invoice.invoiceItems[i].quantity*(this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense);
       }
       else if(this.invoice.invoiceItems[i].category == 'ac')
       {
           this.acInvoice.invoiceItems.push(this.invoice.invoiceItems[i]);
-          this.acInvoice.amount += this.invoice.invoiceItems[i].productAmount;
-          this.acInvoice.expense += this.invoice.invoiceItems[i].productExpense;
-          this.acInvoice.profit += this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense;
+          this.acInvoice.amount += this.invoice.invoiceItems[i].productAmount*this.invoice.invoiceItems[i].quantity;
+          this.acInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
+          this.acInvoice.profit += (this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense)*this.invoice.invoiceItems[i].quantity;
       }
       else if(this.invoice.invoiceItems[i].category == 'pvw')
       {
           this.pvwInvoice.invoiceItems.push(this.invoice.invoiceItems[i]);
-          this.pvwInvoice.amount += this.invoice.invoiceItems[i].productAmount;
-          this.pvwInvoice.expense += this.invoice.invoiceItems[i].productExpense;
-          this.pvwInvoice.profit += this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense;
+          this.pvwInvoice.amount += this.invoice.invoiceItems[i].productAmount*this.invoice.invoiceItems[i].quantity;
+          this.pvwInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
+          this.pvwInvoice.profit += (this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense)*this.invoice.invoiceItems[i].quantity;
       }
       if(this.invoice.invoiceItems[i].category == 'batt')
       {
           this.battInvoice.invoiceItems.push(this.invoice.invoiceItems[i]);
-          this.battInvoice.amount += this.invoice.invoiceItems[i].productAmount;
-          this.battInvoice.expense += this.invoice.invoiceItems[i].productExpense;
-          this.battInvoice.profit += this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense;
+          this.battInvoice.amount += this.invoice.invoiceItems[i].productAmount*this.invoice.invoiceItems[i].quantity;
+          this.battInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
+          this.battInvoice.profit += (this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense)*this.invoice.invoiceItems[i].quantity;
       }
       if(this.invoice.invoiceItems[i].category == 'ot')
       {
           this.otInvoice.invoiceItems.push(this.invoice.invoiceItems[i]);
-          this.otInvoice.amount += this.invoice.invoiceItems[i].productAmount;
-          console.log(this.invoice.invoiceItems[i].product);
-          this.otInvoice.expense += this.invoice.invoiceItems[i].productExpense;
-          this.otInvoice.profit += this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense;
+          this.otInvoice.amount += this.invoice.invoiceItems[i].productAmount*this.invoice.invoiceItems[i].quantity;
+          this.otInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
+          this.otInvoice.profit += (this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense)**this.invoice.invoiceItems[i].quantity;
       }
     }
     this.pvInvoice.summary = 'PV SETUP';

@@ -27,44 +27,43 @@ export class PoItemsSpComponent implements OnInit {
   private splitMainIntoSubPos() : void {
     
     for(let i = 0; i < this.po.invoiceItems.length; i++){
-      console.log('fish', this.po.invoiceItems[i].category);
+
       if(this.po.invoiceItems[i].category == 'pv')
       {
           
           this.pvPo.invoiceItems.push(this.po.invoiceItems[i]);
-          this.pvPo.amount += this.po.invoiceItems[i].productAmount;
-          this.pvPo.expense += this.po.invoiceItems[i].productExpense;
-          console.log('how come', this.po.invoiceItems[i].productExpense);
-          this.pvPo.profit += this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense;
+          this.pvPo.amount += this.po.invoiceItems[i].productAmount*this.po.invoiceItems[i].quantity;
+          this.pvPo.expense += this.po.invoiceItems[i].productExpense*this.po.invoiceItems[i].quantity;
+          
+          this.pvPo.profit += (this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense)*this.po.invoiceItems[i].quantity;
       }
       else if(this.po.invoiceItems[i].category == 'ac')
       {
           this.acPo.invoiceItems.push(this.po.invoiceItems[i]);
-          this.acPo.amount += this.po.invoiceItems[i].productAmount;
-          this.acPo.expense += this.po.invoiceItems[i].productExpense;
-          this.acPo.profit += this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense;
+          this.acPo.amount += this.po.invoiceItems[i].productAmount*this.po.invoiceItems[i].quantity;
+          this.acPo.expense += this.po.invoiceItems[i].productExpense*this.po.invoiceItems[i].quantity;
+          this.acPo.profit += (this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense)*this.po.invoiceItems[i].quantity;
       }
       else if(this.po.invoiceItems[i].category == 'pvw')
       {
           this.pvwPo.invoiceItems.push(this.po.invoiceItems[i]);
-          this.pvwPo.amount += this.po.invoiceItems[i].productAmount;
-          this.pvwPo.expense += this.po.invoiceItems[i].productExpense;
-          this.pvwPo.profit += this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense;
+          this.pvwPo.amount += this.po.invoiceItems[i].productAmount*this.po.invoiceItems[i].quantity;
+          this.pvwPo.expense += this.po.invoiceItems[i].productExpense*this.po.invoiceItems[i].quantity;
+          this.pvwPo.profit += (this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense)*this.po.invoiceItems[i].quantity;
       }
       if(this.po.invoiceItems[i].category == 'batt')
       {
           this.battPo.invoiceItems.push(this.po.invoiceItems[i]);
-          this.battPo.amount += this.po.invoiceItems[i].productAmount;
-          this.battPo.expense += this.po.invoiceItems[i].productExpense;
-          this.battPo.profit += this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense;
+          this.battPo.amount += this.po.invoiceItems[i].productAmount*this.po.invoiceItems[i].quantity;
+          this.battPo.expense += this.po.invoiceItems[i].productExpense*this.po.invoiceItems[i].quantity;
+          this.battPo.profit += (this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense)*this.po.invoiceItems[i].quantity;
       }
       if(this.po.invoiceItems[i].category == 'ot')
       {
           this.otPo.invoiceItems.push(this.po.invoiceItems[i]);
-          this.otPo.amount += this.po.invoiceItems[i].productAmount;
-          console.log(this.po.invoiceItems[i].product);
-          this.otPo.expense += this.po.invoiceItems[i].productExpense;
-          this.otPo.profit += this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense;
+          this.otPo.amount += this.po.invoiceItems[i].productAmount*this.po.invoiceItems[i].quantity;
+          this.otPo.expense += this.po.invoiceItems[i].productExpense*this.po.invoiceItems[i].quantity;
+          this.otPo.profit += (this.po.invoiceItems[i].productAmount - this.po.invoiceItems[i].productExpense)*this.po.invoiceItems[i].quantity;
       }
     }
     this.pvPo.summary = 'PV SETUP';
