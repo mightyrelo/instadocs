@@ -26,7 +26,7 @@ export class QuoteItemsSpComponent implements OnInit {
 
   private splitMainIntoSubQuotes() : void {
     for(let i = 0; i < this.quote.quoteItems.length; i++){
-      console.log('trapzoneddd', this.quote.quoteItems[i].product, this.quote.quoteItems[i].category);
+
       if(this.quote.quoteItems[i].category == 'pv')
       {
           this.pvQuote.quoteItems.push(this.quote.quoteItems[i]);
@@ -43,7 +43,7 @@ export class QuoteItemsSpComponent implements OnInit {
       }
       else if(this.quote.quoteItems[i].category == 'pvw')
       {
-          console.log('trapzone', this.quote.quoteItems[i].product);
+
           this.pvwQuote.quoteItems.push(this.quote.quoteItems[i]);
           this.pvwQuote.amount += this.quote.quoteItems[i].productAmount*this.quote.quoteItems[i].quantity;
           this.pvwQuote.expense += this.quote.quoteItems[i].productExpense*this.quote.quoteItems[i].quantity;
