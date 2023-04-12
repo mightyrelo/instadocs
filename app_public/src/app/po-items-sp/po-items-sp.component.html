@@ -1,0 +1,227 @@
+<table>
+  <tr>
+    <th class="wide" style="text-align:center;">Product</th>
+    <th class="wider" style="text-align:center;">Description</th>
+    <th class="narrow" style="text-align:center;">Qty</th>
+    <th class="narrow" style="text-align:center;">R/Unit</th>
+    <th class="narrow" style="text-align:center;">Amount</th>
+  </tr>
+  <tr *ngIf="pvPo.invoiceItems.length > 0">
+    <td><a (click)="revealPV = true" style="font-weight: bold; font-size: 1.1em">{{pvPo.summary}}</a> </td>
+    <td><a (click)="revealPV = false" style="font-weight: bold; font-size: 1.1em">Panels, Inverter, Roof Type</a> </td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{pvPo.expense | currency : 'R' : true }}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr *ngFor="let item of pvPo.invoiceItems">
+      <td class="wide" *ngIf="revealPV">{{item.description}}</td>
+      <td class="wider" *ngIf="revealPV">{{item.product}}</td>
+      <td class="narrow" *ngIf="revealPV">{{item.quantity}}</td>
+      <td class="narrow" *ngIf="revealPV">{{item.productExpense | currency : 'R' : true}}</td>
+      <td class="narrow" *ngIf="revealPV">{{item.productExpense * item.quantity | currency : 'R' : true}}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>  
+  <tr *ngIf="pvwPo.invoiceItems.length > 0">
+    <td><a (click)="revealPVW = true" style="font-weight: bold; font-size: 1.1em">{{pvwPo.summary}}</a> </td>
+    <td><a (click)="revealPVW = false" style="font-weight: bold; font-size: 1.1em">Cabling Material PV and battery only </a> </td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{pvwPo.expense | currency : 'R' : true }}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr *ngFor="let item of pvwPo.invoiceItems">
+      <td class="wide" *ngIf="revealPVW">{{item.description}}</td>
+      <td class="wider" *ngIf="revealPVW">{{item.product}}</td>
+      <td class="narrow" *ngIf="revealPVW">{{item.quantity}}</td>
+      <td class="narrow" *ngIf="revealPVW">{{item.productExpense | currency : 'R' : true}}</td>
+      <td class="narrow" *ngIf="revealPVW">{{item.productExpense * item.quantity | currency : 'R' : true}}</td>
+    </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>  
+  <tr *ngIf="acPo.invoiceItems.length > 0">
+    <td><a (click)="revealAC = true" style="font-weight: bold; font-size: 1.1em">{{acPo.summary}}</a> </td>
+    <td><a (click)="revealAC = false" style="font-weight: bold; font-size: 1.1em" >AC distribution - Protection,Change over,Consumables</a> </td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{acPo.expense | currency : 'R' : true }}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr *ngFor="let item of acPo.invoiceItems">
+      <td class="wide" *ngIf="revealAC">{{item.description}}</td>
+      <td class="wider" *ngIf="revealAC">{{item.product}}</td>
+      <td class="narrow" *ngIf="revealAC">{{item.quantity}}</td>
+      <td class="narrow" *ngIf="revealAC">{{item.productExpense | currency : 'R' : true}}</td>
+      <td class="narrow" *ngIf="revealAC">{{item.productExpense * item.quantity | currency : 'R' : true}}</td>
+    </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>  
+<tr *ngIf="battPo.invoiceItems.length > 0">
+  <td><a (click)="revealBATT = true" style="font-weight: bold; font-size: 1.1em">{{battPo.summary}}</a> </td>
+  <td><a (click)="revealBATT = false" style="font-weight: bold; font-size: 1.1em">Battery type- Specified</a> </td>
+  <td></td>
+  <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+  <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{battPo.expense | currency : 'R' : true }}</td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+  <tr *ngFor="let item of battPo.invoiceItems">
+    <td class="wide" *ngIf="revealBATT">{{item.description}}</td>
+    <td class="wider" *ngIf="revealBATT">{{item.product}}</td>
+    <td class="narrow" *ngIf="revealBATT">{{item.quantity}}</td>
+    <td class="narrow" *ngIf="revealBATT">{{item.productExpense | currency : 'R' : true}}</td>
+    <td class="narrow" *ngIf="revealBATT">{{item.productExpense * item.quantity | currency : 'R' : true}}</td>
+  </tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>  
+<tr *ngIf="otPo.invoiceItems.length > 0">
+<td><a (click)="revealOT = true" style="font-weight: bold; font-size: 1.1em">{{otPo.summary}}</a> </td>
+<td><a (click)="revealOT = false" style="font-weight: bold; font-size: 1.1em">Labour and Travelling</a></td>
+<td></td>
+<td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+<td class="narrow" style="font-weight: bold; font-size: 1.1em">{{otPo.expense | currency : 'R' : true }}</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr *ngFor="let item of otPo.invoiceItems">
+  <td class="wide" *ngIf="revealOT">{{item.description}}</td>
+  <td class="wider" *ngIf="revealOT">{{item.product}}</td>
+  <td class="narrow" *ngIf="revealOT">{{item.quantity}}</td>
+  <td class="narrow" *ngIf="revealOT">{{item.productExpense | currency : 'R' : true}}</td>
+  <td class="narrow" *ngIf="revealOT">{{item.productExpense * item.quantity | currency : 'R' : true}}</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.2em">Total: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.2em">{{po.expense | currency : 'R' : true }}</td>
+  </tr>
+</table>
