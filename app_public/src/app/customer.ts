@@ -154,6 +154,29 @@ export class QuoteItem5  {
 
   }
 
+export class QuoteItem7  {
+    psm: string;
+    quantityP: number;
+    pAmount: number;
+    pDescription: string;
+    pExpense: number;
+
+    fuse: string;
+    quantityF: number;
+    fAmount: number;
+    fDescription: string;
+    fExpense: number;
+
+    box: string;
+    quantityB: number;
+    bAmount: number;
+    bDescription: string;
+    bExpense: number;
+
+    summary: string;
+
+  }
+
 export class QuoteItem6  {
     travel: string;
     quantityT: number;

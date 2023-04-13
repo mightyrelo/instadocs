@@ -83,6 +83,41 @@
     <td></td>
     <td></td>
   </tr>  
+  <tr *ngIf="protQuote.quoteItems.length > 0">
+    <td><a (click)="revealProt = true" style="font-weight: bold; font-size: 1.1em">{{protQuote.summary}}</a> </td>
+    <td><a (click)="revealProt = false" style="font-weight: bold; font-size: 1.1em">PV Protection Box</a> </td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{protQuote.amount | currency : 'R' : true }}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr *ngFor="let item of protQuote.quoteItems">
+      <td class="wide" *ngIf="revealProt">{{item.description}}</td>
+      <td class="wider" *ngIf="revealProt">{{item.product}}</td>
+      <td class="narrow" *ngIf="revealProt">{{item.quantity}}</td>
+      <td class="narrow" *ngIf="revealProt">{{item.productAmount | currency : 'R' : true}}</td>
+      <td class="narrow" *ngIf="revealProt">{{item.productAmount * item.quantity | currency : 'R' : true}}</td>
+    </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>  
   <tr *ngIf="acQuote.quoteItems.length > 0">
     <td><a (click)="revealAC = true" style="font-weight: bold; font-size: 1.1em">{{acQuote.summary}}</a> </td>
     <td><a (click)="revealAC = false" style="font-weight: bold; font-size: 1.1em" >AC distribution - Protection,Change over,Consumables</a> </td>

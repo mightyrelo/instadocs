@@ -20,6 +20,7 @@ export class QuoteFormSpComponent implements OnInit {
   @Input() wireProducts = [];
   @Input() battProducts = [];
   @Input() otherProducts = [];
+  @Input() protProducts = [];
   @Output() formClosedEvent = new EventEmitter<boolean>();
 
   constructor(
@@ -33,6 +34,8 @@ export class QuoteFormSpComponent implements OnInit {
   public wirProducts = [];
   public batProducts = [];
   public otProducts = [];
+  public prtProducts = [];
+
   public customer : Customer;
 
   public pvQuoteDone : boolean = false;
@@ -40,6 +43,7 @@ export class QuoteFormSpComponent implements OnInit {
   public acQuoteDone : boolean = false;
   public battQuoteDone : boolean = false;
   public otherQuoteDone : boolean = false;
+  public protQuoteDone : boolean = false;
 
   public pvSummary : string;
   public pvQuote : boolean = false;
@@ -60,6 +64,10 @@ export class QuoteFormSpComponent implements OnInit {
   public otherSummary : string;
   public otherQuote : boolean = false;
   public otherTotal : number;
+
+  public protSummary : string;
+  public protQuote : boolean = false;
+  public protTotal : number;
 
   public mainQuote : Quote = new Quote();
   
@@ -86,6 +94,10 @@ export class QuoteFormSpComponent implements OnInit {
 
   public onOtherFormClosedEvent(eventData : boolean) {
     this.otherQuoteDone = true;
+  }
+
+  public onProtFormClosedEvent(eventData : boolean) {
+    this.protQuoteDone = true;
   }
 
   public submitQuote() : void {
@@ -139,11 +151,20 @@ export class QuoteFormSpComponent implements OnInit {
        
   }
 
+  public onProtQuoteGenerated(evntData : Quote) {
+    //console.log('how?');
+    this.addItemsToQuote(evntData);
+    this.protSummary = evntData.summary;
+    this.protQuote = true;
+    this.protTotal = evntData.amount;
+    //time delay
+       
+  }
+
   private addItemsToQuote(evntData : Quote) {
     for(let i = 0; i < evntData.quoteItems.length; i++){
       this.mainQuote.quoteItems.push(evntData.quoteItems[i]);
     }
-    console.log('adding to main', evntData.amount);
     this.mainQuote.amount += evntData.amount;
     this.mainQuote.profit += evntData.profit;
     this.mainQuote.expense += evntData.expense;
@@ -199,6 +220,7 @@ export class QuoteFormSpComponent implements OnInit {
     this.wirProducts = this.wireProducts;
     this.batProducts = this.battProducts;
     this.otProducts = this.otherProducts;
+    this.prtProducts = this.protProducts;
     this.customer = this.dbCustomer;
     this.mainQuote.quoteItems = [];
     this.mainQuote.amount = 0;

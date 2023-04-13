@@ -10,6 +10,12 @@
      <br>
      <p>Subtotal: {{pvcTotal | currency :'R':true }}</p>
 </div>
+<div *ngIf="protQuote" class="alert alert-success">
+     <h4>PV Protection Items</h4>
+     <p>{{protSummary}}</p>
+     <br>
+     <p>Subtotal: {{protTotal | currency :'R':true }}</p>
+</div>
 <div *ngIf="acQuote" class="alert alert-success">
      <h4>AC Items</h4>
      <p>{{acSummary}}</p>
@@ -33,13 +39,15 @@
      [prods]="allProducts" [dbCustomer]="customer" (quoteGenerated)="onPVQuoteGenerated($event)">
 </app-qoute-pv>
 
-
-
 <app-quote-pv-wire *ngIf="pvQuoteDone && !pvwQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onPVWFormClosedEvent($event)"
     [prods]="wirProducts" [dbCustomer]="customer"  (quoteGenerated)="onPVWQuoteGenerated($event)">
 </app-quote-pv-wire>
 
-<app-qoute-ac *ngIf="pvwQuoteDone && !acQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onACFormClosedEvent($event)"
+<app-quote-prot *ngIf="pvwQuoteDone && !protQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onProtFormClosedEvent($event)"
+    [prods]="prtProducts" [dbCustomer]="customer"  (quoteGenerated)="onProtQuoteGenerated($event)">
+</app-quote-prot>
+
+<app-qoute-ac *ngIf="protQuoteDone && !acQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onACFormClosedEvent($event)"
      [prods]="acProducts" [dbCustomer]="customer"  (quoteGenerated)="onACQuoteGenerated($event)">
 </app-qoute-ac>
 

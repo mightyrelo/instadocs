@@ -15,12 +15,14 @@ export class QuoteItemsSpComponent implements OnInit {
   public acQuote : Quote = new Quote();
   public battQuote : Quote = new Quote();
   public otQuote : Quote = new Quote();
+  public protQuote : Quote = new Quote();
 
   public revealPV : boolean = false;
   public revealPVW : boolean = false;
   public revealAC : boolean = false;
   public revealBATT : boolean = false;
   public revealOT : boolean = false;
+  public revealProt : boolean = false;
 
   constructor() { }
 
@@ -64,12 +66,21 @@ export class QuoteItemsSpComponent implements OnInit {
           this.otQuote.expense += this.quote.quoteItems[i].productExpense*this.quote.quoteItems[i].quantity;
           this.otQuote.profit += (this.quote.quoteItems[i].productAmount - this.quote.quoteItems[i].productExpense)*this.quote.quoteItems[i].quantity;
       }
+      if(this.quote.quoteItems[i].category == 'prot')
+      {
+          this.protQuote.quoteItems.push(this.quote.quoteItems[i]);
+          this.protQuote.amount += this.quote.quoteItems[i].productAmount*this.quote.quoteItems[i].quantity;
+          
+          this.protQuote.expense += this.quote.quoteItems[i].productExpense*this.quote.quoteItems[i].quantity;
+          this.protQuote.profit += (this.quote.quoteItems[i].productAmount - this.quote.quoteItems[i].productExpense)*this.quote.quoteItems[i].quantity;
+      }
     }
     this.pvQuote.summary = 'PV SETUP';
     this.acQuote.summary = 'AC';
     this.pvwQuote.summary = 'PV CABLING';
     this.battQuote.summary = 'BATTERY';
     this.otQuote.summary = 'ADDITIONAL';
+    this.protQuote.summary = 'PV SAFE';
   }
 
   ngOnInit() : void{
@@ -78,11 +89,13 @@ export class QuoteItemsSpComponent implements OnInit {
     this.acQuote.quoteItems = [];
     this.battQuote.quoteItems = [];
     this.otQuote.quoteItems = [];
+    this.protQuote.quoteItems = [];
     this.pvQuote.amount = 0;
     this.acQuote.amount = 0;
     this.pvwQuote.amount = 0;
     this.battQuote.amount = 0;
     this.otQuote.amount = 0;
+    this.protQuote.amount = 0;
     this.splitMainIntoSubQuotes();
   }
 

@@ -63,6 +63,8 @@ import { TermsComponent } from './terms/terms.component';
 import { QuoteItemsSpComponent } from './quote-items-sp/quote-items-sp.component';
 import { InvoiceItemsSpComponent } from './invoice-items-sp/invoice-items-sp.component';
 import { PoItemsSpComponent } from './po-items-sp/po-items-sp.component';
+import { QuoteCabComponent } from './quote-cab/quote-cab.component';
+import { QuoteProtComponent } from './quote-prot/quote-prot.component';
 
 
 
@@ -126,7 +128,9 @@ import { PoItemsSpComponent } from './po-items-sp/po-items-sp.component';
     TermsComponent,
     QuoteItemsSpComponent,
     InvoiceItemsSpComponent,
-    PoItemsSpComponent
+    PoItemsSpComponent,
+    QuoteCabComponent,
+    QuoteProtComponent
   ],
   imports: [
     BrowserModule,
