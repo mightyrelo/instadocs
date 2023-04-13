@@ -87,6 +87,7 @@ export class ViewCustomerContentComponent implements OnInit {
   public battProducts : Product[];
   public otherProducts : Product[];
   public protProducts : Product[];
+  public cabProducts : Product[];
 
 
 
@@ -132,7 +133,7 @@ export class ViewCustomerContentComponent implements OnInit {
 
   //deleting quote
   flagged(customerId: string, quoteId: string) {
-    console.log(this.customers.length);
+    
     for(let i = 0; i < this.customers.length; i++){
       if(this.customers[i]._id == customerId){
         for(let j = 0; j < this.customers[i].quotations.length; j++){
@@ -176,7 +177,6 @@ export class ViewCustomerContentComponent implements OnInit {
   }
 
   deleteQuote(customerId: string, quoteId: string) {
-    console.log('deleting...');
     for(let i = 0; i < this.customers.length; i++) {
       if(this.customers[i]._id === customerId) {
         for(let j = 0; j < this.customers[i].quotations.length; j++){
@@ -184,7 +184,6 @@ export class ViewCustomerContentComponent implements OnInit {
             this.quoteDataService.deleteQuote(customerId, quoteId)
              .then(resp => {
               if(!resp){
-                console.log('deleted');
                 let quotes = this.dbCustomer.quotations.slice(0);
                 this.dbCustomer.quotations = quotes;
                 this.getCustomer(customerId);       
@@ -199,7 +198,7 @@ export class ViewCustomerContentComponent implements OnInit {
     //now we can finally post invoice
     this.invoiceDataService.addInvoice(cId, qId)
       .then(response => {
-        console.log(response, ' invoice added...');
+
         let invoices = this.dbCustomer.invoices.slice(0);
         invoices.unshift(response);
         this.dbCustomer.invoices = invoices;
@@ -208,7 +207,7 @@ export class ViewCustomerContentComponent implements OnInit {
               response.completedInvoices = response.completedInvoices + 1;
               this.userDataService.updateInvoices(response)
                 .then(usr => {
-                    console.log('completed invoices', usr.completedInvoices);
+
                     window.location.reload();
                 });
             });
@@ -227,7 +226,7 @@ export class ViewCustomerContentComponent implements OnInit {
   }
 
   public flaggedInvoice(customerId: string, invoiceId: string) {
-    console.log(this.customers.length);
+    
     for(let i = 0; i < this.customers.length; i++){
       if(this.customers[i]._id == customerId){
         for(let j = 0; j < this.customers[i].invoices.length; j++){
@@ -266,7 +265,7 @@ export class ViewCustomerContentComponent implements OnInit {
 
 
   public deleteInvoice(customerId: string, invoiceId: string) {
-    console.log('deleting...');
+    
     for(let i = 0; i < this.customers.length; i++) {
       if(this.customers[i]._id === customerId) {
         for(let j = 0; j < this.customers[i].invoices.length; j++){
@@ -274,7 +273,6 @@ export class ViewCustomerContentComponent implements OnInit {
             this.invoiceDataService.deleteInvoice(customerId, invoiceId)
              .then(resp => {
               if(!resp){
-                console.log('deleted!');
                 let invoices = this.dbCustomer.invoices.slice(0);
                 this.dbCustomer.invoices = invoices;
                 this.getCustomer(customerId);       
@@ -285,13 +283,10 @@ export class ViewCustomerContentComponent implements OnInit {
     }
   }
 
-  
-
   onCustomerSubmit(customerId: string){
     if(true){
       this.customerDataService.updateCustomer(this.formCustomer, customerId)
        .then (dbCus =>  {
-        console.log('customer saved', dbCus);
         let customers = this.customers.slice(0);
         customers.unshift(dbCus);
         this.customers = customers;
@@ -366,6 +361,8 @@ export class ViewCustomerContentComponent implements OnInit {
       .then(rsp => this.otherProducts = rsp);
     this.productDataService.getCategoryProducts(this.getUserName(), 'PVPROT')
       .then(rsp => this.protProducts = rsp);
+    this.productDataService.getCategoryProducts(this.getUserName(), 'ACCABLE')
+      .then(rsp => this.cabProducts = rsp);
     for(let i = 1; i <= 100;i++){
         this.counts[i] = i;
     }

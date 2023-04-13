@@ -22,6 +22,12 @@
      <br>
      <p>Subtotal: {{acTotal | currency :'R':true }}</p>
 </div>
+<div *ngIf="cabQuote" class="alert alert-success">
+     <h4>Cable Items</h4>
+     <p>{{cabSummary}}</p>
+     <br>
+     <p>Subtotal: {{cabTotal | currency :'R':true }}</p>
+</div>
 <div *ngIf="battQuote" class="alert alert-success">
      <h4>Battery Items</h4>
      <p>{{battSummary}}</p>
@@ -51,8 +57,13 @@
      [prods]="acProducts" [dbCustomer]="customer"  (quoteGenerated)="onACQuoteGenerated($event)">
 </app-qoute-ac>
 
+<app-quote-cab *ngIf="acQuoteDone && !cabQuoteDone" [displayForm]="displayForm" 
+     (formClosedEvent)="onCabFormClosedEvent($event)"
+     [prods]="cbProducts" [dbCustomer]="customer"  (quoteGenerated)="onCabQuoteGenerated($event)">
+</app-quote-cab>
 
-<app-qoute-bat *ngIf="acQuoteDone && !battQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onBattFormClosedEvent($event)"
+
+<app-qoute-bat *ngIf="cabQuoteDone && !battQuoteDone" [displayForm]="displayForm" (formClosedEvent)="onBattFormClosedEvent($event)"
      [prods]="batProducts" [dbCustomer]="customer"  (quoteGenerated)="onBattQuoteGenerated($event)">
 </app-qoute-bat>
 

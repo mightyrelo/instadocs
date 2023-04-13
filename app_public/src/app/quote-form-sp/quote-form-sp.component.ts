@@ -21,6 +21,7 @@ export class QuoteFormSpComponent implements OnInit {
   @Input() battProducts = [];
   @Input() otherProducts = [];
   @Input() protProducts = [];
+  @Input() cabProducts = [];
   @Output() formClosedEvent = new EventEmitter<boolean>();
 
   constructor(
@@ -35,6 +36,7 @@ export class QuoteFormSpComponent implements OnInit {
   public batProducts = [];
   public otProducts = [];
   public prtProducts = [];
+  public cbProducts = [];
 
   public customer : Customer;
 
@@ -44,6 +46,7 @@ export class QuoteFormSpComponent implements OnInit {
   public battQuoteDone : boolean = false;
   public otherQuoteDone : boolean = false;
   public protQuoteDone : boolean = false;
+  public cabQuoteDone : boolean = false;
 
   public pvSummary : string;
   public pvQuote : boolean = false;
@@ -68,6 +71,10 @@ export class QuoteFormSpComponent implements OnInit {
   public protSummary : string;
   public protQuote : boolean = false;
   public protTotal : number;
+
+  public cabSummary : string;
+  public cabQuote : boolean = false;
+  public cabTotal : number;
 
   public mainQuote : Quote = new Quote();
   
@@ -100,6 +107,10 @@ export class QuoteFormSpComponent implements OnInit {
     this.protQuoteDone = true;
   }
 
+  public onCabFormClosedEvent(eventData : boolean) {
+    this.cabQuoteDone = true;
+  }
+
   public submitQuote() : void {
       this.formClosedEvent.emit(false);
       this.doCreateQuote();
@@ -111,7 +122,6 @@ export class QuoteFormSpComponent implements OnInit {
     this.acQuote = true;
     this.acTotal = evntData.amount;
 
-       
   }
   
   public onPVQuoteGenerated(evntData : Quote) {
@@ -127,9 +137,6 @@ export class QuoteFormSpComponent implements OnInit {
     this.pvcQuote = true;
     this.pvcTotal = evntData.amount;
 
-    //this.pvSummary = evntData.summary;
-   // this.pvQuote = evntData.summary;
-       
   }
   
   public onBattQuoteGenerated(evntData : Quote) {
@@ -137,27 +144,30 @@ export class QuoteFormSpComponent implements OnInit {
     this.battSummary = evntData.summary;
     this.battQuote = true;
     this.battTotal = evntData.amount;
-
        
   }
   
   public onOtherQuoteGenerated(evntData : Quote) {
-    //console.log('how?');
     this.addItemsToQuote(evntData);
     this.otherSummary = evntData.summary;
     this.otherQuote = true;
     this.otherTotal = evntData.amount;
-    //time delay
        
   }
 
   public onProtQuoteGenerated(evntData : Quote) {
-    //console.log('how?');
     this.addItemsToQuote(evntData);
     this.protSummary = evntData.summary;
     this.protQuote = true;
     this.protTotal = evntData.amount;
-    //time delay
+       
+  }
+
+  public onCabQuoteGenerated(evntData : Quote) {
+    this.addItemsToQuote(evntData);
+    this.cabSummary = evntData.summary;
+    this.cabQuote = true;
+    this.cabTotal = evntData.amount;
        
   }
 
@@ -190,8 +200,6 @@ export class QuoteFormSpComponent implements OnInit {
   private doCreateQuote() : void {
     this.quoteDataService.addQuote(this.dbCustomer._id, this.mainQuote)
       .then((quotation: Quote) => {
-        console.log('deep', this.mainQuote.amount)
-          console.log('quotation saved', quotation);
           let quotes = this.dbCustomer.quotations.slice(0);
           quotes.unshift(quotation);
           this.dbCustomer.quotations = quotes;
@@ -200,7 +208,7 @@ export class QuoteFormSpComponent implements OnInit {
             response.completedQuotes = response.completedQuotes + 1;
             this.userDataService.updateQuotes(response)
                 .then(usr => {
-                    console.log('completed quotes', usr.completedQuotes);
+
                 });
             
             });
@@ -221,6 +229,7 @@ export class QuoteFormSpComponent implements OnInit {
     this.batProducts = this.battProducts;
     this.otProducts = this.otherProducts;
     this.prtProducts = this.protProducts;
+    this.cbProducts = this.cabProducts;
     this.customer = this.dbCustomer;
     this.mainQuote.quoteItems = [];
     this.mainQuote.amount = 0;

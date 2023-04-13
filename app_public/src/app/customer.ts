@@ -177,6 +177,17 @@ export class QuoteItem7  {
 
   }
 
+export class QuoteItem8  {
+    trunk: string;
+    quantityT: number;
+    tAmount: number;
+    tDescription: string;
+    tExpense: number;
+
+    summary: string;
+
+  }
+
 export class QuoteItem6  {
     travel: string;
     quantityT: number;

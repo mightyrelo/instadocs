@@ -153,6 +153,41 @@
     <td></td>
     <td></td>
   </tr>
+  <tr *ngIf="cabQuote.quoteItems.length > 0">
+    <td><a (click)="revealCab = true" style="font-weight: bold; font-size: 1.1em">{{cabQuote.summary}}</a> </td>
+    <td><a (click)="revealCab = false" style="font-weight: bold; font-size: 1.1em" >Cableway and Accessories</a> </td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{cabQuote.amount | currency : 'R' : true }}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr *ngFor="let item of cabQuote.quoteItems">
+      <td class="wide" *ngIf="revealCab">{{item.description}}</td>
+      <td class="wider" *ngIf="revealCab">{{item.product}}</td>
+      <td class="narrow" *ngIf="revealCab">{{item.quantity}}</td>
+      <td class="narrow" *ngIf="revealCab">{{item.productAmount | currency : 'R' : true}}</td>
+      <td class="narrow" *ngIf="revealCab">{{item.productAmount * item.quantity | currency : 'R' : true}}</td>
+    </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
   <tr>
     <td></td>
     <td></td>

@@ -1,3 +1,31 @@
-<p>
-  quote-cab works!
-</p>
+<div *ngIf="displayForm">
+  <h2>Cableway</h2>
+  <div *ngIf="!closeForm">
+    <form (ngSubmit)="onCabSubmit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError}}</div>
+        <div *ngIf="itemAdded" class="alert alert-success">
+          <p>{{formQuoteItem.summary}} added</p>
+        </div>
+      <div class="form-group row">
+        <div class="col-7 col-md-7">
+          <label  for="pvw">trunking</label>
+          <select [(ngModel)]="formQuoteItem5.trunk" class="form-control input-sm" id="pvw" name="pvw">
+           <option *ngFor="let product of trunks">{{product.name}}</option> 
+          </select>
+        </div>
+        <div class="col-3 col-md-3">
+          <label  for="quantityP">Qty</label>
+          <select [(ngModel)]="formQuoteItem5.quantityT" class="form-control input-sm" id="quantityP" name="quantityP">
+           <option *ngFor="let item of counts">{{item}}</option>
+          </select>                         
+        </div>
+    </div>       
+      <div class="form-group">
+      </div>
+      <small><button  type="submit" role="button" class="btn-primary sm-button">quote</button></small>
+      <small><button (click)="resetAndHideQuoteForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa-solid fa-xmark"></i></button></small>
+    </form>  
+  </div>
+  </div>
+  
