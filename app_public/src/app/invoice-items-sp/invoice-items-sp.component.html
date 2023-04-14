@@ -83,6 +83,42 @@
     <td></td>
     <td></td>
   </tr>  
+  <tr *ngIf="protInvoice.invoiceItems.length > 0">
+    <td><a (click)="revealProt = true" style="font-weight: bold; font-size: 1.1em">{{protInvoice.summary}}</a> </td>
+    <td><a (click)="revealProt = false" style="font-weight: bold; font-size: 1.1em">PV Protection Box</a> </td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{protInvoice.amount | currency : 'R' : true }}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr *ngFor="let item of protInvoice.invoiceItems">
+      <td class="wide" *ngIf="revealProt">{{item.description}}</td>
+      <td class="wider" *ngIf="revealProt">{{item.product}}</td>
+      <td class="narrow" *ngIf="revealProt">{{item.quantity}}</td>
+      <td class="narrow" *ngIf="revealProt">{{item.productAmount | currency : 'R' : true}}</td>
+      <td class="narrow" *ngIf="revealProt">{{item.productAmount * item.quantity | currency : 'R' : true}}</td>
+    </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>  
+  <tr>
   <tr *ngIf="acInvoice.invoiceItems.length > 0">
     <td><a (click)="revealAC = true" style="font-weight: bold; font-size: 1.1em">{{acInvoice.summary}}</a> </td>
     <td><a (click)="revealAC = false" style="font-weight: bold; font-size: 1.1em" >AC distribution - Protection,Change over,Consumables</a> </td>
@@ -118,13 +154,41 @@
     <td></td>
     <td></td>
   </tr>
+  <tr *ngIf="cabInvoice.invoiceItems.length > 0">
+    <td><a (click)="revealCab = true" style="font-weight: bold; font-size: 1.1em">{{cabInvoice.summary}}</a> </td>
+    <td><a (click)="revealCab = false" style="font-weight: bold; font-size: 1.1em" >Cableway and Accessories</a> </td>
+    <td></td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">SubTotal: </td>
+    <td class="narrow" style="font-weight: bold; font-size: 1.1em">{{cabInvoice.amount | currency : 'R' : true }}</td>
+  </tr>
   <tr>
     <td></td>
     <td></td>
     <td></td>
     <td></td>
     <td></td>
-  </tr>  
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr *ngFor="let item of cabInvoice.invoiceItems">
+      <td class="wide" *ngIf="revealCab">{{item.description}}</td>
+      <td class="wider" *ngIf="revealCab">{{item.product}}</td>
+      <td class="narrow" *ngIf="revealCab">{{item.quantity}}</td>
+      <td class="narrow" *ngIf="revealCab">{{item.productAmount | currency : 'R' : true}}</td>
+      <td class="narrow" *ngIf="revealCab">{{item.productAmount * item.quantity | currency : 'R' : true}}</td>
+    </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 <tr *ngIf="battInvoice.invoiceItems.length > 0">
   <td><a (click)="revealBATT = true" style="font-weight: bold; font-size: 1.1em">{{battInvoice.summary}}</a> </td>
   <td><a (click)="revealBATT = false" style="font-weight: bold; font-size: 1.1em">Battery type- Specified</a> </td>

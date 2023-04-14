@@ -15,19 +15,24 @@ export class InvoiceItemsSpComponent implements OnInit {
   public acInvoice : Invoice = new Invoice();
   public battInvoice : Invoice = new Invoice();
   public otInvoice : Invoice = new Invoice();
+  public protInvoice : Invoice = new Invoice();
+  public cabInvoice : Invoice = new Invoice();
+
 
   public revealPV : boolean = false;
   public revealPVW : boolean = false;
   public revealAC : boolean = false;
   public revealBATT : boolean = false;
   public revealOT : boolean = false;
+  public revealProt : boolean = false;
+  public revealCab : boolean = false;
 
   constructor() { }
 
   private splitMainIntoSubInvoices() : void {
     
     for(let i = 0; i < this.invoice.invoiceItems.length; i++){
-      console.log('fish', this.invoice.invoiceItems[i].category);
+
       if(this.invoice.invoiceItems[i].category == 'pv')
       {
           
@@ -64,12 +69,28 @@ export class InvoiceItemsSpComponent implements OnInit {
           this.otInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
           this.otInvoice.profit += (this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense)**this.invoice.invoiceItems[i].quantity;
       }
+      if(this.invoice.invoiceItems[i].category == 'prot')
+      {
+          this.protInvoice.invoiceItems.push(this.invoice.invoiceItems[i]);
+          this.protInvoice.amount += this.invoice.invoiceItems[i].productAmount*this.invoice.invoiceItems[i].quantity;
+          this.protInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
+          this.protInvoice.profit += (this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense)**this.invoice.invoiceItems[i].quantity;
+      }
+      if(this.invoice.invoiceItems[i].category == 'cab')
+      {
+          this.cabInvoice.invoiceItems.push(this.invoice.invoiceItems[i]);
+          this.cabInvoice.amount += this.invoice.invoiceItems[i].productAmount*this.invoice.invoiceItems[i].quantity;
+          this.cabInvoice.expense += this.invoice.invoiceItems[i].productExpense*this.invoice.invoiceItems[i].quantity;
+          this.cabInvoice.profit += (this.invoice.invoiceItems[i].productAmount - this.invoice.invoiceItems[i].productExpense)**this.invoice.invoiceItems[i].quantity;
+      }
     }
     this.pvInvoice.summary = 'PV SETUP';
     this.acInvoice.summary = 'AC';
     this.pvwInvoice.summary = 'PV CABLING';
     this.battInvoice.summary = 'BATTERY';
     this.otInvoice.summary = 'ADDITIONAL';
+    this.protInvoice.summary = 'PV SAFETY';
+    this.cabInvoice.summary = 'CABLEWAY';
   }
 
   ngOnInit() : void{
@@ -78,11 +99,15 @@ export class InvoiceItemsSpComponent implements OnInit {
     this.acInvoice.invoiceItems = [];
     this.battInvoice.invoiceItems = [];
     this.otInvoice.invoiceItems = [];
+    this.protInvoice.invoiceItems = [];
+    this.cabInvoice.invoiceItems = [];
     this.pvInvoice.amount = 0;
     this.acInvoice.amount = 0;
     this.pvwInvoice.amount = 0;
     this.battInvoice.amount = 0;
     this.otInvoice.amount = 0;
+    this.protInvoice.amount = 0;
+    this.cabInvoice.amount = 0;
     this.splitMainIntoSubInvoices();
   }
 
