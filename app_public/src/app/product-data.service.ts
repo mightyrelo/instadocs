@@ -37,6 +37,16 @@ export class ProductDataService {
 
   }
 
+  public getSubCategoryProducts(userName: string, subCategory: string) : Promise<Product[]> {
+    console.log('logggins');
+    const url: string = `${this.apiBaseUrl}/products/userName/${userName}/subcategories/${subCategory}`;
+    return this.http
+      .get(url)
+      .toPromise()
+      .then(response => response as Product[])
+      .catch(this.handleError);
+  }
+
   public getProduct(prodId: string) : Promise<Product> {
     const url : string = `${this.apiBaseUrl}/products/${prodId}`;
     return this.http

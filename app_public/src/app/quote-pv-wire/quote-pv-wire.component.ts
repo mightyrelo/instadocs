@@ -151,7 +151,7 @@ export class QuotePvWireComponent implements OnInit {
     this.getProductByName(this.formQuoteItem4.pvwire)
     .then(foundProduct => {
       this.currentW = foundProduct;
-      console.log('hole in one', this.currentW);
+ 
       this.formQuoteItem4.wAmount = this.currentW.selling;
       this.formQuoteItem4.wDescription = this.currentW.description;
       this.formQuoteItem4.wExpense = this.currentW.trade;

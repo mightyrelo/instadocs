@@ -14,6 +14,7 @@ export class ViewProductsContentComponent implements OnInit {
  
   //variableName: variableType = variableValue
   public products: Product[];
+  public subProducts: Product[];
 
   public displayForm = false;
   public formError = '';
@@ -21,9 +22,39 @@ export class ViewProductsContentComponent implements OnInit {
 
   public categories = ['user','suv','aut','intr','pow','cab','tool','int','acc','fir','swt','efe', 'auto'];
   public categoriesFull = ['user','surveillance','automation','intrusion','power','cabling','tools','intercom','access control','fire','switches','electric fencing', 'automation advanced'];
+
+  public solarCategories = ['user','PV','PVCABLE','PVPROT','AC','ACCABLE', 'battery','TRVLAB'];
+  public solarCategoriesFull = ['user', 'pv setup', 'pv cabling', 'pv protection', 'ac', 'ac cableway', 'battery', 'additional'];
+
+  public solarPVSubCategories = ['panel','roof','other','inv'];
+  public solarPVSubCategoriesFull = ['panels','roof types','other','inverters'];
+  public solarPVCabSubCategories = ['wire','wiretr','earth','flex','batt','weld','pvc'];
+  public solarPVCabSubCategoriesFull = ['PV wire','wire trunking','earth cable','flex cable','battery cable','welding cable','armour'];
+  public solarACSubCategories = ['din','cons','chover','mcb','surgProt','avr'];
+  public solarACSubCategoriesFull = ['din-rail','consumables','change over switch','main circuit breaker','surge Protection','avr switch'];
+  public solarPVProtSubCategories = ['acprot'];
+  public solarPVProtSubCategoriesFull = ['ac protection'];
+  public solarCabSubCategories = ['cab'];
+  public solarCabSubCategoriesFull = ['ac cableway'];
+  public solarBatSubCategories = ['batt','batprot','batstand'];
+  public solarBatSubCategoriesFull = ['battery','batttery protection','battery stand'];
+  public solarOtherSubCategories = ['trvl','lab', 'assess'];
+  public solarOtherSubCategoriesFull = ['travelling','labour', 'assessment'];
+
+  public solarSubCategoriesFull = [];
+  public solarSubCategories = [];
+
   public formCat = {
-    category: ''
+    category: '',
   }; 
+
+  public formCat2 = {
+    subCategory: '',
+  }; 
+
+  public products2 : Product[];
+
+  public categorySubmitted : boolean = false;
 
   public newProduct : Product = {
     _id: '',
@@ -103,6 +134,10 @@ export class ViewProductsContentComponent implements OnInit {
       });
   }
 
+  public addSubCatProducts(cat: Product[]) : void {
+    
+  } 
+
   public onProductSubmit() : void {
     this.formError = '';
     this.newProduct.userId = this.getUserName();
@@ -115,10 +150,59 @@ export class ViewProductsContentComponent implements OnInit {
   }
   public onCategorySubmit() : void {
     //this.formError2 = '';
-    const idx = this.categoriesFull.indexOf(this.formCat.category);
-    this.productDataService.getCategoryProducts(this.getUserName(), this.categories[idx])
-      .then(foundProducts => {this.products = foundProducts;});
-    
+    if(this.getUserName() == 'thabethe'){
+      const idx = this.solarCategoriesFull.indexOf(this.formCat.category);
+      this.productDataService.getCategoryProducts(this.getUserName(), this.solarCategories[idx])
+        .then(foundProducts => {
+          this.products2 = foundProducts;
+          this.categorySubmitted = true;
+          if(this.products2[0].category == 'PV'){
+            this.solarSubCategoriesFull = this.solarPVSubCategoriesFull;
+            this.solarSubCategories = this.solarPVSubCategories;
+          }
+          if(this.products2[0].category == 'PVCABLE'){
+            this.solarSubCategoriesFull = this.solarPVCabSubCategoriesFull;
+          }
+          if(this.products2[0].category == 'PVPROT'){
+            this.solarSubCategoriesFull = this.solarPVProtSubCategoriesFull;
+            this.solarSubCategories = this.solarPVProtSubCategories;
+          }
+          if(this.products2[0].category == 'AC'){
+            this.solarSubCategoriesFull = this.solarACSubCategoriesFull;
+            this.solarSubCategories = this.solarACSubCategories;
+          }
+          if(this.products2[0].category == 'ACCABLE'){
+            this.solarSubCategoriesFull = this.solarCabSubCategoriesFull;
+            this.solarSubCategories = this.solarCabSubCategories;
+          }
+          if(this.products2[0].category == 'battery'){
+            this.solarSubCategoriesFull = this.solarBatSubCategoriesFull;
+            this.solarSubCategories = this.solarBatSubCategories;
+          }
+          if(this.products2[0].category == 'TRVLAB'){
+            this.solarSubCategoriesFull = this.solarOtherSubCategoriesFull;
+            this.solarSubCategories = this.solarOtherSubCategories;
+          }
+        });
+    }
+    else {
+      const idx = this.categoriesFull.indexOf(this.formCat.category);
+      this.productDataService.getCategoryProducts(this.getUserName(), this.categories[idx])
+        .then(foundProducts => {
+          this.products = foundProducts;
+          console.log(this.products.length);
+          //write the correct subproducts into cat
+        });
+    }
+  }
+
+  public onSubCategorySubmit() : void {
+    const idx = this.solarSubCategoriesFull.indexOf(this.formCat2.subCategory);
+    this.productDataService.getSubCategoryProducts(this.getUserName(), this.solarSubCategories[idx])
+    .then(foundSubProducts => {
+      this.subProducts = foundSubProducts;
+      this.products = foundSubProducts;
+    })
   }
 
   private getProducts() : void {

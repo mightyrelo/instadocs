@@ -149,6 +149,7 @@ const productsReadByUserName = (req, res) =>
      });
 
 };
+
 const productsReadByCategory = (req, res) => 
 {
     
@@ -162,6 +163,19 @@ const productsReadByCategory = (req, res) =>
      });
 };
 
+const productsReadBySubCategory = (req, res) => 
+{
+    
+    if(!req.params.subcategory || !req.params.userName) {sendJSONResponse(res, 400, {"message": "name required"}); return;}
+    Prod
+     .find({userId: req.params.userName})
+     .exec((err, products)=>{
+        if(err) {sendJSONResponse(res, 400, err); return}
+        if(!products) {sendJSONResponse(res, 404, {"message":"customers not found"}); return}
+        sendSubCategoryProducts(req, res, products);
+     });
+};
+
 const sendCategoryProducts = (req, res, products) => 
 {
     let userProducts = [];
@@ -169,6 +183,21 @@ const sendCategoryProducts = (req, res, products) =>
     {
         if(req.params.category == products[i].category)
         {
+            userProducts.push(products[i]);
+        }
+    }
+    sendJSONResponse(res, 200, userProducts); 
+};
+
+const sendSubCategoryProducts = (req, res, products) => 
+{
+    let userProducts = [];
+    
+    for(let i = 0; i < products.length; i++)
+    {
+        if(req.params.subcategory == products[i].subCategory)
+        {
+            console.log(req.params.subcategory);
             userProducts.push(products[i]);
         }
     }
@@ -289,5 +318,6 @@ module.exports = {
     productsReadByName,
     productsReadByUserName,
     productsReadByCategory,
-    createDBProducts
+    createDBProducts,
+    productsReadBySubCategory
 };

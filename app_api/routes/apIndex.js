@@ -88,6 +88,7 @@ router
 
 
 router.get('/products/userName/:userName/categories/:category', productsCtrl.productsReadByCategory)
+router.get('/products/userName/:userName/subcategories/:subcategory', productsCtrl.productsReadBySubCategory)
 
 router
     .route('/products/userName/:userName')

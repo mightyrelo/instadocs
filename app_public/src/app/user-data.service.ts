@@ -64,7 +64,6 @@ export class UserDataService {
   }
 
   public getUser(userId : string) {
-    console.log('insfds', userId);
     const url : string = `${this.apiBaseUrl}/users/${userId}`;
     return this.http
        .get(url)

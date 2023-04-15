@@ -19,26 +19,15 @@ const imagesReadAll = (req, res) => {
     });
 };
 
-const imagesCreateOne = (req, res) => {
-    var formImage = {
-        name: req.body.name,
-        desc: req.body.desc,
-        userId: req.body.userId,
-        img: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
-            contentType: 'image/png'
-        }
-    };
-
-    imageModel.create(formImage, (err, item) => {
-        if(err) {
-            console.log('err', err);
-            sendJSONResponse(res, 400, err);
-            return;
-        }
-        console.log('image saved', item);
-        sendJSONResponse(res, 201, {"message": "image saved"});
-    });
+const imagesCreateOne = (req, res, next) => {
+   const file = req.file;
+   console.log(file.filename);
+   if(!file) {
+    const err = new Error('please upload file');
+    err.httpStatusCode = 400;
+    return next(err);
+   }
+   res.send(file);
     
 };
 

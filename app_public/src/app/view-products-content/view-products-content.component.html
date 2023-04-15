@@ -3,27 +3,50 @@
     <div *ngIf="formError2" class="alert alert-danger">
       {{formError2}}
     </div> 
-   <div class="form-group">
+   <div class="form-group" *ngIf="getUserName() != 'thabethe'">
     <label for="category">Category</label>
     <select [(ngModel)]="formCat.category" class="form-control bg" id="category" name="category">
       <option  class="form-control bg" *ngFor="let cat of categoriesFull">{{cat}}</option>
     </select>
    </div>
+   <div class="form-group" *ngIf="getUserName()=='thabethe'">
+    <label for="category">Category</label>
+    <select [(ngModel)]="formCat.category" class="form-control bg" id="category" name="category">
+      <option  class="form-control bg" *ngFor="let cat of solarCategoriesFull">{{cat}}</option>
+    </select>
+   </div>
     <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
   </form>
 </div>
-<div *ngIf="products">
+
+<div class="heading" *ngIf="categorySubmitted">
+  <form (ngSubmit)="onSubCategorySubmit()" method="post" role="form">
+    <div *ngIf="formError2" class="alert alert-danger">
+      {{formError2}}
+    </div> 
+   <div class="form-group" *ngIf="getUserName()=='thabethe'">
+    <label for="subCategory">SubCategory</label>
+    <select [(ngModel)]="formCat2.subCategory" class="form-control bg" id="subCategory" name="subCategory">
+      <option  class="form-control bg" *ngFor="let cat of solarSubCategoriesFull">{{cat}}</option>
+    </select>
+   </div>
+    <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
+  </form>
+</div>
+
+<div *ngIf="subProducts">
   <div class="row">
     <div class="col-12" >
-      <small>
-        <button class="btn-primary" (click)="displayForm=true"><i class="fa-sharp fa-solid fa-plus"></i></button>
+      <small style="float:right;">
+        <button  class="btn-primary" (click)="displayForm=true"><i class="fa-sharp fa-solid fa-plus"></i></button>
       </small>
     </div>
   </div>
   <div *ngIf="displayForm" class="col-12 col-md-8 heading">
     <form (ngSubmit)="onProductSubmit()" method="post" role="form">
       <div *ngIf="formError" class="alert alert-danger">
-        {{formError}}</div>
+        {{formError}}
+      </div>
       <div class="form-group">
          <label for="name">name</label>
          <input class="form-control" id="name" name="name" type="text" placeholder="" [(ngModel)]="newProduct.name">
@@ -35,33 +58,59 @@
       <div class="form-group">
         <label for="trade">trade</label>
         <input class="form-control" id="trade" name="trade" type="text" placeholder="" [(ngModel)]="newProduct.trade">
-     </div> 
-     <div class="form-group">
+      </div> 
+      <div class="form-group">
       <label for="selling">retail</label>
       <input class="form-control" id="selling" name="selling" type="text" placeholder="" [(ngModel)]="newProduct.selling">
-     </div>
+      </div>
       <div class="form-group">
       </div>
       <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
       <small><button (click)="resetAndHideProductForm()" type="button" role="button" class="btn-primary sm-button"><i class="fa-solid fa-xmark"></i></button></small>
     </form>     
   </div>
-  <div *ngFor="let product of products | mostRecentFirst" class="card">
-    <div class="card-block"></div>
-    <h4><a routerLink="/products/{{product._id}}" class="heading">{{product.name}}</a>
-     <small>&nbsp;
-       <a class="btn float-right" style="font-size: 1.4em" (click)="flagged(product._id)"><i class="fa-solid fa-trash trash"></i></a>
-     </small><span class="badge badge-pill badge-default float-right"></span>
-     <div *ngIf="isFlagged(product._id)">
-      <small><button style="font-size: 0.8em" (click)="setFlagOff(product._id)" class="btn btn-primary float-right">cancel</button></small>
-      <small> <button style="font-size: 0.8em" (click)="deleteProduct(product._id)" class="btn btn-primary float-right">for real?</button></small>
-     </div>
-    </h4>
-   <p class="address">{{product.description}}</p>
-   <div class="facilities"> 
-     <span class="badge badge-warning">retail: {{product.selling | currency:'R':true}}</span>
-     <span class="badge badge-warning">trade: {{product.trade | currency:'R': true}}</span>
-   </div>
-   <div class="col-12 col-md-4"></div>
+    <div *ngIf="subProducts">
+      <div *ngFor="let product of products | mostRecentFirst" class="card">
+        <div class="card-block"></div>
+          <h4><a routerLink="/products/{{product._id}}" class="heading">{{product.name}}</a>
+            <small>&nbsp;
+            <a class="btn float-right" style="font-size: 1.4em" (click)="flagged(product._id)"><i class="fa-solid fa-trash trash"></i></a>
+            </small><span class="badge badge-pill badge-default float-right"></span>
+            <div *ngIf="isFlagged(product._id)">
+            <small><button style="font-size: 0.8em" (click)="setFlagOff(product._id)" class="btn btn-primary float-right">cancel</button></small>
+            <small> <button style="font-size: 0.8em" (click)="deleteProduct(product._id)" class="btn btn-primary float-right">for real?</button></small>
+            </div>
+          </h4>
+          <p class="address">{{product.description}}</p>
+          <div class="facilities"> 
+            <span class="badge badge-warning">retail: {{product.selling | currency:'R':true}}</span>
+            <span class="badge badge-warning">trade: {{product.trade | currency:'R': true}}</span>
+          </div>
+          <div class="col-12 col-md-4"></div>
+        </div>
+      </div>
   </div>
-</div>
+  <div *ngIf="getUserName() != 'thabethe'">
+    <div *ngFor="let product of products | mostRecentFirst" class="card">
+      <div class="card-block"></div>
+        <h4><a routerLink="/products/{{product._id}}" class="heading">{{product.name}}</a>
+          <small>&nbsp;
+          <a class="btn float-right" style="font-size: 1.4em" (click)="flagged(product._id)"><i class="fa-solid fa-trash trash"></i></a>
+          </small><span class="badge badge-pill badge-default float-right"></span>
+          <div *ngIf="isFlagged(product._id)">
+           <small><button style="font-size: 0.8em" (click)="setFlagOff(product._id)" class="btn btn-primary float-right">cancel</button></small>
+            <small> <button style="font-size: 0.8em" (click)="deleteProduct(product._id)" class="btn btn-primary float-right">for real?</button></small>
+          </div>
+        </h4>
+        <p class="address">{{product.description}}</p>
+        <div class="facilities"> 
+          <span class="badge badge-warning">retail: {{product.selling | currency:'R':true}}</span>
+          <span class="badge badge-warning">trade: {{product.trade | currency:'R': true}}</span>
+        </div>
+        <div class="col-12 col-md-4"></div>
+      </div>
+    </div>
+
+
+  
+
