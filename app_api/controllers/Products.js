@@ -67,7 +67,7 @@ const productsUpdateOne = (req, res) => {
         if(req.body.trade){
             product.trade = req.body.trade;
         }
-        if(req.body.retail){
+        if(req.body.selling){
             product.selling = req.body.selling;
         }
         if(req.body.name){

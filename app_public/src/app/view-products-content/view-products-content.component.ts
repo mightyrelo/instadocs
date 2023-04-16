@@ -133,11 +133,26 @@ export class ViewProductsContentComponent implements OnInit {
 
 
   private doAddProduct() : void {
-    this.productDataService.addProduct(this.newProduct)
+
+    if(this.getUserName() != 'thabethe'){
+      this.productDataService.addProduct(this.newProduct)
       .then((prod: Product) => {
         console.log('product saved', prod.category);
         this.resetAndHideProductForm();
+      });  
+    }
+    else{
+      const idx = this.solarCategoriesFull.indexOf(this.formCat.category);
+      const idx2 = this.solarSubCategoriesFull.indexOf(this.formCat2.subCategory);
+      this.newProduct.category = this.solarCategories[idx];
+      this.newProduct.subCategory = this.solarSubCategories[idx2];
+      this.productDataService.addProduct(this.newProduct)
+      .then((prod: Product) => {
+        console.log('product saved', prod.category, prod.subCategory);
+        this.resetAndHideProductForm();
       });
+    }
+    
   }
 
   public addSubCatProducts(cat: Product[]) : void {
@@ -204,11 +219,9 @@ export class ViewProductsContentComponent implements OnInit {
   }
 
   public onSubCategorySubmit() : void {
-    console.log('sub', this.formCat2.subCategory);
+
     const idx = this.solarSubCategoriesFull.indexOf(this.formCat2.subCategory);
-    console.log('idx', idx);
-    console.log('source',this.solarSubCategories[0]);
-   console.log('orginal send', this.solarSubCategories[idx]);
+    
     
     
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.solarSubCategories[idx])
@@ -220,9 +233,17 @@ export class ViewProductsContentComponent implements OnInit {
   }
 
   private getProducts() : void {
-    this.productDataService
+    if(this.getUserName() != 'thabethe'){
+      this.productDataService
       .getProducts(this.getUserName())
       .then(foundProducts => this.products = foundProducts)
+    }
+    else{
+      const idx = this.solarSubCategoriesFull.indexOf(this.formCat2.subCategory);
+      this.productDataService
+      .getSubCategoryProducts(this.getUserName(), this.solarSubCategories[idx])
+      .then(dbProducts => this.products = dbProducts);
+    }
   }
 
   public isLoggedIn() : boolean {
