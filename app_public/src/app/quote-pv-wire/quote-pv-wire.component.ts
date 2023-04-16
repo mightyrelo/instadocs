@@ -128,16 +128,12 @@ export class QuotePvWireComponent implements OnInit {
   }
 
   formIsValid(){
-    /*if(!this.formQuoteItem3.distribution || !this.formQuoteItem3.quantityDSB  ||
-       !this.formQuoteItem3.consumables || !this.formQuoteItem3.quantityCons ||
-       !this.formQuoteItem3.acProt|| !this.formQuoteItem3.quantityACProt ||
-       !this.formQuoteItem3.cova|| !this.formQuoteItem3.quantityCov ||
-       !this.formQuoteItem3.mcb|| !this.formQuoteItem3.quantityMCB ||
-       !this.formQuoteItem3.surgProt|| !this.formQuoteItem3.quantitySurg ||
-       !this.formQuoteItem3.avr|| !this.formQuoteItem3.quantityAvr
+    if(!this.formQuoteItem4.pvwire || !this.formQuoteItem4.quantityW  ||
+       !this.formQuoteItem4.flex || !this.formQuoteItem4.quantityFL ||
+       !this.formQuoteItem4.batt|| !this.formQuoteItem4.quantityB
        ){
       return false;
-    }*/
+    }
     return true;
   }
 
@@ -147,7 +143,7 @@ export class QuotePvWireComponent implements OnInit {
 
   public onQuoteSubmit() : void {
     this.formError = '';
-
+  
     this.getProductByName(this.formQuoteItem4.pvwire)
     .then(foundProduct => {
       this.currentW = foundProduct;
@@ -326,7 +322,7 @@ export class QuotePvWireComponent implements OnInit {
                                     this.quoteGenerated.emit(this.newQuotation);
                                     this.resetAndHideQuoteForm();
                                   } else {
-                                    this.formError = 'No items entered, please try again.';
+                                    this.formError = 'Missing values, please try again.';
                                   }
                                 
                               });

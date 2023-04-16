@@ -70,7 +70,6 @@ export class ViewProductContentComponent implements OnInit {
   public onProductSubmit(productId : string){
     if(this.formIsValid()){
       this.newProduct.userId = this.getUserName();
-      console.log('in here', this.newProduct.selling);
       this.prodDataService.updateProduct(this.newProduct, productId)
        .then (dbProd =>  {
         console.log('product saved', dbProd);
