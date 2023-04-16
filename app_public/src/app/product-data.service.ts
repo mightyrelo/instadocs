@@ -38,7 +38,7 @@ export class ProductDataService {
   }
 
   public getSubCategoryProducts(userName: string, subCategory: string) : Promise<Product[]> {
-    console.log('logggins');
+    console.log('service send', subCategory);
     const url: string = `${this.apiBaseUrl}/products/userName/${userName}/subcategories/${subCategory}`;
     return this.http
       .get(url)

@@ -28,16 +28,22 @@ export class ViewProductsContentComponent implements OnInit {
 
   public solarPVSubCategories = ['panel','roof','other','inv'];
   public solarPVSubCategoriesFull = ['panels','roof types','other','inverters'];
+
   public solarPVCabSubCategories = ['wire','wiretr','earth','flex','batt','weld','pvc'];
   public solarPVCabSubCategoriesFull = ['PV wire','wire trunking','earth cable','flex cable','battery cable','welding cable','armour'];
-  public solarACSubCategories = ['din','cons','chover','mcb','surgProt','avr'];
+  
+  public solarACSubCategories = ['din','cons','chover','mcb','surgprot','avr'];
   public solarACSubCategoriesFull = ['din-rail','consumables','change over switch','main circuit breaker','surge Protection','avr switch'];
-  public solarPVProtSubCategories = ['acprot'];
-  public solarPVProtSubCategoriesFull = ['ac protection'];
+  
+  public solarPVProtSubCategories = ['psm','fuse','box'];
+  public solarPVProtSubCategoriesFull = ['Psm', 'fuses', 'boxes'];
+  
   public solarCabSubCategories = ['cab'];
   public solarCabSubCategoriesFull = ['ac cableway'];
+  
   public solarBatSubCategories = ['batt','batprot','batstand'];
   public solarBatSubCategoriesFull = ['battery','batttery protection','battery stand'];
+  
   public solarOtherSubCategories = ['trvl','lab', 'assess'];
   public solarOtherSubCategoriesFull = ['travelling','labour', 'assessment'];
 
@@ -162,6 +168,7 @@ export class ViewProductsContentComponent implements OnInit {
           }
           if(this.products2[0].category == 'PVCABLE'){
             this.solarSubCategoriesFull = this.solarPVCabSubCategoriesFull;
+            this.solarSubCategories = this.solarPVCabSubCategories;
           }
           if(this.products2[0].category == 'PVPROT'){
             this.solarSubCategoriesFull = this.solarPVProtSubCategoriesFull;
@@ -197,10 +204,17 @@ export class ViewProductsContentComponent implements OnInit {
   }
 
   public onSubCategorySubmit() : void {
+    console.log('sub', this.formCat2.subCategory);
     const idx = this.solarSubCategoriesFull.indexOf(this.formCat2.subCategory);
+    console.log('idx', idx);
+    console.log('source',this.solarSubCategories[0]);
+   console.log('orginal send', this.solarSubCategories[idx]);
+    
+    
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.solarSubCategories[idx])
     .then(foundSubProducts => {
       this.subProducts = foundSubProducts;
+      console.log('length of found', foundSubProducts.length);
       this.products = foundSubProducts;
     })
   }

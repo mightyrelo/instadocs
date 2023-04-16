@@ -19,7 +19,9 @@ const productsCreateOne = (req, res) => {
         description: req.body.description,
         trade: req.body.trade,
         selling: req.body.selling,
-        userId: req.body.userId
+        userId: req.body.userId,
+        category: req.body.category,
+        subCategory: req.body.subCategory
     },(err, product)=>{
         if(err) {
  
@@ -77,7 +79,7 @@ const productsUpdateOne = (req, res) => {
         
         product.save((err, prod)=>{
             if(err) {
-                console.log('hierss');
+
                 sendJSONResponse(res, 404, err);
                 return;
             } else {
@@ -165,7 +167,7 @@ const productsReadByCategory = (req, res) =>
 
 const productsReadBySubCategory = (req, res) => 
 {
-    
+    console.log('api receive', req.params.subcategory);
     if(!req.params.subcategory || !req.params.userName) {sendJSONResponse(res, 400, {"message": "name required"}); return;}
     Prod
      .find({userId: req.params.userName})
@@ -193,11 +195,12 @@ const sendSubCategoryProducts = (req, res, products) =>
 {
     let userProducts = [];
     
+    
     for(let i = 0; i < products.length; i++)
     {
+
         if(req.params.subcategory == products[i].subCategory)
         {
-            console.log(req.params.subcategory);
             userProducts.push(products[i]);
         }
     }
@@ -262,7 +265,6 @@ const createProduct = (req, res, data) => {
     }
 };
 
-
 const createDBProducts = (req, res) => {
     const products = [];
     let count = 0;
@@ -276,7 +278,6 @@ const createDBProducts = (req, res) => {
             if((Number(data.rate)-1) != -1){
               if(!isNaN(Number(data.rate))){
                   count++;
-                  //console.log(data);
                   products.push(data);
                   createProduct(req, res, data);    
               }
