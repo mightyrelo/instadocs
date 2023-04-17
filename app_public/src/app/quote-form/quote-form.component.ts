@@ -124,7 +124,7 @@ export class QuoteFormComponent implements OnInit {
             });
       });
     } else {
-      this.formError = 'No items entered, please try again.';
+      this.formError = 'No itemss entered, please try again.';
     }
 
   }

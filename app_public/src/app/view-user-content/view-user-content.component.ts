@@ -88,7 +88,8 @@ export class ViewUserContentComponent implements OnInit {
 
   public onUserSubmit( userId : string){
     if(this.formIsValid()){
-      console.log('in here', this.newUser);
+      this.newUser._id = userId;
+      console.log('user', this.newUser);
       this.userDataService.updateUser(this.newUser)
        .then (dbUsr =>  {
         console.log('user saved', dbUsr);
@@ -148,6 +149,8 @@ export class ViewUserContentComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.userDataService.getUsers()
+      .then(users => this.users = users);
     
   }
 }

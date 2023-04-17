@@ -92,6 +92,7 @@ export class UserDataService {
 
   public updatePOs(user : User) {
     const url : string = `${this.apiBaseUrl}/users/${user._id}`;
+    
     return this.http
         .put(url, user)
         .toPromise()
@@ -100,6 +101,8 @@ export class UserDataService {
   }
 
   public updateUser(user : User) {
+    console.log('updaing');
+    console.log('id', user._id)
     const url : string = `${this.apiBaseUrl}/users/${user._id}`;
     return this.http
         .put(url, user)

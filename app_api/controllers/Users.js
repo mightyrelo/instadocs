@@ -62,6 +62,7 @@ const usersDeleteOne = (req, res) => {
  };
 
  const usersUpdateOne = (req, res) => {
+    console.log('instance of failure');
   if(!req.params.userId) {
     sendJSONResponse(res, 404, {"message":"user id required"});
     return;
@@ -93,7 +94,7 @@ const usersDeleteOne = (req, res) => {
             user.completedPOs = req.body.completedPOs;
         }
         if(req.body.password){
-            user.password = req.body.password;
+            user.setPassword(req.body.password);
         }
         
         user.save((err, usr)=>{
