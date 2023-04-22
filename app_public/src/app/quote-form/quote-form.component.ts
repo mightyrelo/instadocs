@@ -37,10 +37,23 @@ export class QuoteFormComponent implements OnInit {
   public formCat = {
     category: ''
   };
+  public formCat2 = {
+    subCategory: ''
+  };
   public categories = ['user','suv','aut','intr','pow','cab','tool','int','acc','fir','swt','efe','auto'];
   public categoriesFull = ['user','surveillance','automation','intrusion','power','cabling','tools','intercom','access control','fire','switches','electric fencing', 'automation advanced'];
 
+  public efeSubCategories = ['ENG','POLE','WIRE','INSULATOR','ACCESS','WARNING','PROTECTION','TOOL','LIGHT','CABLE','FREE','SOLAR'];
+  public efeSubCategoriesFull = ['energizer','pole','fence wire','insulator','accessories','warning signs','lightning protection','tools','fence lights','HT cable','Free-standing','solar'];
+
+  public subCategories = [];
+  public subCategoriesFull = [];
+
+  public suvSubCategories = ['kit','cam','dvr','nvr','cam_ip','license','kit_ip','int','acc','intr','swt','wireless','pc','monitor','hdd','store', 'cabinet', 'cable', 'access', 'connect', 'tool', 'power', 'protection'];
+  public suvSubCategoriesFull = ['full kit','cameras','dvr','nvr','ip cameras','licenses','full ip kit','video intercom','access control','intruder detection','switches','wireless accessories', 'surveillance pc', 'monitor', 'hard-drive', 'storage', 'cabinets', 'accessories', 'connectors', 'tools', 'power supply', 'lightning protection'];
+
   public categorySelected = false;
+  public subCategorySelected = false;
 
   public currentProduct: Product;
 
@@ -90,8 +103,28 @@ export class QuoteFormComponent implements OnInit {
   public onCategorySubmit() : void {
     //this.formError2 = '';
     const idx = this.categoriesFull.indexOf(this.formCat.category);
-    this.productDataService.getCategoryProducts(this.getUserName(), this.categories[idx])
-      .then(foundProducts => {this.products = foundProducts;this.categorySelected = false;});
+    if(this.categories[idx] == 'suv'){
+      this.subCategoriesFull = this.suvSubCategoriesFull;
+      this.subCategories = this.suvSubCategories;
+    }
+    else if(this.categories[idx] == 'efe'){
+      
+      this.subCategoriesFull = this.efeSubCategoriesFull;
+      this.subCategories = this.efeSubCategories;
+    }
+
+    this.categorySelected = true;
+  }
+
+  public onSubCategorySubmit() : void {
+    const idx = this.subCategoriesFull.indexOf(this.formCat2.subCategory);
+    console.log('subcat', this.subCategories[idx]);
+    this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
+      .then(foundProducts => {
+        console.log(foundProducts.length);
+        this.products = foundProducts;
+        this.subCategorySelected = true;
+      })
   }
 
   formIsValid(){

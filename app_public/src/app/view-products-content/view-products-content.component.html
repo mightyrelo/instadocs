@@ -73,6 +73,7 @@
       <div *ngFor="let product of products | mostRecentFirst" class="card">
         <div class="card-block"></div>
           <h4><a routerLink="/products/{{product._id}}" class="heading">{{product.name}}</a>
+            
             <small>&nbsp;
             <a class="btn float-right" style="font-size: 1.4em" (click)="flagged(product._id)"><i class="fa-solid fa-trash trash"></i></a>
             </small><span class="badge badge-pill badge-default float-right"></span>
@@ -81,7 +82,7 @@
             <small> <button style="font-size: 0.8em" (click)="deleteProduct(product._id)" class="btn btn-primary float-right">for real?</button></small>
             </div>
           </h4>
-          <p class="address">{{product.description}}</p>
+          <p class="address">{{product.address}}</p>
           <div class="facilities"> 
             <span class="badge badge-warning">retail: {{product.selling | currency:'R':true}}</span>
             <span class="badge badge-warning">trade: {{product.trade | currency:'R': true}}</span>
@@ -103,6 +104,7 @@
           </div>
         </h4>
         <p class="address">{{product.description}}</p>
+        <p class="address">{{product.userId}}</p>
         <div class="facilities"> 
           <span class="badge badge-warning">retail: {{product.selling | currency:'R':true}}</span>
           <span class="badge badge-warning">trade: {{product.trade | currency:'R': true}}</span>

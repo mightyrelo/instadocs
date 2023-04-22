@@ -253,7 +253,8 @@ const createProduct = (req, res, data) => {
             trade: trade,
             selling: retail,
             userId: req.params.userName,
-            category: data.category
+            category: data.category,
+            subCategory: data.subcategory
             },(err, product)=>{
             if(err) {
                 console.log(err);
@@ -270,11 +271,12 @@ const createDBProducts = (req, res) => {
     let count = 0;
     console.log('creating...',req.params.userName, req.params.pricelist);
     let path = `./${req.params.pricelist}.csv`;
+    
     if(req.params.userName == 'thabethe') {
         fs.createReadStream(path)
         .pipe(csvParser({separator: ';'}))
         .on("data", (data)=> {
-
+            console.log(path);
             if((Number(data.rate)-1) != -1){
               if(!isNaN(Number(data.rate))){
                   count++;
@@ -282,7 +284,6 @@ const createDBProducts = (req, res) => {
                   createProduct(req, res, data);    
               }
             }
-  
           })
         .on("end", ()=>{
           console.log(count,' products read from cvs to db.');
@@ -290,12 +291,15 @@ const createDBProducts = (req, res) => {
         });  
     }
     else {
+       
         fs.createReadStream(path)
         .pipe(csvParser({separator: ';'}))
         .on("data", (data)=> {
-          if((Number(data.trade)-1) != -1){
+        if((Number(data.trade)-1) != -1){
+             
               if(!isNaN(Number(data.trade)) && !isNaN(Number(data.retail))){
                   count++;
+                  //console.log(++count2);       
                   products.push(data);
                   createProduct(req, res, data);    
               }

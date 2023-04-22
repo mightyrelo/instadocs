@@ -135,18 +135,20 @@ export class ViewUserContentComponent implements OnInit {
   }
 
   public deleteUserProducts() : void {
+    let count = 0;
     this.productDataService.getProductsByUserName(this.dbUser.name)
       .then(products => {
         this.userProducts = products;
+        console.log('deleting prods', this.userProducts.length);
         for(let i = 0; i < this.userProducts.length; i++){
           this.productDataService.deleteProduct(this.userProducts[i]._id)
-             .then(rsp => {});
+             .then(rsp => {
+                console.log(++count);
+          });
         }
         this.productsDeleted = true;
       });
-    
   }
-
 
   ngOnInit(): void {
     this.userDataService.getUsers()

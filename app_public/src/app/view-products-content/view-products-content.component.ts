@@ -171,6 +171,7 @@ export class ViewProductsContentComponent implements OnInit {
   }
   public onCategorySubmit() : void {
     //this.formError2 = '';
+    
     if(this.getUserName() == 'thabethe'){
       const idx = this.solarCategoriesFull.indexOf(this.formCat.category);
       this.productDataService.getCategoryProducts(this.getUserName(), this.solarCategories[idx])
