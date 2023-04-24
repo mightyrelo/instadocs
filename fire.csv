@@ -1,0 +1,44 @@
+regalCode;description;Retail Excl VAT;Trade Excl VAT;trade;retail;subcategory;category
+;FIRE PANELS - ANALOGUE STANDARD;;;0;0;;
+FR01;Fire Control Panel 2 Zone (Conventional);4376;3063;5032.4;3522.45;panel;fir
+FR01-1;Fire Control Panel 4 Zone (Conventional);4559;3191;5242.85;3669.65;panel;fir
+FR01-2;Fire Control Panel 8 Zone (Conventional);6202;4341;7132.3;4992.15;panel;fir
+;FIRE PANEL POWER SUPPLIES;;;0;0;;fir
+PS66;SP PS 24VDC 5Amp Power Store;2497;1875;2871.55;2156.25;supply_fire;fir
+;CALL POINTS & ACCESSORIES;;;0;0;;fir
+FR02;SP Green Call Point Break Glass;213;149;244.95;171.35;callpoints;fir
+FR02-1;SP Green Call Point Resettable;243;173;279.45;198.95;callpoints;fir
+FR03;SP Red Call Point Break Glass;213;149;244.95;171.35;callpoints;fir
+FR03-1;SP Red Call Point Resettable;248;173;285.2;198.95;callpoints;fir
+FR04;Spare Glass for FR02 (75mm x 43mm) Big;28;19;32.2;21.85;callpoints;fir
+FR04-1;Call Point - Spare Plastic - DMN800;35;24;40.25;27.6;callpoints;fir
+FR04-8;Insert for Resettable Call Points;36;24;41.4;27.6;callpoints;fir
+FR05;Emergency Key Holder - Fire;162;113.4;186.3;130.41;callpoints;fir
+FR06-1;Emergency Key Holder - Spare Glass FR05;8.3;5.8;9.545;6.67;callpoints;fir
+FR07;Call Point - Spare Glass - DM711;19;13.1;21.85;15.065;callpoints;fir
+FR07-1;Call Point - Yellow Complete;292;204;335.8;234.6;callpoints;fir
+FR09;Call Point - Green Front Only DMN700G;292;204;335.8;234.6;callpoints;fir
+FR09-1;Call Point - Red Front Only DMN700R;226;157.6;259.9;181.24;callpoints;fir
+FR10;Call Point - Green Back Box Only DMN787G;113;78.9;129.95;90.735;callpoints;fir
+FR10-1;Call Point - Red Back Box Only DMN787;87;60.9;100.05;70.035;callpoints;fir
+FR16;Keyguard Spare Perspex for FR18;175;122;201.25;140.3;callpoints;fir
+FR18;Keyguard w-switch - Red - DM796;1154;807.5;1327.1;928.625;callpoints;fir
+FR29;Union Fire Bolt - Redlam;349.6;244.7;402.04;281.405;callpoints;fir
+FR29-1;Union Fire Bolt - Tube;17.2;12;19.78;13.8;callpoints;fir
+FR30;Smoke Detector Tester -Aerosol - SC010;870;609;1000.5;700.35;callpoints;fir
+;SMOKE DETECTORS - FIRE DETECTORS;;;0;0;;fir
+FR14;Heat Detector - Apollo S65 - DT654;413.9;289.7;475.985;333.155;detect_fire;fir
+FR19;Smoke Detector - Optical S65 - DP652;392;274;450.8;315.1;detect_fire;fir
+FR22-1;Securi-prod Photoelectric Smoke Detector;350;249;402.5;286.35;detect_fire;fir
+FR23;Smoke Detector - Base S65 - DB860;89;62;102.35;71.3;detect_fire;fir
+FR23-1;Smoke Detector - Relay Base S65 - DB650;663;464;762.45;533.6;detect_fire;fir
+FR28-5;Standalone Mini Carbon Monoxide Detector;295;232.89;339.25;267.8235;detect_fire;fir
+SOUND DEVICES;;;;0;0;;fir
+SD09;"Motorised Siren - 12V; 17A 1000m";3753;2627;4315.95;3021.05;fire_sound;fir
+SD10;Motorised Siren - 12V 500m;1789;1252;2057.35;1439.8;fire_sound;fir
+SD11;Motorised Siren - 220VAC 1000m;3753;2627;4315.95;3021.05;fire_sound;fir
+SD12;Motorised Siren - 220VAC 500m;1789;1252;2057.35;1439.8;fire_sound;fir
+FR08;"Fire Bell - 12VDC 6""";778;544;894.7;625.6;fire_sound;fir
+FR08-2;Fire Bell - 24VDC 6inch - AB360;855;598;983.25;687.7;fire_sound;fir
+FR11;Flashni Siren - Red - 24V - ASC366;2582;1807;2969.3;2078.05;fire_sound;fir
+FR20;Siren Roshni - 12-24VDC - AS363;665;464.9;764.75;534.635;fire_sound;fir

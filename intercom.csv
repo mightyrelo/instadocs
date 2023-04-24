@@ -1,0 +1,148 @@
+regalCode;description;Retail Excl VAT;Trade Excl VAT;retail;trade;subcategory;category
+AUDIO INTERCOMS;;;;0;0;;
+IC54-1;KOCOM - 1-1 Audio Intercom Kit 220VAC;725;507;833.75;583.05;int_kit;int
+IC54-2;KOCOM - 1-2 Audio Intercom Kit 220VAC;1315;920;1512.25;1058;int_kit;int
+IC54-3;KOCOM 1-1 Audio Intercom Kit 6-12V Dual;668;467;768.2;537.05;int_kit;int
+IC41;COMMAX - 1-1 Audio Intercom Kit 220V;798.84;549.2;918.666;631.58;int_kit;int
+IC41-1;COMMAX - 1-1 Audio Intercom Kit 12V;798.84;549.2;918.666;631.58;int_kit;int
+IC42;COMMAX - 1-2 Audio Intercom Kit 220V;1342.3;922.83;1543.645;1061.2545;int_kit;int
+IC44;COMMAX - 1 Button Gate station;211.75;145.58;243.5125;167.417;station;int
+IC111-2;Commax 2 Button Apartment Door Station;1169.87;804.29;1345.3505;924.9335;station;int
+IC111-4;Commax 4 Button Apartment Door Station;1353.91;930.81;1556.9965;1070.4315;station;int
+IC111-6;Commax 6 Button Apartment Door Station;1538.87;1057.97;1769.7005;1216.6655;station;int
+IC111-8;Commax 8 Button Apartment Door Station;1722.9;1184.5;1981.335;1362.175;station;int
+IC43-3;Commax - Apart Phone DP-SS;308.99;212.43;355.3385;244.2945;station;int
+IC43-6;Commax - 6 Call Telephone Master TP-6RC;832;582;956.8;669.3;station;int
+;Add on Panels and Surface Boxes Available on Request;;;0;0;;int
+IC85-17;POLO Entry Panel 12VDC;688.57;482;791.8555;554.3;station;int
+IC85-18;POLO Handset 12VDC;567.14;397;652.211;456.55;handset;int
+IC130-2;BPT - AGT VILLA 1-1 Kit;3130.65;2319;3600.2475;2666.85;int_kit;int
+IC130-4;BPT - AGT MINI 1-4 Intercom Kit;7152.3;5298;8225.145;6092.7;int_kit;int
+IC133-5;BPT - AGT A200 Handset S200;546.75;405;628.7625;465.75;handset;int
+IC133-6;BPT - AGT A Handset X1;770.85;571;886.4775;656.65;handset;int
+IC133-7;BPT - AGT A EVO Handset X1;951.75;705;1094.5125;810.75;handset;int
+IC133-8;BPT AGT A200 K Handset S200 Door Release;768.15;569;883.3725;654.35;handset;int
+IC135-6;BPT - AGT A200 EVO Handset S200 Multi;861.3;638;990.495;733.7;handset;int
+IC38-3;BPT - B-RED 12-18VDC Kit Incl PSU;722.25;535;830.5875;615.25;kit;int
+IC03-1;BPT - Targha 2 Entry Panel;1270.8;889.5;1461.42;1022.925;station;int
+IC05-3;BPT - Targha 1 Entry Panel;1157.8;810.4;1331.47;931.96;station;int
+IC06-1;BPT - Three Butt Kit YP3;146.85;108.78;168.8775;125.097;kit;int
+IC09;BPT - PSU E310;2691.9;1994;3095.685;2293.1;bpt_acc;int
+IC10;BPT - PSU E320;3947.4;2924;4539.51;3362.6;bpt_acc;int
+IC11;BPT - PSU A200R;1485;1100;1707.75;1265;bpt_acc;int
+IC32;BPT - SI200 Double Selector;2363.85;1751;2718.4275;2013.65;bpt_acc;int
+IC66;BPT - Audio Module HA200;557.55;413;641.1825;474.95;bpt_acc;int
+IC77;BPT - KHPS Push Button Kit;113.4;84;130.41;96.6;bpt_acc;int
+IC77-1;BPT - KHPD Two Call Button Module;166.05;123;190.9575;141.45;bpt_acc;int
+IC81;BPT - VSE-200 Intercommunication Switch;1603.8;1188;1844.37;1366.2;bpt_acc;int
+IC92;BPT - XDV-304 Video Distributor;868.05;643;998.2575;739.45;bpt_acc;int
+VIDEO INTERCOMS;;;;0;0;;int
+CC05-4;COMMAX - Audio Handset DP-4VHP;399.87;274.91;459.8505;316.1465;vid_handset;int
+IC59-1;"COMMAX Col 7"" LED Touch Button Video Kit";4414.04;3034.65;5076.146;3489.8475;vid_kit;int
+IC59-2;"COMMAX Col 7"" Hands Free Vid Int Kit";4534.91;3117.75;5215.1465;3585.4125;vid_kit;int
+IC61;"COMMAX 4.3""Exp Colour Video Intercom Kit";3329.25;2288.86;3828.6375;2632.189;vid_kit;int
+IC62-1;"COMMAX 7"" Exp Console Vid Intercom";5376;3762.68;6182.4;4327.082;vid_kit;int
+IC62-2;COMMAX Colour Video Gate Station Pinhole;1874.85;1288.96;2156.0775;1482.304;vid_station;int
+IC62-5;"COMMAX 7"" Console Black Video Intercom";4005.95;2754.09;4606.8425;3167.2035;;int
+IC62-8;"COMMAX 7"" Neo Silver Video Intercom Kit";9189.6;4999;10568.04;5748.85;vid_kit;int
+IC140;"BPT - AGATA 3.5"" Building Color Monitor";4923.45;3647;5661.9675;4194.05;vid_mon;int
+IC145;"BPT - OPALE 3.5"" Col Video Intercom Kit";4748.2;3517.2;5460.43;4044.78;vid_kit;int
+IC147;"BPT - OPALE 3.5"" Colour Video Monitor";7249.5;5370;8336.925;6175.5;vid_mon;int
+IC104-11;BPT- LITHOS LYNEA B&W Video Intercom Kit;5569;3898;6404.35;4482.7;vid_kit;int
+IC104-15;BPT- LITHOS PERLA Col Video Intercom Kit;8040.6;5956;9246.69;6849.4;vid_kit;int
+IC104-16;BPT- LITHOS PERLA Col Video Monitor Only;5377.05;3983;6183.6075;4580.45;vid_mon;int
+;;;;0;0;;int
+Prices are subject to change without prior notice.;;;;0;0;;int
+E&OE. Valid until 31st March 2023.;Page: 62;;;0;0;;int
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;int
+;;;;0;0;;int
+Trade Price List;;;;0;0;;int
+INTERCOM EQUIPMENT;;;;0;0;;int
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;int
+VIDEO INTERCOMS;;;;0;0;;int
+CC01;"Kocom 4"" Col Handsfree Video Kit Expanda";3412;2438;3923.8;2803.7;vid_kit;int
+CC03;"Kocom 4.3"" Col Handsfree Video Kit";3100;2215;3565;2547.25;vid_kit;int
+CC03-12;"Kocom 7"" Col Handsfree Video Kit 4 Wire";5239;3667;6024.85;4217.05;vid_kit;int
+CC03-15;"KOCOM - Video Kit 7"" Col Handsfree Black";5239;3667;6024.85;4217.05;vid_kit;int
+IC55-7;"KOCOM 4 Wire Apartment System 7"" Monitor";3449;2414;3966.35;2776.1;vid_mon;int
+IC120;"NICE 7"" Colour Video Intercom Kit Br Al";3142;2199;3613.3;2528.85;vid_kit;int
+IC120-1;"NICE Colour Video Intercom 7"" Monitor";1525;1281;1753.75;1473.15;vid_mon;int
+IC120-2;NICE Col Vid Intercom Brushed Alum GStn;1094;918.75;1258.1;1056.5625;vid_station;int
+IC120-3;NICE Col Vid Intercom Die-Cast Alum GStn;869;729.75;999.35;839.2125;vid_station;int
+IC122;"NICE 7"" Colour Video Intercom Kit DC Alu";2715;1900;3122.25;2185;vid_kit;int
+;MICROSOUND MULTISYSTEM INTERCOMS;;;0;0;;int
+IC63;MS - 40 Way School Intercom;16286;11400;18728.9;13110;sch_int;int
+IC63-1;MS - 20 Way School Intercom;13429;9400;15443.35;10810;sch_int;int
+IC63-3;MS - 60 Way School Intercom;20715;14500;23822.25;16675;sch_int;int
+IC64;MS - Substation Plastic Incl Callback;793;555;911.95;638.25;station;int
+IC64-1;MS - Substation Latch Incl Callback;850;595;977.5;684.25;station;int
+IC64-3;MS - Apartment Intercom Handset MF400HS;772;540;887.8;621;handset;int
+IC64-5;MS - Programmable Time Switch;5100;3570;5865;4105.5;int_swt;int
+IC64-6;SLSI Cabinet-6 Slots-Psu-Cpu-A;25429;17800;29243.35;20470;;int
+IC64-7;SLSI Master Station With Displ;4272;2990;4912.8;3438.5;;int
+IC64-8;SLSI Sub Card-16 Sub Stn W-C-B;3429;2400;3943.35;2760;;int
+IC64-9;MS - School Bell 220VAC;1236;865;1421.4;994.75;;int
+;WIRELESS INTERCOMS;;;0;0;;int
+IC155-2;ZARTEK Radio Intercom Long Range;2678;1874;3079.7;2155.1;int_nowire;int
+IC157;ZARTEK 1 Button Digital Wireless Kit;3404.3;2383;3914.945;2740.45;int_nowire;int
+IC157-1;ZARTEK 1 Button Digital Kit Handset;1878.6;1315;2160.39;1512.25;int_nowire;int
+IC157-2;ZARTEK 1 Btn Digital Wireless Gate Stn;1656;1159;1904.4;1332.85;int_nowire;int
+IC157-3;ZARTEK 1Btn Digital Wireless Kit ZA-650A;2997.2;2098;3446.78;2412.7;int_nowire;int
+;GENERAL ACCESSORIES;;;0;0;;int
+IC26-1;BPT - Mounting Plate - LITHOS MPLI;282.15;209;324.4725;240.35;bpt_acc;int
+IC26-2;BPT- Mounting Plate - THANGRAM MPTA01;313.2;232;360.18;266.8;bpt_acc;int
+IC27-2;BPT - Rainshield for Targha S-S MP3SRS;510.3;378;586.845;434.7;bpt_acc;int
+IC27-3;BPT - Mounting Plate MPT2RS;375.3;278;431.595;319.7;bpt_acc;int
+IC27-4;BPT - Mounting Plate MPT3RS;487.35;361;560.4525;415.15;bpt_acc;int
+IC27-7;BPT - Mounting Plate S-Steel MPT2SRS;726.3;538;835.245;618.7;bpt_acc;int
+IC28;BPT - Rainshield Theft Resistant MP6RS;533.25;395;613.2375;454.25;bpt_acc;int
+IC58;BPT - Rainshield MP3RS;228;159;262.2;182.85;bpt_acc;int
+IC45;COMMAX - Rainshield;162;113;186.3;129.95;int_acc;int
+IC45-2;COMMAX - Rainshield with Grill;298;208;342.7;239.2;int_acc;int
+IC45-3;COMMAX - Rainshield Stainless Steel;322;225;370.3;258.75;int_acc;int
+IC45-4;COMMAX - Rainshield Stainless Steel 4PIP;409.6;249;471.04;286.35;int_acc;int
+;;;;0;0;int_acc;int
+IC50;Gooseneck - No Base Plate;349;246;401.35;282.9;int_acc;int
+IC50-1;Gooseneck - With Base Plate;426;298;489.9;342.7;int_acc;int
+IC50-3;Gooseneck - Galv Rainshield & Base Plate;538;376;618.7;432.4;int_acc;int
+IC50-4;Gooseneck - No Base Plate Stainless;1470;1029;1690.5;1183.35;int_acc;int
+IC50-5;Gooseneck - Galvanised With Rainshield;538;376;618.7;432.4;int_acc;int
+IC50-8;Gooseneck - Base Plate Stainless Steel;1852;1296;2129.8;1490.4;int_acc;int
+;;;;0;0;int_acc;int
+IC85-19;Rainshield Stainless with Grill for POLO;498.57;349;573.3555;401.35;int_acc;int
+IC85-22;Rainshield with Grill for POLO Gate Stat;416;291;478.4;334.65;int_acc;int
+IC85-20;POLO Switch for Polo Phone;432.86;303;497.789;348.45;int_acc;int
+IC85-21;POLO Phone Psu 14V 300mA;160;112;184;128.8;int_acc;int
+;;;;0;0;;int
+Prices are subject to change without prior notice.;;;;0;0;;int
+E&OE. Valid until 31st March 2023.;Page: 63;;;0;0;;int
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;int
+;;;;0;0;;int
+Trade Price List;;;;0;0;;int
+INTERCOM EQUIPMENT;;;;0;0;;int
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;int
+;GSM INTERCOM SYSTEMS;;;0;0;;int
+IC100-2;BPT - GSM-I500 In Metal Box incl Keypad;12696.75;9405;14601.2625;10815.75;gsm;int
+IC103-6;BPT MTM GSM KIT with Keypad & 2 SM;15356.25;11375;17659.6875;13081.25;gsm;int
+IC103-7;BPT MTM GSM KIT with Keypad & 3SM;20007;14820;23008.05;17043;gsm;int
+IC117;Accentronix Nano 10 User GSM Unit;2996;2097;3445.4;2411.55;gsm;int
+IC117-1;Accentronix Cellswitch Infinity;4585;3209;5272.75;3690.35;gsm;int
+IC117-2;Accentronix Wireless GSM Intercom Nano;7088;4961;8151.2;5705.15;gsm;int
+IC118;Accentronix Wireless GSM Intercom Mini;17620;12334;20263;14184.1;gsm;int
+IC118-9;Accentronix Rainshield for Complex GSM;2439;1707;2804.85;1963.05;gsm;int
+SW43-9;Accentronix Fixed Micro Receiver;172;119.9;197.8;137.885;gsm;int
+IC226;Centurion G-Switch Ultra Smart 3G Unit;2726.79;1908.75;3135.8085;2195.0625;gsm;int
+IC226-1;Centurion G-Speak Ultra 4G Kit 4 I-O's;3646;2552;4192.9;2934.8;gsm;int
+IC226-4;Centurion G-Ultra GSM 4G Control V2;2799;1959;3218.85;2252.85;gsm;int
+IC227-8;GSM Blade Antenna for G-Ultra SMA 2m;274.29;192;315.4335;220.8;gsm;int
+IC228-2;GSM Intercom System MK11-S;31954;19971;36747.1;22966.65;gsm;int
+IC229-3;GSM Intercom System MK11 Lite;29337;18361;33737.55;21115.15;gsm;int
+IC229-5;GSM System MK11 LITE Upgrade Kit;12171;7607;13996.65;8748.05;gsm;int
+IC50-7;MK11-S GSM Theft Resistant Bracket;2045;1431;2351.75;1645.65;gsm;int
+IC50-6;MK11-S GSM Gooseneck with Mounting Plate;1808;1265;2079.2;1454.75;gsm;int
+IC228-3;MK11-S GSM Intercom System Audio Module;953;596;1095.95;685.4;gsm;int
+IC228-4;MK11-S GSM Intercom Lightning Protector;1071;669;1231.65;769.35;gsm;int
+IC228-5;MK11-S GSM Intercom FrontPlate incl K&D;7827;4892;9001.05;5625.8;gsm;int
+IC228-6;MK11-S GSM Tap Tap Keypad;2722;1701;3130.3;1956.15;gsm;int
+IC228-7;MK11 GSM NOVA BT Loader Dongle;4564;2852;5248.6;3279.8;gsm;int
+IC229;MK11 GSM YAGI Antenna 11dB Gain;1785;1249;2052.75;1436.35;gsm;int

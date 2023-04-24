@@ -9,7 +9,7 @@ export class LoginPageComponent implements OnInit {
 
   public pageContent = {
     header: {
-      title: 'Log into Ngamla!',
+      title: 'Log into InstaDocs!',
       strapline: ''
     },
     sideBar: {

@@ -1,0 +1,123 @@
+regalCode;description;Retail Excl VAT;Trade Excl VAT;retail;trade;subcategory;category
+CABLE;;;;0;0;;
+CB46;Ripcord - 0.2mm Brown - 100m;171.5;120;197.225;138;ripcord;cab
+CB47;Ripcord - 0.2mm White - 100m;171.5;106;197.225;121.9;ripcord;cab
+CB54;Ripcord - 0.5mm White - 100m BC;555;388;638.25;446.2;ripcord;cab
+CB55-1;Ripcord - 1mm BC White - 100m;953;667;1095.95;767.05;ripcord;cab
+CB20;Comms - 4 Core Brown -100m;265.8;186;305.67;213.9;comms;cab
+CB22;Comms - 4 Core White -100m;265.8;186;305.67;213.9;comms;cab
+CB23;Comms - 6 Core Brown -100m;377.2;264;433.78;303.6;comms;cab
+CB24;Comms - 6 Core White -100m;377.2;233;433.78;267.95;comms;cab
+CB25;Comms - 8 Core Brown -100m;515.8;361;593.17;415.15;comms;cab
+CB26;Comms - 8 Core White -100m;515.8;319;593.17;366.85;comms;cab
+CB12;Comms - 10 Core Brown -100m;638.6;447;734.39;514.05;comms;cab
+CB13;Comms - 10 Core White -100m;638.6;447;734.39;514.05;comms;cab
+CB14;Comms - 12 Core Brown -100m;752;526;864.8;604.9;comms;cab
+CB15;Comms - 12 Core White -100m;752;526;864.8;604.9;comms;cab
+CB17;Comms - 20 Core White -100m;1335;934;1535.25;1074.1;comms;cab
+CB57;Stranded - 20 Core White - 100m;963;674;1107.45;775.1;stranded;cab
+CB56;Stranded 12 Core BC Wht - 100m;939;657;1079.85;755.55;stranded;cab
+CB58;Stranded 4 Core BC Wht - 100m;316;221;363.4;254.15;stranded;cab
+CB59;Stranded 6 Core BC Wht - 100m;422;295;485.3;339.25;stranded;cab
+CB60;Stranded 8 Core BC Wht - 100m;634.3;444;729.445;510.6;stranded;cab
+CB01;Cabtyre - 0.5mm 3 Core Black - 100m;899;649;1033.85;746.35;cabtyre;cab
+CB04;Cabtyre - 1.0mm 3 Core Black - 100m;1548;1083;1780.2;1245.45;cabtyre;cab
+CB05;Cabtyre - 1.5mm 3 Core Black - 100m;2125;1487;2443.75;1710.05;cabtyre;cab
+CB06;Cabtyre - 1.5mm 3 Core White - 100m;1999;1399;2298.85;1608.85;cabtyre;cab
+CB07;Cabtyre - 0.5mm 3 Core White - 100m;885;619;1017.75;711.85;cabtyre;cab
+CB44;Norsc - 1.5mm 2 Core + Earth - 100m;1993;1395;2291.95;1604.25;twinE;cab
+CB61;Twin + Earth 1.5mm Flat - 100m;1560;1092;1794;1255.8;twinE;cab
+CB61-1;Twin + Earth 2.5mm Flat - 100m;2399;1679;2758.85;1930.85;twinE;cab
+;Twin + Earth also available in 25m rolls;;;0;0;;cab
+CB33;Mylar - 1 Pair 0.22 - 100m;450;315;517.5;362.25;mylar;cab
+CB35;Mylar - 2 Pair 0.22 - 100m;655;458;753.25;526.7;mylar;cab
+CB37;Mylar - 3 Pair 0.22 - 100m;825;565;948.75;649.75;mylar;cab
+CB39;Mylar - 4 Pair 0.22 - 100m;1280;896;1472;1030.4;mylar;cab
+CB41;Mylar - 6 Pair 0.22 - 100m;1979;1385;2275.85;1592.75;mylar;cab
+;"Mylar available in up to 12 Pair; 0.5mm & 500m rolls";;;0;0;;cab
+CB63-2;Fire Cable - 1 Pair 0.8mm - 100m FR20;1039;727;1194.85;836.05;fire;cab
+CB63-3;Fire Cable - 2 Pair 0.8mm - 100m FR20;1678;1174;1929.7;1350.1;fire;cab
+CB63-7;Fire Cable - 1 Pair 1mm - 200m PH30;3328;2344;3827.2;2695.6;fire;cab
+;FR20 Fire Cable also available in 500m rolls;;;0;0;;cab
+CB65;Cable - CAT5 CCA 10Mbps - 100m;356;249;409.4;286.35;cat;cab
+CB69;Cable - CAT5E UTP BC 100m;806;564;926.9;648.6;cat;cab
+CB69-2;Cable - CAT5E UTP BC 500m;4296;3007;4940.4;3458.05;cat;cab
+CB70;Cable - CAT6E UTP BC 100m;1042;729;1198.3;838.35;cat;cab
+CB70-1;Cable - CAT6E U-UTP BC 300m Grey;3303;2312;3798.45;2658.8;cat;cab
+CB70-2;Cable - CAT6E U-UTP BC 500m Grey;5506;3854;6331.9;4432.1;cat;cab
+CA41;Trunking YT1 16x16mm - 2m;27;18.5;31.05;21.275;trunking;cab
+CA42;Trunking YT2 16x25mm - 3m;48;33.1;55.2;38.065;trunking;cab
+CA45;Trunking YT3 16x40mm - 3m;61;42.2;70.15;48.53;trunking;cab
+CA44;Trunking YT4 25x40mm - 3m;71;49.3;81.65;56.695;trunking;cab
+CA43;Trunking YT5 40x40mm - 3m;93.5;65.4;107.525;75.21;trunking;cab
+CA40;Trunking NBT4 100x40mm - 3m;235;162;270.25;186.3;trunking;cab
+;;;;0;0;;cab
+Prices are subject to change without prior notice.;;;;0;0;;cab
+E&OE. Valid until 31st March 2023.;Page: 69;;;0;0;;cab
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;cab
+;;;;0;0;;cab
+Trade Price List;;;;0;0;;cab
+CABLE AND ACCESSORIES;;;;0;0;;cab
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;cab
+;CONDUIT & CONDUIT ACCESSORIES;;;0;0;;cab
+CA24-1;Insul Tape - 20mx18mm Nitto Bk;33.4;23.1;38.41;26.565;;cab
+CA26-1;Insul Tape - 20mx18mm Nitto Wt;33.4;23.1;38.41;26.565;;cab
+;"Also available Red; Green & Blue";;;0;0;;cab
+CA06;Cable Tie Small 100x2.5mm Wht - 100;33.5;23.4;38.525;26.91;tie;cab
+CA07;Cable Tie Small 100x2.5mm Blk - 100;32.5;22.7;37.375;26.105;tie;cab
+CA04;Cable Tie Med 200x5mm Blk - 100;107.8;75.4;123.97;86.71;tie;cab
+CA05;Cable Tie Med 200x5mm Wht - 100;120.9;84.6;139.035;97.29;tie;cab
+CA01;Cable Tie Large 400x5mm Wht - 100;249.3;174.5;286.695;200.675;tie;cab
+CA03;Cable Tie Large 400x5mm Blk - 100;223;156.1;256.45;179.515;tie;cab
+CA09;Conduit PVC 20mm SABS - 4m;27;18.9;31.05;21.735;pvc;cab
+CA13;Conduit PVC 20mm Coupling;1.49;1.04;1.7135;1.196;pvc;cab
+CA14;Conduit PVC 20mm Lock Wing;1.5;1.1;1.725;1.265;pvc;cab
+CA10;Conduit PVC 20mm 1-Way Box Lid & Screws;9.85;6.4;11.3275;7.36;pvc;cab
+CA11;Conduit PVC 20mm 2-Way Box Lid & Screws;10.4;6.7;11.96;7.705;pvc;cab
+CA11-2;Conduit PVC 20mm U-Type Box;15;11.3;17.25;12.995;pvc;cab
+CA12;Conduit PVC 20mm 3-Way Box Lid & Screws;11;7.1;12.65;8.165;pvc;cab
+CA08;Conduit PVC 20mm 90 Deg Bend;15.3;10.7;17.595;12.305;pvc;cab
+CA08-1;Conduit PVC 20mm Inspection Elbow;11.9;7.7;13.685;8.855;pvc;cab
+CA08-2;"Conduit PVC 20mm ""T"" Inspection Box";9.5;6.6;10.925;7.59;pvc;cab
+CA09-1;Conduit PVC 20mm Flex sold - Meter 50m R;11;7.7;12.65;8.855;pvc;cab
+CA16-1;Conduit PVC 25mm Flex - m Wht;13.2;9.2;15.18;10.58;pvc;cab
+CA18;Conduit Strap Saddle 20mm - 100;88;61.6;101.2;70.84;pvc;cab
+CA18-1;Conduit Strap Saddle 25mm - 25;42.9;30;49.335;34.5;pvc;cab
+CA27;PVC Gland - '0' White;2.9;2;3.335;2.3;pvc;cab
+CA32;PVC Saddle Round with Nail - 20mm - 25;31.5;22;36.225;25.3;pvc;cab
+CA33;PVC Saddle Round - 3mm - 100;14.2;9.9;16.33;11.385;pvc;cab
+CA34;PVC Saddle Round - 4mm - 100;12.5;8.7;14.375;10.005;pvc;cab
+CA35;PVC Saddle Round - 5mm - 100;15.3;10.7;17.595;12.305;pvc;cab
+CA36;PVC Saddle Round - 6mm - 100;18.3;12.8;21.045;14.72;pvc;cab
+CA37;PVC Saddle Round - 7mm - 100;21;13.6;24.15;15.64;pvc;cab
+CA38;PVC Saddle Round - 8mm - 100;21.5;15;24.725;17.25;pvc;cab
+CA30;PVC Saddle Round - 10mm - 100;29.9;20.9;34.385;24.035;pvc;cab
+CA31;PVC Saddle Round - 12mm - 100;42.9;30;49.335;34.5;pvc;cab
+CA47;PVC Bonding Fluid - 200ml;33;23.1;37.95;26.565;pvc;cab
+CA54;SPIRAL BIND - 12 x 30m - m;15.3;10.7;17.595;12.305;pvc;cab
+;"We also stock trunking end caps; corner pieces; terminal ends and 25mm conduit and accessories";;;0;0;;cab
+PVC - ABS ENCLOSURES;;;;0;0;;cab
+CA21;SP Uni Cam Mnt Enclose 115x115x48mm;58;39;66.7;44.85;cab_enc;cab
+CA21-1;SP L Uni Cam Mnt Enclose 161x161x48mm Wh;88;59;101.2;67.85;cab_enc;cab
+CA21-5;SP Enclose Blk Uni Cam Mnt 115x115x48mm;58;39;66.7;44.85;cab_enc;cab
+CA12-5;ENCLOSURE PVC - 4 x 2 inch Surface Mount;23.2;16.2;26.68;18.63;cab_enc;cab
+CA12-10;ENCLOSURE PVC - 4 x 4 inch Surface Mount;28.6;20;32.89;23;cab_enc;cab
+CA19-1;Enclose for 36AH Batt RL-3P H260xW220xD2;980;676;1127;777.4;cab_enc;cab
+CA19-3;SP Plastic Enclose 240x190x90mm;401.5;281;461.725;323.15;cab_enc;cab
+CA20-1;SP Plastic Enclose 190x140x70mm;199;149;228.85;171.35;cab_enc;cab
+CA21-2;SP Plastic Enclose 100x100x50mm;76.3;53.4;87.745;61.41;cab_enc;cab
+CA22-1;SP Plastic Enclose 150x110x70mm;119;81;136.85;93.15;cab_enc;cab
+CA59;SP Plastic Enclose 150x150x70mm;184.3;129;211.945;148.35;cab_enc;cab
+CA60;SP Plastic Enclose 300x220x120mm;788;569;906.2;654.35;cab_enc;cab
+CN17;Encolsure - Utility Box White;29.2;20.4;33.58;23.46;cab_enc;cab
+CN29;ENCLOSURE -273x243x92mm for 17AH Battery;348;243.1;400.2;279.565;cab_enc;cab
+;"FASTENERS FOR CONDUIT; TRUNKING AND CABLES";;;0;0;cab_enc;cab
+HW29-1;Easyhold Plug - 8mm Black - 100 pack;132;106.2;151.8;122.13;cab_enc;cab
+CB95-4;Solar Cable 4mm (Black and Red) - 10m;440;293.33;506;337.3295;cab_sol;cab
+CB95-5;Solar Cable 4mm (Black and Red) - 20m;839;587;964.85;675.05;cab_sol;cab
+CB95-6;Solar Cable 4mm (Black and Red) - 50m;1920;1280;2208;1472;cab_sol;cab
+CB95-7;Solar Cable 6mm (Black and Red) - 10m;600;400;690;460;cab_sol;pow
+CB95-8;Solar Cable 6mm (Black and Red) - 20m;1160;773.33;1334;889.3295;cab_sol;pow
+CB95-9;Solar Cable 6mm (Black and Red) - 50m;2912;1941.33;3348.8;2232.5295;cab_sol;pow
+KTS010;Solar Cabling Kit (12-24V);1399	899	1608.85;1033.85;cab_sol;pow
+

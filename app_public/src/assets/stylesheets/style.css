@@ -26,7 +26,7 @@ background-image: url("data:image/svgxml;charset=utf8,%3CsvgviewBox='0 0 30 30'x
 color: white;
 }
 .card {
-background-color: rgba(0,0,0, 0.4);;
+background-color: rgba(0,100,0, 0.12);
 padding: 1rem;
 border: 3px solid whitesmoke;
 margin-top: 2px;
@@ -101,7 +101,7 @@ h4 small {
   body {
   font-family: "Cabin", Arial, sans-serif;
   color: #fff;
-  background-image: url('../images/pexels-yasin-gündogdu-2761116.jpg');
+  background-image: url('../images/pexels-eva-bronzini-7641148.jpg');
   background-attachment: fixed;
   }
 

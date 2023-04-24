@@ -9,12 +9,12 @@ export class HomePageComponent implements OnInit {
 
   public pageContent = {
     header: {
-      title: 'Ngamla - ',
+      title: 'InstaDocs - ',
       strapline: 'Installer\'s Invoicing App'
     },
     viewBar: {
-      main: 'Prepare documents on the move',
-      sub: 'Ngamla! is accessible from any device with an internet connection. This means that quotations, invoices and purchase orders can be prepared from anywhere.'
+      main: 'Create docs in an Instant!',
+      sub: 'Quote in 60 seconds and Convert Quote to Invoice or Purchase Order at the click of a button.'
     }
   };
 

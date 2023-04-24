@@ -1,0 +1,268 @@
+regalCode;description;Retail Excl VAT;Trade Excl VAT;trade;retail;subcategory;category
+RGA01-2;D10 Smart 24V DC Motor excl Batteries;10842.86;7590;8728.5;12469.289;cent_kit_sl;aut
+RGA01-3;D10 Smart Turbo 24VDC Motor excl Batt;11677.14;8174;9400.1;13428.711;cent_kit_sl;aut
+RGA02;D20 Smart Motor 2000kg excl Batteries;11227.14;7859;9037.85;12911.211;cent_kit_sl;aut
+KT012;D5 EVO 12V Gate Motor Incl 2 x 4B Tx;6270;3999;4598.85;7210.5;cent_kit_sl;aut
+RGA03-2;D5 EVO 12V Gate Motor Only (500Kg);5466;3826;4399.9;6285.9;cent_kit_sl;aut
+SP07-1;D5 EVO Motor Kit Complete - Steel Rack;7097.14;4468;5138.2;8161.711;cent_kit_sl;aut
+SP08-1;D5 EVO Motor Kit Complete RAZ-Nylon Rack;7191.43;4554;5237.1;8270.1445;cent_kit_sl;aut
+KT013;D5 Smart 24V Gate Motor Incl 2 x 4B Tx;6604.29;4223;4856.45;7594.9335;cent_kit_sl;aut
+SP07-2;D5 Smart Motor Kit 2x4B Tx Rack & Batt;7662.86;4864;5593.6;8812.289;cent_kit_sl;aut
+SP08-2;D5 Smart Motor Kit 2x4B Tx RAZ & Batt;7757.14;4930;5669.5;8920.711;cent_kit_sl;aut
+SP10-2;D10 Smart 24V DC Motor Kit Steel Rack;12271.43;8250;9487.5;14112.1445;cent_kit_sl;aut
+SP10-3;D10 Smart Turbo 24VDC Motor Kit Stl Rack;15948.57;10814;12436.1;18340.8555;cent_kit_sl;aut
+;;;;0;0;cent_kit_sl;aut
+SP20;D20 Smart 24V DC Motor Kit Steel Rack;12655.71;8859;10187.85;14554.0665;cent_kit_sl;aut
+SP20-1;D20 Smart 24V DC Sliding Motor Part Kit;11995.71;8397;9656.55;13795.0665;cent_kit_sl;aut
+SP46;D2 Turbo CENTURION Gate Motor Kit;5065.71;3399;3908.85;5825.5665;cent_kit_sl;aut
+;;;;0;0;cent_kit_sl;aut
+;CENTURION - SWING GATE MOTORS;;;0;0;cent_kit_sl;aut
+GA74;Vantage Single 400 Operator Kit;9208.57;6446;7412.9;10589.8555;cent_kit_sw;aut
+GA74-1;Vantage Double 400 Operator Kit;13770;9639;11084.85;15835.5;cent_kit_sw;aut
+GA75;Vantage Single 500 Operator Kit;9342.86;6540;7521;10744.289;cent_kit_sw;aut
+GA75-1;Vantage Double 500 Operator Kit;14038.57;9827;11301.05;16144.3555;cent_kit_sw;aut
+GA78;VERT-X Single Swing Operator Kit;8871.43;6210;7141.5;10202.1445;cent_kit_sw;aut
+GA78-1;VERT-X Double Swing Operator Kit;13095.71;9167;10542.05;15060.0665;cent_kit_sw;aut
+CB81;CABLE - 2 Core x 2mm 4 Core x 0.5mm 25m;1027.14;719;826.85;1181.211;cent_kit_sw;aut
+;"Cable for Vector; Vantage & Vert-X";;;0;0;;aut
+;;;;0;0;;aut
+;CENTURION - HD Roller Shutter Operators;;;0;0;;aut
+GA138;CENTURION RSO5R Kit - 500Kg 360W;9197;6437.75;7403.4125;10576.55;cent_kit_gd;aut
+GA138-2;CENTURION RSO50 Kit - 500Kg 24VDC;12012.14;8408.5;9669.775;13813.961;cent_kit_gd;aut
+GA138-5;CENTURION RSO50 Kit - 500Kg 24VD FMLC T2;10105.36;7073.75;8134.8125;11621.164;cent_kit_gd;aut
+GA139;CENTURION RSO5R - 220VAC 500Kg RSO ONLY;7344.29;5141;5912.15;8445.9335;cent_kit_gd;aut
+GA139-1;CENTURION RSO5DC - 24VDC 500Kg RSO Only;5557.14;3890;4473.5;6390.711;cent_kit_gd;aut
+;3 Phase 380VAC RSO also available;;;0;0;;aut
+;;;;0;0;;aut
+;CENTURION GENERAL ACCESSORIES;;;0;0;;aut
+GA26-1;CENTURION A10 - D10 Theft Resistant Cage;1807.14;1265;1454.75;2078.211;cage;aut
+GA26-13;CENTURION D5 Theft Resistant Cage & Lock;1297.14;908;1044.2;1491.711;cage;aut
+GA26-8;CENTURION D2 Theft Resistant Cage SSG304;851.43;596;685.4;979.1445;cage;aut
+GA26-14;CENTURION D5 Smart Theft Cage Assembly;1117.14;782;899.3;1284.711;cage;aut
+GA26-15;D10 Smart D10 Turbo D20 Smart Theft Cage;1874.29;1312;1508.8;2155.4335;cage;aut
+GA24-6;CENTURION DX Smart Controller No LCD Box;1958.57;1371;1576.65;2252.3555;board;aut
+GA23-14;CENTURION - D5 EVO LCD Controller;1898.57;1329;1528.35;2183.3555;board;aut
+GA23-15;CENTURION - PCB D10 (Black);1984.29;1389;1597.35;2281.9335;board;aut
+GA23-16;CENTURION - A10 Encoder Housing & PCB;66.2;46.3;53.245;76.13;board;aut
+GA23-17;CENTURION - D10 - D5EVO Doss Harness V3;42;29.3;33.695;48.3;cent_acc;aut
+GA23-8;CENTURION 24-12V DC-DC Regulator - Relay;287.14;201;231.15;330.211;cent_char;aut
+GA27-10;CENTURION DX Smart Charger 27.4V 1.3Amp;811.43;568;653.2;933.1445;cent_char;aut
+GA27-11;CENTURION DX Smart Charger D10S 27.4V;1008.57;706;811.9;1159.8555;cent_char;aut
+GA27-4;CENTURION - A10 DC Converter 3Amp;9130;6391;7349.65;10499.5;cent_char;aut
+GA27-5;CENTURION - D5 EVO Switch Mode PSU 2A;704;492.7;566.605;809.6;cent_char;aut
+GA76-21;VERT-X - VANTAGE Wall Mount Bracket Kit;395.8;277;318.55;455.17;cent_kit_sw;aut
+;;;;0;0;;aut
+Prices are subject to change without prior notice.;;;;0;0;;aut
+E&OE. Valid until 31st March 2023.;Page: 21;;;0;0;;aut
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;aut
+;;;;0;0;;aut
+Trade Price List;;;;0;0;;aut
+GATE AUTOMATION;;;;0;0;;aut
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;aut
+NICE - GATE MOTORS;;;;0;0;;aut
+GA02;Nice Drive 300 Gate Motor  incl Battery;4031;2795;3214.25;4635.65;nice_kit;aut
+RGA06;Nice Drive 500 12V Mag Limit Trf Plug In;4425;3871.1;4451.765;5088.75;nice_kit;aut
+RGA08;Nice Drive 600 Mag Limit ACDC;6274;4350.24;5002.776;7215.1;nice_kit;aut
+GA01;Nice Drive 1000 Gate Motor Kit incl Batt;10536;7375;8481.25;12116.4;nice_kit;aut
+GA01-5;Nice RUN 2500 Sliding Gate Motor Only;15382;12920.25;14858.2875;17689.3;nice_kit;aut
+GA01-4;Nice TUB 4000 Sliding Gate Motor Only;24903;20918.5;24056.275;28638.45;nice_kit;aut
+GA08;Nice 500 - ACDC Gate Motor Incl 2 x Tx;5275;4430.8;5095.42;6066.25;nice_kit;aut
+SP51;Nice 500 - 12V Gate Motor Kit Nylon Rack;5021;4217.4;4850.01;5774.15;nice_kit;aut
+SP55;ET500 - ACDC Gate Motor Kit - 4m Rack;5619;3933;4522.95;6461.85;nice_kit;aut
+SP56;ET500 - ACDC Gate Motor Kit - Nylon Rack;5719;4803.15;5523.6225;6576.85;nice_kit;aut
+SP58;Nice Drive 300 Motor Kit inc Batt & Rack;3781;3175.55;3651.8825;4348.15;nice_kit;aut
+SP59-1;Nice Drive 500 Motor Kit inc Batt & Rack;6200;4298.55;4943.3325;7130;nice_kit;aut
+SP61-1;Nice Drive 600 Motor Kit inc Batt & Rack;5529;4837.35;5562.9525;6358.35;nice_kit;aut
+SP57;ET Drive 1000 Motor Kit incl Batt & Rack;8880;7769.2;8934.58;10212;nice_kit;aut
+;NICE GENERAL ACCESSORIES;;;0;0;nice;aut
+GA29-1;Nice Drive 500-600 Theft Resistant Brack;1036;870.24;1000.776;1191.4;nice_acc;aut
+GA29-3;Nice AC-DC Cover Incl Theft BrackNice Re;380;318.55;366.3325;437;nice_acc;aut
+GA29-4;Nice AC-DC Cover Incl Theft BrackNice Gr;387;324.45;373.1175;445.05;nice_acc;aut
+GA29-5;Nice Drive 1000 Theft Deterrent Bracket;1391;964.39;1109.0485;1599.65;nice_acc;aut
+GA29-6;Nice Drive 500 Cover Only;233;195.5;224.825;267.95;nice_acc;aut
+GA29-7;Nice Drive 600 Cover Only;233;195.5;224.825;267.95;nice_acc;aut
+GA29-10;Nice Drive 500 Gate Motor Base Plate Kit;190;159.52;183.448;218.5;nice_acc;aut
+GA107-13;Nice Drive 500-600 PCB in Housing;1433.4;1003.33;1153.8295;1648.41;nice_acc;aut
+GA107-18;Nice Drive 300 PCB;855;718.13;825.8495;983.25;nice_acc;aut
+GA107-4;Nice 500 Control Cards;1140;957.6;1101.24;1311;nice_acc;aut
+GEMINI GATE MOTORS;;;;0;0;;aut
+RGA85;Gemini DC Slider Battery & Remotes Only;4229.22;3524.1;4052.715;4863.603;gemini;aut
+RGA85-1;Gemini DC Slider Motor Only;4119;2786;3203.9;4736.85;gemini;aut
+GA85;Gemini DC Slider Kit Batt Remotes & Rack;4499;3725;4283.75;5173.85;gemini;aut
+RGA86-1;Gemini DC Slider SEL 12A-H 142 Excl Stee;4988;3399;3908.85;5736.2;gemini;aut
+GA86-1;Gemini DC Slider SEL 12A-H 142 incl Rack;4618.65;3848.87;4426.2005;5311.4475;gemini;aut
+GA86-2;Gemini Slider Gate Motor 24V 5AH excl St;4656.95;3880.79;4462.9085;5355.4925;gemini;aut
+GA86-3;Gemini Complex Slider Gate Motor 24V 8AH;7959.69;6122.83;7041.2545;9153.6435;gemini;aut
+DACE GATE MOTORS;;;;0;0;;aut
+SP90-1;DACE SPRINT 500 Sliding Motor HV Kit;4759.74;3388.93;3897.2695;5473.701;dace;aut
+SP91;DACE CONDO Gate Motor Kit Incl Rack;5954.02;4364.3;5018.945;6847.123;dace;aut
+GA111-1;DACE 12V Single Swing Pedestal Mnt Kit;5152.16;4121.73;4739.9895;5924.984;dace;aut
+GA112-1;DACE 12V Single Swing Wall Mount Kit;5107.31;4085.85;4698.7275;5873.4065;dace;aut
+;NICE-HANSA - SLIDING GATE MOTORS;;;0;0;;aut
+GA53-2;HANSA SPEEDO 24V HD + 4m Steel Rack;12497;10496.7;12071.205;14371.55;hansa;aut
+GA53-6;HANSA SPEEDO 24V HD Incl Powerpack;12858;9000;10350;14786.7;hansa;aut
+GA230;"NICE ROBUS 250 Motor; Incl 24VDC Battery";3839;2687;3090.05;4414.85;hansa;aut
+;NICE-HANSA - SWING GATE MOTORS;;;0;0;hansa;aut
+GA67-5;HANSA - Elite Double Swing 24V HD kit;35685;29975;34471.25;41037.75;hansa;aut
+GA222;NICE TOONA 7m Double Swing 24VDC;22525;18921;21759.15;25903.75;hansa;aut
+;;;;0;0;;aut
+Prices are subject to change without prior notice.;;;;0;0;;aut
+E&OE. Valid until 31st March 2023.;Page: 22;;;0;0;;aut
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;aut
+;;;;0;0;;aut
+Trade Price List;;;;0;0;;aut
+GATE AUTOMATION;;;;0;0;;aut
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;aut
+;SENTRY - SLIDING GATE MOTOR;;;0;0;;aut
+GA134;Sentry SGO6 Gate Motor Kit Batt + 2x Tx4;4000;3100;3565;4600;sentry;aut
+SP134;"Sentry SGO6 Motor Kit 2 x Tx4 Batt; Rack";5000;3499;4023.85;5750;sentry;aut
+GA134-9;Sentry SGO6 Motor Theft Deterrent Cage;711;514;591.1;817.65;sentry;aut
+GATE BEAMS;;;;0;0;;aut
+BD06;GATE BEAM - Centurion 40M;460;322;370.3;529;beam;aut
+BD09;GATE BEAM - Centurion PHOTON Wireless;912.86;639;734.85;1049.789;beam;aut
+BD09-1;GATE BEAM - Centurion PHOTON Smart WL;954.29;668;768.2;1097.4335;beam;aut
+BD05-2;GATE BEAM Nice Wave Semi-Wireless IR;564;473.27;544.2605;648.6;beam;aut
+BD08-1;GATE BEAM Nice Infra Red Blue Eyes V2;351;294.84;339.066;403.65;beam;aut
+BD05-4;GATE BEAM - Sentry 15M Wireles IP55;590;399;458.85;678.5;beam;aut
+LOOP DETECTORS;;;;0;0;;aut
+GA31-1;Loop Detector - 11 Pin Socket;65;45;51.75;74.75;detector;aut
+GA31-3;Loop Detector - Single Channel 220V SS;570;399;458.85;655.5;detector;aut
+GA31-4;Loop Detector - Dual 12 - 24VDC SS;856;599;688.85;984.4;detector;aut
+GA31-6;Loop Detector - Single Channel 12V MD201;449;377.14;433.711;516.35;detector;aut
+GA31-7;Loop Detector - FLUX SA 1Ch 12-24V AC-DC;705.71;494;568.1;811.5665;detector;aut
+GA31-8;Loop Detector - FLUX 11 Pin 1Ch 12-24V;984.29;689;792.35;1131.9335;detector;aut
+CB64;Cable Silicon 1.5mm Red - 100m - Loop;789;552;634.8;907.35;detector;aut
+;INSTALLATION ACCESSORIES;;;0;0;;aut
+GA26-4;D5 Theft Resistant Cage - Generic;713;499;573.85;819.95;cage;aut
+LK79-3;Padlock - Insurance 70mm;385;269;309.35;442.75;cage;aut
+LK79-4;Padlock - Discus 70mm;170;118.5;136.275;195.5;cage;aut
+LK79-3-1;Padlock - Insurance 90mm;520;364;418.6;598;cage;aut
+;;;;0;0;;aut
+GA30;Gate Wheel Kit - 60mm  - V-Profile;231;161.2;185.38;265.65;wheel;aut
+GA30-2;Gate Wheel Kit - 60mm E-Plated;242;169.1;194.465;278.3;wheel;aut
+GA42;Gate Wheel Kit - 80mm  - V-Profile;296;207;238.05;340.4;wheel;aut
+GA42-1;Gate Wheel Kit - 80mm E-Plated;318;222.4;255.76;365.7;wheel;aut
+GA42-2;Gate Wheel Kit - 80mm U - Profile Elect;329;229.8;264.27;378.35;wheel;aut
+GA42-3;Gate Wheel Kit - 80mm Radius;307;214.4;246.56;353.05;wheel;aut
+GA42-4;Gate Wheel Kit - 100mm;692;484.4;557.06;795.8;wheel;aut
+GA42-6;Gate Shox Wheel Set 80mm Stainless Steel;2287.14;1601;1841.15;2630.211;wheel;aut
+GA33;Gate Nylon Guide Rollers - Pair;45;31.2;35.88;51.75;wheel;aut
+;Radius and Electro plated Wheel kit types also available;;;0;0;;aut
+GA40;Rack-Steel 30x10mmx2m incl Brackets;388;284;326.6;446.2;rack;aut
+GA39;Rack - RAZ Nylon 20mm x 0.5m;91.43;64;73.6;105.1445;rack;aut
+GA18-1;Rack - Nylon Angle Galvanised - 2m;270;189;217.35;310.5;rack;aut
+GA131;Sherlo Gate Alarm Code Hopping Tx 403MHz;351;245.56;282.394;403.65;remote;aut
+GA132;Swing Gate Timer;423.65;319.2;367.08;487.1975;swt;aut
+GA33-2;Gate Mate Brushes (Mr Sweepy);189;132;151.8;217.35;wheel;aut
+SW98;Isolator Switch 30Amp with W-Proof S-Box;219;152.9;175.835;251.85;swt;aut
+;CENTURION - SOLAR ACCESSORIES;;;0;0;;aut
+PS81;Solar Panel 40W Polycrystalline 18.2V 46;715;500;575;822.25;gate_solar;aut
+PS81-1;Solar Panel 60W 18.2V 630x670x30mm;1029;720;828;1183.35;gate_solar;aut
+PS81-2;Solar Panel 80W 18.2V 915x670x30mm;1150;910;1046.5;1322.5;gate_solar;aut
+PS83-3;Universal Solar Panel Brkt Kit 20W-80W;1357;949.6;1092.04;1560.55;gate_solar;aut
+PS45;Solar Regulator 12V-24V 20Amp;688;481;553.15;791.2;gate_solar;aut
+;;;;0;0;;aut
+Prices are subject to change without prior notice.;;;;0;0;;aut
+E&OE. Valid until 31st March 2023.;Page: 23;;;0;0;;aut
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;aut
+;;;;0;0;;aut
+Trade Price List;;;;0;0;;aut
+GATE AUTOMATION;;;;0;0;;aut
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;aut
+;REMOTES - Standard Range;;;0;0;;aut
+SW44-1;Nice Tx 1 Button - Blu-Mix Rolling Code;160;110.61;127.2015;184;remote;aut
+SW44-2;Nice Tx 2 Button - Blu-Mix Rolling Code;187;130.43;149.9945;215.05;remote;aut
+SW44-4;Nice Tx 4 Button - Blu-Mix Rolling Code;156;141.88;163.162;179.4;remote;aut
+SW44-6;Nice Tx 6 Button - Blu-Mix Rolling Code;165;149.54;171.971;189.75;remote;aut
+SW56;Smart - 1 Button Tx 433 MHz;243.33;146;167.9;279.8295;remote;aut
+SW56-6;Smart - 2 Button Tx 433 MHz;285;171;196.65;327.75;remote;aut
+SW56-8;Smart - 4 Button Tx 433 MHz;355;213;244.95;408.25;remote;aut
+SW56-1;Classic - 1 Button Tx 403 MHz;228.33;137;157.55;262.5795;remote;aut
+SW56-1-1;Classic - 2 Button Tx 403 MHz;235;141;162.15;270.25;remote;aut
+SW58-1;NOVA V3 1 Button SG Transmitter 433MHz;191.67;115;132.25;220.4205;remote;aut
+SW58-2;NOVA V3 2 Button SG Transmitter 433MHz;250;150;172.5;287.5;remote;aut
+SW58-4;NOVA V3 4 Button SG Transmitter 433MHz;308.33;185;212.75;354.5795;remote;aut
+SW107;Sentry - 1 Button Tx Binary (403);152;98;112.7;174.8;remote;aut
+SW107-1;Sentry - 3 Button Tx Binary (403);179;115;132.25;205.85;remote;aut
+SW107-11;Sentry - 1 Button Tx Learn (403);147;95;109.25;169.05;remote;aut
+SW107-12;Sentry - 3 Button Tx Learn (403);162;104;119.6;186.3;remote;aut
+SW107-1-1;Sentry - 4 Button Tx Learn (403);197;111;127.65;226.55;remote;aut
+SW107-13;Sentry - 4 Button Dual Tx Learn (Green);240;135;155.25;276;remote;aut
+SW107-21;Sentry - 4 Button Code Hopping Tx 433 NC;216;122;140.3;248.4;remote;aut
+SW107-22;Sentry - 6 Button Code Hopping Tx 433 NC;247;158;181.7;284.05;remote;aut
+SW107-31;Sentry - 1 Button Code Hopping Tx 403 SC;152;98;112.7;174.8;remote;aut
+SW107-34;Sentry - 4 Button Code Hopping Tx 403 SC;216;122;140.3;248.4;remote;aut
+SW107-36;Sentry - 6 Button Code Hopping Tx 403 SC;247;158;181.7;284.05;remote;aut
+SW81;Sherlo Tx 1 Button Code Hopping Key Ring;136;94.89;109.1235;156.4;remote;aut
+SW81-1;Sherlo Tx 2 Button Code Hopping Key Ring;153;107.05;123.1075;175.95;remote;aut
+SW81-3;Sherlo Tx 4 Button Code Hopping Key Ring;160;111.92;128.708;184;remote;aut
+SW81-6;Sherlo Tx 6 Button Code Hopping Key Ring;167;116.8;134.32;192.05;remote;aut
+SW84;Sherlo 6 Button Glow-in-Dark Keyring Tx;176;122.82;141.243;202.4;remote;aut
+SW131;Digi - Tx 4 Button E-Key;260;182;209.3;299;remote;aut
+SW23;MTQ 1 Button Tx Code Hop 433Mhz;132.41;110.34;126.891;152.2715;remote;aut
+SW24;MTQ 3 Button Tx Code Hop 433Mhz;137.18;114.32;131.468;157.757;remote;aut
+;;;;0;0;;aut
+Prices are subject to change without prior notice.;;;;0;0;;aut
+E&OE. Valid until 31st March 2023.;Page: 24;;;0;0;;aut
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;aut
+;;;;0;0;;aut
+Trade Price List;;;;0;0;;aut
+GATE AUTOMATION;;;;0;0;;aut
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;aut
+RECEIVERS - Standard Range;;;;0;0;;aut
+SW42-2;Nice Rx 1 Channel - Learn 404MHz 40Bit;265;183.18;210.657;304.75;receiver;aut
+SW42-5;Nice Rx 1Channel - Rolling Code (434) Bl;260;179.76;206.724;299;receiver;aut
+SW42-7;Nice Multi-Receiver RX3 (TH ASSEMBLY);279;253.03;290.9845;320.85;receiver;aut
+SW43-2;Nice Micro Blu Mix Rolling Code Rx2;137;124.07;142.6805;157.55;receiver;aut
+SW45;Smart - 1 Channel Receiver 433 MHz;518.33;311;357.65;596.0795;receiver;aut
+SW46-2;Nova - 1 Channel Receiver 433 MHz;473.33;284;326.6;544.3295;receiver;aut
+SW46-3;Nova - 2 Channel Receiver 433 MHz;690;414;476.1;793.5;receiver;aut
+SW46-4-1;Nova - 4 Channel Receiver 433 MHz;823.33;494;568.1;946.8295;receiver;aut
+SW72-2;Sherlo Rx 1Ch 150m Code Hopping RX1-150;244;170.34;195.891;280.6;receiver;aut
+SW80-1;Sherlo Rx 2Ch 150m Code Hopping RX2-150;280;195.37;224.6755;322;receiver;aut
+SW72-5;Sherlo Rx 3Ch 150m Code Hopping RX3-150;301;210.58;242.167;346.15;receiver;aut
+SW108-3-1;Sentry - 1Ch Rx Binary- Trinary- French;226;133;152.95;259.9;receiver;aut
+SW132;Digi - 1 Channel Receiver E-Key;665;467;537.05;764.75;receiver;aut
+;TRANSMITTERS - Fixed - Standard Range;;;0;0;remote;aut
+SW60;Centurion WiZo Link 12-24V 1 IO V1 TxR;615.93;430.4;494.96;708.3195;remote;aut
+SW82-5;Sherlo Fixed Wireless Waterproof Tx CH;285;198.87;228.7005;327.75;remote;aut
+SW82-6;Sherlo Elegant Wallmount Tx 100m 403MHz;216;151.11;173.7765;248.4;remote;aut
+SW83;Sherlo 2 Channel PIR Transmitter PIR-TX;368;257.36;295.964;423.2;remote;aut
+SW43-1;Nice Micro Blu Mix Rolling Code Tx2;141;127.55;146.6825;162.15;remote;aut
+SW24-1;MTQ Gemini Wall Console Tx3 Code Hop 433;150.21;126.22;145.153;172.7415;remote;aut
+TOWNHOUSE RECEIVERS;;;;0;0;remote;aut
+SW80-9;Sherlo Rx 4000 User Complex Code Hopping;860;601.31;691.5065;989;receiver;aut
+SW108-8;Sentry - Complex Rx (1000ch);578;385;442.75;664.7;receiver;aut
+;;;;0;0;;aut
+Prices are subject to change without prior notice.;;;;0;0;;aut
+E&OE. Valid until 31st March 2023.;Page: 25;;;0;0;;aut
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;aut
+;;;;0;0;;aut
+Trade Price List;;;;0;0;;aut
+GATE AUTOMATION;;;;0;0;;aut
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;remote;aut
+;REMOTES & RECEIVERS - Long Range;;;0;0;;aut
+SW102;MAMI - RKU TG1 Tx 1Km;1015;680;782;1167.25;remote;aut
+SW94-1;MAMI - 4 Ch Fixed Rx 1-3Km;2344;1570;1805.5;2695.6;remote;aut
+SW95;MAMI - Aerial Folded Hog;407.2;285;327.75;468.28;remote;aut
+SW135;Sherlo Tx 4 Ch 1.5Km Code HoppingS4;557;389.56;447.994;640.55;remote;aut
+SW54;Sherlo Kit 200M L-Range SS5002;794;555.69;639.0435;913.1;remote;aut
+SW55-1;Sherlo Tx 1Button Trinary ST4001P;201;140.39;161.4485;231.15;remote;aut
+SW72;Sherlo 1Ch 500m Stand Alone Transmitter;255;178.26;204.999;293.25;remote;aut
+SW80;Sherlo Rx 1Ch 500m Code Hopping RX1-500;435;304.16;349.784;500.25;remote;aut
+SW80-4;Sherlo Rx 4Ch 500m Code Hopping RX4-500;470;328.5;377.775;540.5;remote;aut
+SW81-7;Sherlo Tx 1 Button Code Hopping Pendant;155;108.27;124.5105;178.25;remote;aut
+SW88-2;Sherlo Repeater Code Hopping RPT1-800;1217;851.21;978.8915;1399.55;remote;aut
+SW43-6;Nice Weatherproof 2 Ch Long Range Tx;325;295.19;339.4685;373.75;remote;aut
+SW43-7;Nice Weatherproof 2 Ch Long Range Rx;301.55;241;277.15;346.7825;remote;aut
+SW71;Nice Tx 3 Ch O-Door High Power RC Dual 4;391;355.17;408.4455;449.65;remote;aut
+SW43;Nice 1Ch Weatherproof Transceiver Repeat;451;315.37;362.6755;518.65;remote;aut
+SW108-10;Sentry - M5 Superhet Receiver Module;150;113;129.95;172.5;remote;aut
+SW108-17;Sentry - 4 Ch Long Range Transmitter 433;378;243;279.45;434.7;remote;aut
+SW108-18;Sentry - 1 Ch Long Range Receiver 433;378;243;279.45;434.7;remote;aut
+;REMOTES & RECEIVERS - Other;;;0;0;remote;aut
+SW108-11;Sentry - 220V Light Rx Tx incl 1x4 BtnTx;800;580;667;920;remote;aut
+SW108-12;Sentry - 12V Light Rx Tx Incl 1x4 Btn Tx;580;421;484.15;667;remote;aut
+SW88-1;Sherlo 14 Channel Module 64 User;1043;729.99;839.4885;1199.45;remote;aut
+SW72-3;Sherlo Rx Data Code HoppingASKDRX;452;316.33;363.7795;519.8;remote;aut
+CP04-2;Sherlotronics Fixed Panic Panel Only;995;695.95;800.3425;1144.25;remote;aut
