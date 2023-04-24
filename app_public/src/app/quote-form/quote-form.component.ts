@@ -126,6 +126,9 @@ export class QuoteFormComponent implements OnInit {
                           
   public fireSubCategoriesFull = ['control panel', 'fire power supply', 'call points', 'smoke detectors',
                               'sound equipment'];
+
+  public userSubCategories = ['labour', 'travelling', 'assessment', 'callout', 'user'];
+  public userSubCategoriesFull = ['labour', 'travelling', 'assessment', 'callout', 'user products'];
                           
   public categorySelected = false;
   public subCategorySelected = false;
@@ -244,6 +247,11 @@ export class QuoteFormComponent implements OnInit {
       
       this.subCategoriesFull = this.fireSubCategoriesFull;
       this.subCategories = this.fireSubCategories;
+    }
+
+    else if(this.categories[idx] == 'user'){
+      this.subCategoriesFull = this.userSubCategoriesFull;
+      this.subCategories = this.userSubCategories;
     }
 
     this.categorySelected = true;

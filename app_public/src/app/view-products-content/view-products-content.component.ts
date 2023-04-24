@@ -111,7 +111,7 @@ export class ViewProductsContentComponent implements OnInit {
                               'mylar', 'fire', 'trunking', 'tie', 'pvc', 'cab_enc', 'cab_sol'];
                           
   public cabSubCategoriesFull = ['ripcord', 'comms cable', 'stranded comms cable', 'cabtyre', 'twin and earth',
-                              'mylar', 'fire cable', 'trunking', 'cable tie', 'pvc and accessories', 'cable enclosures'
+                              'mylar', 'fire cable', 'trunking', 'cable ties', 'pvc and accessories', 'cable enclosures'
                               ,'solar cables'];
   
   public powSubCategories = ['battt', 'lit_batt', 'batt_small', 'batt_enc', 'pow_sup'
@@ -132,6 +132,9 @@ export class ViewProductsContentComponent implements OnInit {
                           
   public fireSubCategoriesFull = ['control panel', 'fire power supply', 'call points', 'smoke detectors',
                               'sound equipment'];
+  
+  public userSubCategories = ['labour', 'travelling', 'assessment', 'callout', 'user'];
+  public userSubCategoriesFull = ['labour', 'travelling', 'assessment', 'callout', 'user products'];
 
 
   public solarSubCategoriesFull = [];
@@ -366,7 +369,13 @@ export class ViewProductsContentComponent implements OnInit {
       this.subCategoriesFull = this.fireSubCategoriesFull;
       this.subCategories = this.fireSubCategories;
     }
-    console.log('in hereddd');
+
+    else if(this.categories[idx] == 'user'){
+      
+      this.subCategoriesFull = this.userSubCategoriesFull;
+      this.subCategories = this.userSubCategories;
+    }
+
     this.categorySubmitted = true;
 
    
@@ -397,8 +406,9 @@ export class ViewProductsContentComponent implements OnInit {
 
   private getProducts() : void {
     if(this.getUserName() != 'thabethe'){
+      const idx = this.subCategoriesFull.indexOf(this.formCat2.subCategory);
       this.productDataService
-      .getProducts(this.getUserName())
+      .getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
       .then(foundProducts => this.products = foundProducts)
     }
     else{

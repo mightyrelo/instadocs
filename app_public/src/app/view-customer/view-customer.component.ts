@@ -43,7 +43,7 @@ export class ViewCustomerComponent implements OnInit {
     .subscribe((newCustomer: Customer) => {
      this.newCustomer = newCustomer;
      this.pageContent.header.title = newCustomer.name.toString();
-     this.pageContent.viewBar.main = `${this.newCustomer.name} is on Ngamla because they enquired about our services.`
+     this.pageContent.viewBar.main = `${this.newCustomer.name} is on InstaDocs because they enquired about our services.`
      this.pageContent.viewBar.sub = `Nugget: The aim is to convert ${this.newCustomer.name}'s query into an actual sale. The first step is to prepare a professional-looking quotation based on their request. Click on the Quote button to continue...`
     });
   }
