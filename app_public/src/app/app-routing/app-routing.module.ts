@@ -20,6 +20,9 @@ import { ViewPrintPoComponent } from '../view-print-po/view-print-po.component';
 import { TransferDbComponent } from '../transfer-db/transfer-db.component';
 import { ViewUsersComponent } from '../view-users/view-users.component';
 import { ViewUserComponent } from '../view-user/view-user.component';
+import { DownloadsComponent } from '../downloads/downloads.component';
+import { SettingsComponent } from '../settings/settings.component';
+import { HelpComponent } from '../help/help.component';
 
 const routes : Routes = 
   [{
@@ -80,6 +83,18 @@ const routes : Routes =
 },{
   path:'users/:userId',
   component: ViewUserComponent, 
+
+},{
+  path:'downloads',
+  component: DownloadsComponent, 
+
+},{
+  path:'settings',
+  component: SettingsComponent, 
+
+},{
+  path:'help',
+  component: HelpComponent, 
 
 }];
 

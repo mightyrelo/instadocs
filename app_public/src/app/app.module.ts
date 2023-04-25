@@ -65,6 +65,12 @@ import { InvoiceItemsSpComponent } from './invoice-items-sp/invoice-items-sp.com
 import { PoItemsSpComponent } from './po-items-sp/po-items-sp.component';
 import { QuoteCabComponent } from './quote-cab/quote-cab.component';
 import { QuoteProtComponent } from './quote-prot/quote-prot.component';
+import { DownloadsComponent } from './downloads/downloads.component';
+import { SettingsComponent } from './settings/settings.component';
+import { SettingsContentComponent } from './settings-content/settings-content.component';
+import { DownloadsContentComponent } from './downloads-content/downloads-content.component';
+import { HelpComponent } from './help/help.component';
+import { HelpContentComponent } from './help-content/help-content.component';
 
 
 
@@ -130,7 +136,13 @@ import { QuoteProtComponent } from './quote-prot/quote-prot.component';
     InvoiceItemsSpComponent,
     PoItemsSpComponent,
     QuoteCabComponent,
-    QuoteProtComponent
+    QuoteProtComponent,
+    DownloadsComponent,
+    SettingsComponent,
+    SettingsContentComponent,
+    DownloadsContentComponent,
+    HelpComponent,
+    HelpContentComponent
   ],
   imports: [
     BrowserModule,
