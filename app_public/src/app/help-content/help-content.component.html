@@ -1,6 +1,7 @@
 <div class="row">
   <p>
-    <a style="font-size: 2.3em;color: white;" class="btn float-right" (click)="createTasks()"><i class="fa-solid fa-file-pdf"></i></a>
+    <a style="font-size: 2.3em;color: white;" class="btn" (click)="createTasks()"><i class="fa-solid fa-download"></i></a>
+    <a style="font-size: 2.3em;color: whitesmoke;" class="btn float-right" (click)="createPDF()"><i class="fa-solid fa-file-pdf"></i></a>
   </p>
 </div>
 <div class="outer" id="print">
@@ -21,9 +22,9 @@
       </table>
      </div>
     <span style="text-align: center">
-      <a class="btn" *ngIf="task.revealActs" style="font-size: 1.8em; text-align: center;" (click)="hideActions(task._id)"><i class="fa-solid fa-xmark" style="color:rgb(182, 8, 8)"></i></a>
-      <a class="btn" *ngIf="!task.revealActs" style="font-size: 1.8em; text-align: center;" (click)="revealActions(task._id)"><i class="fa-solid fa-check" style="color:green"></i></a>
-      <a class="btn"  style="font-size: 1.8em; text-align: center" (click)="flagged(task._id)"><i class="fa-solid fa-trash trash"></i></a>  
+      <a class="btn" *ngIf="task.revealActs" style="font-size: 1.8em; text-align: center;" (click)="hideActions(task._id)"><i class="fa-solid fa-angle-up" style="color:rgb(182, 8, 8)"></i></a>
+      <a class="btn" *ngIf="!task.revealActs" style="font-size: 1.8em; text-align: center;" (click)="revealActions(task._id)"><i class="fa-solid fa-angle-down" style="color:green"></i></a>
+      <a class="btn"  style="font-size: 1.8em; text-align: center" (click)="flagged(task._id)"><i class="fa-solid fa-circle-play" style="color:green"></i></a>  
     </span>
          <div *ngIf="isFlagged(task._id)">
        <button style="font-size: 0.7em" (click)="setFlagOff(task._id)" class="btn btn-primary float-right">cancel</button>
