@@ -1,6 +1,6 @@
 <div class="row">
   <p>
-    <a style="font-size: 2.3em;color: white;" class="btn" (click)="createTasks()"><i class="fa-solid fa-download"></i></a>
+    <a *ngIf="isLoggedIn() && getUserName()=='admin'" style="font-size: 2.3em;color: white;" class="btn" (click)="createTasks()"><i class="fa-solid fa-download"></i></a>
     <a style="font-size: 2.3em;color: whitesmoke;" class="btn float-right" (click)="createPDF()"><i class="fa-solid fa-file-pdf"></i></a>
   </p>
 </div>

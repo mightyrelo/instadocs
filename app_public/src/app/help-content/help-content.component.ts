@@ -4,6 +4,7 @@ import * as html2pdf from 'html2pdf.js';
 
 import { DbTransferService } from '../db-transfer.service';
 import { TaskDataService } from '../task-data.service';
+import {AuthenticationService} from '../authentication.service'
 
 
 import { Task } from '../task';
@@ -21,7 +22,8 @@ export class HelpContentComponent implements OnInit {
 
   constructor(
     private dbTransferService: DbTransferService,
-    private taskDataService: TaskDataService
+    private taskDataService: TaskDataService,
+    private authService : AuthenticationService
   ) { }
 
   public createTasks() : void {
@@ -99,6 +101,21 @@ export class HelpContentComponent implements OnInit {
       .from(content)
       .set(options)
       .save();
+  }
+
+  public isLoggedIn() : boolean {
+    return this.authService.isLoggedIn();
+  }
+
+  public getUserName() : string {
+    if(this.isLoggedIn())
+    {
+      const {name} = this.authService.getCurrentUser();
+      return name ? name : 'Guest';
+    }
+
+    return 'Guest';
+
   }
 
 
