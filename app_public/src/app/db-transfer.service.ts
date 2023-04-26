@@ -26,12 +26,12 @@ export class DbTransferService {
 
   }
 
-  public transferTasks() : Promise<Task[]> {
+  public transferTasks() : Promise<null> {
     const url : string = `${this.apiBaseUrl}/transfer/tasks`;
     return this.http
       .get(url)
       .toPromise()
-      .then(response => response as Task[])
+      .then(response => response as any)
       .catch(this.handleError);
 
   }

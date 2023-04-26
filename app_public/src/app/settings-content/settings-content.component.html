@@ -1,5 +1,44 @@
 <p>
-  User must be able to change their credentials such as email and password
+  <button (click)="resetPassword = true" type="button" style="color: black">reset password</button>
+</p>
+<div *ngIf="!closeForms">
+  <div *ngIf="formSuccess2" class="alert alert-success">
+    <p>{{formSuccess2}}</p>
+  </div>
+  <div *ngIf="resetPassword && !passwordCorrect">
+    <form (ngSubmit)="onPassSubmit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError}}
+        </div>
+      <div class="form-group">
+         <label for="password">current password</label>
+         <input class="form-control" id="password" name="password" type="password" placeholder="" [(ngModel)]="credentials.password">
+      </div> 
+      <div class="form-group">
+      </div>
+      <button  type="submit" role="button" class="btn-primary sm-button">Enter</button>  
+    </form>     
+  </div>
+  <div *ngIf="passwordCorrect">
+    <form (ngSubmit)="onNewPassSubmit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError}}
+        </div>
+      <div class="form-group">
+         <label for="password">new password</label>
+         <input class="form-control" id="password" name="password" type="password" placeholder="" [(ngModel)]="newCredentials.password">
+      </div> 
+      <div class="form-group">
+      </div>
+      <button  type="submit" role="button" class="btn-primary sm-button">Submit</button>  
+    </form>
+  </div>
+</div>
+<div *ngIf="formSuccess" class="alert alert-success">
+  <p>{{formSuccess}}</p>
+</div>
+<p>
+  <button type="button" style="color: black">change email</button>
 </p>
 <p>
   User must be able to select a theme for their quotations and invoices
