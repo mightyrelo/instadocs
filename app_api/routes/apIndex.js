@@ -34,7 +34,7 @@ const invCtrl = require('../controllers/Invoices');
 const compCtrl = require('../controllers/Companies');
 const imgCtrl = require('../controllers/Images');
 const usersCtrl = require('../controllers/Users');
-
+const tasksCtrl = require('../controllers/Tasks');
 
 
 //model/collection routes
@@ -168,6 +168,10 @@ router
   .get(productsCtrl.createDBProducts);
 
 router
+  .route('/transfer/tasks')
+  .get(tasksCtrl.createDBTasks);
+
+router
   .route('/users')
   .get(usersCtrl.usersReadAll);
 
@@ -180,6 +184,18 @@ router
 router
   .route('/users/username/:userName')
   .get(usersCtrl.usersReadByName);
+
+router
+  .route('/tasks')
+  .get(tasksCtrl.tasksReadAll)
+  .post(tasksCtrl.tasksCreateOne);
+//instances/document routes
+router
+  .route('/tasks/:taskId')
+  .get(tasksCtrl.tasksReadOne)
+  .put(tasksCtrl.tasksUpdateOne)
+  .delete(tasksCtrl.tasksDeleteOne);
+
 
 
 module.exports = router;

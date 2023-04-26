@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DbTransferService } from '../db-transfer.service';
+import { TaskDataService } from '../task-data.service';
+
+
+import { Task } from '../task';
+
 @Component({
   selector: 'app-help-content',
   templateUrl: './help-content.component.html',
@@ -7,9 +13,80 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpContentComponent implements OnInit {
 
-  constructor() { }
+  public tasks : Task[];
+
+  public revealActs : boolean = false;
+
+  constructor(
+    private dbTransferService: DbTransferService,
+    private taskDataService: TaskDataService
+  ) { }
+
+  public createTasks() : void {
+    this.dbTransferService
+      .transferTasks()
+      .then(rsp => {});
+  }
+
+  private getTasks() : void {
+    this.taskDataService.getTasks()
+      .then(tasks => {
+        this.tasks = tasks;
+      });
+  }
+
+  public flagged(taskId: string) : boolean {
+    for(let i = 0; i < this.tasks.length; i++){
+      if(this.tasks[i]._id == taskId){
+        this.tasks[i].flagged = true;
+      }
+    }
+    return false;
+  }
+
+  public isFlagged(taskId: string) : boolean {
+    for(let i = 0; i < this.tasks.length; i++){
+      if(this.tasks[i]._id == taskId){
+        if(this.tasks[i].flagged){
+          return true;
+        } else return false;
+
+      }
+    }
+  }
+
+  public setFlagOff(taskId: string) : void {
+    for(let i = 0; i < this.tasks.length; i++) {
+      if(this.tasks[i]._id === taskId) {
+        this.tasks[i].flagged = false;
+      }
+    }
+  }
+
+  public deleteTask(taskId: string) : void {
+    this.taskDataService.deleteTask(taskId)
+      .then(response => {if(!response){console.log('deleted');this.getTasks()}});
+  }
+
+
+  public revealActions(taskId: string) : void {
+    for(let i = 0; i < this.tasks.length; i++) {
+      if(this.tasks[i]._id === taskId) {
+        this.tasks[i].revealActs = true;
+      }
+    }
+  }
+
+  public hideActions(taskId: string) : void {
+    for(let i = 0; i < this.tasks.length; i++) {
+      if(this.tasks[i]._id === taskId) {
+        this.tasks[i].revealActs = false;
+      }
+    }
+  }
 
   ngOnInit() {
+    this.getTasks();
   }
 
 }

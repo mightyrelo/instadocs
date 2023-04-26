@@ -1,7 +1,33 @@
-<p>
-  here I'm seeing a simple table with three columns.
-  Column1 names a task, column2 names the steps and the third column is a short clip on how to do the task.
-  This leads to me create a model of a task. Its attributes will be name, a list of steps and a video or a link
-  to a video.
-  The user manual will basically be the first two columns of the table
-</p>
+<div class="row">
+  <p>
+    <a style="font-size: 2.3em;color: white;" class="btn float-right" (click)="createTasks()"><i class="fa-solid fa-file-pdf"></i></a>
+  </p>
+</div>
+<div class="outer">
+  <div *ngFor="let task of tasks" class="card">
+    <div class="card-block"> 
+    </div>
+    <h4> <a style="color: black;" class="heading">{{task.name}}</a></h4>
+    <div *ngIf="task.revealActs">
+      <table>
+        <tr>
+          <th style="text-align: center;">action</th>
+          <th style="text-align: center;">outcome</th>
+        </tr>
+        <tr *ngFor="let pair of task.actionResponses" style="color: black;">
+          <td style="border: 1px solid black;">{{pair.action}}</td>
+          <td style="border: 1px solid black;">{{pair.response}}</td>
+        </tr>
+      </table>
+     </div>
+    <span style="text-align: center">
+      <a class="btn" *ngIf="task.revealActs" style="font-size: 1.8em; text-align: center;" (click)="hideActions(task._id)"><i class="fa-solid fa-xmark" style="color:rgb(182, 8, 8)"></i></a>
+      <a class="btn" *ngIf="!task.revealActs" style="font-size: 1.8em; text-align: center;" (click)="revealActions(task._id)"><i class="fa-solid fa-check" style="color:green"></i></a>
+      <a class="btn"  style="font-size: 1.8em; text-align: center" (click)="flagged(task._id)"><i class="fa-solid fa-trash trash"></i></a>  
+    </span>
+         <div *ngIf="isFlagged(task._id)">
+       <button style="font-size: 0.7em" (click)="setFlagOff(task._id)" class="btn btn-primary float-right">cancel</button>
+       <button style="font-size: 0.7em" (click)="deleteTask(task._id)" class="btn btn-primary float-right">are you sure?</button>
+     </div>
+ </div>
+</div>

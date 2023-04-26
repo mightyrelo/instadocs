@@ -398,7 +398,6 @@ export class ViewProductsContentComponent implements OnInit {
       this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
       .then(foundSubProducts => {
         this.subProducts = foundSubProducts;
-        console.log('length of found', foundSubProducts.length);
         this.products = foundSubProducts;
       })
     }

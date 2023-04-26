@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../environments/environment';
 
+import { Task } from './task';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +22,16 @@ export class DbTransferService {
       .get(url)
       .toPromise()
       .then(response => response as any)
+      .catch(this.handleError);
+
+  }
+
+  public transferTasks() : Promise<Task[]> {
+    const url : string = `${this.apiBaseUrl}/transfer/tasks`;
+    return this.http
+      .get(url)
+      .toPromise()
+      .then(response => response as Task[])
       .catch(this.handleError);
 
   }
