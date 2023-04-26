@@ -3,7 +3,7 @@
     <a style="font-size: 2.3em;color: white;" class="btn float-right" (click)="createTasks()"><i class="fa-solid fa-file-pdf"></i></a>
   </p>
 </div>
-<div class="outer">
+<div class="outer" id="print">
   <div *ngFor="let task of tasks" class="card">
     <div class="card-block"> 
     </div>
@@ -30,4 +30,9 @@
        <button style="font-size: 0.7em" (click)="deleteTask(task._id)" class="btn btn-primary float-right">are you sure?</button>
      </div>
  </div>
+</div>
+<div>
+  <p> 
+    <a style="font-size: 2.3em;color: whitesmoke;" class="btn float-right" (click)="createPDF()"><i class="fa-solid fa-file-pdf"></i></a>
+  </p>
 </div>

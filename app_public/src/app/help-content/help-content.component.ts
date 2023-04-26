@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as html2pdf from 'html2pdf.js';
+
 import { DbTransferService } from '../db-transfer.service';
 import { TaskDataService } from '../task-data.service';
 
@@ -84,6 +86,21 @@ export class HelpContentComponent implements OnInit {
       }
     }
   }
+
+  public createPDF() : void {
+    const options = {
+      filename: `InstaDocs_UserManual.pdf`,
+      html2canvas: {},
+      jsPDF: {orientation: 'landscape'}
+    };
+    const content: Element = document.getElementById('print');
+    
+    html2pdf()
+      .from(content)
+      .set(options)
+      .save();
+  }
+
 
   ngOnInit() {
     this.getTasks();
