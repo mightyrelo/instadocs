@@ -15,8 +15,26 @@ export class SettingsContentComponent implements OnInit {
   public formSuccess = '';
   public formSuccess2 = '';
 
+  public formError2 = '';
+  public formSuccess3 = '';
+  public formSuccess4 = '';
+
+  public selectTemplate : boolean = false;
+
 
   public credentials : User = {
+    email: '',
+    password: '',
+    name: '',
+    _id: '',
+    createdOn: '',
+    flagged: null,
+    completedQuotes: null,
+    completedInvoices: null,
+    completedPOs: null,
+  };
+
+  public credentials2 : User = {
     email: '',
     password: '',
     name: '',
@@ -40,9 +58,24 @@ export class SettingsContentComponent implements OnInit {
     completedPOs: null,
   };
 
+  public newCredentials2 : User = {
+    email: '',
+    password: '',
+    name: '',
+    _id: '',
+    createdOn: '',
+    flagged: null,
+    completedQuotes: null,
+    completedInvoices: null,
+    completedPOs: null,
+  };
+
   public resetPassword : boolean = false;
   public passwordCorrect : boolean = false;
+  public passwordCorrect2 : boolean = false;
   public closeForms : boolean = false;
+  public closeForms2 : boolean = false;
+  public changeEmail : boolean = false;
 
   constructor(
     private authService : AuthenticationService,
@@ -68,6 +101,7 @@ export class SettingsContentComponent implements OnInit {
    this.userDataService.getUserByName(this.getUserName())
      .then(user => {
       this.newCredentials._id = user._id;
+      this.newCredentials2._id = user._id;
     });
   }
 
@@ -88,6 +122,23 @@ export class SettingsContentComponent implements OnInit {
     
   }
 
+  public onPass2Submit() : void {
+    //attempt to login
+    this.credentials2.email = this.getUserEmail();
+    this.authService.login(this.credentials2)
+      .then(() => {
+        //provided password is valid
+        this.passwordCorrect2 = true;
+        this.formError2 = '';
+        this.formSuccess3 = 'password correct';
+      })
+      .catch((message) => {
+        this.formError2 = 'incorrect password';
+        //invalid password
+      });
+    
+  }
+
   public onNewPassSubmit() : void {
 
     this.userDataService.updateUser(this.newCredentials)
@@ -98,10 +149,27 @@ export class SettingsContentComponent implements OnInit {
 
   };
 
+  public onNewEmailSubmit() : void {
+
+    this.userDataService.updateUser(this.newCredentials2)
+      .then(() => {
+        this.formSuccess4 = 'Email changed successfully!';
+        this.closeAndResetForm2();
+      });
+
+  };
+
   public closeAndResetForm() : void {
     this.closeForms = true;
 
   }
+
+  public closeAndResetForm2() : void {
+    this.closeForms2 = true;
+
+  }
+
+  public useTemplate(tempId: string) : void {}
 
 
   private getUserEmail() : string {
@@ -112,6 +180,7 @@ export class SettingsContentComponent implements OnInit {
     }
     return 'Guest';
   }
+
 
 
   ngOnInit() : void{

@@ -37,9 +37,74 @@
 <div *ngIf="formSuccess" class="alert alert-success">
   <p>{{formSuccess}}</p>
 </div>
-<p>
+
+<p (click)="changeEmail = true">
   <button type="button" style="color: black">change email</button>
 </p>
+<div *ngIf="formSuccess3" class="alert alert-success">
+  <p>{{formSuccess3}}</p>
+</div>
+<div *ngIf="!closeForms2">
+  <div *ngIf="changeEmail && !passwordCorrect2">
+    <form (ngSubmit)="onPass2Submit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError2}}
+        </div>
+      <div class="form-group">
+         <label for="password">password</label>
+         <input class="form-control" id="password" name="password" type="password" placeholder="" [(ngModel)]="credentials2.password">
+      </div> 
+      <div class="form-group">
+      </div>
+      <button  type="submit" role="button" class="btn-primary sm-button">Enter</button>  
+    </form>     
+  </div>
+  <div *ngIf="passwordCorrect2">
+    <form (ngSubmit)="onNewEmailSubmit()" method="post" role="form">
+      <div *ngIf="formError" class="alert alert-danger">
+        {{formError3}}
+        </div>
+      <div class="form-group">
+         <label for="password">new email</label>
+         <input class="form-control" id="password" name="password" type="email" placeholder="" [(ngModel)]="newCredentials2.email">
+      </div> 
+      <div class="form-group">
+      </div>
+      <button  type="submit" role="button" class="btn-primary sm-button">Submit</button>  
+    </form>
+  </div>  
+</div>
+<div *ngIf="formSuccess4" class="alert alert-success">
+<p>{{formSuccess4}}</p>
+</div>
+
+<hr>
+
 <p>
-  User must be able to select a theme for their quotations and invoices
+  <button (click)="selectTemplate = true" type="button" style="color: black">select template</button>
 </p>
+<div *ngIf="selectTemplate">
+  <div class="col-12 col-md-6 location-map">
+    <div class="card card-primary">
+      <div class="card-block">
+        <a class="btn"  style="font-size: 1.8em; float:right;" (click)="useTemplate(task._id)"><i class="fa-solid fa-check" style="color:green"></i></a>
+        <h2 class="card-title">Template 1 </h2>
+            <img class="img-fluid roundedrounded"  src='/assets/images/productImage.jpg' alt='map of location' height="660">
+      </div>
+    </div>
+    <div class="card card-primary">
+      <div class="card-block">
+        <a class="btn"  style="font-size: 1.8em; float:right;" (click)="useTemplate(task._id)"><i class="fa-solid fa-check" style="color:green"></i></a>
+        <h2 class="card-title">Template 2</h2>
+            <img class="img-fluid roundedrounded"  src='/assets/images/productImage.jpg' alt='map of location' height="660">
+      </div>
+    </div>
+    <div class="card card-primary">
+      <div class="card-block">
+        <a class="btn"  style="font-size: 1.8em; float:right;" (click)="useTemplate(task._id)"><i class="fa-solid fa-check" style="color:green"></i></a>
+        <h2 class="card-title">Template 3</h2>
+            <img class="img-fluid roundedrounded"  src='/assets/images/productImage.jpg' alt='map of location' height="660">
+      </div>
+    </div>
+  </div>
+</div>
