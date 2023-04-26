@@ -1,8 +1,18 @@
-<p>
-  User must be able to download the latest pricing for any category that they are interested in.
-  If the user already has the product in their db, only the price should be updated, it should not
-  be added again.
-</p>
-<p>
-  Users must also be able to download the user manual in pdf format
-</p>
+<div class="card">
+  <form (ngSubmit)="onPricelistSubmit()" method="post" role="form">
+    <div *ngIf="formError" class="alert alert-danger">
+      {{formError}}
+    </div> 
+    <div class="form-group">
+      <label for="list">Select Pricelist</label>
+      <select  [(ngModel)]="formUser.pricelist" class="form-control bg" id="category" name="list">
+          <option  class="form-control bg" *ngFor="let list of pricelistsFull">{{list}}</option>
+      </select>
+    </div>
+    <small><button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button> </small>
+  </form>
+</div>
+<div *ngIf="dataTransferred" class="alert alert-success">
+  <p>{{dataTransferred}}</p>
+  </div>
+

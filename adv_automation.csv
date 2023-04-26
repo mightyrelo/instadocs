@@ -28,8 +28,8 @@ GA31-5;Loop Detector - Single Channel 12V SS;570;399;655.5;458.85;loop_detector;
 GA31-6;Loop Detector - Single Channel 12V MD201;449;377.14;516.35;433.711;loop_detector;auto
 GA31-7;Loop Detector - FLUX SA 1Ch 12-24V AC-DC;705.71;494;811.5665;568.1;loop_detector;auto
 GA31-8;Loop Detector - FLUX 11 Pin 1Ch 12-24V;984.29;689;1131.9335;792.35;loop_detector;auto
-GA81-4;CENTINEL 3 / 4.5 / 6m Mild Steel ex Pole;7773.00;10104.9;8938.95;11620.635;cent_barrier;auto
-GA81-5;CENTINEL 3 / 4.5 / 6m Stainless ex Pole;8320.00;10816;9568;12438.4;cent_barrier;auto
+GA81-4;CENTINEL 3 - 4.5 - 6m Mild Steel ex Pole;7773.00;10104.9;8938.95;11620.635;cent_barrier;auto
+GA81-5;CENTINEL 3 - 4.5 - 6m Stainless ex Pole;8320.00;10816;9568;12438.4;cent_barrier;auto
 GA84-3;SECTOR II DC 3m Barrier Kit Mild Steel;16119.00;20954.7;18536.85;24097.905;cent_barrier;auto
 GA84-4;SECTOR II DC 4.5m Barrier Kit Mild Steel;17294.00;22482.2;19888.1;25854.53;cent_barrier;auto
 GA84-6;SECTOR II DC 6m Barrier Kit Mild Steel;18275.00;23757.5;21016.25;27321.125;cent_barrier;auto

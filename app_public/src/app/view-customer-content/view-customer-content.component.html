@@ -86,7 +86,7 @@
                     <a routerLink="/login"><button class="btn-primary float-right" *ngSwitchDefault>login to quote</button></a>
                   </small>
                 </div>
-                <div *ngIf="displayForm" class="col-12 col-md-8">
+                <div *ngIf="displayForm" class="card">
                     <app-quote-form-sp *ngIf="getUserName()=='thabethe'" [dbCustomer]="dbCustomer" [displayForm]="displayForm"
                       (formClosedEvent)="onFormClosedEvent($event)" [dbProducts]="products"
                       [aacProducts]="acProducts" [wireProducts]="wireProducts" [battProducts]="battProducts"

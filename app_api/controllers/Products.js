@@ -287,7 +287,7 @@ const createDBProducts = (req, res) => {
           })
         .on("end", ()=>{
           console.log(count,' products read from cvs to db.');
-          //sendJSONResponse(res, 201, products);
+          sendJSONResponse(res, 201, products);
         });  
     }
     else {
@@ -308,7 +308,7 @@ const createDBProducts = (req, res) => {
           })
         .on("end", ()=>{
           console.log(count,' products read from cvs to db.');
-          //sendJSONResponse(res, 201, products);
+          sendJSONResponse(res, 201, products);
         });         
     }
        

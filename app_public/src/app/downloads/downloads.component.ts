@@ -10,7 +10,7 @@ export class DownloadsComponent implements OnInit {
   public pageContent = {
     header: {
       title: 'Download',
-      strapline: 'Get the latest prices'
+      strapline: 'sync with latest prices'
     },
     sideBar: {
       main: '',

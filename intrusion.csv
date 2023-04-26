@@ -19,7 +19,7 @@ CP443W;Ajax VHF Bridge White;1777.00;2043.55;2043.55;2350.0825;ajax;intr
 ;"REMOTE CONTROLS; RELAYS; SWITCHES AND TRANSMITTERS";;;0;0;ajax;intr
 SW420B;Ajax Button black;418.00;480.70;480.7;552.805;ajax;intr
 SW420W;Ajax Button white;420.00;483.00;483;555.45;ajax;intr
-SW421B;Ajax Holder for Button/DoubleButton blac;77.70;89.36;89.355;102.764;ajax;intr
+SW421B;Ajax Holder for Button-DoubleButton blac;77.70;89.36;89.355;102.764;ajax;intr
 SW421W;Ajax holder for Button;66.00;75.90;75.9;87.285;ajax;intr
 SW422B;Ajax Tag Black;78.90;91.31;90.735;105.0065;ajax;intr
 SW422W;Ajax Tag White;78.90;91.31;90.735;105.0065;ajax;intr
@@ -37,13 +37,13 @@ SW431;Ajax uartBridge;426.70;494.50;490.705;568.675;ajax;intr
 ;;;;0;0;ajax;intr
 Prices are subject to change without prior notice.;;;;0;0;ajax;intr
 E&OE. Valid until 31st March 2023.;Page: 27;;;0;0;ajax;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;ajax;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;ajax;intr
 ;;;;0;0;ajax;intr
 Trade Price List;;;;0;0;ajax;intr
 INTRUSION;;;;0;0;ajax;intr
 Our Code;Item Description;Trade Excl VAT;Trade Incl VAT;#VALUE!;#VALUE!;ajax;intr
 POWER SUPPLY MODULES;;;;0;0;ajax;intr
-PS420;Ajax 12V PSU for Hub/Hub Plus /Rex;335.40;385.71;385.71;443.5665;ajax;intr
+PS420;Ajax 12V PSU for Hub-Hub Plus -Rex;335.40;385.71;385.71;443.5665;ajax;intr
 PS421;Ajax 12V PSU for Hub 2;335.40;385.71;385.71;443.5665;ajax;intr
 PS422;Ajax 6V PSU for Hub 2 Plus;315.50;364.55;362.825;419.2325;ajax;intr
 DOOR SENSORS;;;;0;0;ajax;intr
@@ -85,7 +85,7 @@ SD421W;Ajax StreetSiren white;1675.50;1926.83;1926.825;2215.8545;ajax;intr
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 28;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 INTRUSION;;;;0;0;;intr
@@ -94,7 +94,7 @@ HUB TECHNICAL SPECIFICATIONS;;;;0;0;;intr
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 29;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -106,8 +106,8 @@ CP221-K1;LightSYS Plus Kit 1 Standard PSU and Hou;2595.00;2984.25;2984.25;3431.8
 CP221-K2;LightSYS Plus Kit 2 Large PSU and Housin;3375.00;3881.25;3881.25;4463.4375;lightsys;intr
 LightSYS2 - LightSYS Plus Keypads;;;;0;0;lightsys;intr
 CP181-6;LightSYS LCD Keypad;773.00;888.95;888.95;1022.2925;lightsys;intr
-CP181-8;"Elegant Keypad; White w/Prox";2011.00;2312.65;2312.65;2659.5475;lightsys;intr
-CP182-8;"Elegant Keypad; Black w/ Prox";1998.00;2297.70;2297.7;2642.355;lightsys;intr
+CP181-8;"Elegant Keypad; White w-Prox";2011.00;2312.65;2312.65;2659.5475;lightsys;intr
+CP182-8;"Elegant Keypad; Black w- Prox";1998.00;2297.70;2297.7;2642.355;lightsys;intr
 CP181-9;Panda Wired Keypad without Prox;1461.00;1680.15;1680.15;1932.1725;lightsys;intr
 CP181-10;RisControl IPS Touchscreen KP;4512.00;5188.80;5188.8;5967.12;lightsys;intr
 CP182-7;LightSYS Panda Wireless Keypad 868MHz;1825.00;2098.75;2098.75;2413.5625;lightsys;intr
@@ -120,8 +120,8 @@ CP189-1;LightSys & ProSys Plus 32 Zone WL Rec 86;859.00;987.85;987.85;1136.0275;
 CP182-10;Risco 2-Way Wireless Slim White Keypad;1582.80;1820.22;1820.22;2093.253;lightsys;intr
 LightSYS2 - LightSYS Plus PSU;;;;0;0;lightsys;intr
 CP174-1;PROSYS PSU Bus pcb Exp 3A 16VAC Input;1432.00;1646.80;1646.8;1893.82;lightsys;intr
-CP174-2;"L & P 3A PSU w/ 2 outputs; Metal Box";2196.00;2525.40;2525.4;2904.21;lightsys;intr
-CP174-3;Supervised 3A Power Supply PCB w/ 2 O;1728.00;1987.20;1987.2;2285.28;lightsys;intr
+CP174-2;"L & P 3A PSU w- 2 outputs; Metal Box";2196.00;2525.40;2525.4;2904.21;lightsys;intr
+CP174-3;Supervised 3A Power Supply PCB w- 2 O;1728.00;1987.20;1987.2;2285.28;lightsys;intr
 LightSYS2 - LightSYS Plus Connect;;;;0;0;lightsys;intr
 CP184;ProSYS Plus & LightSYS IP Plug-in Module;973.00;1118.95;1118.95;1286.7925;lightsys;intr
 CP194;LightSYS2 Adaptor from panel to PC USB;2263.49;2603.01;2603.0135;2993.4615;lightsys;intr
@@ -137,7 +137,7 @@ RCP221-8;LightSYS Plus large plastic box + TMP;1059.00;1217.85;1217.85;1400.5275
 ;;;;0;0;lightsys;intr
 Prices are subject to change without prior notice.;;;;0;0;lightsys;intr
 E&OE. Valid until 31st March 2023.;Page: 30;;;0;0;lightsys;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;lightsys;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;lightsys;intr
 ;;;;0;0;lightsys;intr
 Trade Price List;;;;0;0;lightsys;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;lightsys;intr
@@ -148,8 +148,8 @@ RCP180;ProSYS Plus Kit Main Plus Power Supply;2977.00;3423.55;3423.55;3937.0825;
 RCP165-3-1;PROSYS Metal Box White;532.80;612.72;612.72;704.628;lightsys;intr
 ProSYS PLUS Keypad;;;;0;0;lightsys;intr
 CP181-1;ProSYS LCD Keypad with icons;1299.82;1494.79;1494.793;1719.0085;lightsys;intr
-CP181-8;"Elegant Keypad; White w/Prox";2011.00;2312.65;2312.65;2659.5475;lightsys;intr
-CP182-8;"Elegant Keypad; Black w/ Prox";1998.00;2297.70;2297.7;2642.355;lightsys;intr
+CP181-8;"Elegant Keypad; White w-Prox";2011.00;2312.65;2312.65;2659.5475;lightsys;intr
+CP182-8;"Elegant Keypad; Black w- Prox";1998.00;2297.70;2297.7;2642.355;lightsys;intr
 CP181-9;Panda Wired Keypad without Prox;1461.00;1680.15;1680.15;1932.1725;lightsys;intr
 CP181-10;RisControl IPS Touchscreen KP;4512.00;5188.80;5188.8;5967.12;lightsys;intr
 CP182-7;LightSYS Panda Wireless Keypad 868MHz;1825.00;2098.75;2098.75;2413.5625;lightsys;intr
@@ -169,8 +169,8 @@ CP189;LightSys & ProSys plus 32 Zone WL Rec 43;935.00;1075.25;1075.25;1236.5375;
 CP189-1;LightSys & ProSys Plus 32 Zone WL Rec 86;859.00;987.85;987.85;1136.0275;lightsys;intr
 ProSYS PLUS PSU;;;;0;0;lightsys;intr
 CP174-1;PROSYS PSU Bus pcb Exp 3A 16VAC Input;1432.00;1646.80;1646.8;1893.82;lightsys;intr
-CP174-2;"L & P 3A PSU w/ 2 outputs; Metal Box";2196.00;2525.40;2525.4;2904.21;lightsys;intr
-CP174-3;Supervised 3A Power Supply PCB w/ 2 O;1728.00;1987.20;1987.2;2285.28;lightsys;intr
+CP174-2;"L & P 3A PSU w- 2 outputs; Metal Box";2196.00;2525.40;2525.4;2904.21;lightsys;intr
+CP174-3;Supervised 3A Power Supply PCB w- 2 O;1728.00;1987.20;1987.2;2285.28;lightsys;intr
 CP174-4;ProSYS BASIC B2BOX Only  + Tamper Switch;896.00;1030.40;1030.4;1184.96;lightsys;intr
 RCP221-3;4.5Amp Power Supply without AC cable;485.00;557.75;557.75;641.4125;lightsys;intr
 ProSYS PLUS License;;;;0;0;lightsys;intr
@@ -178,7 +178,7 @@ CPS001;ProSYS Plus Single Zone License;45.60;52.44;52.44;60.306;lightsys;intr
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 31;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -218,7 +218,7 @@ BD162-9;PIR Beyond 180 Deg Swivel Bracket for BD;319.00;366.85;366.85;421.8775;r
 ;;;;0;0;risco;intr
 Prices are subject to change without prior notice.;;;;0;0;risco;intr
 E&OE. Valid until 31st March 2023.;Page: 32;;;0;0;risco;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;risco;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;risco;intr
 ;;;;0;0;risco;intr
 Trade Price List;;;;0;0;risco;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;risco;intr
@@ -256,7 +256,7 @@ CPW03;Z-wave In Wall Dual Relay (1 Way) Switch;756.00;869.40;869.4;999.81;risco;
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 33;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -297,8 +297,8 @@ CP48-12;IDS Remote Rx Analogue Bus 2 Channel 3A;341.00;392.15;392.15;450.9725;id
 CP62-3;IDS 805 Key-Bus Interface Module;264.00;303.60;303.6;349.14;ids;intr
 SW195;IDS 4 Button Transmitter;135.40;155.71;155.71;179.0665;ids;intr
 SW195-6;IDS XSeries Remote Receiver Kit;557.00;640.55;640.55;736.6325;ids;intr
-CP43-2;IDS 805 Control Card N/Comms;692.00;795.80;795.8;915.17;ids;intr
-CP43-3;IDS 805 Control Card W/Comms;720.00;828.00;828;952.2;ids;intr
+CP43-2;IDS 805 Control Card N-Comms;692.00;795.80;795.8;915.17;ids;intr
+CP43-3;IDS 805 Control Card W-Comms;720.00;828.00;828;952.2;ids;intr
 CP60-2;IDS X16 8 Zone Alarm PCB Only;1364.00;1568.60;1568.6;1803.89;ids;intr
 CP60-3;IDS X16 8 Zone Alarm PCB Only 24VDC;941.00;1082.15;1082.15;1244.4725;ids;intr
 CP43-4;IDS X64 Control Card;1334.00;1534.10;1534.1;1764.215;ids;intr
@@ -326,7 +326,7 @@ CP62-15;IDS HYYP GSM Module for X Series Serial;1547.00;1779.05;1779.05;2045.907
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 34;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -380,7 +380,7 @@ SW147-3;DSC NEO KEYFOB 868MHz;462.00;531.30;531.3;610.995;dsc;intr
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 35;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -408,13 +408,13 @@ BD99-7;PIR Optex CX 702 Wired Industrial Indoor;960.00;1104.00;1104;1269.6;optex
 BD99-8;Optex CDX NAM Indoor PIR AM 24 x 15m Gr3;850.00;977.50;977.5;1124.125;optex;intr
 BD99-9;Optex RXC DT X5 Wired Industrial PIR;515.00;592.25;592.25;681.0875;optex;intr
 BD99-2;PIR Optex Bracket CA1W;153.00;175.95;175.95;202.3425;optex;intr
-BD39;PIR Paradox Pro 12m PA1081/476+;201.00;231.15;231.15;265.8225;paradox;intr
+BD39;PIR Paradox Pro 12m PA1081-476+;201.00;231.15;231.15;265.8225;paradox;intr
 BD39-1;PIR Paradox PMD75 WL Digital Pet 40kg PA;1071.00;1231.65;1231.65;1416.3975;paradox;intr
 BD42-4;PIR - Paradox Digiguard 75 Pet 40Kg;427.00;491.05;491.05;564.7075;paradox;intr
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 36;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -423,7 +423,7 @@ Our Code;Item Description;Trade Excl VAT;Trade Incl VAT;#VALUE!;#VALUE!;;intr
 BD129;PIR - Askari Outdoor Dual 5-22m 108 Deg;983.00;1130.45;1130.45;1300.0175;;intr
 BD132;SP Out Detector Dual PIR MW;545.00;626.75;626.75;720.7625;;intr
 BD132-1;SP Bracket 180 Deg for BD132 Out Detecto;49.80;57.27;57.27;65.8605;;intr
-BD39-5;PIR Paradox DG85 Out W/Pet Lens Bracket;1460.00;1679.00;1679;1930.85;paradox;intr
+BD39-5;PIR Paradox DG85 Out W-Pet Lens Bracket;1460.00;1679.00;1679;1930.85;paradox;intr
 BD40-2;PIR - Paradox NV780MX Dual Side AM OD;1698.00;1952.70;1952.7;2245.605;paradox;intr
 BD39-9;PIR - Paradox Wireless MG-PMD2;810.00;931.50;931.5;1071.225;paradox;intr
 BD39-10;PIR Paradox PMD85 Out WL 2 Lens PA-3730;1808.00;2079.20;2079.2;2391.08;paradox;intr
@@ -447,9 +447,9 @@ BD87;PIR Optex LX402C Wide Angle;660.00;759.00;759;872.85;optex;intr
 BD126;PIR Takex Outdoor 14 lenses 90 Degree;949.00;1091.35;1091.35;1255.0525;takex;intr
 BD126-1;PIR Takex Outdoor Dual Pet 180 Degree;1625.00;1868.75;1868.75;2149.0625;takex;intr
 BD126-2;PIR Takex Outdoor Dual Pet 90Deg MS-12TE;1349.00;1551.35;1551.35;1784.0525;takex;intr
-BD126-3;PIR Takex O/Door W/Less Dual Pet 180 Deg;2289.00;2632.35;2632.35;3027.2025;takex;intr
+BD126-3;PIR Takex O-Door W-Less Dual Pet 180 Deg;2289.00;2632.35;2632.35;3027.2025;takex;intr
 BD126-4;PIR Takex Outdoor Dual Zone 180 Deg AM;1865.00;2144.75;2144.75;2466.4625;takex;intr
-BD127;PIR Takex O/Door Dual 180 Degree OMS-12F;1517.00;1744.55;1744.55;2006.2325;takex;intr
+BD127;PIR Takex O-Door Dual 180 Degree OMS-12F;1517.00;1744.55;1744.55;2006.2325;takex;intr
 BD127-6;Takex Theft Resistant Bracket and Lock;394.00;453.10;453.1;521.065;takex;intr
 ;OPTEX PERIMETER BEAMS;;;0;0;;intr
 BD83;BEAM - Optex AX130TN Dual 40M;1134.50;1304.68;1304.675;1500.382;optex;intr
@@ -457,9 +457,9 @@ BD83-1;BEAM - Optex SL-350QN Dual 100M;4442.00;5108.30;5108.3;5874.545;optex;int
 BD83-2;BEAM - Optex SL-650QN Dual 200M;4908.00;5644.20;5644.2;6490.83;optex;intr
 BD83-4;BEAM - Optex 250m Quad Active IR Outdoor;1999.00;2298.85;2298.85;2643.6775;optex;intr
 ;PASSIVES - OUTDOOR WIRELESS SYSTEM;;;0;0;;intr
-BD300-3;RoboGuard O/door Tx 20m DPIR Brk Black;1650.00;1897.50;1897.5;2182.125;robo;intr
-BD300-4;RoboGuard O/door Tx 20m DPIR Brkt Green;1650.00;1897.50;1897.5;2182.125;robo;intr
-BD300-5;RoboGuard O/door Tx 20m DPIR Brkt White;1650.00;1897.50;1897.5;2182.125;robo;intr
+BD300-3;RoboGuard O-door Tx 20m DPIR Brk Black;1650.00;1897.50;1897.5;2182.125;robo;intr
+BD300-4;RoboGuard O-door Tx 20m DPIR Brkt Green;1650.00;1897.50;1897.5;2182.125;robo;intr
+BD300-5;RoboGuard O-door Tx 20m DPIR Brkt White;1650.00;1897.50;1897.5;2182.125;robo;intr
 BD304-1;RoboGuard HQ 8 Zone ONLY EXCL Charger;935.87;1076.25;1076.2505;1237.6875;robo;intr
 BD305;RoboGuard Keypad 4 Zone Fixed Interface;289.30;332.70;332.695;382.605;robo;intr
 BD306;RoboGuard Visual LED Indicator;209.24;240.63;240.626;276.7245;robo;intr
@@ -477,7 +477,7 @@ BA28-2;BATT KINETIC Alkaline Size C Medium 2 Pc;42.40;48.76;48.76;56.074;robo;in
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 37;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -495,7 +495,7 @@ CN07;Connector Block - 6A Std Black;12.10;13.92;13.915;16.008;al_acc;intr
 CN07-1;Connector Block - 15A 12 Way Black;14.60;16.79;16.79;19.3085;al_acc;intr
 CN08;Door Loop - Expandable White;199.00;228.85;228.85;263.1775;al_acc;intr
 CN22;SP Armoured Silver Door Loop;122.00;140.30;140.3;161.345;al_acc;intr
-CN23;SP S/less Steel Door Loop 40cm;249.00;286.35;286.35;329.3025;al_acc;intr
+CN23;SP S-less Steel Door Loop 40cm;249.00;286.35;286.35;329.3025;al_acc;intr
 CN12;Junction Box  - 24 Way White;59.20;68.08;68.08;78.292;al_acc;intr
 CN13;Junction Box - 8 Way Brown;11.20;12.88;12.88;14.812;al_acc;intr
 CN14;Junction Box - 8 Way White;13.10;15.07;15.065;17.3305;al_acc;intr
@@ -505,12 +505,12 @@ CN26;Junction Box - Multipurpose 120x114x42mm;36.50;41.98;41.975;48.277;al_acc;i
 CN27;Junction Box - 6 Way 64x44x29mm EHJ3;17.00;19.55;19.55;22.4825;al_acc;intr
 CN28;Junction Box - 20 Way 124x80x25mm EHJ1;21.30;24.50;24.495;28.175;al_acc;intr
 CN17;Encolsure - Utility Box White;20.40;23.46;23.46;26.979;al_acc;intr
-CN18;Connector - UY2 Scotch Lock / 100;107.00;123.05;123.05;141.5075;al_acc;intr
+CN18;Connector - UY2 Scotch Lock - 100;107.00;123.05;123.05;141.5075;al_acc;intr
 POWER SUPPLIES - AC;;;;0;0;al_acc;intr
 PS25;PSU - 24VAC 2Amp;394.00;453.10;453.1;521.065;al_acc;intr
-PS30;T/Former Plug-in 16VAC 1.25A;175.00;201.25;201.25;231.4375;al_acc;intr
+PS30;T-Former Plug-in 16VAC 1.25A;175.00;201.25;201.25;231.4375;al_acc;intr
 PS51;SP PS 16VAC 2.5Amp Transformer;214.00;246.10;246.1;283.015;al_acc;intr
-LT19;SP PS 12/16VAC 50VA Protected Transforme;319.00;366.85;366.85;421.8775;al_acc;intr
+LT19;SP PS 12-16VAC 50VA Protected Transforme;319.00;366.85;366.85;421.8775;al_acc;intr
 STROBE & SIREN COMBO's;;;;0;0;al_acc;intr
 SD50;SP Siren & Strobe Red;169.00;194.35;194.35;223.5025;al_acc;intr
 SD51;SP Alarm Siren & Strobe Red;179.00;205.85;205.85;236.7275;al_acc;intr
@@ -533,7 +533,7 @@ HW05;Venus Alarm Adaptor RJ11 Socket plus Con;23.40;26.91;26.91;30.9465;al_acc;i
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 38;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "CONTROL PANELS; BEAMS; DETECTORS AND ACCESSORIES";;;;0;0;;intr
@@ -567,21 +567,21 @@ ES02;Emergency Sw - Latching Panic;26.70;30.71;30.705;35.3165;al_sw;intr
 ES04;SP Emergency Switch NO & NC Wht;23.60;27.14;27.14;31.211;al_sw;intr
 ES04-1;SP Emergency Switch NO & NC Luminous;24.90;28.64;28.635;32.936;al_sw;intr
 ES05;SP Emergency Switch NO & NC Wht;26.70;30.71;30.705;35.3165;al_sw;intr
-ES14;Push Button - Heavy Duty R/ST-17 N/O;224.00;257.60;257.6;296.24;al_sw;intr
-ES14-1;Push Button - Heavy Duty R/ST-15 N/C;221.00;254.15;254.15;292.2725;al_sw;intr
+ES14;Push Button - Heavy Duty R-ST-17 N-O;224.00;257.60;257.6;296.24;al_sw;intr
+ES14-1;Push Button - Heavy Duty R-ST-15 N-C;221.00;254.15;254.15;292.2725;al_sw;intr
 ES15;Push Panic Single Non-Latch;178.00;204.70;204.7;235.405;al_sw;intr
 MAGNETIC CONTACTS;;;;0;0;;intr
-MC01;Mag Contact Flush Mnt N/C;26.90;30.94;30.935;35.581;mag_contact;intr
-MC02;Flush Mount Mag - N/O;68.60;78.89;78.89;90.7235;mag_contact;intr
+MC01;Mag Contact Flush Mnt N-C;26.90;30.94;30.935;35.581;mag_contact;intr
+MC02;Flush Mount Mag - N-O;68.60;78.89;78.89;90.7235;mag_contact;intr
 MC08;SP Mag Contact NC Wht;12.80;14.72;14.72;16.928;mag_contact;intr
 MC10;SP Mag Contact NC Brown;12.80;14.72;14.72;16.928;mag_contact;intr
-MC06;Mag Contact - N/O Brown;58.40;67.16;67.16;77.234;mag_contact;intr
-MC07;Mag Contact - N/O White;58.40;67.16;67.16;77.234;mag_contact;intr
-MC26;Roller Shutter - N/C Aluminium;172.00;197.80;197.8;227.47;mag_contact;intr
-MC28;Roller Shutter - N/O Aluminium;222.00;255.30;255.3;293.595;mag_contact;intr
+MC06;Mag Contact - N-O Brown;58.40;67.16;67.16;77.234;mag_contact;intr
+MC07;Mag Contact - N-O White;58.40;67.16;67.16;77.234;mag_contact;intr
+MC26;Roller Shutter - N-C Aluminium;172.00;197.80;197.8;227.47;mag_contact;intr
+MC28;Roller Shutter - N-O Aluminium;222.00;255.30;255.3;293.595;mag_contact;intr
 MC31;SP Mag Contact Wide Gap NC Grey;72.40;83.26;83.26;95.749;mag_contact;intr
 MC32;SP Mag Contact Wide Gap NO Grey;122.50;140.88;140.875;162.012;mag_contact;intr
-MC34;Mag Contact - Flush Mount Sentrol N/C;254.00;292.10;292.1;335.915;mag_contact;intr
+MC34;Mag Contact - Flush Mount Sentrol N-C;254.00;292.10;292.1;335.915;mag_contact;intr
 MC40;Heavy Duty Read Switch;169.00;194.35;194.35;223.5025;mag_contact;intr
 ;SECURITY LIGHTING PRODUCTS;;;0;0;;intr
 BD22;SENSOR - External PIR Sensor Only 12m;232.00;266.80;266.8;306.82;al_lights;intr
@@ -594,21 +594,21 @@ BD24-20;200 Watt LED Floodlight;1462.00;1681.30;1681.3;1933.495;al_lights;intr
 ;;;;0;0;;intr
 Prices are subject to change without prior notice.;;;;0;0;;intr
 E&OE. Valid until 31st March 2023.;Page: 39;;;0;0;;intr
-www.REGALSECURITY.co.za;05/03/2023;;;0;0;;intr
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;intr
 ;;;;0;0;;intr
 Trade Price List;;;;0;0;;intr
 "ANCILLARY SECURITY SYSTEMS; COMMUNICATORS & ACCESSORIES";;;;0;0;;intr
 Our Code;Item Description;Trade Excl VAT;Trade Incl VAT;#VALUE!;#VALUE!;;intr
 ;COMMUNICATION EQUIPMENT - RADIOS & OTHER;;;0;0;;intr
 IC226;Centurion G-Switch Ultra Smart 3G Unit;1908.75;2195.06;2195.0625;2524.319;al_remote;intr
-IC226-1;Centurion G-Speak Ultra 4G Kit 4 I/O's;2552.00;2934.80;2934.8;3375.02;al_remote;intr
+IC226-1;Centurion G-Speak Ultra 4G Kit 4 I-O's;2552.00;2934.80;2934.8;3375.02;al_remote;intr
 IC226-2;Centurion Entry Panel - G-Speak Classic;462.00;531.30;531.3;610.995;al_remote;intr
 IC226-4;Centurion G-Ultra GSM 4G Control V2;1959.00;1792.85;2252.85;2061.7775;al_remote;intr
 CP117;"SMS Alert 9 - 9 Input; 3 Relay Outputs";1344.00;1545.60;1545.6;1777.44;al_remote;intr
 CP117-1;SMS Alert 9 Plus Alarm - 6 Zones 3 Relay;1469.00;1689.35;1689.35;1942.7525;al_remote;intr
 CP117-2;"SMS Alert 1 - 3 Input; 1 Output; 8 User";1144.00;1315.60;1315.6;1512.94;al_remote;intr
 CP117-3;SMS Alert Standalone Alarm Kit;3750.00;4312.50;4312.5;4959.375;al_remote;intr
-IC100-2;BPT - GSM/I500 In Metal Box incl Keypad;9405.00;10815.75;10815.75;12438.1125;al_remote;intr
+IC100-2;BPT - GSM-I500 In Metal Box incl Keypad;9405.00;10815.75;10815.75;12438.1125;al_remote;intr
 RA01;Zartek ZA720 Two Way Radio UHF with Crad;546.00;627.90;627.9;722.085;al_remote;intr
 RA01-1;Zartek Professional UHF 2 Way Radio;879.00;1010.85;1010.85;1162.4775;al_remote;intr
 RA01-2;Zartek TX-8 Two Way Radio Twinpack;923.00;1061.45;1061.45;1220.6675;al_remote;intr
@@ -621,7 +621,7 @@ RA69-6;Zartek GE-215 USB Desktop Charger Cradle;159.00;182.85;182.85;210.2775;al
 RA69-7;Zartek RX-8 TWIN Two-Way Radio Pack;799.00;918.85;918.85;1056.6775;al_remote;intr
 RA69-8;Zartek ZA-P7 PTT Radio GSM - USB Charger;1799.00;2068.85;2068.85;2379.1775;al_remote;intr
 RA69;Sherlo Mimic Base Code Hopping 2000Ch;2725.76;3134.62;3134.624;3604.813;al_remote;intr
-RA69-3;Sherlo GSM / GPRS Communicator for RA69;1403.84;1614.42;1614.416;1856.583;al_remote;intr
+RA69-3;Sherlo GSM - GPRS Communicator for RA69;1403.84;1614.42;1614.416;1856.583;al_remote;intr
 ;PEPPER GAS ALARM SYSTEMS AND ACCESSORIES;;;0;0;;intr
 CP126;Pepper Gas Skunk Stand Alone Alarm 1;2394.00;2753.10;2753.1;3166.065;pepper;intr
 CP127;Pepper Gas Skunk Master Unit;3438.00;3953.70;3953.7;4546.755;pepper;intr
