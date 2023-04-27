@@ -12,4 +12,5 @@ export class Company {
     accountNumber: number;
     flagged: boolean;
     userId: string;
+    file: any;
 }

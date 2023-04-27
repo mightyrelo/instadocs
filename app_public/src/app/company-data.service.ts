@@ -45,6 +45,16 @@ export class CompanyDataService {
         .catch(this.handleError);
   }
 
+  public uploadLogo(file: any) : Promise<any> {
+    console.log('posting image');
+    const url: string = `${this.apiBaseUrl}/pics`;
+    return this.http
+      .post(url, file)
+      .toPromise()
+      .then(resp => resp as any)
+      .catch(this.handleError);
+  }
+
   public removeCompany(id: string) : Promise<null> {
     const url: string = `${this.apiBaseUrl}/companies/${id}`;
     return this.http

@@ -9,19 +9,22 @@ const auth = jwt({
   userProperty: 'payload'
 });
 
-var multer = require('multer');
-var storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-      cb(null, 'uploads')
-  },
+const multer = require('multer');
+const storage = multer.diskStorage({
+  destination: './app_api/',
   filename: (req, file, cb) => {
-      cb(null, file.fieldname + '-' + Date.now())
+      cb(null, file.originalname)
   }
 });
 
-var upload = multer({
+const upload = multer({
   storage: storage
 });
+
+
+
+
+
 
 
 const mCtrl = require('../controllers/Ms');
@@ -36,6 +39,14 @@ const imgCtrl = require('../controllers/Images');
 const usersCtrl = require('../controllers/Users');
 const tasksCtrl = require('../controllers/Tasks');
 
+router
+  .route('/pics')
+  .post(upload.single('file'), (req, res)=> {
+    console.log('loading img');
+    res
+    .status(200)
+    .json({"message":"image saved on server"});
+  });
 
 //model/collection routes
 //list
@@ -139,11 +150,12 @@ router
  .put(invCtrl.invoicesUpdateOne)
  .delete(invCtrl.invoicesDeleteOne);
 
+
 //level one - customer collection
 router
 .route('/companies')
 .get(compCtrl.companiesReadAll)
-.post(compCtrl.companiesCreateOne);
+.post(upload.single('file'), compCtrl.companiesCreateOne);
 
 //level two = customer document
 router
@@ -153,10 +165,6 @@ router
  .delete(compCtrl.companiesDeleteOne);
 
 
-router
-  .route('/images')
-  .get(imgCtrl.imagesReadAll)
-  .post(upload.single('image'), imgCtrl.imagesCreateOne);
 
 router
   .route('/images/:imageId')

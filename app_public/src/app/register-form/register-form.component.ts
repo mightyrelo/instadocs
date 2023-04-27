@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../authentication.service';
@@ -6,8 +7,10 @@ import { HistoryService } from '../history.service';
 
 import { Company } from '../company';
 import { User } from '../user';
+import { UserDataService } from '../user-data.service';
 
 import { CompanyDataService } from '../company-data.service';
+
 
 
 @Component({
@@ -16,6 +19,8 @@ import { CompanyDataService } from '../company-data.service';
   styleUrls: ['./register-form.component.css']
 })
 export class RegisterFormComponent implements OnInit {
+
+  @ViewChild('fileInput', {}) fileInput : ElementRef;
 
   public credentials : User = {
     name: '',
@@ -48,6 +53,7 @@ export class RegisterFormComponent implements OnInit {
     accountNumber: null,
     flagged: false,
     userId: '',
+    file: null
   };
 
   public companies : Company[];
@@ -60,6 +66,7 @@ export class RegisterFormComponent implements OnInit {
     private router: Router,
     private historyService: HistoryService,
     private companyDataService: CompanyDataService,
+    private http : HttpClient
 
   ) { }
 
@@ -87,16 +94,24 @@ export class RegisterFormComponent implements OnInit {
 
   onCompanySubmit(){
     if(this.formIsValid()){
-      this.formCompany.userId = this.getUserName();
-      this.companyDataService.addCompany(this.formCompany)
-       .then (dbCom =>  {
-        console.log('company saved', dbCom); 
-        let comps = this.companies.slice(0);
-        comps.unshift(dbCom);
-        this.companies = comps;
-        this.resetAndHideCompanyForm();
-        this.router.navigateByUrl(this.historyService.getPreviousUrl());
-       })
+      const imageBlob = this.fileInput.nativeElement.files[0];
+      const file = new FormData();
+      file.set('file', imageBlob);
+      this.formCompany.file = file;
+      console.log('source of upload logo');
+      this.companyDataService.uploadLogo(file)
+        .then(rsp => {
+          this.formCompany.userId = this.getUserName();
+          this.companyDataService.addCompany(this.formCompany)
+           .then (dbCom =>  {
+            console.log('company saved', dbCom); 
+            let comps = this.companies.slice(0);
+            comps.unshift(dbCom);
+            this.companies = comps;
+            this.resetAndHideCompanyForm();
+            this.router.navigateByUrl(this.historyService.getPreviousUrl());
+           })
+        });
     } else {
       	this.formError = 'Missing fields required, give it another go!'
     }
