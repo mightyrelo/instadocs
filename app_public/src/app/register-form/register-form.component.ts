@@ -53,7 +53,7 @@ export class RegisterFormComponent implements OnInit {
     accountNumber: null,
     flagged: false,
     userId: '',
-    file: null
+    logo: null
   };
 
   public companies : Company[];
@@ -97,7 +97,8 @@ export class RegisterFormComponent implements OnInit {
       const imageBlob = this.fileInput.nativeElement.files[0];
       const file = new FormData();
       file.set('file', imageBlob);
-      this.formCompany.file = file;
+      console.log('this is the file', imageBlob.name);
+      this.formCompany.logo = imageBlob.name;
       console.log('source of upload logo');
       this.companyDataService.uploadLogo(file)
         .then(rsp => {

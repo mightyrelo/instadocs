@@ -17,7 +17,8 @@ const CompanySchema = mongoose.Schema({
     bank: String,
     branch: Number,
     accountNumber: Number,
-    userId: String
+    userId: String,
+    logo: String,
 
 });
 

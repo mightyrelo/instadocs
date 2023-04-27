@@ -44,7 +44,8 @@ const companiesCreateOne = (req, res) => {
         branch: req.body.branch,
         website: req.body.website,
         bank: req.body.bank,
-        userId: req.body.userId
+        userId: req.body.userId,
+        logo: req.body.logo
     };
 
     Company

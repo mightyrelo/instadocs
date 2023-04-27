@@ -29,7 +29,8 @@ export class ViewCompaniesContentComponent implements OnInit {
     branch: null,
     accountNumber: null,
     flagged: false,
-    userId: ''
+    userId: '',
+    file: null
   };
 
   public companies : Company[];
