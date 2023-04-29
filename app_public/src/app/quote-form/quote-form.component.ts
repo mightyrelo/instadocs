@@ -357,6 +357,96 @@ export class QuoteFormComponent implements OnInit {
 
   }
 
+  public categoryChanged(event: any) : void {
+    console.log('cat changed', event.target.value);
+    const idx = this.categoriesFull.indexOf(event.target.value);
+    if(this.categories[idx] == 'suv'){
+      this.subCategoriesFull = this.suvSubCategoriesFull;
+      this.subCategories = this.suvSubCategories;
+    }
+    else if(this.categories[idx] == 'efe'){
+      
+      this.subCategoriesFull = this.efeSubCategoriesFull;
+      this.subCategories = this.efeSubCategories;
+    }
+    else if(this.categories[idx] == 'aut'){
+      
+      this.subCategoriesFull = this.autSubCategoriesFull;
+      this.subCategories = this.autSubCategories;
+    }
+    else if(this.categories[idx] == 'intr'){
+      
+      this.subCategoriesFull = this.intrSubCategoriesFull;
+      this.subCategories = this.intrSubCategories;
+    }
+    else if(this.categories[idx] == 'acc'){
+      
+      this.subCategoriesFull = this.accSubCategoriesFull;
+      this.subCategories = this.accSubCategories;
+    }
+    else if(this.categories[idx] == 'int'){
+      
+      this.subCategoriesFull = this.intSubCategoriesFull;
+      this.subCategories = this.intSubCategories;
+    }
+
+    else if(this.categories[idx] == 'autt'){
+      
+      this.subCategoriesFull = this.auttSubCategoriesFull;
+      this.subCategories = this.auttSubCategories;
+    }
+
+    else if(this.categories[idx] == 'auto'){
+      
+      this.subCategoriesFull = this.autoSubCategoriesFull;
+      this.subCategories = this.autoSubCategories;
+    }
+    else if(this.categories[idx] == 'cab'){
+      
+      this.subCategoriesFull = this.cabSubCategoriesFull;
+      this.subCategories = this.cabSubCategories;
+    }
+    else if(this.categories[idx] == 'pow'){
+      
+      this.subCategoriesFull = this.powSubCategoriesFull;
+      this.subCategories = this.powSubCategories;
+    }
+    else if(this.categories[idx] == 'swt'){
+      
+      this.subCategoriesFull = this.swtSubCategoriesFull;
+      this.subCategories = this.swtSubCategories;
+    }
+    else if(this.categories[idx] == 'tool'){
+      
+      this.subCategoriesFull = this.toolSubCategoriesFull;
+      this.subCategories = this.toolSubCategories;
+    }
+
+    else if(this.categories[idx] == 'fir'){
+      
+      this.subCategoriesFull = this.fireSubCategoriesFull;
+      this.subCategories = this.fireSubCategories;
+    }
+
+    else if(this.categories[idx] == 'user'){
+      this.subCategoriesFull = this.userSubCategoriesFull;
+      this.subCategories = this.userSubCategories;
+    }
+
+    this.categorySelected = true;
+  }
+
+  public subCategoryChanged(event: any) : void {
+    console.log('subcat changed', event.target.value);
+    const idx = this.subCategoriesFull.indexOf(event.target.value); 
+    this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
+      .then(foundProducts => {
+        console.log(foundProducts.length);
+        this.products = foundProducts;
+        this.subCategorySelected = true;
+      })
+  }
+
   ngOnInit() : void {
     for(let i = 1; i <= 100;i++){
       this.counts[i] = i;

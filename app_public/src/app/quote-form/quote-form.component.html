@@ -7,29 +7,27 @@
         </div> 
         <div class="form-group">
           <label for="category">Category</label>
-          <select  [(ngModel)]="formCat.category" class="form-control bg" id="category" name="category">
+          <select  [(ngModel)]="formCat.category" 
+              class="form-control bg" id="category" name="category"
+              (change)="categoryChanged($event)">
               <option  class="form-control bg" *ngFor="let cat of categoriesFull">{{cat}}</option>
           </select>
         </div>
-        <small>
-          <button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button>
-        </small>
       </form>
     </div>                  
-    <div *ngIf="categorySelected" class="heading">
+    <div class="heading">
       <form (ngSubmit)="onSubCategorySubmit()" method="post" role="form">
         <div *ngIf="formError" class="alert alert-danger">
             {{formError}}
         </div> 
         <div class="form-group">
           <label for="category">Sub-category</label>
-          <select  [(ngModel)]="formCat2.subCategory" class="form-control bg" id="category" name="category">
+          <select  [(ngModel)]="formCat2.subCategory"
+           class="form-control bg" id="category"
+            name="category" (change)="subCategoryChanged($event)">
               <option  class="form-control bg" *ngFor="let cat of subCategoriesFull">{{cat}}</option>
           </select>
         </div>
-        <small>
-          <button  type="submit" role="button" class="btn-primary sm-button"><i class="fa-solid fa-check"></i></button>
-        </small>
       </form>
     </div> 
 

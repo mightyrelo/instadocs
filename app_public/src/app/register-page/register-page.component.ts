@@ -9,7 +9,7 @@ export class RegisterPageComponent implements OnInit {
 
   public pageContent = {
     header: {
-      title: 'Sign up to use Ngamla',
+      title: 'Sign up to use InstaDocs',
       strapline: ''
     },
     sideBar: {
