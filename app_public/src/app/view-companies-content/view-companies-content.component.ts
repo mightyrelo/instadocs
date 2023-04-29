@@ -30,7 +30,7 @@ export class ViewCompaniesContentComponent implements OnInit {
     accountNumber: null,
     flagged: false,
     userId: '',
-    file: null
+    logo: null
   };
 
   public companies : Company[];

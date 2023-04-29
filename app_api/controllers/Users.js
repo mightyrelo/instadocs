@@ -62,7 +62,6 @@ const usersDeleteOne = (req, res) => {
  };
 
  const usersUpdateOne = (req, res) => {
-    console.log('instance of failure');
   if(!req.params.userId) {
     sendJSONResponse(res, 404, {"message":"user id required"});
     return;

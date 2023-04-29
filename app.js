@@ -24,6 +24,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use('/logos', express.static(path.join(__dirname, 'public', 'logos')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'app_public', 'build')));
 app.use(passport.initialize());
@@ -36,6 +37,7 @@ app.use('/api', (req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'POST, PUT, GET, DELETE, OPTIONS');
   next();
 });
+
 
 //app.use('/', indexRouter);
 app.use('/api', apiRouter);

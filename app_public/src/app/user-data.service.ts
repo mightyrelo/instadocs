@@ -101,7 +101,7 @@ export class UserDataService {
   }
 
   public updateUser(user : User) {
-    console.log('updaing');
+    console.log('updating');
     console.log('id', user._id)
     const url : string = `${this.apiBaseUrl}/users/${user._id}`;
     return this.http

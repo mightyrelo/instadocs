@@ -11,7 +11,7 @@ const auth = jwt({
 
 const multer = require('multer');
 const storage = multer.diskStorage({
-  destination: './app_api/',
+  destination: './public/logos/',
   filename: (req, file, cb) => {
       cb(null, file.originalname)
   }
@@ -165,6 +165,13 @@ router
  .delete(compCtrl.companiesDeleteOne);
 
 
+ router
+   .route('/logos')
+   .post(upload.single('file'), imgCtrl.imagesCreateOne);
+
+router
+  .route('/logos/:companyName')
+  .get(imgCtrl.imagesReadOne);
 
 router
   .route('/images/:imageId')

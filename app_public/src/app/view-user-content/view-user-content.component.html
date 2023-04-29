@@ -34,7 +34,8 @@
       <div class="card-block">
         <form (ngSubmit)="onUserNameSubmit()" method="post" role="form">
           <div *ngIf="formError" class="alert alert-danger">
-            {{formError}}</div> 
+            {{formError}}
+          </div> 
           <div class="form-group heading">
              <label for="pricelist">transfer pricelist</label>
              <input class="form-control" id="pricelist" name="pricelist" type="text" placeholder="" [(ngModel)]="formUser.pricelist">

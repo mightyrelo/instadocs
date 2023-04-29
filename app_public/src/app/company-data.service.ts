@@ -46,14 +46,24 @@ export class CompanyDataService {
   }
 
   public uploadLogo(file: any) : Promise<any> {
-    console.log('posting image');
-    const url: string = `${this.apiBaseUrl}/pics`;
+    const url: string = `${this.apiBaseUrl}/logos`;
     return this.http
       .post(url, file)
       .toPromise()
       .then(resp => resp as any)
       .catch(this.handleError);
   }
+
+  public downloadLogo(companyLogo: string) : Promise<any> {
+    const url: string = `http://localhost:3000/logos/${companyLogo}`;
+    return this.http
+      .get(url)
+      .toPromise()
+      .then(resp => resp as any)
+      .catch(this.handleError);
+  }
+
+  
 
   public removeCompany(id: string) : Promise<null> {
     const url: string = `${this.apiBaseUrl}/companies/${id}`;
