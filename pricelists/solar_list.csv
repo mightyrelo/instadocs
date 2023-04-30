@@ -1,4 +1,4 @@
-description;name;qty;rate;cost;dist;price;inner;category;margin
+description;name;Retail Excl VAT;Trade Excl VAT;retail;trade;subcategory;category
 ;;;;R33 040.00;R33 040.00;R41 822.78;;;0.79
 MC4 connectors  Twin pack;;2;90.00;R180.00;R180.00;R227.85;other;PV;
 Flat Roof custom made stand;;0;8000.00;R0.00;R0.00;R0.00;roof;PV;

@@ -349,7 +349,8 @@ export class ViewCustomerContentComponent implements OnInit {
 
   ngOnInit() {
     this.getCustomers();
-    this.productDataService.getCategoryProducts(this.getUserName(), 'PV')
+    if(this.getUserName() == 'thabethe'){
+      this.productDataService.getCategoryProducts(this.getUserName(), 'PV')
       .then(rsp => this.products = rsp);
     this.productDataService.getCategoryProducts(this.getUserName(), 'AC')
       .then(rsp => this.acProducts = rsp);
@@ -363,7 +364,8 @@ export class ViewCustomerContentComponent implements OnInit {
       .then(rsp => this.protProducts = rsp);
     this.productDataService.getCategoryProducts(this.getUserName(), 'ACCABLE')
       .then(rsp => this.cabProducts = rsp);
-    for(let i = 1; i <= 100;i++){
+    }
+        for(let i = 1; i <= 100;i++){
         this.counts[i] = i;
     }
   }

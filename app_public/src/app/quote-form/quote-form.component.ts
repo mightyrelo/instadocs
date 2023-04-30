@@ -34,6 +34,8 @@ export class QuoteFormComponent implements OnInit {
 
   public closedForm : boolean = false;
 
+  public userCategory: boolean = false;
+
   public formCat = {
     category: ''
   };
@@ -252,6 +254,7 @@ export class QuoteFormComponent implements OnInit {
     else if(this.categories[idx] == 'user'){
       this.subCategoriesFull = this.userSubCategoriesFull;
       this.subCategories = this.userSubCategories;
+      this.userCategory = true;
     }
 
     this.categorySelected = true;

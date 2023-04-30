@@ -1,4 +1,4 @@
-regalCode;description;Retail Excl VAT;Trade Excl VAT;trade;retail;subcategory;category
+description;name;Retail Excl VAT;Trade Excl VAT;retail;trade;subcategory;category
 CIRCUIT BOARDS;;;;0;0;;
 SW35;Relay - On-board Double Pole AC-DC;67.08;50.54;77.142;58.121;relay;swt
 SW36;Relay - Mains Fail Timer;182.7;119.7;210.105;137.655;relay;swt

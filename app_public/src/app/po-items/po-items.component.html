@@ -7,8 +7,8 @@
     <th class="narrow" style="text-align:center;">Amount</th>
   </tr>
   <tr *ngFor="let item of content.invoiceItems">
-    <td class="wide">{{item.description}}</td>
-    <td class="wider">{{item.product}}</td>
+    <td class="wide">{{item.product}}</td>
+    <td class="wider">{{item.description}}</td>
     <td class="narrow">{{item.quantity}}</td>
     <td class="narrow">{{item.productExpense | currency : 'R' : true}}</td>
     <td class="narrow">{{item.productExpense * item.quantity | currency : 'R' : true}}</td>

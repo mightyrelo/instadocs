@@ -228,8 +228,8 @@ const createProduct = (req, res, data) => {
         const trade = Number(data.rate);
         const retail = trade/0.79;
         Prod.create({
-            name: data.description,
-            description: data.name,
+            name: data.name,
+            description: data.description,
             trade: trade,
             selling: retail,
             userId: userName,
@@ -249,8 +249,8 @@ const createProduct = (req, res, data) => {
         const trade = Number(data.trade);
         const retail = Number(data.retail);
         Prod.create({
-            name: data.description,
-            description: data.regalCode,
+            name: data.name,
+            description: data.description,
             trade: trade,
             selling: retail,
             userId: req.params.userName,
