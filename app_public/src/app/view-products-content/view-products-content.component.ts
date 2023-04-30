@@ -223,7 +223,7 @@ export class ViewProductsContentComponent implements OnInit {
 
 
   private doAddProduct() : void {
-    console.log('tis');
+    
     if(this.getUserName() != 'thabethe'){
       const idx = this.categoriesFull.indexOf(this.formCat.category);
       console.log('hola', this.formCat2.subCategory);
@@ -515,6 +515,7 @@ export class ViewProductsContentComponent implements OnInit {
     }
     
     this.categorySubmitted = true;
+    this.formCat2.subCategory = this.subCategoriesFull[0];
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[0])
       .then(foundSubProducts => {
         this.subProducts = foundSubProducts;

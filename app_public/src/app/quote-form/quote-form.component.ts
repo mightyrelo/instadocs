@@ -434,10 +434,10 @@ export class QuoteFormComponent implements OnInit {
     }
 
     this.categorySelected = true;
+    this.formCat2.subCategory = this.subCategoriesFull[0];
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[0])
       .then(foundSubProducts => {
         this.products = foundSubProducts;
-        console.log('why', this.products.length);
         this.subCategorySelected = true;
       })
 
