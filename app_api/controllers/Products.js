@@ -14,6 +14,7 @@ const sendJSONResponse = (res, stat, content) => {
 const productsCreateOne = (req, res) => {
     if(!req.body.name || !req.body.description || !req.body.trade || !req.body.selling  
         || !req.body.userId){sendJSONResponse(res, 400, {"message":"all fields required"}); return}
+    console.log('what i push', req.body.category, req.body.subCategory);
     Prod.create({
         name: req.body.name,
         description: req.body.description,

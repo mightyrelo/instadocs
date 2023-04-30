@@ -185,7 +185,7 @@ export class ViewProductsContentComponent implements OnInit {
     this.newProduct.selling = null;
     this.displayForm = false;
     this.newProduct.category = '';
-    this.getProducts();
+    //this.getProducts();
   }
 
   //deleting quote
@@ -223,16 +223,23 @@ export class ViewProductsContentComponent implements OnInit {
 
 
   private doAddProduct() : void {
-
+    console.log('tis');
     if(this.getUserName() != 'thabethe'){
       const idx = this.categoriesFull.indexOf(this.formCat.category);
       const idx2 = this.subCategoriesFull.indexOf(this.formCat2.subCategory);
       this.newProduct.category = this.categories[idx];
       this.newProduct.subCategory = this.subCategories[idx2];
+      console.log('tis', this.newProduct.category, this.newProduct.subCategory);
       this.productDataService.addProduct(this.newProduct)
       .then((prod: Product) => {
         console.log('product saved', prod.category);
         this.resetAndHideProductForm();
+        this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
+        .then(foundProducts => {
+          this.products = foundProducts;
+          this.subProducts = foundProducts;
+          console.log('subproducts', this.subProducts.length);
+        })
       });  
     }
     else{
@@ -300,11 +307,12 @@ export class ViewProductsContentComponent implements OnInit {
     }
     else {
       
-      const idx = this.categoriesFull.indexOf(this.formCat.category);
+    const idx = this.categoriesFull.indexOf(this.formCat.category);
     if(this.categories[idx] == 'suv'){
       
       this.subCategoriesFull = this.suvSubCategoriesFull;
       this.subCategories = this.suvSubCategories;
+      
     }
     else if(this.categories[idx] == 'efe'){
       
@@ -375,15 +383,10 @@ export class ViewProductsContentComponent implements OnInit {
       this.subCategoriesFull = this.userSubCategoriesFull;
       this.subCategories = this.userSubCategories;
     }
-
-    this.categorySubmitted = true;
-
-   
     }
   }
 
   public onSubCategorySubmit() : void {
-
     if(this.getUserName() == 'thabethe'){
       const idx = this.solarSubCategoriesFull.indexOf(this.formCat2.subCategory);
       this.productDataService.getSubCategoryProducts(this.getUserName(), this.solarSubCategories[idx])
@@ -408,13 +411,13 @@ export class ViewProductsContentComponent implements OnInit {
       const idx = this.subCategoriesFull.indexOf(this.formCat2.subCategory);
       this.productDataService
       .getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
-      .then(foundProducts => this.products = foundProducts)
+      .then(foundProducts => {this.products = foundProducts; this.subProducts = foundProducts;})
     }
     else{
       const idx = this.solarSubCategoriesFull.indexOf(this.formCat2.subCategory);
       this.productDataService
       .getSubCategoryProducts(this.getUserName(), this.solarSubCategories[idx])
-      .then(dbProducts => this.products = dbProducts);
+      .then(dbProducts => {this.products = dbProducts; this.subProducts = dbProducts});
     }
   }
 
@@ -508,6 +511,15 @@ export class ViewProductsContentComponent implements OnInit {
       this.subCategoriesFull = this.userSubCategoriesFull;
       this.subCategories = this.userSubCategories;
     }
+    
+    this.categorySubmitted = true;
+    this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[0])
+      .then(foundSubProducts => {
+        this.subProducts = foundSubProducts;
+        this.products = foundSubProducts;
+        console.log('why', this.subProducts.length);
+      })
+
 
    
   }
@@ -515,6 +527,7 @@ export class ViewProductsContentComponent implements OnInit {
   public subCategoryChanged(event: any) : void {
     console.log('subcat changed', event.target.value);
     const idx = this.subCategoriesFull.indexOf(event.target.value); 
+    console.log('i am', idx);
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
       .then(foundProducts => {
         this.products = foundProducts;
