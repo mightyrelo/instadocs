@@ -1,7 +1,0 @@
-task,action,response
-register user and link to company details,click 'register' link on the navigation bar,redirects to register page
-,complete user credentials form,
-,click register button,saves user and opens the company details form
-,complete company details form,
-,click complete button,redirects to the home page if successful and stays on registration page if not
-,,,

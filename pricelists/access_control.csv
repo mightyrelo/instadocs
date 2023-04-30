@@ -1,0 +1,539 @@
+regalCode;description;Retail Excl VAT;Trade Excl VAT;retail;trade;subcategory;category
+;ZKTeco BIOMETRIC T&A READERS;;;0;0;;acc
+LK168-1;S922W Fingerprint KP Reader WiFi Port;19371.1;13255.96;22276.765;15244.354;zk_fp;acc
+LK168-2;S922G Fingerprint KP Reader 4G Portable;21929.5;15006.75;25218.925;17257.7625;zk_fp;acc
+LK168-4;ZK S922 Batt;2977;2031;3423.55;2335.65;zk_fp;acc
+LK168-10;IN01A Fingerprint KP Reader + Batt;8406.3;5752.59;9667.245;6615.4785;zk_fp;acc
+LK168-11;ZK IN01AW FP Keypad Reader WiFi  Batt;9137.3;6252.81;10507.895;7190.7315;zk_fp;acc
+LK168-12;IN01A Fingerprint KP Reader 4G + Batt;12061.2;8253.71;13870.38;9491.7665;zk_fp;acc
+LK168-13;WL30 Fingerprint KP Reader WiFi Black;3435.7;2351.06;3951.055;2703.719;zk_fp;acc
+LK172-23;ZK ProCapture-X Terminal RFID;12426.7;8503.83;14290.705;9779.4045;zk_fp;acc
+;ZKTeco TAKE-ON READERS;;;0;0;;acc
+LK185-4;CR20E Take-on Reader EM USB;731;500.23;840.65;575.2645;zk_enrol_fp;acc
+LK185-3;ZK SLK20R Enrolment FP SilkID USB;2924;2000.9;3362.6;2301.035;zk_enrol_fp;acc
+LK185-5;PV10R Enrollment Palm USB;4020.4;2751.24;4623.46;3163.926;zk_enrol_fp;acc
+LK185-8;ZK9500 Enrollment Fingerprint BioID USB;1462;1000.45;1681.3;1150.5175;zk_enrol_fp;acc
+LK198-6;UR20RW-E Take-on Reader UHF USB;6359.6;4351.97;7313.54;5004.7655;zk_enrol_fp;acc
+;ZKTeco RFID READERS;;;0;0;;acc
+LK184-1;KR101E Proximity Reader EM Wiegand;365.5;250.11;420.325;287.6265;zk_prox;acc
+LK184-5;KR601 Proximity Reader EM Wiegand;438.6;300.14;504.39;345.161;zk_prox;acc
+LK184-6;KR602 Proximity KP Reader EM Wiegand;548.3;375.17;630.545;431.4455;zk_prox;acc
+LK184-7;KR310 Proximity Reader EM & MF Wiegand;621.4;425.19;714.61;488.9685;zk_prox;acc
+;ZKTeco RFID STANDARD & UHF;;;0;0;;acc
+LK142;Proximity Tag Black EM;20.4;13.94;23.46;16.031;zk_tag;acc
+LK142-1;Proximity Tag Blue EM;11;7.5;12.65;8.625;zk_tag;acc
+LK142-3;ZK Proximity Tag Higgs4 Windscreen Tag U;17;11.63;19.55;13.3745;zk_tag;acc
+LK142-4;Proximity Tag Sticker UHF;19.1;13.01;21.965;14.9615;zk_tag;acc
+LK142-5;ZK Proximity Tag Lic Plate UHF 915Mhz;76.1;52.02;87.515;59.823;zk_tag;acc
+LK142-6;Proximity Card EM & UHF;51.2;35.02;58.88;40.273;zk_tag;acc
+LK142-7;ZK Proximity Tag Leather EM 125KHz;83.1;56.84;95.565;65.366;zk_tag;acc
+LK142-9;Proximity Tag 1K S50 MF;27.8;19.01;31.97;21.8615;zk_tag;acc
+LK143-3;ZK Proximity Card UHF 915Mhz;20.5;14.01;23.575;16.1115;zk_tag;acc
+LK198;ZK UHF210E UHF Reader 12m Wiegand;10113;6920.43;11629.95;7958.4945;zk_uhf;acc
+LK198-1;ZK UHF2-5E UHF Reader 6m Wiegand;8772;6002.7;10087.8;6903.105;zk_uhf;acc
+LK198-2;ZK U2000E UHF Reader 12m Standalone;16812.6;11505.18;19334.49;13230.957;zk_uhf;acc
+LK198-3;UHF Reader 6m Standalone;14619.7;10004.5;16812.655;11505.175;zk_uhf;acc
+;ZKTeco ACCESS CONTROLLERS - RFID;;;0;0;;acc
+LK186;ZK C3-100 Door Cont One Door RFID;2924;2000.9;3362.6;2301.035;zk_cont;acc
+LK186-1;C3-200 Door Controller 2 Doors RF;4093.5;2801.26;4707.525;3221.449;zk_cont;acc
+;ZKTeco ACCESS CONTROLLERS - BIOMETRIC;;;0;0;zk_cont;acc
+LK187;InBio160 Door Controller 1 Door FP & RF;5263.1;3601.62;6052.565;4141.863;zk_cont;acc
+LK187-1;InBio260 Door Controller 2 Doors FP & RF;8187;5602.52;9415.05;6442.898;zk_cont;acc
+LK187-2;InBio460 Door Controller 4 Doors FP & RF;11111;7603.42;12777.65;8743.933;zk_cont;acc
+;ZKTeco BIOMETRIC & RFID KIT;;;0;0;zk_cont;acc
+SP154-1;ZKTeco Biometric & RFID Access Kit;4095;2795;4709.25;3214.25;zk_kit;acc
+;"Consists of: LK169 X7 Biometric and RFID reader; LK118 maglock and LK118-1 ZL bracket;";;;0;0;;acc
+;"PS49-3 Access 3A PSU; BA13-1 7Ah battery; LK14 door closer and door release button.";;;0;0;;acc
+;ZKTeco X-Ray Machine;;;0;0;;acc
+LK230-2;ZKX6550A X-Ray Machine;423969.1;290130.51;487564.465;333650.0865;zk_xray;acc
+;;;;0;0;;acc
+Prices are subject to change without prior notice.;;;;0;0;;acc
+E&OE. Valid until 31st March 2023.;Page: 57;;;0;0;;acc
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;acc
+;;;;0;0;;acc
+Trade Price List;;;;0;0;;acc
+ACCESS CONTROL;;;;0;0;;acc
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;acc
+;ZKTeco BIOMETRIC FACIAL READER;;;0;0;;acc
+LK188-6;ZK MultiBio800H Multi-BM Reader Face & F;9502.8;6502.93;10928.22;7478.3695;zk_multi;acc
+LK188-7;ZK KF460 Facial Keypad Reader WiFi;5116.9;3501.58;5884.435;4026.817;zk_multi;acc
+LK188-8;SpeedFaceV5LP Reader Face Palm & FP;15789.2;10804.86;18157.58;12425.589;zk_multi;acc
+LK188-14;ZK FaceDepot 7BCH Facial Reader VisibleL;21929.5;15006.75;25218.925;17257.7625;zk_multi;acc
+LK188-15;ZK SpeedFace RFID Multi-BM Reader Face &;11330.3;7753.49;13029.845;8916.5135;zk_multi;acc
+LK188-16;ZK MB10 Multi-BM Keypad Reader Face & FP;4385.9;3001.35;5043.785;3451.5525;zk_multi;acc
+LK188-18;ZK ProFace XTI Multi-BM FA & PA Temp Det;46782.8;32014.4;53800.22;36816.56;zk_multi;acc
+LK188-19;ZK SpeedFace V5LTI Multi-BM FA PA & FP T;32894.2;22510.13;37828.33;25886.6495;zk_multi;acc
+LK188-20;ZK T1 Thermal IP Cam Temperature Detecti;271258;189880;311946.7;218362;zk_multi;acc
+LK188-21;ZK TH01 Blkbody Thermal Calibration Devi;116253;81377;133690.95;93583.55;zk_multi;acc
+LK188-30;ZK SpeedFace Mini Multi-BM Reader Face P;7675.4;5252;8826.71;6039.8;zk_multi;acc
+LK188-31;SpeedFaceM4 MultiBio Reader Face FA & PA;16666.4;11405;19166.36;13115.75;zk_multi;acc
+LK188-32;Elite Access Facial Reader;25684;19757;29536.6;22720.55;zk_multi;acc
+LK188-35;ZK SpeedFaceV5 Andriod Multi-BM Reader F;14670;10269;16870.5;11809.35;zk_multi;acc
+LK188-36;G3 Pro Multi-Bio Reader Face Palm FP;14955;11504;17198.25;13229.6;zk_multi;acc
+LK188-26;ZK Stand for SpeedFace & ProFace;3298.3;2257.08;3793.045;2595.642;zk_multi;acc
+LK188-27;ZK Rain for ProFaceXP;604.9;413.88;695.635;475.962;zk_multi;acc
+LK188-28;ZK Stand for ProFaceXP Adjustable;9579.6;6555.48;11016.54;7538.802;zk_multi;acc
+LK187-3;FHT2300 Turnstile Full Height Blank;116957;80036;134500.55;92041.4;turn;acc
+LK187-4;ZK TS2000 Turnstile Waist High Drop Arm;24853.4;17007.65;28581.41;19558.7975;turn;acc
+LK187-5;ZK TS2022 Turnstile Waist High Drop Arm;34645.8;23708.78;39842.67;27265.097;turn;acc
+LK187-6;TS1200 TS Waiste High Dual Tripod;65791;45015.8;75659.65;51768.17;turn;acc
+LK187-7;FHT2322 Turnstile Full Height + FP & RF;134500.6;92041.4;154675.69;105847.61;turn;acc
+LK187-11;ZK Pro TS2011 Turnstile Waist High Drop;29970.3;20509.23;34465.845;23585.6145;turn;acc
+LK187-12;TS1022Pro Turnstile Waiste High + FP&RF;31432.2;21509.68;36147.03;24736.132;turn;acc
+LK187-13;TS1011Pro Turnstile Waiste High + RF;22053;15160;25360.95;17434;turn;acc
+LK482;SBTL2000S Swing Barrier;40204;27512.38;46234.6;31639.237;barrier;acc
+LK483;ZK SBTL1000S Swing Barrier;24420;17094;28083;19658.1;barrier;acc
+LK484;ZK FBL4022 Flap Barrier Single Lane FP &;96489.6;66029.7;110963.04;75934.155;barrier;acc
+LK485;ZK FBL4222 Flap Barrier Double Wing FP &;77484.1;53023.85;89106.715;60977.4275;barrier;acc
+;ZKTeco Management Software;;;0;0;;acc
+LK189-1;BioSecurity Access Module 1 Door;-;-;#VALUE!;#VALUE!;;acc
+LK189-5;ZK BS-AC-5 BioSecurity Access Mod 5 Door;3061.4;2094.96;3520.61;2409.204;zk_soft;acc
+LK189-9;ZK BioTime 8 Software Lic Device Limit 5;35893.1;24562.32;41277.065;28246.668;zk_soft;acc
+LK189-10;ZKBT-M10 BT 8 Mobile App - 10 Users;3925.8;2686.5;4514.67;3089.475;zk_soft;acc
+LK189-11;ZK ZKBT-Dev-P5 BioTime 8 Lic 5 Dev;4486.7;3070.3;5159.705;3530.845;zk_soft;acc
+LK189-12;ZK ZKBT-Dev-P10 BioTime 8 Lic 10 Dev;8973.3;6140.58;10319.295;7061.667;zk_soft;acc
+LK189-13;ZKBT-Dev-P20 BT Licence - 20 Devices;17946.6;12281.16;20638.59;14123.334;zk_soft;acc
+LK189-14;ZK ZKTime.Net 3.0 Economic 500 Em & 50 D;3589.3;2456.23;4127.695;2824.6645;zk_soft;acc
+LK189-15;HLMS Module 1 Door;312.4;213.77;359.26;245.8355;zk_soft;acc
+LK189-16;ZKBS-M5 BS App 5 Users;9309.1;6370.39;10705.465;7325.9485;zk_soft;acc
+LK189-17;ZKBS-CP-P1 BS Card Printer 1;12433;8508.1;14297.95;9784.315;zk_soft;acc
+LK189-18;ZKTeco BioSecurity 5000 Visitor Module;20446;14312;23512.9;16458.8;zk_soft;acc
+LK189-19;ZKBS-TA-P10 BioSecurity T&A Module - 10;18866;12782.25;21695.9;14699.5875;zk_soft;acc
+LK197-3;ZK BS-AC-10 BioSecurity Access Mod 10 Do;6185.3;4232.67;7113.095;4867.5705;zk_soft;acc
+LK197-4;ZK BS-AC-25 BioSecurity Access Mod 25 Do;15556.8;10645.81;17890.32;12242.6815;zk_soft;acc
+LK197-5;ZK BS-AC-50 BioSecurity Access Mod 50 Do;28203;19299.84;32433.45;22194.816;zk_soft;acc
+LK197-6;ZK BS-AC-75 BioSecurity Access Mod 75 Do;46795.3;32022.95;53814.595;36826.3925;zk_soft;acc
+LK197-7;ZK BS-AC-100 BioSecurity Access Mod 100;62414.6;42711.52;71776.79;49118.248;zk_soft;acc
+;;;;0;0;;acc
+Prices are subject to change without prior notice.;;;;0;0;;acc
+E&OE. Valid until 31st March 2023.;Page: 58;;;0;0;;acc
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;acc
+;;;;0;0;;acc
+Trade Price List;;;;0;0;;acc
+ACCESS CONTROL;;;;0;0;;acc
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;acc
+;ZKTeco BIOMETRIC METAL DETECTORS;;;0;0;;acc
+BD04-2;D180K Hand Held Metal Detector + BATT;1827.5;1250.56;2101.625;1438.144;zk_detect;acc
+BD100;ZK D1065 Walkthrough Metal Detector 6 Zo;18274.6;12505.63;21015.79;14381.4745;zk_detect;acc
+BD100-1;D2180 Walkthrough Metal Detector 18Z;27777.3;19008.55;31943.895;21859.8325;zk_detect;acc
+BD100-2;ZK D4330 Walkthrough Metal Detector 33 Z;75949;51973.38;87341.35;59769.387;zk_detect;acc
+BD100-5;ZK D3180STD Walkthrough Metal Detector T;46051.9;31514.18;52959.685;36241.307;zk_detect;acc
+;ZKTeco VEHICLE BOOM BARRIER & RADAR DETECTION;;;0;0;zk_detect;acc
+LK196;ZK VR10 Vehicle Detection Radar Sensor;5774.8;3951.78;6641.02;4544.547;zk_detect;acc
+LK196-1;ZK VR10 Connector USB RS485;1096.5;750.34;1260.975;862.891;zk_detect;acc
+LK487;ZK 6m Boom Barrier;20467.5;14006.3;23537.625;16107.245;zk_boom;acc
+LK487-1L;ZK BG1045L Parking Barrier 4.5m Boom Inc;23610.7;16157.27;27152.305;18580.8605;zk_boom;acc
+LK487-1R;BG1045R Parking Barrier 4.5m Incl. UPS;23081.9;16157;26544.185;18580.55;zk_boom;acc
+LK487-2L;ZK BG1145 LHS Parking Folding Barrier 3.;28946.9;19808.91;33288.935;22780.2465;zk_boom;acc
+LK487-2R;BG1145 RHS Folding Barrier 3.5m UPS;28946.9;19808.91;33288.935;22780.2465;zk_boom;acc
+;;;;0;0;;acc
+Prices are subject to change without prior notice.;;;;0;0;;acc
+E&OE. Valid until 31st March 2023.;Page: 59;;;0;0;;acc
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;acc
+;;;;0;0;;acc
+Trade Price List;;;;0;0;;acc
+ACCESS CONTROL;;;;0;0;;acc
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;acc
+;VIRDI BIOMETRIC SYSTEMS;;;0;0;;acc
+LK343;UBioTab5 Biometrics Android Tablet;18700;12467;21505;14337.05;vi_reader;acc
+LK345;KL100S Doorlock Standalone SC BT;5255;3504;6043.25;4029.6;vi_reader;acc
+LK347-1;AC2000HRF FP Reader IP65 EM;9418;6279;10830.7;7220.85;vi_reader;acc
+LK348;AC1100SC LCD BT;9942;6628;11433.3;7622.2;vi_reader;acc
+LK349;AC2000SC FP Reader IP65 SC;8372;5582;9627.8;6419.3;vi_reader;acc
+LK349-1;AC2000HSC FP Reader IP65 SC;9942;6628;11433.3;7622.2;vi_reader;acc
+LK350-8;AC2100PSC Reader IP65 SC LCD;9157;6105;10530.55;7020.75;vi_reader;acc
+LK350-9;AC2100PRF Reader IP65 EM LCD;8634;5756;9929.1;6619.4;vi_reader;acc
+LK351-2;AC2200HRF FP Reader IP65 LCD BT;13343;8896;15344.45;10230.4;vi_reader;acc
+LK350-7;AC2200HSC FP Reader IP65 LCD BT;13866;9244;15945.9;10630.6;vi_reader;acc
+LK353-3;AC5100RF Reader LCD BT;17529;11686;20158.35;13438.9;vi_reader;acc
+LK353-5;Virdi AC5000PIKRF Reader EM LCD BT IK09;15354;10236;17657.1;11771.4;vi_reader;acc
+LK353-6;Virdi AC5000PIKSC Reader SC LCD BT IK09;15849;10566;18226.35;12150.9;vi_reader;acc
+LK355;AC7000 Face Reader LCD EM-SC;19983;13322;22980.45;15320.3;vi_reader;acc
+LK358;FMD10SC Reader SC RS485 BT;5994;3996;6893.1;4595.4;vi_reader;acc
+LK365;FOH02RF FP-EM Enrolment Reader USB;5068;3379;5828.2;3885.85;vi_reader;acc
+LK368;BLC015 Battery and Lock Controller;957;638;1100.55;733.7;vi_acc;acc
+LK369;ACC420 Relay Timer 26Bit Weigand;550;367;632.5;422.05;vi_acc;acc
+LK372;ACC210 Enclosure AC2100-5000 SS;1239;867;1424.85;997.05;vi_acc;acc
+LK373;ACC200 Enclosure AC2x00 SS;897;598;1031.55;687.7;vi_acc;acc
+LK374;ACC202 VR Enclosure for AC2x00 Series SS;2200;1467;2530;1687.05;vi_acc;acc
+LK384;UNiS V4 Standard;3800;2534;4370;2914.1;vi_acc;acc
+LK390;MCP040K1 Four Door ACU Metal 6A PSU;14675;9784;16876.25;11251.6;vi_acc;acc
+VIRDI RFID SYSTEMS;;;;0;0;vi_acc;acc
+LK342;VSR20D Reader EM IP65 RS485;2199;1466;2528.85;1685.9;vi_acc;acc
+LK342-1;VSR20D Reader SC IP65 RS485;2245;1497;2581.75;1721.55;vi_acc;acc
+;;;;0;0;;acc
+Prices are subject to change without prior notice.;;;;0;0;;acc
+E&OE. Valid until 31st March 2023.;Page: 60;;;0;0;;acc
+www.REGALSECURITY.co.za;05-03-2023;;;0;0;;acc
+;;;;0;0;;acc
+Trade Price List;;;;0;0;;acc
+ACCESS CONTROL;;;;0;0;;acc
+Our Code;Item Description;Retail Excl VAT;Trade Excl VAT;#VALUE!;#VALUE!;;acc
+;MORPHO BIOMETRIC SYSTEMS;;;0;0;;acc
+LK419-1;MA Sigma Bio Lite Reader with Prox IP65;13793;9918;15861.95;11405.7;mor_reader;acc
+LK419-2;MA Sigma Bio Lite Multi Reader IP65;11121;7996;12789.15;9195.4;mor_reader;acc
+LK419-3;MA Sigma Bio Lite IP65 1:500 iClass CR;13622;9795;15665.3;11264.25;mor_reader;acc
+LK420-1;Morpho WR Sigma Lite Reader Screen Prox;15487;11136;17810.05;12806.4;mor_reader;acc
+LK420-2;Morpho WR Sigma Lite Reader Screen Multi;14125;10157;16243.75;11680.55;mor_reader;acc
+LK420-3;Morpho WR Sigma Lite Reader Screen iClas;15141;10887;17412.15;12520.05;mor_reader;acc
+LK422-2;Morpho Sigma STD IP65 1:5000 Bio MD CR;18423;13248;21186.45;15235.2;mor_reader;acc
+LK422-3;Morpho Sigma STD IP65 1:5000 Bio iClass;19794;14232;22763.1;16366.8;mor_reader;acc
+LK423;Morpho Sigma Extreme IP65 (1:5000) BPCR;38485;27672;44257.75;31822.8;mor_reader;acc
+LK423-1;Morpho Sigma Extreme IP65 1:5000 Bio MD;38098;27394;43812.7;31503.1;mor_reader;acc
+LK423-2;Morpho Sigma Extreme IP65 1:5000 Bio iCl;38485;27672;44257.75;31822.8;mor_reader;acc
+LK426;Morpho Wave Compact MDR;86115;61920;99032.25;71208;mor_reader;acc
+LK426-9;MA MorphoWaveSP MD;47785;34359;54952.75;39512.85;mor_reader;acc
+LK427;VisionPass Facial Recognition MD;65186;46871;74963.9;53901.65;mor_reader;acc
+LK427-1;VisionPass Facial Recognition MDPI;73438;52804;84453.7;60724.6;mor_reader;acc
+LK419-4;Sigma Lite Series Rugged SSOD Rainshield;896;742;1030.4;853.3;mor_shield;acc
+LK419-5;Sigma Lite Series Rugged ID Mnt Bracket;580;472;667;542.8;mor_shield;acc
+LK422-4;Morpho Sigma STD Series Ruggedised ODSSR;1020;839;1173;964.85;mor_shield;acc
+LK422-5;MA Sigma STD Series Rugg SS ID Bracket;698;585;802.7;672.75;mor_shield;acc
+LK423-3;Morpho Sigma Extreme SS OD Rainshield;1981.79;1565;2279.0585;1799.75;mor_shield;acc
+LK423-4;Morpho Sigma Extreme Ruggedised ID SS MB;1407.91;1113;1619.0965;1279.95;mor_shield;acc
+LK426-4;Mounting Bracket for MWC SS;1903.77;1711;2189.3355;1967.65;mor_shield;acc
+LK426-5;Pedestal for MWC SS;6898.68;5011;7933.482;5762.65;mor_shield;acc
+LK426-6;Rainshield for MWC SS;2587.33;2042;2975.4295;2348.3;mor_shield;acc
+LK419-6;MA Sigma Lite Plus & Lite Portable Case;8699.75;6473;10004.7125;7443.95;mor_acc;acc
+LK422-6;Morpho Sigma STD Portable Case & Battery;9947.5;7369;11439.625;8474.35;mor_acc;acc
+LK421-1;MSO 1300 Everif USB Desktop ER;3727.41;2862;4286.5215;3291.3;mor_acc;acc
+LK421-2;MSO 330 Enrollment Device USB;9357.69;7185;10761.3435;8262.75;mor_acc;acc
+LK421-3;MSO 351 Enrollment Reader USB SC;8528;5969;9807.2;6864.35;mor_acc;acc
+LK421-9;MSO 300 Desktop Enrol Reader SC + Verif;10786;7550;12403.9;8682.5;mor_acc;acc
+LK424;Sigma Upgrade Increase Lite Series 3000;1609;1158;1850.35;1331.7;mor_acc;acc
+LK424-1;Sigma Upgrade Increase Lite & Std 10 000;2195;1578;2524.25;1814.7;mor_acc;acc
+LK424-2;Sigma Upgrade Increase Std Series 50 000;4390;3157;5048.5;3630.55;mor_acc;acc
+LK424-3;Sigma Upgrade Increase Std Series 100000;8780;6314;10097;7261.1;mor_acc;acc
+LK426-3;Morpho Wave Compact Upgradeto 40K Person;31316;22518;36013.4;25895.7;mor_acc;acc
+LK425-1;Morpho Software Verification lic (1:1);2270.4;1632;2610.96;1876.8;mor_acc;acc
+LK425-2;Morpho USB Dongle Verification lic (1:1);4551.55;3272;5234.2825;3762.8;mor_acc;acc
+LK425-3;Morpho Software Verification lic 1:20000;78447.05;56379;90214.1075;64835.85;mor_acc;acc
+LK425;Morpho Manager Software - USB Dongle;473;340;543.95;391;mor_acc;acc
+LK426-7;Steri-C UV fingerprint sensor sterilisin;1250;914;1437.5;1051.1;mor_acc;acc
+LK429-5;Fluss BLE controller;709;491;815.35;564.65;mor_acc;acc
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;

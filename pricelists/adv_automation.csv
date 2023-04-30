@@ -1,0 +1,58 @@
+regalCode;description;Retail Excl VAT;Trade Excl VAT;retail;trade;subcategory;category
+;BOOM GATES & TRAFFIC ACCESS SYSTEMS;;;0;0;;auto
+GA143-2;Nice Traffic Barrrier Straight Pole 4m;1593;1337.96;1831.95;1538.654;nice_barrier;auto
+GA147-1;Nice Traffic Barrrier ACDC-M LH +4m Pole;18366;15426.66;21120.9;17740.659;nice_barrier;auto
+GA147-2;Nice Traffic Barrrier ACDC-M RH +4m Pole;18366;15426.66;21120.9;17740.659;nice_barrier;auto
+GA147-3;Nice Traffic Barrrier ACDC-L LH + Telesc;19158;16092.34;22031.7;18506.191;nice_barrier;auto
+GA147-4;Nice Traffic Barrrier ACDC-L RH + Telesc;19158;16092.34;22031.7;18506.191;nice_barrier;auto
+GA147-5;Nice Traffic Barrrier ACDC-L LH + Fence;23260;19537.98;26749;22468.677;nice_barrier;auto
+GA147-6;Nice Traffic Barrrier ACDC-L RH + Fence;23260;19537.98;26749;22468.677;nice_barrier;auto
+GA147-7;Nice Traffic Barrrier ACDC-L LH 180 JKnf;23239;19520.42;26724.85;22448.483;nice_barrier;auto
+GA147-8;Nice Traffic Barrrier ACDC-L RH 180 JKnf;23239;19520.42;26724.85;22448.483;nice_barrier;auto
+GA147-9;Nice Traffic Barrrier Light Red - Green;2717;2282.13;3124.55;2624.4495;nice_barrier;auto
+GA146-3;Nice Manual Barrier 4m Kit;8345;7009.36;9596.75;8060.764;nice_barrier;auto
+GA148;Nice Spear Module Surf Mnt 1.2m Spike;14780;12414.61;16997;14276.8015;nice_spike;auto
+GA148-1;Nice Spear Module Surf Mnt Drive Uint;18653;15668.13;21450.95;18018.3495;nice_spike;auto
+GA148-2;Nice Road Spear Kit Complete 1.8m;37143;26000;42714.45;29900;nice_spike;auto
+GA148-3;Nice Road Spear Kit Complete 3.0m;49246;41366;56632.9;47570.9;nice_spike;auto
+GA148-4;Nice Road Spear Kit Complete 4.2m;63886;53664;73468.9;61713.6;nice_spike;auto
+GA148-5;Nice Road Spear Kit Complete 5.4m;78527;65962;90306.05;75856.3;nice_spike;auto
+GA148-6;Nice Road Spear Kit Complete 6.6m;93167;78260;107142.05;89999;nice_spike;auto
+GA148-7;Nice Road Spear Kit Complete 7.8m;115715;81000;133072.25;93150;nice_spike;auto
+GA148-9;Nice Spear Module Surface Mnt End Cap;2071;1449.6;2381.65;1667.04;nice_spike;auto
+LOOP DETECTORS;;;;0;0;;auto
+GA31-1;Loop Detector - 11 Pin Socket;65;45;74.75;51.75;loop_detector;auto
+GA31-3;Loop Detector - Single Channel 220V SS;570;399;655.5;458.85;loop_detector;auto
+GA31-4;Loop Detector - Dual 12 - 24VDC SS;856;599;984.4;688.85;loop_detector;auto
+GA31-5;Loop Detector - Single Channel 12V SS;570;399;655.5;458.85;loop_detector;auto
+GA31-6;Loop Detector - Single Channel 12V MD201;449;377.14;516.35;433.711;loop_detector;auto
+GA31-7;Loop Detector - FLUX SA 1Ch 12-24V AC-DC;705.71;494;811.5665;568.1;loop_detector;auto
+GA31-8;Loop Detector - FLUX 11 Pin 1Ch 12-24V;984.29;689;1131.9335;792.35;loop_detector;auto
+GA81-4;CENTINEL 3 - 4.5 - 6m Mild Steel ex Pole;7773.00;10104.9;8938.95;11620.635;cent_barrier;auto
+GA81-5;CENTINEL 3 - 4.5 - 6m Stainless ex Pole;8320.00;10816;9568;12438.4;cent_barrier;auto
+GA84-3;SECTOR II DC 3m Barrier Kit Mild Steel;16119.00;20954.7;18536.85;24097.905;cent_barrier;auto
+GA84-4;SECTOR II DC 4.5m Barrier Kit Mild Steel;17294.00;22482.2;19888.1;25854.53;cent_barrier;auto
+GA84-6;SECTOR II DC 6m Barrier Kit Mild Steel;18275.00;23757.5;21016.25;27321.125;cent_barrier;auto
+GA84-10;SECTOR II DC 3m Barrier Kit 316SS;22844.00;29697.2;26270.6;34151.78;cent_barrier;auto
+GA84-11;SECTOR II DC 4.5m Barrier Kit 316SS;24666.00;32065.8;28365.9;36875.67;cent_barrier;auto
+GA84-12;SECTOR II DC 6m Barrier Kit 316SS;25373.00;32984.9;29178.95;37932.635;cent_barrier;auto
+GA80-1;"SECTOR II Jack Knife Assembly; Incl Rod";3591.00;4668.3;4129.65;5368.545;cent_barrier;auto
+GA83-3;SECTOR Break Away Coupler Assembly;1922.00;2498.6;2210.3;2873.39;cent_barrier;auto
+GA81-1;Boom Pole - 6m Aluminium;1283.00;1667.9;1475.45;1918.085;cent_barrier;auto
+GA81-2;Boom Pole - 3m Aluminium;667.00;867.1;767.05;997.165;cent_barrier;auto
+GA81-7;Boom Pole - 4.5m Aluminium;983.00;1277.9;1130.45;1469.585;cent_barrier;auto
+GA81-18;Centurion Boom Pole Joiner;444.00;577.2;510.6;663.78;cent_barrier;auto
+;;;0;0;0;;auto
+GA120;CLAWS Spike System 3m I-Drive F-Mount;37548.00;48812.4;43180.2;56134.26;cent_spike;auto
+GA120-1;CLAWS Spike System 4.5m I-Drive F-Mount;50538.00;65699.4;58118.7;75554.31;cent_spike;auto
+GA121;CLAWS Spike System 3m I-Drive S-Mount;49839.00;64790.7;57314.85;74509.305;cent_spike;auto
+GA121-1;CLAWS Spike System 4.5m I-Drive S-Mount;67533.00;87792.9;77662.95;100961.835;cent_spike;auto
+GA122;CLAWS Spike System 3m D-Drive F-Mount;36370.00;47281;41825.5;54373.15;cent_spike;auto
+GA122-1;CLAWS Spike System 4.5m D-Drive F-Mount;49360.00;64168;56764;73793.2;cent_spike;auto
+GA123;CLAWS Spike System 3m D-Drive S-Mount;44628.00;58016.4;51322.2;66718.86;cent_spike;auto
+GA123-1;CLAWS Spike System 4.5m D-Drive S-Mount;62322.00;81018.6;71670.3;93171.39;cent_spike;auto
+GA123-4;CLAWS Spike Kit Direct Drive Surface Mnt;7436.78;9667.814;8552.297;11117.9861;cent_spike;auto
+GA125;Traffic Light Kit - 2 Way Red & Green;2288.00;2974.4;2631.2;3420.56;cent_barrier_acc;auto
+GA125-1;Traffic Light Mounting Post stainless;343.00;445.9;394.45;512.785;cent_barrier_acc;auto
+GA126;Centurion TRAPEX Mounting Kit V2 SS Type;1183.00;1537.9;1360.45;1768.585;cent_barrier_acc;auto
+GA126-1;Centurion Barrier Fence SECN 1.5m;1515.00;1969.5;1742.25;2264.925;cent_barrier_acc;auto

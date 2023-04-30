@@ -14,7 +14,7 @@ const sendJSONResponse = (res, stat, content) => {
 const productsCreateOne = (req, res) => {
     if(!req.body.name || !req.body.description || !req.body.trade || !req.body.selling  
         || !req.body.userId){sendJSONResponse(res, 400, {"message":"all fields required"}); return}
-    console.log('what i push', req.body.category, req.body.subCategory);
+    
     Prod.create({
         name: req.body.name,
         description: req.body.description,
@@ -271,7 +271,7 @@ const createDBProducts = (req, res) => {
     const products = [];
     let count = 0;
     console.log('creating...',req.params.userName, req.params.pricelist);
-    let path = `./${req.params.pricelist}.csv`;
+    let path = `./pricelists/${req.params.pricelist}.csv`;
     
     if(req.params.userName == 'thabethe') {
         fs.createReadStream(path)

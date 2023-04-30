@@ -90,7 +90,7 @@ const createDBTasks = (req, res) => {
     const actionResponses = [];
     let count = 0;
 
-    let path = `./tasks.csv`;
+    let path = `./files/tasks.csv`;
     let tempTask = {
         name: '',
         actionResponses: []
