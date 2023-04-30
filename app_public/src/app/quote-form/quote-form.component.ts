@@ -261,7 +261,6 @@ export class QuoteFormComponent implements OnInit {
     const idx = this.subCategoriesFull.indexOf(this.formCat2.subCategory); 
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
       .then(foundProducts => {
-        console.log(foundProducts.length);
         this.products = foundProducts;
         this.subCategorySelected = true;
       })
@@ -279,7 +278,6 @@ export class QuoteFormComponent implements OnInit {
     this.itemAdded = false;
     if(this.formIsValid()) {
       //get last item and set its summary
-      console.log('deep', this.newQuotation.amount)
       this.quoteDataService.addQuote(this.dbCustomer._id, this.newQuotation)
       .then((quotation: Quote) => {
         console.log('quotation saved', quotation);
@@ -307,9 +305,7 @@ export class QuoteFormComponent implements OnInit {
   }
 
   public addItemToQuote() : void {
-    
     this.formError = '';
-
     this.getProductByName(this.formQuoteItem.product)
     .then(foundProduct => {
       this.currentProduct = foundProduct;
@@ -358,7 +354,7 @@ export class QuoteFormComponent implements OnInit {
   }
 
   public categoryChanged(event: any) : void {
-    console.log('cat changed', event.target.value);
+
     const idx = this.categoriesFull.indexOf(event.target.value);
     if(this.categories[idx] == 'suv'){
       this.subCategoriesFull = this.suvSubCategoriesFull;
@@ -438,18 +434,21 @@ export class QuoteFormComponent implements OnInit {
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[0])
       .then(foundSubProducts => {
         this.products = foundSubProducts;
+        this.formQuoteItem.product = this.products[0].name;
         this.subCategorySelected = true;
       })
 
   }
 
   public subCategoryChanged(event: any) : void {
-    console.log('subcat changed', event.target.value);
+    
     const idx = this.subCategoriesFull.indexOf(event.target.value); 
+   
     this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
       .then(foundProducts => {
         console.log(foundProducts.length);
         this.products = foundProducts;
+        this.formQuoteItem.product = this.products[0].name;
         this.subCategorySelected = true;
       })
   }

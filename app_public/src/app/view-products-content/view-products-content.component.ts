@@ -236,7 +236,7 @@ export class ViewProductsContentComponent implements OnInit {
       .then((prod: Product) => {
         console.log('product saved', prod.category);
         this.resetAndHideProductForm();
-        this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx])
+        this.productDataService.getSubCategoryProducts(this.getUserName(), this.subCategories[idx2])
         .then(foundProducts => {
           this.products = foundProducts;
           this.subProducts = foundProducts;
