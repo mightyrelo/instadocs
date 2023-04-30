@@ -226,7 +226,9 @@ export class ViewProductsContentComponent implements OnInit {
     console.log('tis');
     if(this.getUserName() != 'thabethe'){
       const idx = this.categoriesFull.indexOf(this.formCat.category);
+      console.log('hola', this.formCat2.subCategory);
       const idx2 = this.subCategoriesFull.indexOf(this.formCat2.subCategory);
+      console.log('index', idx2);
       this.newProduct.category = this.categories[idx];
       this.newProduct.subCategory = this.subCategories[idx2];
       console.log('tis', this.newProduct.category, this.newProduct.subCategory);
