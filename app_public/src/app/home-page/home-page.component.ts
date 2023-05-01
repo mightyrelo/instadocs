@@ -13,7 +13,7 @@ export class HomePageComponent implements OnInit {
       strapline: 'Installer\'s Invoicing App'
     },
     viewBar: {
-      main: 'Create docs in an Instant!',
+      main: 'Document in an Instant!',
       sub: 'Quote in 60 seconds and Convert Quote to Invoice or Purchase Order at the click of a button.'
     }
   };
