@@ -9,7 +9,7 @@ export class HomePageComponent implements OnInit {
 
   public pageContent = {
     header: {
-      title: 'InstaDocs - ',
+      title: 'InstaDocu - ',
       strapline: 'Installer\'s Invoicing App'
     },
     viewBar: {
