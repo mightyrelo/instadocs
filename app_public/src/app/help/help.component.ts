@@ -9,12 +9,12 @@ export class HelpComponent implements OnInit {
 
   public pageContent = {
     header: {
-      title: 'How To?',
+      title: 'Step-by-Step Guide',
       strapline: ''
     },
     sideBar: {
       main: '',
-      sub: 'a guide on how to perform tasks on InstaDocs'
+      sub: 'a guide on how to perform tasks using InstaDocu'
     }
   };
 

@@ -93,7 +93,8 @@ const createDBTasks = (req, res) => {
     let path = `./files/tasks.csv`;
     let tempTask = {
         name: '',
-        actionResponses: []
+        actionResponses: [],
+        number: null
     };
 
     fs.createReadStream(path)
@@ -103,6 +104,7 @@ const createDBTasks = (req, res) => {
 
             if(data.task){
                 tempTask.name = data.task;
+                tempTask.number = data.number;
                 tempTask.actionResponses = [];
                 count++;
                 //add action response
@@ -121,6 +123,7 @@ const createDBTasks = (req, res) => {
             else if(!data.task && !data.action & !data.response){
                 Task.create({
                     name: tempTask.name,
+                    number: tempTask.number,
                     actionResponses: tempTask.actionResponses
                 },(err, task)=>{
                     if(err) {

@@ -1,6 +1,7 @@
 <div class="row">
   <p>
     <a *ngIf="isLoggedIn() && getUserName()=='admin'" style="font-size: 2.3em;color: white;" class="btn" (click)="createTasks()"><i class="fa-solid fa-download"></i></a>
+    <a *ngIf="isLoggedIn() && getUserName()=='admin'" style="font-size: 2.3em;color: white;" class="btn" (click)="deleteTasks()"><i class="fa-solid fa-trash trash"></i></a>
     <a style="font-size: 2.3em;color: whitesmoke;" class="btn float-right" (click)="createPDF()"><i class="fa-solid fa-file-pdf"></i></a>
   </p>
 </div>
@@ -9,11 +10,12 @@
     <div class="card-block"> 
     </div>
     <h4> <a style="color: black;" class="heading">{{task.name}}</a></h4>
+    <h4> <a style="color: black;" class="heading">{{task.number}}</a></h4>
     <div *ngIf="task.revealActs">
       <table>
         <tr>
-          <th style="text-align: center;">action</th>
-          <th style="text-align: center;">outcome</th>
+          <th style="text-align: center;">what to do</th>
+          <th style="text-align: center;">how InstaDocu reacts</th>
         </tr>
         <tr *ngFor="let pair of task.actionResponses" style="color: black;">
           <td style="border: 1px solid black;">{{pair.action}}</td>
@@ -31,9 +33,4 @@
        <button style="font-size: 0.7em" (click)="deleteTask(task._id)" class="btn btn-primary float-right">are you sure?</button>
      </div>
  </div>
-</div>
-<div>
-  <p> 
-    <a style="font-size: 2.3em;color: whitesmoke;" class="btn float-right" (click)="createPDF()"><i class="fa-solid fa-file-pdf"></i></a>
-  </p>
 </div>

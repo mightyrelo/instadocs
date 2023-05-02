@@ -39,6 +39,13 @@ export class HelpContentComponent implements OnInit {
       });
   }
 
+  public deleteTasks() : void {
+    for(let i = 0; i < this.tasks.length; i++){
+      this.taskDataService.deleteTask(this.tasks[i]._id)
+        .then(rsp => {});
+    }
+  }
+
   public flagged(taskId: string) : boolean {
     for(let i = 0; i < this.tasks.length; i++){
       if(this.tasks[i]._id == taskId){

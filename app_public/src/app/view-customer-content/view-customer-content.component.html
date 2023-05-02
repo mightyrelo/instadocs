@@ -81,10 +81,10 @@
               <div class="card-block">
                 <h2 class="card-title">Quotations </h2>
                 <div class="row sm-button" [ngSwitch]="isLoggedIn()">
-                  <small>
-                    <button (click)="openQuoteForm()" class="btn-primary float-right" *ngSwitchCase="true">add quote</button>
+                  
+                    <button (click)="openQuoteForm()" class="btn-primary" *ngSwitchCase="true">Quote Customer</button>
                     <a routerLink="/login"><button class="btn-primary float-right" *ngSwitchDefault>login to quote</button></a>
-                  </small>
+                  
                 </div>
                 <div *ngIf="displayForm" class="card">
                     <app-quote-form-sp *ngIf="getUserName()=='thabethe'" [dbCustomer]="dbCustomer" [displayForm]="displayForm"

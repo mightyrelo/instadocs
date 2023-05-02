@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-12" >
     <small>
-      <button *ngIf="isLoggedIn()" class="btn-primary" (click)="displayForm=true"><i class="fa-sharp fa-solid fa-user-plus"></i> </button>
+      <button *ngIf="isLoggedIn()" class="btn-primary float-right" (click)="displayForm=true"><i class="fa-sharp fa-solid fa-user-plus"></i> </button>
       <a *ngIf="!isLoggedIn()" routerLink="/login"><button class="btn-primary">login to add</button>
       </a>
     </small>
@@ -28,7 +28,7 @@
       <input class="form-control" id="email" name="email" type="text" placeholder="" [(ngModel)]="formCustomer.email">
    </div> 
    <div class="form-group">
-    <label for="rating">rating</label>
+    <label for="rating">likelihood of sale</label>
     <select [(ngModel)]="formCustomer.rating" class="form-control bg" id="category" name="rating">
       <option  class="form-control bg" *ngFor="let item of counts">{{item}}</option>
      </select>
