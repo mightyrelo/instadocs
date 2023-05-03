@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../environments/environment';
 
 import { Task } from './task';
+import { Product } from './product';
 
 
 @Injectable({
@@ -21,7 +22,7 @@ export class DbTransferService {
     return this.http
       .get(url)
       .toPromise()
-      .then(response => response as any)
+      .then(response => response as Product[])
       .catch(this.handleError);
 
   }

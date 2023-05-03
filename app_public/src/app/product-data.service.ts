@@ -78,6 +78,7 @@ export class ProductDataService {
  
 
   public addProduct(prod: Product) : Promise<Product> {
+    
     const url: string = `${this.apiBaseUrl}/products`;
     return this.http
         .post(url, prod)

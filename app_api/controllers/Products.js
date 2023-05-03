@@ -253,7 +253,7 @@ const createProduct = (req, res, data) => {
             description: data.description,
             trade: trade,
             selling: retail,
-            userId: req.params.userName,
+            userId: 'tempUser',
             category: data.category,
             subCategory: data.subcategory
             },(err, product)=>{
